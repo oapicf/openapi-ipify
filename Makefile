@@ -30,17 +30,9 @@ test:
 	mocha --timeout 5000 test/javascript/
 
 test-ci:
-	ls -alrth generated/
-	ls -alrth generated/javascript/
-	npm --version
-	whoami
-	pwd
-	cd generated/javascript
-	echo "post cd"
-	ls -alrth ~
 	sudo chown travis:travis -R generated/
-	cd generated/javascript/ && sudo npm link
-	cd test/javascript/ && sudo npm link ipify
+	cd generated/javascript/ && npm link
+	cd test/javascript/ && npm link ipify
 	mocha --timeout 5000 test/javascript/
 
 doc:
