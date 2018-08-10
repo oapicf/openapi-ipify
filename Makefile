@@ -37,8 +37,8 @@ test-ci:
 	pwd
 	cd generated/javascript
 	echo "post cd"
-	cd generated/javascript && npm link
-	cd test/javascript && npm link ipify
+	cd generated/javascript && sudo npm link
+	cd test/javascript && sudo npm link ipify
 	mocha --timeout 5000 test/javascript/
 
 doc:
