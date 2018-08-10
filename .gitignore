@@ -1,3 +1,4 @@
 .DS_Store
 generated/javascript/node_modules/
+generated/javascript/package-lock.json
 test/javascript/node_modules/
