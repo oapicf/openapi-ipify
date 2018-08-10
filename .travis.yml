@@ -3,8 +3,5 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - make deps
-
 script:
-  - make generate
+  - make ci
