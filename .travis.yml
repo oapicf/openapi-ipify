@@ -1,7 +1,5 @@
-sudo: required
-
+sudo: false
 services:
   - docker
-
 script:
   - make ci
