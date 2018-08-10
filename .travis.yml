@@ -2,4 +2,4 @@ sudo: false
 services:
   - docker
 script:
-  - sudo make ci
+  - make ci
