@@ -33,6 +33,10 @@ test-ci:
 	ls -alrth generated/
 	ls -alrth generated/javascript/
 	npm --version
+	whoami
+	pwd
+	cd generated/javascript
+	echo "post cd"
 	cd generated/javascript && npm link
 	cd test/javascript && npm link ipify
 	mocha --timeout 5000 test/javascript/
