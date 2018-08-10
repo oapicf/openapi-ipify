@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  description: OpenAPI client for ipify, a simple public IP address API
+  license:
+    name: MIT
+  title: ipify
+  version: 0.9.0
+servers:
+- url: https://api.ipify.org
+paths:
+  /:
+    get:
+      operationId: getIp
+      parameters:
+      - description: Response format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - json
+          - jsonp
+          type: string
+        style: form
+      - description: JSONP callback function name
+        explode: true
+        in: query
+        name: callback
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                oneOf:
+                - $ref: '#/components/schemas/Ip'
+                - type: string
+          description: IP
+      summary: Get your public IP address
+components:
+  schemas:
+    Ip:
+      properties:
+        ip:
+          type: string
+      required:
+      - ip

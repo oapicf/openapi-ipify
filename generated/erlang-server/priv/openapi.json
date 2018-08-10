@@ -1,0 +1,72 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "ipify",
+    "description" : "OpenAPI client for ipify, a simple public IP address API",
+    "license" : {
+      "name" : "MIT"
+    },
+    "version" : "0.9.0"
+  },
+  "servers" : [ {
+    "url" : "https://api.ipify.org"
+  } ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "summary" : "Get your public IP address",
+        "operationId" : "getIp",
+        "parameters" : [ {
+          "name" : "format",
+          "in" : "query",
+          "description" : "Response format",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "enum" : [ "json", "jsonp" ]
+          }
+        }, {
+          "name" : "callback",
+          "in" : "query",
+          "description" : "JSONP callback function name",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "IP",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "oneOf" : [ {
+                    "$ref" : "#/components/schemas/Ip"
+                  }, {
+                    "type" : "string"
+                  } ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Ip" : {
+        "required" : [ "ip" ],
+        "properties" : {
+          "ip" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
