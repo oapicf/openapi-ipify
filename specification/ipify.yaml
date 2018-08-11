@@ -28,13 +28,22 @@ paths:
             type: string
       responses:
         '200':
-          description: IP
+          description: Your public IP address
           content:
-            application/json:
+            '*/*':
               schema:
                 oneOf:
                   - $ref: "#/components/schemas/Ip"
                   - type: string
+            # 'application/json':
+            #   schema:
+            #     $ref: "#/components/schemas/Ip"
+            # 'application/javascript':
+            #   schema:
+            #     type: string
+            # 'text/plain':
+            #   schema:
+            #     type: string
 components:
   schemas:
     Ip:
