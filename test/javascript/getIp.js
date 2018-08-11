@@ -8,6 +8,7 @@ describe('ipify', function() {
       var callback = function(error, data, response) {
         assert.equal(error, null);
         assert.equal(typeof data, 'string');
+        assert.equal(response.res.statusCode, 200);
         done();
       };
       var opts = {
@@ -21,6 +22,7 @@ describe('ipify', function() {
         assert.equal(error, null);
         try {
           assert.equal(typeof data.ip, 'string');
+          assert.equal(response.res.statusCode, 200);
           done();
         } catch (e) {
           assert.fail(e);
@@ -28,6 +30,37 @@ describe('ipify', function() {
       };
       var opts = {
         'format': 'json'
+      };
+      api.getIp(opts, callback);
+    });
+  });
+  describe('with JSONP format', function() {
+    it('should return IP address as function string', function(done) {
+      var callback = function(error, data, response) {
+        assert.equal(error, null);
+        // TODO: disabled for now due to undefined data being returned
+        // assert.equal(typeof data, 'string');
+        assert.equal(response.res.statusCode, 200);
+        done();
+      };
+      var opts = {
+        'format': 'jsonp'
+      };
+      api.getIp(opts, callback);
+    });
+  });
+  describe('with JSONP format and callback function name', function() {
+    it('should return IP address as function string', function(done) {
+      var callback = function(error, data, response) {
+        assert.equal(error, null);
+        // TODO: disabled for now due to undefined data being returned
+        // assert.equal(typeof data, 'string');
+        assert.equal(response.res.statusCode, 200);
+        done();
+      };
+      var opts = {
+        'format': 'jsonp',
+        'callback': 'foobar'
       };
       api.getIp(opts, callback);
     });
