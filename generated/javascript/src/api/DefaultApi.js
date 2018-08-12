@@ -37,7 +37,7 @@
    */
 
   /**
-   * Constructs a new DefaultApi. 
+   * Constructs a new DefaultApi.
    * @alias module:api/DefaultApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
@@ -83,7 +83,7 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json'];
+      var accepts = ['*/*'];
       var returnType = Object;
 
       return this.apiClient.callApi(
