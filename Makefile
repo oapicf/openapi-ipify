@@ -32,7 +32,7 @@ test-ci:
 	sudo chown travis:travis -R generated/
 	cd generated/javascript/ && npm link
 	cd test/javascript/ && npm link ipify
-	mocha --timeout 5000 test/javascript/
+	mocha --timeout 10000 test/javascript/
 
 doc:
 	bootprint openapi specification/ipify.yaml doc/api/latest/
