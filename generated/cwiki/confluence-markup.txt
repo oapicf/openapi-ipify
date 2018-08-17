@@ -1,4 +1,4 @@
-h1. ipify OpenAPI client for ipify, a simple public IP address API
+h1. openapi-ipify OpenAPI client for ipify, a simple public IP address API
 
 *Version:* 0.9.0
 
@@ -33,7 +33,7 @@ h2. Endpoints
 
     h4. Responses
         *Status Code:* 200
-        *Message:*     IP
+        *Message:*     Your public IP address
         {code:title=Response Type}
 Object
         {code}
@@ -43,9 +43,9 @@ Object
 
         {code:title=Response Schema |collapse=true}
 {
-  "description" : "IP",
+  "description" : "Your public IP address",
   "content" : {
-    "application/json" : {
+    "*/*" : {
       "schema" : {
         "oneOf" : [ {
           "$ref" : "#/components/schemas/Ip"

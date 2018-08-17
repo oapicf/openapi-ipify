@@ -290,7 +290,7 @@ impl<F, C> Api<C> for Client<F> where
 
                                              ))
                         .map(move |body|
-                            GetIpResponse::IP(body)
+                            GetIpResponse::YourPublicIPAddress(body)
                         )
                     ) as Box<Future<Item=_, Error=_>>
                 },

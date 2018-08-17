@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2018-08-10T05:21:47.352Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2018-08-17T01:57:10.193Z[GMT]")
 public class DefaultApi  {
 
     @Inject DefaultApiService service;
@@ -33,10 +33,10 @@ public class DefaultApi  {
     @GET
     
     
-    @Produces({ "application/json" })
+    @Produces({ "*/*" })
     @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = Object.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "IP", response = Object.class) })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = Object.class) })
     public Response getIp(  @QueryParam("format") String format,  @QueryParam("callback") String paramCallback,@Context SecurityContext securityContext)
     throws NotFoundException {
         return service.getIp(format,paramCallback,securityContext);

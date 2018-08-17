@@ -24,7 +24,7 @@ import javax.validation.constraints.*;
 @Api(description = "the default API")
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2018-08-10T05:21:40.944Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2018-08-17T01:57:05.777Z[GMT]")
 
 public class DefaultApi  {
 
@@ -36,10 +36,10 @@ public class DefaultApi  {
     @GET
     
     
-    @Produces({ "application/json" })
+    @Produces({ "*/*" })
     @ApiOperation(value = "Get your public IP address", notes = "", response = Object.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "IP", response = Object.class) })
+        @ApiResponse(code = 200, message = "Your public IP address", response = Object.class) })
     public Response getIp( @ApiParam(value = "Response format", allowableValues="json, jsonp")  @QueryParam("format") String format,  @ApiParam(value = "JSONP callback function name")  @QueryParam("callback") String paramCallback) {
         return delegate.getIp(format, paramCallback, securityContext);
     }

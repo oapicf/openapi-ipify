@@ -41,8 +41,8 @@ pub const API_VERSION: &'static str = "0.9.0";
 
 #[derive(Debug, PartialEq)]
 pub enum GetIpResponse {
-    /// IP
-    IP ( object ) ,
+    /// Your public IP address
+    YourPublicIPAddress ( object ) ,
 }
 
 

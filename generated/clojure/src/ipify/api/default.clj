@@ -12,7 +12,7 @@
               :query-params  {"format" format "callback" callback }
               :form-params   {}
               :content-types []
-              :accepts       ["application/json"]
+              :accepts       ["*/*"]
               :auth-names    []})))
 
 (defn get-ip

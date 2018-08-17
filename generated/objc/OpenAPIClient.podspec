@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.name             = "OpenAPIClient"
     s.version          = "1.0.0"
 
-    s.summary          = "ipify"
+    s.summary          = "openapi-ipify"
     s.description      = <<-DESC
                          OpenAPI client for ipify, a simple public IP address API
                          DESC

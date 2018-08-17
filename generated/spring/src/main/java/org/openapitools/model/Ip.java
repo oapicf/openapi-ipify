@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 /**
  * Ip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-10T05:23:26.981Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-17T01:58:27.979Z[GMT]")
 
 public class Ip   {
   @JsonProperty("ip")

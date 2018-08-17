@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>ipify</title>
+  <title>openapi-ipify</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
@@ -852,7 +852,7 @@ ul.nav-tabs {
       <div id="content">
         <div id="project">
           <div class="pull-left">
-            <h1>ipify</h1>
+            <h1>openapi-ipify</h1>
           </div>
           <div class="clearfix"></div>
         </div>
@@ -975,9 +975,9 @@ DefaultApi *apiInstance = [[DefaultApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-Default-getIp-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var Ipify = require('ipify');
+                              <pre class="prettyprint"><code class="language-js">var OpenapiIpify = require('openapi_ipify');
 
-var api = new Ipify.DefaultApi()
+var api = new OpenapiIpify.DefaultApi()
 var opts = {
   'format': format_example, // {String} Response format
   'callback': callback_example // {String} JSONP callback function name
@@ -1165,7 +1165,7 @@ JSONP callback function name
                             <h3 id="examples-Default-getIp-title-200"></h3>
                             <p id="examples-Default-getIp-description-200" class="marked"></p>
                             <script>
-                              var responseDefault200_description = `IP`;
+                              var responseDefault200_description = `Your public IP address`;
                               var responseDefault200_description_break = responseDefault200_description.indexOf('\n');
                               if (responseDefault200_description_break == -1) {
                                 $("#examples-Default-getIp-title-200").text("Status: 200 - " + responseDefault200_description);
@@ -1193,9 +1193,9 @@ JSONP callback function name
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "IP",
+  "description" : "Your public IP address",
   "content" : {
-    "application/json" : {
+    "*/*" : {
       "schema" : {
         "oneOf" : [ {
           "$ref" : "#/components/schemas/Ip"
@@ -1235,8 +1235,8 @@ JSONP callback function name
           <div id="footer">
             <div id="api-_footer">
               <p>Suggestions, contact, support and error reporting;
-                  <div class="app-desc">Information URL: <a href="https://openapi-generator.tech">https://openapi-generator.tech</a></div>
-                  <div class="app-desc">Contact Info: <a href="contributors@openapitools.org">contributors@openapitools.org</a></div>
+                  <div class="app-desc">Information URL: <a href="http://blog.cliffano.com">http://blog.cliffano.com</a></div>
+                  <div class="app-desc">Contact Info: <a href="blah@cliffano.com">blah@cliffano.com</a></div>
               </p>
                 <div class="license-info">MIT</div>
                 <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>

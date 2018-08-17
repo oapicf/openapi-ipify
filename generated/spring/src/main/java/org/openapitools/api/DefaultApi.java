@@ -25,7 +25,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-10T05:23:26.981Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-17T01:58:27.979Z[GMT]")
 
 @Validated
 @Api(value = "default", description = "the default API")
@@ -37,9 +37,9 @@ public interface DefaultApi {
 
     @ApiOperation(value = "Get your public IP address", nickname = "getIp", notes = "", response = Object.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "IP", response = Object.class) })
+        @ApiResponse(code = 200, message = "Your public IP address", response = Object.class) })
     @RequestMapping(value = "/",
-        produces = { "application/json" }, 
+        produces = { "*/*" }, 
         method = RequestMethod.GET)
     default ResponseEntity<Object> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp") @Valid @RequestParam(value = "format", required = false) String format,@ApiParam(value = "JSONP callback function name") @Valid @RequestParam(value = "callback", required = false) String paramCallback) {
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);

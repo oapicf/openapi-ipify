@@ -9,6 +9,7 @@ To see how to make this your own, look here:
 [README]((https://openapi-generator.tech))
 
 - API version: 0.9.0
+For more information, please visit [http://blog.cliffano.com](http://blog.cliffano.com)
 
 ## QHTTPEngine
 

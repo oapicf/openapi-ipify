@@ -18,10 +18,10 @@ REQUIRES = ["connexion"]
 setup(
     name=NAME,
     version=VERSION,
-    description="ipify",
-    author_email="",
+    description="openapi-ipify",
+    author_email="blah@cliffano.com",
     url="",
-    keywords=["OpenAPI", "ipify"],
+    keywords=["OpenAPI", "openapi-ipify"],
     install_requires=REQUIRES,
     packages=find_packages(),
     package_data={'': ['openapi/openapi.yaml']},

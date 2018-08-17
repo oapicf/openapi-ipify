@@ -14,7 +14,7 @@ import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2018-08-10T05:21:44.062Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2018-08-17T01:57:08.062Z[GMT]")
 public class DefaultApiServiceImpl extends DefaultApiService {
     @Override
     public Response getIp( String format,  String paramCallback, SecurityContext securityContext) throws NotFoundException {

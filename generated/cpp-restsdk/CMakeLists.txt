@@ -1,5 +1,5 @@
 #
-# ipify
+# openapi-ipify
 # OpenAPI client for ipify, a simple public IP address API
 #
 # OpenAPI spec version: 1.0.0

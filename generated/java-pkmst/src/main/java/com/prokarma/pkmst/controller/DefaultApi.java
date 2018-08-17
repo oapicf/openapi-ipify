@@ -24,16 +24,16 @@ import java.util.List;
  * @author pkmst
  *
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2018-08-10T05:21:26.533Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2018-08-17T01:56:54.338Z[GMT]")
 
 @Api(value = "Default", description = "the Default API")
 public interface DefaultApi {
 
     @ApiOperation(value = "Get your public IP address", notes = "", response = Object.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "IP", response = Object.class) })
+        @ApiResponse(code = 200, message = "Your public IP address", response = Object.class) })
     @RequestMapping(value = "/",
-        produces = { "application/json" }, 
+        produces = { "*/*" }, 
         method = RequestMethod.GET)
     ResponseEntity<Object> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp")  @RequestParam(value = "format", required = false) String format,@ApiParam(value = "JSONP callback function name")  @RequestParam(value = "callback", required = false) String paramCallback, @RequestHeader(value = "Accept", required = false) String accept) throws Exception;
 

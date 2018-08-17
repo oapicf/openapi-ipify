@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 /**
  * Ip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-10T05:21:29.403Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-17T01:56:56.876Z[GMT]")
 
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Ip   {

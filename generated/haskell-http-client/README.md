@@ -1,6 +1,6 @@
-## OpenAPI Auto-Generated [http-client](https://www.stackage.org/lts-10.0/package/http-client-0.5.7.1) Bindings to `ipify`
+## OpenAPI Auto-Generated [http-client](https://www.stackage.org/lts-10.0/package/http-client-0.5.7.1) Bindings to `openapi-ipify`
 
-The library in `lib` provides auto-generated-from-OpenAPI [http-client](https://www.stackage.org/lts-10.0/package/http-client-0.5.7.1) bindings to the ipify API.
+The library in `lib` provides auto-generated-from-OpenAPI [http-client](https://www.stackage.org/lts-10.0/package/http-client-0.5.7.1) bindings to the openapi-ipify API.
 
 OpenApi Version: 3.0.0
 
@@ -59,10 +59,10 @@ These options allow some customization of the code generation process.
 | allowFromJsonNulls              | allow JSON Null during model decoding from JSON                                                                               | true     | true              |
 | allowNonUniqueOperationIds      | allow *different* API modules to contain the same operationId. Each API must be imported qualified                            | false    | false    |
 | allowToJsonNulls                | allow emitting JSON Null during model encoding to JSON                                                                        | false    | false                |
-| baseModule                      | Set the base module namespace                                                                                                 |          | Ipify                      |
-| cabalPackage                    | Set the cabal package name, which consists of one or more alphanumeric words separated by hyphens                             |          | ipify                    |
+| baseModule                      | Set the base module namespace                                                                                                 |          | Openapi-ipify                      |
+| cabalPackage                    | Set the cabal package name, which consists of one or more alphanumeric words separated by hyphens                             |          | openapi-ipify                    |
 | cabalVersion                    | Set the cabal version number, consisting of a sequence of one or more integers separated by dots                              | 0.1.0.0  | 0.1.0.0                    |
-| configType                      | Set the name of the type used for configuration                                                                               |          | IpifyConfig                      |
+| configType                      | Set the name of the type used for configuration                                                                               |          | Openapi-ipifyConfig                      |
 | dateFormat                      | format string used to parse/render a date                                                                                     | %Y-%m-%d | %Y-%m-%d                      |
 | dateTimeFormat                  | format string used to parse/render a datetime. (Defaults to [formatISO8601Millis][1] when not provided)                       |          |                   |
 | generateEnums                   | Generate specific datatypes for OpenAPI enums                                                                                 | true     | true                   |
@@ -71,7 +71,7 @@ These options allow some customization of the code generation process.
 | generateModelConstructors       | Generate smart constructors (only supply required fields) for models                                                          | true     | true       |
 | inlineMimeTypes                 | Inline (hardcode) the content-type and accept parameters on operations, when there is only 1 option                           | true     | true                 |
 | modelDeriving                   | Additional classes to include in the deriving() clause of Models                                                              |          |                    |
-| requestType                     | Set the name of the type used to generate requests                                                                            |          | IpifyRequest                     |
+| requestType                     | Set the name of the type used to generate requests                                                                            |          | Openapi-ipifyRequest                     |
 | strictFields                    | Add strictness annotations to all model fields                                                                                | true     | true                  |
 | useMonadLogger                  | Use the monad-logger package to provide logging (if instead false, use the katip logging package)                             | false    | false                |
 
@@ -109,13 +109,13 @@ This library is intended to be imported qualified.
 
 | MODULE              | NOTES                                               |
 | ------------------- | --------------------------------------------------- |
-| Ipify.Client    | use the "dispatch" functions to send requests       |
-| Ipify.Core      | core funcions, config and request types             |
-| Ipify.API       | construct api requests                              |
-| Ipify.Model     | describes api models                                |
-| Ipify.MimeTypes | encoding/decoding MIME types (content-types/accept) |
-| Ipify.ModelLens | lenses for model fields                             |
-| Ipify.Logging   | logging functions and utils                         |
+| Openapi-ipify.Client    | use the "dispatch" functions to send requests       |
+| Openapi-ipify.Core      | core funcions, config and request types             |
+| Openapi-ipify.API       | construct api requests                              |
+| Openapi-ipify.Model     | describes api models                                |
+| Openapi-ipify.MimeTypes | encoding/decoding MIME types (content-types/accept) |
+| Openapi-ipify.ModelLens | lenses for model fields                             |
+| Openapi-ipify.Logging   | logging functions and utils                         |
 
 
 ### MimeTypes

@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :ipify, key: :value
+#     config :openapi_ipify, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:ipify, :key)
+#     Application.get_env(:openapi_ipify, :key)
 #
 # Or configure a 3rd-party app:
 #

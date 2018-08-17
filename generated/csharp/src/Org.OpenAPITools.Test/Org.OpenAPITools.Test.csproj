@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-ipify
+openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
 OpenAPI spec version: 0.9.0
-
+Contact: blah@cliffano.com
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -81,7 +81,7 @@ OpenAPI spec version: 0.9.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Org.OpenAPITools\Org.OpenAPITools.csproj">
-          <Project>{AEB44F5B-8E0F-4CF3-8171-1381EFC7E02F}</Project>
+          <Project>{1E8B0F56-62DF-45DB-A994-3221943E1A70}</Project>
           <Name>Org.OpenAPITools</Name>
       </ProjectReference>
   </ItemGroup>

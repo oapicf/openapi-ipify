@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.servlet.ServletContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-10T05:23:26.981Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-17T01:58:27.979Z[GMT]")
 
 @Configuration
 @EnableSwagger2
@@ -25,18 +25,18 @@ public class OpenAPIDocumentationConfig {
 
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("ipify")
+            .title("openapi-ipify")
             .description("OpenAPI client for ipify, a simple public IP address API")
             .license("MIT")
             .licenseUrl("http://unlicense.org")
-            .termsOfServiceUrl("")
+            .termsOfServiceUrl("http://blog.cliffano.com")
             .version("0.9.0")
-            .contact(new Contact("","", ""))
+            .contact(new Contact("","", "blah@cliffano.com"))
             .build();
     }
 
     @Bean
-    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.ipify.base-path:}") String basePath) {
+    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.openapiIpify.base-path:}") String basePath) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                     .apis(RequestHandlerSelectors.basePackage("org.openapitools.api"))

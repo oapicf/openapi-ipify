@@ -12,13 +12,13 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #
-# This is a Bash client for ipify.
+# This is a Bash client for openapi-ipify.
 #
 # LICENSE:
 # 
 #
 # CONTACT:
-# 
+# blah@cliffano.com
 #
 # MORE INFORMATION:
 # 
@@ -443,7 +443,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}ipify command line client (API version 0.9.0)${OFF}
+${BOLD}${WHITE}openapi-ipify command line client (API version 0.9.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -504,10 +504,10 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://api.ipify.org')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}ipify command line client (API version 0.9.0)${OFF}"
+    echo -e "${BOLD}${WHITE}openapi-ipify command line client (API version 0.9.0)${OFF}"
     echo ""
     echo -e "License: MIT"
-    echo -e "Contact: "
+    echo -e "Contact: blah@cliffano.com"
     echo ""
 read -r -d '' appdescription <<EOF
 
@@ -524,7 +524,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}ipify command line client (API version 0.9.0)${OFF}"
+    echo -e "${BOLD}openapi-ipify command line client (API version 0.9.0)${OFF}"
     echo ""
 }
 
@@ -545,7 +545,7 @@ print_getIp_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;IP${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Your public IP address${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 
 

@@ -152,7 +152,7 @@ where
 
                                         match result {
                                             Ok(rsp) => match rsp {
-                                                GetIpResponse::IP
+                                                GetIpResponse::YourPublicIPAddress
 
                                                     (body)
 
@@ -160,7 +160,7 @@ where
                                                 => {
                                                     response.set_status(StatusCode::try_from(200).unwrap());
 
-                                                    response.headers_mut().set(ContentType(mimetypes::responses::GET_IP_IP.clone()));
+                                                    response.headers_mut().set(ContentType(mimetypes::responses::GET_IP_YOUR_PUBLIC_IP_ADDRESS.clone()));
 
 
                                                     let body = serde_json::to_string(&body).expect("impossible to fail to serialize");

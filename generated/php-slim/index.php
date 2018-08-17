@@ -1,6 +1,6 @@
 <?php
 /**
- * ipify
+ * openapi-ipify
  * @version 0.9.0
  */
 

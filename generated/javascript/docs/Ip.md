@@ -1,4 +1,4 @@
-# Ipify.Ip
+# OpenapiIpify.Ip
 
 ## Properties
 Name | Type | Description | Notes

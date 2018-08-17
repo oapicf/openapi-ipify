@@ -2,7 +2,7 @@ PSTOPIC
     about_Org.OpenAPITools
 
 SHORT DESCRIPTION
-    Org.OpenAPITools - the PowerShell module for the ipify
+    Org.OpenAPITools - the PowerShell module for the openapi-ipify
 
 LONG DESCRIPTION
     OpenAPI client for ipify, a simple public IP address API
@@ -12,6 +12,7 @@ LONG DESCRIPTION
     - API version: 0.9.0
     - SDK version: 
     - Build package: org.openapitools.codegen.languages.PowerShellClientCodegen
+    For more information, please visit [http://blog.cliffano.com](http://blog.cliffano.com)
 
     Frameworks supported:
 

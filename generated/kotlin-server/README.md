@@ -1,4 +1,4 @@
-# org.openapitools.server - Kotlin Server library for ipify
+# org.openapitools.server - Kotlin Server library for openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 

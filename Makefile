@@ -25,7 +25,7 @@ generate:
 
 test:
 	cd generated/javascript/ && npm link
-	cd test/javascript/ && npm link ipify
+	cd test/javascript/ && npm link openapi_ipify
 	mocha --timeout 5000 test/javascript/
 
 test-ci:

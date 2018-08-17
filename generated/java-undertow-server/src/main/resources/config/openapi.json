@@ -1,8 +1,13 @@
 {
   "openapi" : "3.0.0",
   "info" : {
-    "title" : "ipify",
+    "title" : "openapi-ipify",
     "description" : "OpenAPI client for ipify, a simple public IP address API",
+    "contact" : {
+      "name" : "Cliffano Subagio",
+      "url" : "http://blog.cliffano.com",
+      "email" : "blah@cliffano.com"
+    },
     "license" : {
       "name" : "MIT"
     },
@@ -40,9 +45,9 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "IP",
+            "description" : "Your public IP address",
             "content" : {
-              "application/json" : {
+              "*/*" : {
                 "schema" : {
                   "oneOf" : [ {
                     "$ref" : "#/components/schemas/Ip"
@@ -54,7 +59,7 @@
             }
           }
         },
-        "x-accepts" : "application/json"
+        "x-accepts" : "*/*"
       }
     }
   },

@@ -1,7 +1,7 @@
-# ipify Bash client
+# openapi-ipify Bash client
 
 ## Overview
-This is a Bash client script for accessing ipify service.
+This is a Bash client script for accessing openapi-ipify service.
 
 The script uses cURL underneath for making all REST calls.
 

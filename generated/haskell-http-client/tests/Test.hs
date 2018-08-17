@@ -12,8 +12,8 @@ import Test.Hspec.QuickCheck
 import PropMime
 import Instances ()
 
-import Ipify.Model
-import Ipify.MimeTypes
+import Openapi-ipify.Model
+import Openapi-ipify.MimeTypes
 
 main :: IO ()
 main =

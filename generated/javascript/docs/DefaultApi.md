@@ -1,4 +1,4 @@
-# Ipify.DefaultApi
+# OpenapiIpify.DefaultApi
 
 All URIs are relative to *https://api.ipify.org*
 
@@ -15,9 +15,9 @@ Get your public IP address
 
 ### Example
 ```javascript
-var Ipify = require('ipify');
+var OpenapiIpify = require('openapi_ipify');
 
-var apiInstance = new Ipify.DefaultApi();
+var apiInstance = new OpenapiIpify.DefaultApi();
 var opts = {
   'format': "format_example", // String | Response format
   'callback': "callback_example" // String | JSONP callback function name

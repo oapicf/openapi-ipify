@@ -1,5 +1,5 @@
 const assert = require('assert');
-const Ipify = require('ipify');
+const Ipify = require('openapi_ipify');
 const api = new Ipify.DefaultApi();
 
 describe('ipify', function() {

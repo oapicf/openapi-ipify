@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.jaxrs.PATCH;
 
 /**
- * ipify
+ * openapi-ipify
  *
  * <p>OpenAPI client for ipify, a simple public IP address API
  *
@@ -32,10 +32,10 @@ public interface DefaultApi  {
      */
     @GET
     @Path("/")
-    @Produces({ "application/json" })
+    @Produces({ "*/*" })
     @ApiOperation(value = "Get your public IP address", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "IP", response = Object.class) })
+        @ApiResponse(code = 200, message = "Your public IP address", response = Object.class) })
     public Object getIp(@QueryParam("format")String format, @QueryParam("callback")String paramCallback);
 }
 

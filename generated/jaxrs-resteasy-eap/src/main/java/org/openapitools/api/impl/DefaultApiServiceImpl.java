@@ -12,7 +12,7 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2018-08-10T05:21:50.330Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2018-08-17T01:57:12.595Z[GMT]")
 public class DefaultApiServiceImpl implements DefaultApi {
       public Response getIp(String format,String paramCallback,SecurityContext securityContext) {
       // do some magic!

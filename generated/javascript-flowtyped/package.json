@@ -1,13 +1,13 @@
 {
-  "name": "ipify",
+  "name": "openapi_ipify",
   "version": "1.0.0",
-  "description": "swagger client for ipify",
+  "description": "swagger client for openapi_ipify",
   "author": "Swagger Codegen Contributors",
   "keywords": [
     "fetch",
     "flow",
     "swagger-client",
-    "ipify"
+    "openapi_ipify"
   ],
   "license": "Unlicense",
   "main": "./lib/index.js",

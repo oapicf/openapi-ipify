@@ -2,8 +2,8 @@
 
 module Instances where
 
-import Ipify.Model
-import Ipify.Core
+import Openapi-ipify.Model
+import Openapi-ipify.Core
 
 import qualified Data.Aeson as A
 import qualified Data.ByteString.Lazy as BL

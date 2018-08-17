@@ -1,4 +1,4 @@
-# org.openapitools.client - Kotlin client library for ipify
+# org.openapitools.client - Kotlin client library for openapi-ipify
 
 ## Requires
 

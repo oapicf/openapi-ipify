@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-10T05:23:26.981Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2018-08-17T01:58:27.979Z[GMT]")
 
 @Controller
-@RequestMapping("${openapi.ipify.base-path:}")
+@RequestMapping("${openapi.openapiIpify.base-path:}")
 public class DefaultApiController implements DefaultApi {
 
     private final NativeWebRequest request;

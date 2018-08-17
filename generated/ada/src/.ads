@@ -1,4 +1,4 @@
---  ipify
+--  openapi_ipify
 --  OpenAPI client for ipify, a simple public IP address API
 --  ------------ EDIT NOTE ------------
 --  This file was generated with openapi-generator.  You can modify it to implement

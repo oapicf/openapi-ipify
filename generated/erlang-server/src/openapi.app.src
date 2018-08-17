@@ -15,5 +15,5 @@
     ]},
     {modules, []},
     {licenses, ["MIT"]},
-    {links, []}
+    {links, ["http://blog.cliffano.com"]}
 ]}.

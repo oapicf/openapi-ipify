@@ -55,10 +55,10 @@ $Manifest = @{
 
     Author = 'OpenAPI Generator Team'
     CompanyName = 'openapitools.org'
-    Description = 'Org.OpenAPITools - the PowerShell module for ipify'
+    Description = 'Org.OpenAPITools - the PowerShell module for openapi-ipify'
 
     RootModule = 'Org.OpenAPITools.psm1'
-    Guid = '{CDAEFF10-5E19-4EB0-8C4E-6C34895C41BD}' # Has to be static, otherwise each new build will be considered different module
+    Guid = '{6B0657C1-599A-45EA-9C5A-6537A14F7346}' # Has to be static, otherwise each new build will be considered different module
 
     PowerShellVersion = '3.0'
 
