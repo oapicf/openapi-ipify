@@ -5,6 +5,10 @@ info:
   description: OpenAPI client for ipify, a simple public IP address API
   license:
     name: MIT
+  contact:
+    name: Cliffano Subagio
+    url: http://blog.cliffano.com
+    email: blah@cliffano.com
 servers:
   - url: https://api.ipify.org
 paths:
