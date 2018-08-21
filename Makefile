@@ -31,7 +31,7 @@ test:
 test-ci:
 	sudo chown travis:travis -R generated/
 	cd generated/javascript/ && npm link
-	cd test/javascript/ && npm link ipify
+	cd test/javascript/ && npm link openapi_ipify
 	mocha --timeout 10000 test/javascript/
 
 doc:
