@@ -1,7 +1,7 @@
 <img align="right" src="https://raw.github.com/cliffano/openapi-ipify/master/avatar.jpg" alt="Avatar"/>
 
 [![Build Status](https://img.shields.io/travis/cliffano/openapi-ipify.svg)](http://travis-ci.org/cliffano/openapi-ipify)
-[![Published npm Version](https://img.shields.io/npm/v/openapi-ipify.svg)](http://www.npmjs.com/package/openapi-ipify)
+[![Published npm Version](https://img.shields.io/npm/v/openapi_ipify.svg)](http://www.npmjs.com/package/openapi_ipify)
 
 OpenAPI ipify
 -------------
