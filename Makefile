@@ -17,9 +17,6 @@ conf-placeholder:
 	  mkdir -p clients/$$lang/; \
 	  cp fixtures/conf-placeholder.json clients/$$lang/conf.json; \
 	done
-	for lang in ${LANGS_PRIMARY} ; do \
-	  git checkout clients/$$lang/conf.json; \
-	done
 
 local-generate:
 	LOCAL=true make generate
