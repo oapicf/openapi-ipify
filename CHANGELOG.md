@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Replace Travis CI with GH Actions
+- Upgrade OpenAPI Generator version to 5.4.0
 
 ## 0.9.0 - 2018-08-17
 ### Added
