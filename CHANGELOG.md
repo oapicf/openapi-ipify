@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add release and publish automation
+
+### Changed
+- Replace Travis CI with GH Actions
+
 ## 0.9.0 - 2018-08-17
 ### Added
 - Initial version
