@@ -1,7 +1,7 @@
 <img align="right" src="https://raw.github.com/cliffano/openapi-ipify/master/avatar.jpg" alt="Avatar"/>
 
-[![Build Status](https://img.shields.io/travis/cliffano/openapi-ipify.svg)](http://travis-ci.org/cliffano/openapi-ipify)
-[![Published npm Version](https://img.shields.io/npm/v/openapi_ipify.svg)](http://www.npmjs.com/package/openapi_ipify)
+[![Build Status](https://github.com/cliffano/openapi-ipify/actions/workflows/ci-workflow.yaml/badge.svg)](https://github.com/cliffano/openapi-ipify/actions/workflows/ci-workflow.yaml)
+<br/>
 
 OpenAPI ipify
 -------------
@@ -10,27 +10,47 @@ OpenAPI ipify is an OpenAPI v3 specification and a set of generated API clients 
 
 The API clients are generated using [OpenAPI Generator](https://openapi-generator.tech/).
 
-Installation
-------------
+Published packages
+------------------
 
-Install dependencies:
+| Language | Package | Status |
+|----------|---------|--------|
+| JavaScript | [openapi-ipify]((http://www.npmjs.com/package/openapi-ipify)) | [![Published Version](https://img.shields.io/npm/v/openapi-ipify.svg)](http://www.npmjs.com/package/openapi-ipify) |
+| Python | [openapiipify]((https://pypi.python.org/pypi/openapiipify)) | [![Published Version](https://img.shields.io/pypi/v/openapiipify.svg)](https://pypi.python.org/pypi/openapiipify) |
+| Ruby | [openapi_ipify]((https://rubygems.org/gems/openapi_ipify)) | [![Published Version](https://img.shields.io/gem/v/openapi_ipify.svg)](https://rubygems.org/gems/openapi_ipify) |
 
-    make deps
+Version Matrix
+--------------
 
-Generate API clients:
-
-    make generate
+| OpenAPI Ipify Version | OpenAPI Version | OpenAPI Generator Version |
+|-----------------------|-----------------|---------------------------|
+| 1.0.0 | 3.0.0 | 5.4.0 |
 
 Usage
 -----
 
-You can either use the generated clients from `generated/<lang>/` directory.
+Generate API clients of the currently supported languages:
+
+    make generate GEN_BASE_DIR=<path/to/openapi-ipify>
+
+Installation
+------------
+
+You can either use the generated clients from `clients/<lang>/generated/` directory.
 
 Or you can use the published packages like below:
 
-node.js:
+Install JavaScript client:
 
     npm install openapi-ipify
+
+Install Python client:
+
+    pip install openapiipify
+
+Install Ruby client:
+
+    gem install openapi_ipify
 
 Colophon
 --------

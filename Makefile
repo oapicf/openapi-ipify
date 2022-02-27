@@ -82,8 +82,8 @@ build-ruby:
 	cd clients/ruby/generated/ && \
 	  gem install bundler --version=1.17.3 && \
 	  bundle install --binstubs && \
-	  gem build swaggy_jenkins.gemspec && \
-	  gem install ./swaggy_jenkins-*.gem
+	  gem build openapi_ipify.gemspec && \
+	  gem install ./openapi_ipify-*.gem
 
 test-javascript: build-javascript
 	cd clients/javascript/generated/ && \
@@ -106,7 +106,7 @@ publish-python: build-python
 
 publish-ruby: build-ruby
 	cd clients/ruby/generated/ && \
-	  gem push `ls swaggy_jenkins-*.gem`
+	  gem push `ls openapi_ipify-*.gem`
 
 doc:
 	bootprint openapi specification/ipify.yml doc/api/latest/
