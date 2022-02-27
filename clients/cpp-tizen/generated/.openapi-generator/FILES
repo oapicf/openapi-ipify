@@ -1,0 +1,16 @@
+.openapi-generator-ignore
+doc/Doxyfile
+doc/README.md
+doc/generateDocumentation.sh
+src/DefaultManager.cpp
+src/DefaultManager.h
+src/Error.cpp
+src/Error.h
+src/Helpers.cpp
+src/Helpers.h
+src/Ip.cpp
+src/Ip.h
+src/NetClient.cpp
+src/NetClient.h
+src/Object.h
+src/RequestInfo.h

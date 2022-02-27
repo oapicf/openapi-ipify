@@ -1,0 +1,71 @@
+h1. openapi-ipify
+
+OpenAPI client for ipify, a simple public IP address API
+
+*Version:* 1.0.0-pre.0
+
+----
+
+{expand:Table of Contents - Click to expand}
+{toc:printable=true|style=square|minLevel=2|maxLevel=3|type=list|outline=false|include=.*}
+{expand}
+
+h2. Endpoints
+
+
+h3. getIp
+{panel:title=getIp|borderStyle=solid|borderColor=#003b6f|titleBGColor=#003b6f|titleColor=#a6b8c7|bgColor=#ffffff}
+    *Summary:* Get your public IP address
+    *Description:* *No Description*
+
+	|| HttpMethod | {status:colour=Yellow|title=get|subtle=false} |
+    || Protocol | {noformat:nopanel=true}https{noformat} |
+    || Path | {noformat:nopanel=true}/{noformat} |
+    || Base Path | {noformat:nopanel=true}https://api.ipify.org{noformat} |
+    || Produces | {noformat:nopanel=true}*/*{noformat} |
+----
+h4. Parameters
+
+
+
+h5. Query Parameters
+        ||Name||Description||Required||Default||Pattern||
+        |format |Response format | String | (x) |null |  | [json, jsonp] ||callback |JSONP callback function name | String | (x) |null |  |  |
+----
+h4. Responses
+
+    	|| Status Code | {status:colour=Green|title=200|subtle=false} |
+    	|| Message | Your public IP address |
+    	|| Response Type | oneOf<Ip,string> |
+    	|| Response Model | [oneOf&lt;Ip,string&gt; Model|#oneOf&lt;Ip,string&gt;ModelAnchor|Jump to model] |
+    	|| Response Schema | {code:collapse=true}{
+  "description" : "Your public IP address",
+  "content" : {
+    "*/*" : {
+      "schema" : {
+        "oneOf" : [ {
+          "$ref" : "#/components/schemas/Ip"
+        }, {
+          "type" : "string"
+        } ]
+      }
+    }
+  }
+}{code} |
+       
+
+{panel}
+
+
+{anchor:models}
+h2. Models
+
+        {anchor:IpModelAnchor}
+        h3. Ip
+
+        
+
+        
+        ||Field Name||Required||Type||Description||Enum||
+         |ip |(/) |{noformat:nopanel=true}String{noformat} | |  |
+         

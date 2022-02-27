@@ -1,0 +1,21 @@
+{ application, openapi
+, [ {description, "OpenAPI client for ipify, a simple public IP address API"}
+  , {vsn, "0.1.0"}
+  , {registered, []}
+  , { applications
+    , [ kernel
+      , stdlib
+      , ssl
+      , jsx
+      ]
+    }
+  , { env
+    , [ {host, "http://api.ipify.org"}
+      , {basic_auth, {"admin", "admin"}}
+      ]
+    }
+  , {modules, []}
+  , {maintainers, []}
+  , {licenses, ["MIT"]}
+  , {links, ["http://blog.cliffano.com"]}
+]}.

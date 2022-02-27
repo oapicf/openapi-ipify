@@ -1,0 +1,8 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+build.sbt
+project/build.properties
+project/plugins.sbt
+src/main/scala/io/swagger/client/api/DefaultApi.scala
+src/main/scala/io/swagger/client/model/Ip.scala

@@ -1,0 +1,17 @@
+package org.openapitools.server.api.verticle;
+
+import org.openapitools.server.api.model.Ip;
+import org.openapitools.server.api.MainApiException;
+import org.openapitools.server.api.model.OneOfIpstring;
+
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+
+import java.util.List;
+import java.util.Map;
+
+public interface DefaultApi  {
+    //getIp
+    void getIp(String format, String paramCallback, Handler<AsyncResult<OneOfIpstring>> handler);
+
+}

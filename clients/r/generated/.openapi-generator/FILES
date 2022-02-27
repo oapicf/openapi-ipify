@@ -1,0 +1,17 @@
+.Rbuildignore
+.gitignore
+.openapi-generator-ignore
+.travis.yml
+DESCRIPTION
+NAMESPACE
+R/api_client.R
+R/api_response.R
+R/default_api.R
+R/ip.R
+README.md
+docs/DefaultApi.md
+docs/Ip.md
+git_push.sh
+tests/testthat.R
+tests/testthat/test_default_api.R
+tests/testthat/test_ip.R

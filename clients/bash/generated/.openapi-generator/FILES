@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+Dockerfile
+README.md
+_client.sh
+client.sh
+client.sh.bash-completion
+docs/DefaultApi.md
+docs/Ip.md

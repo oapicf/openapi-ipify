@@ -1,0 +1,12 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/org/openapitools/OpenAPI2SpringBoot.java
+src/main/java/org/openapitools/RFC3339DateFormat.java
+src/main/java/org/openapitools/api/ApiUtil.java
+src/main/java/org/openapitools/api/DefaultApi.java
+src/main/java/org/openapitools/api/DefaultApiController.java
+src/main/java/org/openapitools/configuration/HomeController.java
+src/main/java/org/openapitools/model/Ip.java
+src/main/resources/application.properties
+src/main/resources/openapi.yaml

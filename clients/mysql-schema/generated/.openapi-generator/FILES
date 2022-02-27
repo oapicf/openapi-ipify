@@ -1,0 +1,4 @@
+.openapi-generator-ignore
+Model/Ip.sql
+README.md
+mysql_schema.sql

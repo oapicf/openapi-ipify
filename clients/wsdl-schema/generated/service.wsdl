@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:schemas="http://localhost/soap/ServiceV1/model" xmlns:wsdl="http://localhost/soap/ServiceV1/service" targetNamespace="http://localhost/soap/ServiceV1/service" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:tns="http://localhost/soap/ServiceV1/model" targetNamespace="http://localhost/soap/ServiceV1/model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="Get_RequestMessage" type="schemas:Get_RequestMessage" />
+      <xs:element name="Get_ResponseMessage" type="schemas:Get_ResponseMessage" />
+      <xs:complexType name="Ip">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="ip" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="Format">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="JSON" />
+          <xs:enumeration value="JSONP" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:complexType name="Get_RequestMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="format" type="schemas:Format">
+            <xs:annotation>
+              <xs:documentation>Response format</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="callback" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>JSONP callback function name</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Get_ResponseMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="OneOf&lt;Ip,string&gt;" type="schemas:OneOf&lt;Ip,string&gt;">
+            <xs:annotation>
+              <xs:documentation>Your public IP address</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="Get_RequestMessage">
+    <part name="Get_RequestMessage" element="schemas:Get_RequestMessage" />
+  </message>
+  <message name="Get_ResponseMessage">
+    <part name="Get_ResponseMessage" element="schemas:Get_ResponseMessage" />
+  </message>
+  <portType name="ServiceV1_PortType">
+    <operation name="Get">
+      <documentation>Get your public IP address</documentation>
+      <input message="wsdl:Get_RequestMessage" />
+      <output message="wsdl:Get_ResponseMessage">
+        <documentation>Your public IP address</documentation>
+      </output>
+    </operation>
+  </portType>
+  <binding name="ServiceV1_Binding" type="wsdl:ServiceV1_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Get">
+      <soap:operation soapAction="Get" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServiceV1">
+    <documentation>OpenAPI client for ipify, a simple public IP address API</documentation>
+    <port name="default_Port" binding="wsdl:ServiceV1_Binding">
+      <soap:address location="http://localhost/soap/ServiceV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

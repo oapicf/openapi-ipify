@@ -1,0 +1,10 @@
+.openapi-generator-ignore
+ApiServiceBinder.ts
+Headers.ts
+HttpClient.ts
+HttpResponse.ts
+IAPIConfiguration.ts
+IHttpClient.ts
+api/default.service.ts
+model/ip.ts
+variables.ts

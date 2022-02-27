@@ -1,0 +1,11 @@
+@startuml
+
+title openapi-ipify Schemas Diagram
+
+entity Ip {
+    * ip: String
+}
+
+
+
+@enduml

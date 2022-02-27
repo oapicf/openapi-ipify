@@ -1,0 +1,8 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+composer.json
+src/App/ApiClient.php
+src/App/ApiClientFactory.php
+src/App/DTO/GetIpParameterData.php
+src/App/DTO/Ip.php

@@ -1,0 +1,12 @@
+.openapi-generator-ignore
+README.md
+build.gradle.kts
+pom.xml
+settings.gradle
+src/main/kotlin/org/openapitools/Application.kt
+src/main/kotlin/org/openapitools/api/ApiUtil.kt
+src/main/kotlin/org/openapitools/api/DefaultApiController.kt
+src/main/kotlin/org/openapitools/api/Exceptions.kt
+src/main/kotlin/org/openapitools/model/Ip.kt
+src/main/resources/application.yaml
+src/test/kotlin/org/openapitools/api/DefaultApiTest.kt

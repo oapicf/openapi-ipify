@@ -1,0 +1,142 @@
+= openapi-ipify
+blah@cliffano.com
+1.0.0-pre.0
+:toc: left
+:numbered:
+:toclevels: 3
+:source-highlighter: highlightjs
+:keywords: openapi, rest, openapi-ipify
+:specDir: 
+:snippetDir: 
+:generator-template: v1 2019-12-20
+:info-url: http://blog.cliffano.com
+:app-name: openapi-ipify
+
+[abstract]
+.Abstract
+OpenAPI client for ipify, a simple public IP address API
+
+
+// markup not found, no include::{specDir}intro.adoc[opts=optional]
+
+
+
+== Endpoints
+
+
+[.Default]
+=== Default
+
+
+[.getIp]
+==== getIp
+
+`GET /`
+
+Get your public IP address
+
+===== Description
+
+
+
+
+// markup not found, no include::{specDir}GET/spec.adoc[opts=optional]
+
+
+
+===== Parameters
+
+
+
+
+
+====== Query Parameters
+
+[cols="2,3,1,1,1"]
+|===
+|Name| Description| Required| Default| Pattern
+
+| format
+| Response format 
+| -
+| null
+| 
+
+| callback
+| JSONP callback function name 
+| -
+| null
+| 
+
+|===
+
+
+===== Return Type
+
+
+<<oneOf&lt;Ip,string&gt;>>
+
+
+===== Content Type
+
+* */*
+
+===== Responses
+
+.http response codes
+[cols="2,3,1"]
+|===
+| Code | Message | Datatype
+
+
+| 200
+| Your public IP address
+|  <<oneOf&lt;Ip,string&gt;>>
+
+|===
+
+===== Samples
+
+
+// markup not found, no include::{snippetDir}GET/http-request.adoc[opts=optional]
+
+
+// markup not found, no include::{snippetDir}GET/http-response.adoc[opts=optional]
+
+
+
+// file not found, no * wiremock data link :GET/GET.json[]
+
+
+ifdef::internal-generation[]
+===== Implementation
+
+// markup not found, no include::{specDir}GET/implementation.adoc[opts=optional]
+
+
+endif::internal-generation[]
+
+
+[#models]
+== Models
+
+
+[#Ip]
+=== _Ip_ 
+
+
+
+[.fields-Ip]
+[cols="2,1,2,4,1"]
+|===
+| Field Name| Required| Type| Description| Format
+
+| ip
+| X
+| String 
+| 
+|  
+
+|===
+
+

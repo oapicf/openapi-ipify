@@ -1,0 +1,12 @@
+controllerPackage: org.openapitools.controllers
+modelPackage:  org.openapitools.model
+swaggerUrl: ./src/main/openapi/openapi.yaml
+modelMappings:
+  # to enable explicit mappings, use this syntax:
+  DefinitionFromSwaggerSpecification: fully.qualified.path.to.Model
+  Ip : org.openapitools.model.Ip
+
+entityProcessors:
+  - json
+  - xml
+  - yaml

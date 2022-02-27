@@ -1,0 +1,3 @@
+.openapi-generator-ignore
+API/Client/DefaultApi.js
+API/Client/Ip.js

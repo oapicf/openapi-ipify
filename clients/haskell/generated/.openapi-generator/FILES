@@ -1,0 +1,7 @@
+.openapi-generator-ignore
+README.md
+Setup.hs
+lib/Openapi-ipify/API.hs
+lib/Openapi-ipify/Types.hs
+openapi-ipify.cabal
+stack.yaml

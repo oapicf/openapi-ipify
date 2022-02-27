@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  contact:
+    email: blah@cliffano.com
+    name: Cliffano Subagio
+    url: http://blog.cliffano.com
+  description: OpenAPI client for ipify, a simple public IP address API
+  license:
+    name: MIT
+  title: openapi-ipify
+  version: 1.0.0-pre.0
+servers:
+- url: https://api.ipify.org
+paths:
+  /:
+    get:
+      operationId: get_ip
+      parameters:
+      - description: Response format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - json
+          - jsonp
+          type: string
+        style: form
+      - description: JSONP callback function name
+        explode: true
+        in: query
+        name: callback
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                oneOf:
+                - $ref: '#/components/schemas/Ip'
+                - type: string
+          description: Your public IP address
+      summary: Get your public IP address
+      x-openapi-router-controller: openapi_server.controllers.default_controller
+components:
+  schemas:
+    Ip:
+      properties:
+        ip:
+          title: ip
+          type: string
+      required:
+      - ip
+      title: Ip
