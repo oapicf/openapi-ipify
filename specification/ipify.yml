@@ -38,16 +38,7 @@ paths:
               schema:
                 oneOf:
                   - $ref: "#/components/schemas/Ip"
-                  - type: string
-            # 'application/json':
-            #   schema:
-            #     $ref: "#/components/schemas/Ip"
-            # 'application/javascript':
-            #   schema:
-            #     type: string
-            # 'text/plain':
-            #   schema:
-            #     type: string
+                  - $ref: "#/components/schemas/IpString"
 components:
   schemas:
     Ip:
@@ -56,3 +47,5 @@ components:
       properties:
         ip:
           type: string
+    IpString:
+      type: string
