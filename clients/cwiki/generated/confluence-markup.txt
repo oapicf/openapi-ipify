@@ -46,7 +46,7 @@ h4. Responses
         "oneOf" : [ {
           "$ref" : "#/components/schemas/Ip"
         }, {
-          "type" : "string"
+          "$ref" : "#/components/schemas/IpString"
         } ]
       }
     }

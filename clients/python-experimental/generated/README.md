@@ -87,6 +87,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Ip](docs/Ip.md)
+ - [IpString](docs/IpString.md)
 
 ## Documentation For Authorization
 

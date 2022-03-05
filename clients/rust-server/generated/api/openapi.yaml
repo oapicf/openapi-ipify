@@ -42,7 +42,7 @@ paths:
               schema:
                 oneOf:
                 - $ref: '#/components/schemas/Ip'
-                - type: string
+                - $ref: '#/components/schemas/IpString'
           description: Your public IP address
       summary: Get your public IP address
 components:
@@ -53,4 +53,6 @@ components:
           type: string
       required:
       - ip
+    IpString:
+      type: string
 

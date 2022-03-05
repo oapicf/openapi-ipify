@@ -3,6 +3,7 @@
             [clojure.spec.alpha :as s]
             [spec-tools.core :as st]
             [orchestra.core :refer [defn-spec]]
+            [openapi-ipify.specs.ip-string :refer :all]
             [openapi-ipify.specs.ip :refer :all]
             )
   (:import (java.io File)))

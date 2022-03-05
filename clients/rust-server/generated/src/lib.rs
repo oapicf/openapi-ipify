@@ -16,7 +16,7 @@ pub const API_VERSION: &'static str = "1.0.0-pre.0";
 pub enum GetIpResponse {
     /// Your public IP address
     YourPublicIPAddress
-    (swagger::OneOf2<models::Ip,String>)
+    (swagger::OneOf2<models::Ip,models::IpString>)
 }
 
 /// API

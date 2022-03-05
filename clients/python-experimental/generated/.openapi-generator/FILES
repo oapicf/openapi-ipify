@@ -5,6 +5,7 @@
 README.md
 docs/DefaultApi.md
 docs/Ip.md
+docs/IpString.md
 git_push.sh
 openapi_client/__init__.py
 openapi_client/api/__init__.py
@@ -15,6 +16,7 @@ openapi_client/configuration.py
 openapi_client/exceptions.py
 openapi_client/model/__init__.py
 openapi_client/model/ip.py
+openapi_client/model/ip_string.py
 openapi_client/models/__init__.py
 openapi_client/rest.py
 openapi_client/schemas.py
@@ -25,4 +27,5 @@ test-requirements.txt
 test/__init__.py
 test/test_default_api.py
 test/test_ip.py
+test/test_ip_string.py
 tox.ini

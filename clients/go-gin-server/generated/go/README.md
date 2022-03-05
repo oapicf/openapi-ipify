@@ -13,7 +13,7 @@ To see how to make this your own, look here:
 [README](https://openapi-generator.tech)
 
 - API version: 1.0.0-pre.0
-- Build date: 2022-02-27T09:33:06.610224Z[Etc/UTC]
+- Build date: 2022-03-05T04:44:14.706017Z[Etc/UTC]
 For more information, please visit [http://blog.cliffano.com](http://blog.cliffano.com)
 
 ### Running the server

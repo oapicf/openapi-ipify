@@ -15,6 +15,33 @@ package .Models is
 
 
 
+   type IpString_Type is
+     record
+     end record;
+
+   package IpString_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => IpString_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in IpString_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in IpString_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out IpString_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out IpString_Type_Vectors.Vector);
+
+
+
+
    type Ip_Type is
      record
        Ip : Swagger.UString;

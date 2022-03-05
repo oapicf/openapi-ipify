@@ -29,7 +29,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import io.swagger.annotations.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2022-02-27T09:34:21.415016Z[Etc/UTC]")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2022-03-05T05:05:48.296709Z[Etc/UTC]")
 @Controller("${context-path}")
 public class DefaultController {
     /**

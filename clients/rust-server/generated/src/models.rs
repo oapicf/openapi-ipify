@@ -115,3 +115,46 @@ impl std::convert::TryFrom<hyper::header::HeaderValue> for header::IntoHeaderVal
     }
 }
 
+
+#[derive(Debug, Clone, PartialEq, PartialOrd, serde::Serialize, serde::Deserialize)]
+#[cfg_attr(feature = "conversion", derive(frunk::LabelledGeneric))]
+pub struct IpString(String);
+
+impl std::convert::From<String> for IpString {
+    fn from(x: String) -> Self {
+        IpString(x)
+    }
+}
+
+impl std::string::ToString for IpString {
+    fn to_string(&self) -> String {
+       self.0.to_string()
+    }
+}
+
+impl std::str::FromStr for IpString {
+    type Err = std::string::ParseError;
+    fn from_str(x: &str) -> std::result::Result<Self, Self::Err> {
+        std::result::Result::Ok(IpString(x.to_string()))
+    }
+}
+
+impl std::convert::From<IpString> for String {
+    fn from(x: IpString) -> Self {
+        x.0
+    }
+}
+
+impl std::ops::Deref for IpString {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+
+impl std::ops::DerefMut for IpString {
+    fn deref_mut(&mut self) -> &mut String {
+        &mut self.0
+    }
+}
+

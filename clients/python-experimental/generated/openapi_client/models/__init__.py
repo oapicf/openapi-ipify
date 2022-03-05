@@ -12,3 +12,4 @@
 # sys.setrecursionlimit(n)
 
 from openapi_client.model.ip import Ip
+from openapi_client.model.ip_string import IpString

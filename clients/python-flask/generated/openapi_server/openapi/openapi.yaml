@@ -42,7 +42,7 @@ paths:
               schema:
                 oneOf:
                 - $ref: '#/components/schemas/Ip'
-                - type: string
+                - $ref: '#/components/schemas/IpString'
           description: Your public IP address
       summary: Get your public IP address
       x-openapi-router-controller: openapi_server.controllers.default_controller
@@ -56,3 +56,5 @@ components:
       required:
       - ip
       title: Ip
+    IpString:
+      type: string

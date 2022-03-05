@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getIp**
-> swagger::OneOf2<models::Ip,String> getIp(optional)
+> swagger::OneOf2<models::Ip,models::IpString> getIp(optional)
 Get your public IP address
 
 ### Required Parameters
@@ -27,7 +27,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**swagger::OneOf2<models::Ip,String>**](swagger::OneOf2<models::Ip,String>.md)
+[**swagger::OneOf2<models::Ip,models::IpString>**](swagger::OneOf2<models::Ip,models::IpString>.md)
 
 ### Authorization
 
