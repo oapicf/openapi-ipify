@@ -1,3 +1,23 @@
 {
-    
-}
+    "artifactId": "openapiipify",
+    "artifactVersion": "1.0.0-pre.0",
+    "artifactUrl": "https://github.com/cliffano/openapi-ipify",
+    "artifactDescription": "Ipify API client generated from Swagger / Open API specification",
+    "groupId": "com.cliffano",
+    "invokerPackage": "com.cliffano.openapiipify",
+    "apiPackage": "com.cliffano.openapiipify.api",
+    "modelPackage": "com.cliffano.openapiipify.model",
+    "licenseName": "MIT",
+    "licenseUrl": "https://github.com/cliffano/openapi-ipify/blob/master/LICENSE",
+    "developerName": "Cliffano Subagio",
+    "developerEmail": "blah@cliffano.com",
+    "developerOrganization": "Studio Cliffano",
+    "developerOrganizationUrl": "http://cliffano.com",
+    "scmConnection": "scm:git:git@github.com:cliffano/openapi-ipify.git",
+    "scmDeveloperConnection": "scm:git:git@github.com:cliffano/openapi-ipify.git",
+    "scmUrl": "https://github.com/cliffano/openapi-ipify",
+    "distributionManagementRepositoryId": "sonatype-release",
+    "distributionManagementRepositoryName": "Sonatype Release",
+    "distributionManagementRepositoryUrl": "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+  }
+  

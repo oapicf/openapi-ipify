@@ -8,6 +8,13 @@
       }
     },
     {
+      "path": "clients/java/conf.json",
+      "type": "json",
+      "params": {
+        "property": "artifactVersion"
+      }
+    },
+    {
       "path": "clients/javascript/conf.json",
       "type": "json",
       "params": {
