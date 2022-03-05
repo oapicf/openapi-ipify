@@ -34,11 +34,15 @@ paths:
         '200':
           description: Your public IP address
           content:
-            '*/*':
+            'application/json':
               schema:
-                oneOf:
-                  - $ref: "#/components/schemas/Ip"
-                  - $ref: "#/components/schemas/IpString"
+                $ref: "#/components/schemas/Ip"
+            'application/javascript':
+              schema:
+                type: string
+            'text/plain':
+              schema:
+                type: string
 components:
   schemas:
     Ip:
@@ -47,5 +51,3 @@ components:
       properties:
         ip:
           type: string
-    IpString:
-      type: string
