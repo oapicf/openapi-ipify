@@ -4,6 +4,7 @@ oag_version = 5.4.0
 version ?= 1.0.0-pre.0
 
 ci: clean deps generate test-javascript test-python test-ruby doc
+local-ci: clean deps local-generate test-javascript test-python test-ruby doc
 
 clean:
 	rm -rf clients/*/generated
