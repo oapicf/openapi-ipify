@@ -65,7 +65,7 @@ namespace Org.OpenAPITools.Test.Api
             //string format = null;
             //string callback = null;
             //var response = instance.GetIp(format, callback);
-            //Assert.IsType<OneOfIpstring>(response);
+            //Assert.IsType<Ip>(response);
         }
     }
 }

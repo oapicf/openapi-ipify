@@ -8,7 +8,6 @@ open DefaultApiHandlerParams
 open DefaultApiServiceInterface
 open DefaultApiServiceImplementation
 open OpenAPI.Model.Ip
-open OpenAPI.Model.OneOfIpstring
 
 module DefaultApiHandler =
 

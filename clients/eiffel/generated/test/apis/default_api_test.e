@@ -18,7 +18,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: ONE_OF_IPSTRING
+            l_response: IP
             l_format: STRING_32
             l_callback: STRING_32
         do

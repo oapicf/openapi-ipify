@@ -5,7 +5,6 @@ import org.openapitools.model.*;
 
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -17,7 +16,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 @RequestScoped
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2022-03-05T05:31:58.537557Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2022-03-05T14:56:26.451943Z[Etc/UTC]")
 public class DefaultApiServiceImpl implements DefaultApiService {
       public Response getIp(String format,String paramCallback,SecurityContext securityContext)
       throws NotFoundException {

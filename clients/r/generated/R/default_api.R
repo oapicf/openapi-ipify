@@ -20,12 +20,12 @@
 #' \itemize{
 #' \item \emph{ @param } format Enum < [json, jsonp] >
 #' \item \emph{ @param } callback character
-#' \item \emph{ @returnType } \link{OneOfIpstring} \cr
+#' \item \emph{ @returnType } \link{Ip} \cr
 #'
 #'
 #' \item status code : 200 | Your public IP address
 #'
-#' \item return type : OneOfIpstring 
+#' \item return type : Ip 
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -100,7 +100,7 @@ DefaultApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "OneOfIpstring", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "Ip", loadNamespace("openapi")),
           error = function(e){
              stop("Failed to deserialize response")
           }

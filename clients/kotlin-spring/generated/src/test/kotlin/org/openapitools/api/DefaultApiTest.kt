@@ -1,7 +1,6 @@
 package org.openapitools.api
 
 import org.openapitools.model.Ip
-import org.openapitools.model.OneOfLessThanIpCommaStringGreaterThan
 import org.junit.jupiter.api.Test
 import org.springframework.http.ResponseEntity
 
@@ -19,7 +18,7 @@ class DefaultApiTest {
     fun getIpTest() {
         val format:kotlin.String? = TODO()
         val paramCallback:kotlin.String? = TODO()
-        val response: ResponseEntity<OneOfLessThanIpCommaStringGreaterThan> = api.getIp(format, paramCallback)
+        val response: ResponseEntity<Ip> = api.getIp(format, paramCallback)
 
         // TODO: test validations
     }

@@ -21,13 +21,17 @@ Response format
 .PARAMETER Callback
 JSONP callback function name
 
+.PARAMETER ReturnType
+
+Select the return type (optional): application/json, application/javascript, text/plain
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-OneOfIpstring
+Ip
 #>
 function Get-Ip {
     [CmdletBinding()]
@@ -39,6 +43,9 @@ function Get-Ip {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Callback},
+        [String]
+        [ValidateSet("application/json", "application/javascript", "text/plain")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
@@ -58,7 +65,12 @@ function Get-Ip {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('*/*')
+        $LocalVarAccepts = @('application/json', 'application/javascript', 'text/plain')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
 
         $LocalVarUri = '/'
 
@@ -79,7 +91,7 @@ function Get-Ip {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "OneOfIpstring" `
+                                -ReturnType "Ip" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

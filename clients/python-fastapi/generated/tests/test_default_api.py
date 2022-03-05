@@ -4,7 +4,6 @@ from fastapi.testclient import TestClient
 
 
 from openapi_server.models.ip import Ip  # noqa: F401
-from openapi_server.models.one_of_ipstring import OneOfIpstring  # noqa: F401
 
 
 def test_get_ip(client: TestClient):

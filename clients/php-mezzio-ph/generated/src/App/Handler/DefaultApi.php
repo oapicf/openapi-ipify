@@ -24,14 +24,18 @@ class DefaultApi
      *     "source": PHAttribute\Transfer::SOURCE_GET
      * })
      * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
-     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="n/a")
+     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="application/json")
+     * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
+     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="application/javascript")
+     * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
+     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="text/plain")
      * @param ServerRequestInterface $request
      *
      * @throws PHException\HttpCode 501 if the method is not implemented
      *
-     * @return OneOfIpString
+     * @return \App\DTO\Ip
      */
-    public function getIp(ServerRequestInterface $request): OneOfIpString
+    public function getIp(ServerRequestInterface $request): \App\DTO\Ip
     {
         //TODO implement method
         /** @var \App\DTO\GetIpQueryData $queryData */

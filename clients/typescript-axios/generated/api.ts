@@ -99,7 +99,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getIp(format?: 'json' | 'jsonp', callback?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ip | string>> {
+        async getIp(format?: 'json' | 'jsonp', callback?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ip>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIp(format, callback, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -121,7 +121,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getIp(format?: 'json' | 'jsonp', callback?: string, options?: any): AxiosPromise<Ip | string> {
+        getIp(format?: 'json' | 'jsonp', callback?: string, options?: any): AxiosPromise<Ip> {
             return localVarFp.getIp(format, callback, options).then((request) => request(axios, basePath));
         },
     };

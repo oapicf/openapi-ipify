@@ -38,7 +38,7 @@ class DefaultApi(object):
         self.api_client = api_client
         self.get_ip_endpoint = _Endpoint(
             settings={
-                'response_type': (bool, date, datetime, dict, float, int, list, str, none_type,),
+                'response_type': (Ip,),
                 'auth': [],
                 'endpoint_path': '/',
                 'operation_id': 'get_ip',
@@ -88,7 +88,9 @@ class DefaultApi(object):
             },
             headers_map={
                 'accept': [
-                    '*/*'
+                    'application/json',
+                    'application/javascript',
+                    'text/plain'
                 ],
                 'content_type': [],
             },
@@ -139,7 +141,7 @@ class DefaultApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            bool, date, datetime, dict, float, int, list, str, none_type
+            Ip
                 If the method is called asynchronously, returns the request
                 thread.
         """

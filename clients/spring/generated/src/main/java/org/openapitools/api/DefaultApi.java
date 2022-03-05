@@ -6,7 +6,6 @@
 package org.openapitools.api;
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
@@ -30,7 +29,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-05T07:37:16.031052Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-05T15:02:07.848792Z[Etc/UTC]")
 @Validated
 @Tag(name = "default", description = "the default API")
 public interface DefaultApi {
@@ -50,18 +49,27 @@ public interface DefaultApi {
         operationId = "getIp",
         summary = "Get your public IP address",
         responses = {
-            @ApiResponse(responseCode = "200", description = "Your public IP address", content = @Content(mediaType = "application/json", schema = @Schema(implementation =  OneOfIpstring.class)))
+            @ApiResponse(responseCode = "200", description = "Your public IP address", content = @Content(mediaType = "application/json", schema = @Schema(implementation =  Ip.class)))
         }
     )
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/",
-        produces = { "*/*" }
+        produces = { "application/json", "application/javascript", "text/plain" }
     )
-    default ResponseEntity<OneOfIpstring> getIp(
+    default ResponseEntity<Ip> getIp(
         @Parameter(name = "format", description = "Response format", schema = @Schema(description = "", allowableValues = { "json", "jsonp" })) @Valid @RequestParam(value = "format", required = false) String format,
         @Parameter(name = "callback", description = "JSONP callback function name", schema = @Schema(description = "")) @Valid @RequestParam(value = "callback", required = false) String paramCallback
     ) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
+                    String exampleString = "{ \"ip\" : \"ip\" }";
+                    ApiUtil.setExampleResponse(request, "application/json", exampleString);
+                    break;
+                }
+            }
+        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

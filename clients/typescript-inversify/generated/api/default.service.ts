@@ -43,8 +43,8 @@ export class DefaultService {
      * @param callback JSONP callback function name
      
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', headers?: Headers): Observable<Ip | string>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', headers?: Headers): Observable<HttpResponse<Ip | string>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', headers?: Headers): Observable<Ip>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', headers?: Headers): Observable<HttpResponse<Ip>>;
     public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', headers: Headers = {}): Observable<any> {
         let queryParameters: string[] = [];
         if (format !== undefined) {
@@ -54,12 +54,12 @@ export class DefaultService {
             queryParameters.push('callback='+encodeURIComponent(String(callback)));
         }
 
-        headers['Accept'] = '*/*';
+        headers['Accept'] = 'application/json, application/javascript, text/plain';
 
-        const response: Observable<HttpResponse<Ip | string>> = this.httpClient.get(`${this.basePath}/?${queryParameters.join('&')}`, headers);
+        const response: Observable<HttpResponse<Ip>> = this.httpClient.get(`${this.basePath}/?${queryParameters.join('&')}`, headers);
         if (observe === 'body') {
                return response.pipe(
-                   map((httpResponse: HttpResponse) => <Ip | string>(httpResponse.response))
+                   map((httpResponse: HttpResponse) => <Ip>(httpResponse.response))
                );
         }
         return response;

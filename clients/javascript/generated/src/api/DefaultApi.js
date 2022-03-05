@@ -14,7 +14,6 @@
 
 import ApiClient from "../ApiClient";
 import Ip from '../model/Ip';
-import OneOfIpstring from '../model/OneOfIpstring';
 
 /**
 * Default service.
@@ -39,7 +38,7 @@ export default class DefaultApi {
      * Callback function to receive the result of the getIp operation.
      * @callback module:api/DefaultApi~getIpCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/OneOfIpstring} data The data returned by the service call.
+     * @param {module:model/Ip} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,7 +48,7 @@ export default class DefaultApi {
      * @param {module:model/String} opts.format Response format
      * @param {String} opts.callback JSONP callback function name
      * @param {module:api/DefaultApi~getIpCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/OneOfIpstring}
+     * data is of type: {@link module:model/Ip}
      */
     getIp(opts, callback) {
       opts = opts || {};
@@ -68,8 +67,8 @@ export default class DefaultApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['*/*'];
-      let returnType = OneOfIpstring;
+      let accepts = ['application/json', 'application/javascript', 'text/plain'];
+      let returnType = Ip;
       return this.apiClient.callApi(
         '/', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -23,7 +23,6 @@ package org.openapitools.client.apis
 import java.io.IOException
 
 import org.openapitools.client.models.Ip
-import org.openapitools.client.models.OneOfLessThanIpCommaStringGreaterThan
 
 import com.squareup.moshi.Json
 
@@ -62,7 +61,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * 
     * @param format Response format (optional)
     * @param paramCallback JSONP callback function name (optional)
-    * @return OneOfLessThanIpCommaStringGreaterThan
+    * @return Ip
     * @throws IllegalStateException If the request is not correctly configured
     * @throws IOException Rethrows the OkHttp execute method exception
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -71,11 +70,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getIp(format: Format_getIp?, paramCallback: kotlin.String?) : OneOfLessThanIpCommaStringGreaterThan {
+    fun getIp(format: Format_getIp?, paramCallback: kotlin.String?) : Ip {
         val localVarResponse = getIpWithHttpInfo(format = format, paramCallback = paramCallback)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as OneOfLessThanIpCommaStringGreaterThan
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Ip
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -94,16 +93,16 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * 
     * @param format Response format (optional)
     * @param paramCallback JSONP callback function name (optional)
-    * @return ApiResponse<OneOfLessThanIpCommaStringGreaterThan?>
+    * @return ApiResponse<Ip?>
     * @throws IllegalStateException If the request is not correctly configured
     * @throws IOException Rethrows the OkHttp execute method exception
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun getIpWithHttpInfo(format: Format_getIp?, paramCallback: kotlin.String?) : ApiResponse<OneOfLessThanIpCommaStringGreaterThan?> {
+    fun getIpWithHttpInfo(format: Format_getIp?, paramCallback: kotlin.String?) : ApiResponse<Ip?> {
         val localVariableConfig = getIpRequestConfig(format = format, paramCallback = paramCallback)
 
-        return request<Unit, OneOfLessThanIpCommaStringGreaterThan>(
+        return request<Unit, Ip>(
             localVariableConfig
         )
     }
@@ -127,7 +126,8 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        
+        localVariableHeaders["Accept"] = "application/json"
+
         return RequestConfig(
             method = RequestMethod.GET,
             path = "/",

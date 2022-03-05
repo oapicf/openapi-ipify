@@ -9,7 +9,6 @@ import {SecurityAuthentication} from '../auth/auth';
 
 
 import { Ip } from '../models/Ip';
-import { Ip | string } from '../models/Ip | string';
 
 /**
  * no description
@@ -64,22 +63,22 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getIp
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getIp(response: ResponseContext): Promise<Ip | string > {
+     public async getIp(response: ResponseContext): Promise<Ip > {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
-            const body: Ip | string = ObjectSerializer.deserialize(
+            const body: Ip = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "Ip | string", ""
-            ) as Ip | string;
+                "Ip", ""
+            ) as Ip;
             return body;
         }
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: Ip | string = ObjectSerializer.deserialize(
+            const body: Ip = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "Ip | string", ""
-            ) as Ip | string;
+                "Ip", ""
+            ) as Ip;
             return body;
         }
 

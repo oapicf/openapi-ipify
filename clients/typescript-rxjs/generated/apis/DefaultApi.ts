@@ -30,16 +30,16 @@ export class DefaultApi extends BaseAPI {
     /**
      * Get your public IP address
      */
-    getIp({ format, callback }: GetIpRequest): Observable<Ip | string>
-    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<RawAjaxResponse<Ip | string>>
-    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<Ip | string | RawAjaxResponse<Ip | string>> {
+    getIp({ format, callback }: GetIpRequest): Observable<Ip>
+    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<RawAjaxResponse<Ip>>
+    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<Ip | RawAjaxResponse<Ip>> {
 
         const query: HttpQuery = {};
 
         if (format != null) { query['format'] = format; }
         if (callback != null) { query['callback'] = callback; }
 
-        return this.request<Ip | string>({
+        return this.request<Ip>({
             url: '/',
             method: 'GET',
             query,

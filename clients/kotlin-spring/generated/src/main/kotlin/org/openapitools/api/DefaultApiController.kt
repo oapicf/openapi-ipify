@@ -1,7 +1,6 @@
 package org.openapitools.api
 
 import org.openapitools.model.Ip
-import org.openapitools.model.OneOfLessThanIpCommaStringGreaterThan
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -32,11 +31,11 @@ class DefaultApiController() {
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/"],
-        produces = ["*/*"]
+        produces = ["application/json", "application/javascript", "text/plain"]
     )
     fun getIp( @RequestParam(value = "format", required = false) format: kotlin.String?
 , @RequestParam(value = "callback", required = false) paramCallback: kotlin.String?
-): ResponseEntity<OneOfLessThanIpCommaStringGreaterThan> {
+): ResponseEntity<Ip> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 }

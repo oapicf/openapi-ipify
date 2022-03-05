@@ -5,7 +5,6 @@ import json
 from aiohttp import web
 
 from openapi_server.models.ip import Ip
-from openapi_server.models.one_of_ipstring import OneOfIpstring
 
 
 async def test_get_ip(client):
@@ -16,7 +15,7 @@ async def test_get_ip(client):
     params = [('format', 'format_example'),
                     ('callback', 'param_callback_example')]
     headers = { 
-        'Accept': '*/*',
+        'Accept': 'application/json',
     }
     response = await client.request(
         method='GET',

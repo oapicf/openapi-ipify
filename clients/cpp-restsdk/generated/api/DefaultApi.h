@@ -24,7 +24,6 @@
 #include "ApiClient.h"
 
 #include "model/Ip.h"
-#include "model/OneOfIpstring.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -53,7 +52,7 @@ public:
     /// </remarks>
     /// <param name="format">Response format (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="callback">JSONP callback function name (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::shared_ptr<OneOfIpstring>> getIp(
+    pplx::task<std::shared_ptr<Ip>> getIp(
         boost::optional<utility::string_t> format,
         boost::optional<utility::string_t> callback
     ) const;

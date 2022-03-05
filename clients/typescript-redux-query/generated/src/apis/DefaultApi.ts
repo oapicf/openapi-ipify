@@ -29,7 +29,7 @@ export interface GetIpRequest {
 /**
  * Get your public IP address
  */
-function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.TypedQueryConfig<T, Ip | string> = {}): QueryConfig<T> {
+function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.TypedQueryConfig<T, Ip> = {}): QueryConfig<T> {
     let queryParameters = null;
 
     queryParameters = {};
@@ -66,7 +66,7 @@ function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.Typ
 
     const { transform: requestTransform } = requestConfig;
     if (requestTransform) {
-        config.transform = (body: ResponseBody, text: ResponseBody) => requestTransform(Ip | stringFromJSON(body), text);
+        config.transform = (body: ResponseBody, text: ResponseBody) => requestTransform(IpFromJSON(body), text);
     }
 
     return config;
@@ -75,7 +75,7 @@ function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.Typ
 /**
 * Get your public IP address
 */
-export function getIp<T>(requestParameters: GetIpRequest, requestConfig?: runtime.TypedQueryConfig<T, Ip | string>): QueryConfig<T> {
+export function getIp<T>(requestParameters: GetIpRequest, requestConfig?: runtime.TypedQueryConfig<T, Ip>): QueryConfig<T> {
     return getIpRaw(requestParameters, requestConfig);
 }
 

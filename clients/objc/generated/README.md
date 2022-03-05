@@ -67,7 +67,7 @@ OAIDefaultApi *apiInstance = [[OAIDefaultApi alloc] init];
 // Get your public IP address
 [apiInstance getIpWithFormat:format
     callback:callback
-              completionHandler: ^(OAIOneOfIpString* output, NSError* error) {
+              completionHandler: ^(OAIIp* output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }

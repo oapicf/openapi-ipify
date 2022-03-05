@@ -2,7 +2,6 @@ package org.openapitools.api.impl;
 
 import org.openapitools.api.*;
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -28,7 +27,7 @@ public class DefaultApiServiceImpl implements DefaultApi {
      * Get your public IP address
      *
      */
-    public OneOfIpstring getIp(String format, String paramCallback) {
+    public Ip getIp(String format, String paramCallback) {
         // TODO: Implement...
 
         return null;

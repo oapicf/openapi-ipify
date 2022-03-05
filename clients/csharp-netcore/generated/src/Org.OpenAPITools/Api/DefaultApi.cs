@@ -33,8 +33,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
-        /// <returns>OneOfIpstring</returns>
-        OneOfIpstring GetIp(string format = default(string), string callback = default(string));
+        /// <returns>Ip</returns>
+        Ip GetIp(string format = default(string), string callback = default(string));
 
         /// <summary>
         /// Get your public IP address
@@ -45,8 +45,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
-        /// <returns>ApiResponse of OneOfIpstring</returns>
-        ApiResponse<OneOfIpstring> GetIpWithHttpInfo(string format = default(string), string callback = default(string));
+        /// <returns>ApiResponse of Ip</returns>
+        ApiResponse<Ip> GetIpWithHttpInfo(string format = default(string), string callback = default(string));
         #endregion Synchronous Operations
     }
 
@@ -66,8 +66,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OneOfIpstring</returns>
-        System.Threading.Tasks.Task<OneOfIpstring> GetIpAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of Ip</returns>
+        System.Threading.Tasks.Task<Ip> GetIpAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Get your public IP address
@@ -79,8 +79,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OneOfIpstring)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OneOfIpstring>> GetIpWithHttpInfoAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (Ip)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Ip>> GetIpWithHttpInfoAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -207,10 +207,10 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
-        /// <returns>OneOfIpstring</returns>
-        public OneOfIpstring GetIp(string format = default(string), string callback = default(string))
+        /// <returns>Ip</returns>
+        public Ip GetIp(string format = default(string), string callback = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<OneOfIpstring> localVarResponse = GetIpWithHttpInfo(format, callback);
+            Org.OpenAPITools.Client.ApiResponse<Ip> localVarResponse = GetIpWithHttpInfo(format, callback);
             return localVarResponse.Data;
         }
 
@@ -220,8 +220,8 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
-        /// <returns>ApiResponse of OneOfIpstring</returns>
-        public Org.OpenAPITools.Client.ApiResponse<OneOfIpstring> GetIpWithHttpInfo(string format = default(string), string callback = default(string))
+        /// <returns>ApiResponse of Ip</returns>
+        public Org.OpenAPITools.Client.ApiResponse<Ip> GetIpWithHttpInfo(string format = default(string), string callback = default(string))
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -230,7 +230,9 @@ namespace Org.OpenAPITools.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "*/*"
+                "application/json",
+                "application/javascript",
+                "text/plain"
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -256,7 +258,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<OneOfIpstring>("/", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<Ip>("/", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetIp", localVarResponse);
@@ -276,10 +278,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of OneOfIpstring</returns>
-        public async System.Threading.Tasks.Task<OneOfIpstring> GetIpAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of Ip</returns>
+        public async System.Threading.Tasks.Task<Ip> GetIpAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<OneOfIpstring> localVarResponse = await GetIpWithHttpInfoAsync(format, callback, cancellationToken).ConfigureAwait(false);
+            Org.OpenAPITools.Client.ApiResponse<Ip> localVarResponse = await GetIpWithHttpInfoAsync(format, callback, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -290,8 +292,8 @@ namespace Org.OpenAPITools.Api
         /// <param name="format">Response format (optional)</param>
         /// <param name="callback">JSONP callback function name (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (OneOfIpstring)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<OneOfIpstring>> GetIpWithHttpInfoAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (Ip)</returns>
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Ip>> GetIpWithHttpInfoAsync(string format = default(string), string callback = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
@@ -301,7 +303,9 @@ namespace Org.OpenAPITools.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "*/*"
+                "application/json",
+                "application/javascript",
+                "text/plain"
             };
 
             var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -327,7 +331,7 @@ namespace Org.OpenAPITools.Api
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<OneOfIpstring>("/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Ip>("/", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

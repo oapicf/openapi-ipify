@@ -67,7 +67,7 @@ public class DefaultApiExample {
         String format = null; // String | Response format
         String callback = null; // String | JSONP callback function name
         try {
-            OneOfIpstring result = apiInstance.getIp(format, callback);
+            Ip result = apiInstance.getIp(format, callback);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#getIp");

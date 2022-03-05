@@ -35,7 +35,6 @@ import org.openapitools.server.infrastructure.ApiPrincipal
 
 
 import org.openapitools.server.models.Ip
-import org.openapitools.server.models.OneOfLessThanIpCommaStringGreaterThan
 
 @KtorExperimentalLocationsAPI
 fun Route.DefaultApi() {
@@ -43,7 +42,16 @@ fun Route.DefaultApi() {
     val empty = mutableMapOf<String, Any?>()
 
     get<Paths.getIp> {  _: Paths.getIp ->
-        call.respond(HttpStatusCode.NotImplemented)
+        val exampleContentType = "application/json"
+        val exampleContentString = """{
+          "ip" : "ip"
+        }"""
+        
+        when(exampleContentType) {
+            "application/json" -> call.respond(gson.fromJson(exampleContentString, empty::class.java))
+            "application/xml" -> call.respondText(exampleContentString, ContentType.Text.Xml)
+            else -> call.respondText(exampleContentString)
+        }
     }
 
 }

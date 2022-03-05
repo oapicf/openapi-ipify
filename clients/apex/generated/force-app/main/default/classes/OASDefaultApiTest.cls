@@ -19,12 +19,17 @@ private class OASDefaultApiTest {
 
         OASClient client;
         OASDefaultApi api;
-        OASOneOfIpstring response;
-        OASOneOfIpstring expectedResponse;
+        OASIp response;
+        OASIp expectedResponse;
         String js = '';
 
         api = new OASDefaultApi(new OASClient());
 
-        api.getIp(params);
+        js = JSON.serialize(OASIp.getExample());
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASIp.getExample();
+        response = (OASIp) api.getIp(params);
+        System.assertEquals(expectedResponse, response);
     }
 }

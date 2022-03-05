@@ -14,7 +14,6 @@
 goog.provide('API.Client.DefaultApi');
 
 goog.require('API.Client.Ip');
-goog.require('API.Client.oneOf&lt;Ip,string&gt;');
 
 /**
  * @constructor
@@ -49,7 +48,7 @@ API.Client.DefaultApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
  * @param {!string=} opt_format Response format
  * @param {!string=} opt_callback JSONP callback function name
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!API.Client.oneOf<Ip,string>>}
+ * @return {!angular.$q.Promise<!API.Client.Ip>}
  */
 API.Client.DefaultApi.prototype.getIp = function(opt_format, opt_callback, opt_extraHttpRequestParams) {
   /** @const {string} */

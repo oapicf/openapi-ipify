@@ -2,7 +2,6 @@
 #import "OAIQueryParamCollection.h"
 #import "OAIApiClient.h"
 #import "OAIIp.h"
-#import "OAIOneOfIpString.h"
 
 
 @interface OAIDefaultApi ()
@@ -57,11 +56,11 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
 ///
 ///  @param callback JSONP callback function name (optional)
 ///
-///  @returns OAIOneOfIpString*
+///  @returns OAIIp*
 ///
 -(NSURLSessionTask*) getIpWithFormat: (NSString*) format
     callback: (NSString*) callback
-    completionHandler: (void (^)(OAIOneOfIpString* output, NSError* error)) handler {
+    completionHandler: (void (^)(OAIIp* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
@@ -76,7 +75,7 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"*/*"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/javascript", @"text/plain"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -105,10 +104,10 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"OAIOneOfIpString*"
+                              responseType: @"OAIIp*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((OAIOneOfIpString*)data, error);
+                                    handler((OAIIp*)data, error);
                                 }
                             }];
 }

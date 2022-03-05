@@ -11,7 +11,7 @@ test_that("GetIp", {
   # Get your public IP address
   # @param format character Response format (optional)
   # @param callback character JSONP callback function name (optional)
-  # @return [OneOfIpstring]
+  # @return [Ip]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

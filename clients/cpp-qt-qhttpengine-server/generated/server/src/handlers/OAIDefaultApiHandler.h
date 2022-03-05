@@ -16,7 +16,6 @@
 #include <QObject>
 
 #include "OAIIp.h"
-#include "OAIOneOfIpstring.h"
 #include <QString>
 
 namespace OpenAPI {

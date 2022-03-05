@@ -21,7 +21,6 @@
 
 #include <qhttpengine/socket.h>
 #include "OAIIp.h"
-#include "OAIOneOfIpstring.h"
 #include <QString>
 #include "OAIDefaultApiHandler.h"
 
@@ -38,10 +37,10 @@ public:
     void getIpRequest();
     
 
-    void getIpResponse(const OAIOneOfIpstring& res);
+    void getIpResponse(const OAIIp& res);
     
 
-    void getIpError(const OAIOneOfIpstring& res, QNetworkReply::NetworkError error_type, QString& error_str);
+    void getIpError(const OAIIp& res, QNetworkReply::NetworkError error_type, QString& error_str);
     
 
     void sendCustomResponse(QByteArray & res, QNetworkReply::NetworkError error_type);

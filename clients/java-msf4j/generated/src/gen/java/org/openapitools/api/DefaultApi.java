@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -27,17 +26,17 @@ import javax.ws.rs.*;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2022-03-05T05:05:55.746505Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2022-03-05T14:55:06.415890Z[Etc/UTC]")
 public class DefaultApi  {
    private final DefaultApiService delegate = DefaultApiServiceFactory.getDefaultApi();
 
     @GET
     
     
-    @Produces({ "*/*" })
-    @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = OneOfIpstring.class, tags={  })
+    @Produces({ "application/json", "application/javascript", "text/plain" })
+    @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = Ip.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = OneOfIpstring.class) })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = Ip.class) })
     public Response getIp(@ApiParam(value = "Response format", allowableValues="json, jsonp") @QueryParam("format") String format
 ,@ApiParam(value = "JSONP callback function name") @QueryParam("callback") String paramCallback
 )

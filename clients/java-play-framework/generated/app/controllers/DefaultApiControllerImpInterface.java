@@ -1,7 +1,6 @@
 package controllers;
 
 import apimodels.Ip;
-import apimodels.OneOfIpstring;
 
 import com.google.inject.Inject;
 import com.typesafe.config.Config;
@@ -28,7 +27,7 @@ public abstract class DefaultApiControllerImpInterface {
     private ObjectMapper mapper = new ObjectMapper();
 
     public Result getIpHttp(Http.Request request, String format, String paramCallback) throws Exception {
-        OneOfIpstring obj = getIp(request, format, paramCallback);
+        Ip obj = getIp(request, format, paramCallback);
 
         if (configuration.getBoolean("useOutputBeanValidation")) {
             OpenAPIUtils.validate(obj);
@@ -40,6 +39,6 @@ public abstract class DefaultApiControllerImpInterface {
 
     }
 
-    public abstract OneOfIpstring getIp(Http.Request request, String format, String paramCallback) throws Exception;
+    public abstract Ip getIp(Http.Request request, String format, String paramCallback) throws Exception;
 
 }

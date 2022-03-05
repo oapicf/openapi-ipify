@@ -38,17 +38,23 @@ paths:
       responses:
         "200":
           content:
-            '*/*':
+            application/json:
               schema:
-                oneOf:
-                - $ref: '#/components/schemas/Ip'
-                - $ref: '#/components/schemas/IpString'
+                $ref: '#/components/schemas/Ip'
+            application/javascript:
+              schema:
+                type: string
+            text/plain:
+              schema:
+                type: string
           description: Your public IP address
       summary: Get your public IP address
       x-openapi-router-controller: openapi_server.controllers.default_controller
 components:
   schemas:
     Ip:
+      example:
+        ip: ip
       properties:
         ip:
           title: ip
@@ -56,5 +62,3 @@ components:
       required:
       - ip
       title: Ip
-    IpString:
-      type: string

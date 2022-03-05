@@ -18,14 +18,14 @@ module
       @api_client = api_client
     end
     # Get your public IP address
-    # @return [OneOfIpstring]
+    # @return [Ip]
     def get_ip(format : String?, callback : String?)
       data, _status_code, _headers = get_ip_with_http_info(format, callback)
       data
     end
 
     # Get your public IP address
-    # @return [Array<(OneOfIpstring, Integer, Hash)>] OneOfIpstring data, response status code and response headers
+    # @return [Array<(Ip, Integer, Hash)>] Ip data, response status code and response headers
     def get_ip_with_http_info(format : String?, callback : String?)
       if @api_client.config.debugging
         Log.debug {"Calling API: DefaultApi.get_ip ..."}
@@ -45,7 +45,7 @@ module
       # header parameters
       header_params = Hash(String, String).new
       # HTTP header "Accept" (if needed)
-      header_params["Accept"] = @api_client.select_header_accept(["*/*"])
+      header_params["Accept"] = @api_client.select_header_accept(["application/json", "application/javascript", "text/plain"])
 
       # form parameters
       form_params = Hash(Symbol, (String | ::File)).new
@@ -54,7 +54,7 @@ module
       post_body = nil
 
       # return_type
-      return_type = "OneOfIpstring"
+      return_type = "Ip"
 
       # auth_names
       auth_names = [] of String
@@ -71,7 +71,7 @@ module
       if @api_client.config.debugging
         Log.debug {"API called: DefaultApi#get_ip\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"}
       end
-      return OneOfIpstring.from_json(data), status_code, headers
+      return Ip.from_json(data), status_code, headers
     end
   end
 end

@@ -40,16 +40,16 @@ type GetIpOpts struct {
  * @param optional nil or *GetIpOpts - Optional Parameters:
  * @param "Format" (optional.String) -  Response format
  * @param "Callback" (optional.String) -  JSONP callback function name
- * @return OneOfIpstring
+ * @return Ip
  */
-func (a *DefaultApiService) GetIp(ctx _context.Context, localVarOptionals *GetIpOpts) (OneOfIpstring, *_nethttp.Response, error) {
+func (a *DefaultApiService) GetIp(ctx _context.Context, localVarOptionals *GetIpOpts) (Ip, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfIpstring
+		localVarReturnValue  Ip
 	)
 
 	// create path and map variables
@@ -74,7 +74,7 @@ func (a *DefaultApiService) GetIp(ctx _context.Context, localVarOptionals *GetIp
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"*/*"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/javascript", "text/plain"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

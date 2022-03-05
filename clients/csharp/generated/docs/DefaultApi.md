@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetIp
 
-> OneOfIpstring GetIp (string format = null, string callback = null)
+> Ip GetIp (string format = null, string callback = null)
 
 Get your public IP address
 
@@ -37,7 +37,7 @@ namespace Example
             try
             {
                 // Get your public IP address
-                OneOfIpstring result = apiInstance.GetIp(format, callback);
+                Ip result = apiInstance.GetIp(format, callback);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: application/json, application/javascript, text/plain
 
 
 ### HTTP response details

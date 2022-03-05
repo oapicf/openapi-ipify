@@ -34,7 +34,7 @@ package body .Skeletons is
          Impl : Implementation_Type;
          Format : Swagger.Nullable_UString;
          Callback : Swagger.Nullable_UString;
-         Result : .Models.OneOfIpstring_Type;
+         Result : .Models.Ip_Type;
       begin
          Swagger.Servers.Get_Query_Parameter (Req, "format", Format);
          Swagger.Servers.Get_Query_Parameter (Req, "callback", Callback);
@@ -66,7 +66,7 @@ package body .Skeletons is
           Context : in out Swagger.Servers.Context_Type) is
          Format : Swagger.Nullable_UString;
          Callback : Swagger.Nullable_UString;
-         Result : .Models.OneOfIpstring_Type;
+         Result : .Models.Ip_Type;
       begin
          Swagger.Servers.Get_Query_Parameter (Req, "format", Format);
          Swagger.Servers.Get_Query_Parameter (Req, "callback", Callback);
@@ -95,7 +95,7 @@ package body .Skeletons is
          procedure Get_Ip
             (Format : in Swagger.Nullable_UString;
              Callback : in Swagger.Nullable_UString;
-             Result : out .Models.OneOfIpstring_Type;
+             Result : out .Models.Ip_Type;
              Context : in out Swagger.Servers.Context_Type) is
          begin
             Impl.Get_Ip

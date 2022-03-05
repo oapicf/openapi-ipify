@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **get_ip**
-> OneOfIpstring get_ip(format => $format, callback => $callback)
+> Ip get_ip(format => $format, callback => $callback)
 
 Get your public IP address
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

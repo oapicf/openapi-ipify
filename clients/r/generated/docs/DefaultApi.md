@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **GetIp**
-> OneOfIpstring GetIp(format=var.format, callback=var.callback)
+> Ip GetIp(format=var.format, callback=var.callback)
 
 Get your public IP address
 
@@ -34,7 +34,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](oneOf&lt;Ip,string&gt;.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 ### HTTP response details
 | Status code | Description | Response headers |

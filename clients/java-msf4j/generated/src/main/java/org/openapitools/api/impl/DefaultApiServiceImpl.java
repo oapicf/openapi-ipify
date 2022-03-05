@@ -4,7 +4,6 @@ import org.openapitools.api.*;
 import org.openapitools.model.*;
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -17,7 +16,7 @@ import org.wso2.msf4j.formparam.FileInfo;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2022-03-05T05:05:55.746505Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2022-03-05T14:55:06.415890Z[Etc/UTC]")
 public class DefaultApiServiceImpl extends DefaultApiService {
     @Override
     public Response getIp(String format

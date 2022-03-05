@@ -15,7 +15,6 @@ package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
 import org.openapitools.client.model.Ip;
-import org.openapitools.client.model.OneOfIpstring;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -45,7 +44,7 @@ public class DefaultApiTest {
     public void getIpTest() throws ApiException {
         String format = null;
         String paramCallback = null;
-                OneOfIpstring response = api.getIp(format, paramCallback);
+                Ip response = api.getIp(format, paramCallback);
         // TODO: test validations
     }
     

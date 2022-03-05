@@ -30,10 +30,10 @@ public class OASDefaultApi {
      * 
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return OASOneOfIpstring
+     * @return OASIp
      * @throws OAS.ApiException if fails to make API call
      */
-    public OASOneOfIpstring getIp(Map<String, Object> params) {
+    public OASIp getIp(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -42,15 +42,15 @@ public class OASDefaultApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        return (OASOneOfIpstring) client.invoke(
+        return (OASIp) client.invoke(
             'GET', '/', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ '*/*' },
+            new List<String>{ 'application/json', 'application/javascript', 'text/plain' },
             new List<String>(),
             new List<String>(),
-            OASOneOfIpstring.class
+            OASIp.class
         );
     }
 }

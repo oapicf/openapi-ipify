@@ -92,11 +92,11 @@ export class DefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public async getIp (format?: 'json' | 'jsonp', callback?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Ip | string;  }> {
+    public async getIp (format?: 'json' | 'jsonp', callback?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Ip;  }> {
         const localVarPath = this.basePath + '/';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['*/*'];
+        const produces = ['application/json', 'application/javascript', 'text/plain'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -142,13 +142,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Ip | string;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Ip;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Ip | string");
+                            body = ObjectSerializer.deserialize(body, "Ip");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

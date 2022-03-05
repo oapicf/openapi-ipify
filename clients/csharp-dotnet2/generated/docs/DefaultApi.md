@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getip"></a>
 # **GetIp**
-> OneOfIpstring GetIp (string format, string callback)
+> Ip GetIp (string format, string callback)
 
 Get your public IP address
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Get your public IP address
-                OneOfIpstring result = apiInstance.GetIp(format, callback);
+                Ip result = apiInstance.GetIp(format, callback);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `getIp()`
 
 ```php
-getIp($format, $callback): OneOfIpString
+getIp($format, $callback): \OpenAPI\Client\Model\Ip
 ```
 
 Get your public IP address
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpString**](../Model/OneOfIpString.md)
+[**\OpenAPI\Client\Model\Ip**](../Model/Ip.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `*/*`
+- **Accept**: `application/json`, `application/javascript`, `text/plain`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

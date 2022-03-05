@@ -58,7 +58,7 @@ namespace Example
             try
             {
                 // Get your public IP address
-                OneOfIpstring result = apiInstance.GetIp(format, callback);
+                Ip result = apiInstance.GetIp(format, callback);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getIp"></a>
 # **getIp**
-> OneOfLessThanIpCommaStringGreaterThan getIp(format, paramCallback)
+> Ip getIp(format, paramCallback)
 
 Get your public IP address
 
@@ -23,7 +23,7 @@ val apiInstance = DefaultApi()
 val format : kotlin.String = format_example // kotlin.String | Response format
 val paramCallback : kotlin.String = paramCallback_example // kotlin.String | JSONP callback function name
 try {
-    val result : OneOfLessThanIpCommaStringGreaterThan = apiInstance.getIp(format, paramCallback)
+    val result : Ip = apiInstance.getIp(format, paramCallback)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling DefaultApi#getIp")
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfLessThanIpCommaStringGreaterThan**](OneOfLessThanIpCommaStringGreaterThan.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -52,5 +52,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 

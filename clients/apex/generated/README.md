@@ -51,7 +51,7 @@ Map<String, Object> params = new Map<String, Object>{
 
 try {
     // cross your fingers
-    OASOneOfIpstring result = api.getIp(params);
+    OASIp result = api.getIp(params);
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions

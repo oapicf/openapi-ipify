@@ -2,7 +2,6 @@ from typing import List, Dict
 from aiohttp import web
 
 from openapi_server.models.ip import Ip
-from openapi_server.models.one_of_ipstring import OneOfIpstring
 from openapi_server import util
 
 

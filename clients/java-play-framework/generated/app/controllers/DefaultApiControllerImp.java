@@ -1,7 +1,6 @@
 package controllers;
 
 import apimodels.Ip;
-import apimodels.OneOfIpstring;
 
 import play.mvc.Http;
 import java.util.List;
@@ -11,12 +10,12 @@ import java.util.LinkedHashSet;
 import java.io.FileInputStream;
 import play.libs.Files.TemporaryFile;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2022-03-05T05:06:13.679385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2022-03-05T14:55:18.871254Z[Etc/UTC]")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
-    public OneOfIpstring getIp(Http.Request request, String format, String paramCallback) throws Exception {
+    public Ip getIp(Http.Request request, String format, String paramCallback) throws Exception {
         //Do your magic!!!
-        return new OneOfIpstring();
+        return new Ip();
     }
 
 }

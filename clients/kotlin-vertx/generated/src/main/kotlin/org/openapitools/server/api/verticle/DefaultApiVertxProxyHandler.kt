@@ -17,7 +17,6 @@ import io.vertx.core.json.JsonArray
 import com.google.gson.reflect.TypeToken
 import com.google.gson.Gson
 import org.openapitools.server.api.model.Ip
-import org.openapitools.server.api.model.OneOfLessThanIpCommaStringGreaterThan
 
 class DefaultApiVertxProxyHandler(private val vertx: Vertx, private val service: DefaultApi, topLevel: Boolean, private val timeoutSeconds: Long) : ProxyHandler() {
     private val timerID: Long

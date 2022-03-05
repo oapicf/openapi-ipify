@@ -5,7 +5,6 @@ Cargo.toml
 README.md
 api/openapi.yaml
 docs/Ip.md
-docs/IpString.md
 docs/default_api.md
 examples/ca.pem
 examples/client/main.rs

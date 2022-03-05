@@ -73,13 +73,14 @@ Get your public IP address
 
 ===== Return Type
 
-
-<<oneOf&lt;Ip,string&gt;>>
+<<Ip>>
 
 
 ===== Content Type
 
-* */*
+* application/json
+* application/javascript
+* text/plain
 
 ===== Responses
 
@@ -91,7 +92,7 @@ Get your public IP address
 
 | 200
 | Your public IP address
-|  <<oneOf&lt;Ip,string&gt;>>
+|  <<Ip>>
 
 |===
 

@@ -19,7 +19,6 @@ import typetraits
 import uri
 
 import ../models/model_ip
-import ../models/model_one_of&lt;ip,string&gt;
 
 const basepath = "https://api.ipify.org"
 
@@ -39,7 +38,7 @@ template constructResult[T](response: Response): untyped =
     (none(T.typedesc), response)
 
 
-proc getIp*(httpClient: HttpClient, format: string, callback: string): (Option[oneOf<Ip,string>], Response) =
+proc getIp*(httpClient: HttpClient, format: string, callback: string): (Option[Ip], Response) =
   ## Get your public IP address
   let query_for_api_call = encodeQuery([
     ("format", $format), # Response format
@@ -47,5 +46,5 @@ proc getIp*(httpClient: HttpClient, format: string, callback: string): (Option[o
   ])
 
   let response = httpClient.get(basepath & "/" & "?" & query_for_api_call)
-  constructResult[oneOf<Ip,string>](response)
+  constructResult[Ip](response)
 

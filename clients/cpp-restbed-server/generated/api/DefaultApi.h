@@ -31,7 +31,6 @@
 #include <corvusoft/restbed/settings.hpp>
 
 #include "Ip.h"
-#include "OneOfIpstring.h"
 #include <string>
 
 namespace org {
@@ -74,7 +73,7 @@ protected:
     // Override these to implement the server functionality //
     //////////////////////////////////////////////////////////
 
-    virtual std::pair<int, std::shared_ptr<OneOfIpstring>> handler_GET(
+    virtual std::pair<int, std::shared_ptr<Ip>> handler_GET(
         std::string const & format, std::string const & callback);
 
 

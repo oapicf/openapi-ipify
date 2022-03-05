@@ -22,7 +22,7 @@ export class PromiseDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<Ip | string> {
+    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<Ip> {
         const result = this.api.getIp(format, callback, _options);
         return result.toPromise();
     }

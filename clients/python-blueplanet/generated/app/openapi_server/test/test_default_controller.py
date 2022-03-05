@@ -6,7 +6,6 @@ from flask import json
 from six import BytesIO
 
 from app.openapi_server.models.ip import Ip  # noqa: E501
-from app.openapi_server.models.one_of_ipstring import OneOfIpstring  # noqa: E501
 from openapi_server.test import BaseTestCase
 
 

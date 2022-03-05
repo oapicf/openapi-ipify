@@ -16,10 +16,9 @@ package openapitools.services.defaultservice;
 
 import "google/protobuf/empty.proto";
 import public "models/ip.proto";
-import public "models/one_of_ipstring.proto";
 
 service DefaultService {
-  rpc GetIp (GetIpRequest) returns (OneOfIpstring);
+  rpc GetIp (GetIpRequest) returns (Ip);
 
 }
 

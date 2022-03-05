@@ -12,5 +12,5 @@ let get_ip ?format ?callback () =
     let uri = Request.maybe_add_query_param uri "format" Enums.show_format format in
     let uri = Request.maybe_add_query_param uri "callback" (fun x -> x) callback in
     Cohttp_lwt_unix.Client.call `GET uri ~headers >>= fun (resp, body) ->
-    Request.read_json_body_as (JsonSupport.unwrap One_of_ipstring.of_yojson) resp body
+    Request.read_json_body_as (JsonSupport.unwrap Ip.of_yojson) resp body
 

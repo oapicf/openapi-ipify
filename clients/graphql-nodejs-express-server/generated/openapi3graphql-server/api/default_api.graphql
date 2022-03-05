@@ -21,7 +21,7 @@ type Query {
   # Get your public IP address
   # @param String! format Response format
   # @param String! callback JSONP callback function name
-  # @return [OneOfIpstring]
-  GetIp(format: String!, callback: String!): OneOfIpstring
+  # @return [Ip]
+  GetIp(format: String!, callback: String!): Ip
 }
 

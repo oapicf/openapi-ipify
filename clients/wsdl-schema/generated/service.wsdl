@@ -31,7 +31,7 @@
       </xs:complexType>
       <xs:complexType name="Get_ResponseMessage">
         <xs:sequence>
-          <xs:element minOccurs="1" name="OneOf&lt;Ip,string&gt;" type="schemas:OneOf&lt;Ip,string&gt;">
+          <xs:element minOccurs="1" name="Ip" type="schemas:Ip">
             <xs:annotation>
               <xs:documentation>Your public IP address</xs:documentation>
             </xs:annotation>

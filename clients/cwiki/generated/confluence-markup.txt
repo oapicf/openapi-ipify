@@ -22,7 +22,7 @@ h3. getIp
     || Protocol | {noformat:nopanel=true}https{noformat} |
     || Path | {noformat:nopanel=true}/{noformat} |
     || Base Path | {noformat:nopanel=true}https://api.ipify.org{noformat} |
-    || Produces | {noformat:nopanel=true}*/*{noformat} |
+    || Produces | {noformat:nopanel=true}application/jsonapplication/javascripttext/plain{noformat} |
 ----
 h4. Parameters
 
@@ -36,18 +36,24 @@ h4. Responses
 
     	|| Status Code | {status:colour=Green|title=200|subtle=false} |
     	|| Message | Your public IP address |
-    	|| Response Type | oneOf<Ip,string> |
-    	|| Response Model | [oneOf&lt;Ip,string&gt; Model|#oneOf&lt;Ip,string&gt;ModelAnchor|Jump to model] |
+    	|| Response Type | Ip |
+    	|| Response Model | [Ip Model|#IpModelAnchor|Jump to model] |
     	|| Response Schema | {code:collapse=true}{
   "description" : "Your public IP address",
   "content" : {
-    "*/*" : {
+    "application/json" : {
       "schema" : {
-        "oneOf" : [ {
-          "$ref" : "#/components/schemas/Ip"
-        }, {
-          "$ref" : "#/components/schemas/IpString"
-        } ]
+        "$ref" : "#/components/schemas/Ip"
+      }
+    },
+    "application/javascript" : {
+      "schema" : {
+        "type" : "string"
+      }
+    },
+    "text/plain" : {
+      "schema" : {
+        "type" : "string"
       }
     }
   }

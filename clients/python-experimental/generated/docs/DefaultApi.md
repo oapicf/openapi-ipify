@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**get_ip**](DefaultApi.md#get_ip) | **GET** / | Get your public IP address
 
 # **get_ip**
-> object get_ip()
+> Ip get_ip()
 
 Get your public IP address
 
@@ -48,7 +48,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
-accept_content_types | typing.Tuple[str] | default is ('*/*', ) | Tells the server the content type(s) that are accepted by the client
+accept_content_types | typing.Tuple[str] | default is ('application/json', 'application/javascript', 'text/plain', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -85,18 +85,29 @@ n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization i
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | typing.Union[SchemaFor200ResponseBody, ] |  |
+body | typing.Union[SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyApplicationJavascript, SchemaFor200ResponseBodyTextPlain, ] |  |
 headers | Unset | headers were not defined |
 
-#### SchemaFor200ResponseBody
-
-#### Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+#### SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**Ip**](Ip.md) |  | 
 
 
-**object**
+#### SchemaFor200ResponseBodyApplicationJavascript
+
+Type | Description | Notes
+------------- | ------------- | -------------
+**str** |  | 
+
+#### SchemaFor200ResponseBodyTextPlain
+
+Type | Description | Notes
+------------- | ------------- | -------------
+**str** |  | 
+
+
+[**Ip**](Ip.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getIp"></a>
 # **getIp**
-> OneOfIpstring getIp(format, paramCallback)
+> Ip getIp(format, paramCallback)
 
 Get your public IP address
 
@@ -31,7 +31,7 @@ public class Example {
     String format = "json"; // String | Response format
     String paramCallback = "paramCallback_example"; // String | JSONP callback function name
     try {
-      OneOfIpstring result = apiInstance.getIp(format, paramCallback);
+      Ip result = apiInstance.getIp(format, paramCallback);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#getIp");
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 ### HTTP response details
 | Status code | Description | Response headers |

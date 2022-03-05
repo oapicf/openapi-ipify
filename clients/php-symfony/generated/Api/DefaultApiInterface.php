@@ -30,7 +30,6 @@ namespace OpenAPI\Server\Api;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use OpenAPI\Server\Model\Ip;
-use OpenAPI\Server\Model\OneOfIpString;
 
 /**
  * DefaultApiInterface Interface Doc Comment
@@ -53,7 +52,7 @@ interface DefaultApiInterface
      * @param  \int $responseCode     The HTTP response code to return
      * @param  \array   $responseHeaders  Additional HTTP headers to return with the response ()
      *
-     * @return \OneOfIpString
+     * @return \OpenAPI\Server\Model\Ip
      */
     public function getIp($format = null, $callback = null, &$responseCode, array &$responseHeaders);
 }

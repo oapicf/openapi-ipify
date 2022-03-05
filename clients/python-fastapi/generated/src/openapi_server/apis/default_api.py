@@ -18,7 +18,6 @@ from fastapi import (  # noqa: F401
 
 from openapi_server.models.extra_models import TokenModel  # noqa: F401
 from openapi_server.models.ip import Ip
-from openapi_server.models.one_of_ipstring import OneOfIpstring
 
 
 router = APIRouter()
@@ -27,7 +26,7 @@ router = APIRouter()
 @router.get(
     "/",
     responses={
-        200: {"model": OneOfIpstring, "description": "Your public IP address"},
+        200: {"model": Ip, "description": "Your public IP address"},
     },
     tags=["default"],
     summary="Get your public IP address",
@@ -35,5 +34,5 @@ router = APIRouter()
 async def get_ip(
     format: str = Query(None, description="Response format"),
     param_callback: str = Query(None, description="JSONP callback function name"),
-) -> OneOfIpstring:
+) -> Ip:
     ...

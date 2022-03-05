@@ -1,7 +1,6 @@
 package controllers;
 
 import apimodels.Ip;
-import apimodels.OneOfIpstring;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;
@@ -24,7 +23,7 @@ import com.typesafe.config.Config;
 
 import openapitools.OpenAPIUtils.ApiAction;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2022-03-05T05:06:13.679385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2022-03-05T14:55:18.871254Z[Etc/UTC]")
 public class DefaultApiController extends Controller {
     private final DefaultApiControllerImpInterface imp;
     private final ObjectMapper mapper;

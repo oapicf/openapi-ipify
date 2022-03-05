@@ -19,7 +19,6 @@
 #include "OAIOauth.h"
 
 #include "OAIIp.h"
-#include "OAIOneOfIpstring.h"
 #include <QString>
 
 #include <QObject>
@@ -91,11 +90,11 @@ private:
 
 signals:
 
-    void getIpSignal(OAIOneOfIpstring summary);
+    void getIpSignal(OAIIp summary);
 
-    void getIpSignalFull(OAIHttpRequestWorker *worker, OAIOneOfIpstring summary);
+    void getIpSignalFull(OAIHttpRequestWorker *worker, OAIIp summary);
 
-    void getIpSignalE(OAIOneOfIpstring summary, QNetworkReply::NetworkError error_type, QString error_str);
+    void getIpSignalE(OAIIp summary, QNetworkReply::NetworkError error_type, QString error_str);
 
     void getIpSignalEFull(OAIHttpRequestWorker *worker, QNetworkReply::NetworkError error_type, QString error_str);
 

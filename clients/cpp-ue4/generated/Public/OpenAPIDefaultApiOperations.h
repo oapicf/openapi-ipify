@@ -16,7 +16,6 @@
 #include "OpenAPIDefaultApi.h"
 
 #include "OpenAPIIp.h"
-#include "OpenAPIOneOfIpstring.h"
 
 namespace OpenAPI
 {
@@ -52,7 +51,7 @@ public:
 	void SetHttpResponseCode(EHttpResponseCodes::Type InHttpResponseCode) final;
 	bool FromJson(const TSharedPtr<FJsonValue>& JsonValue) final;
 
-    OpenAPIOneOfIpstring Content;
+    OpenAPIIp Content;
 };
 
 }

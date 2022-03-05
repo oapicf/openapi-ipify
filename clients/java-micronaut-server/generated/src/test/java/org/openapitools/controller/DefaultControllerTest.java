@@ -1,7 +1,6 @@
 package org.openapitools.controller;
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;
@@ -62,7 +61,7 @@ public class DefaultControllerTest {
         String paramCallback = "example";
 
         // when
-        OneOfIpstring result = controller.getIp(_format, paramCallback).block();
+        Ip result = controller.getIp(_format, paramCallback).block();
 
         // then
         Assertions.assertTrue(true);
@@ -80,13 +79,13 @@ public class DefaultControllerTest {
         // given
         String uri = UriTemplate.of("/").expand(new HashMap<>());
         MutableHttpRequest<?> request = HttpRequest.GET(uri)
-            .accept("*/*");
+            .accept("application/json");
         request.getParameters()
             .add("format", "example") // The query parameter format should be 
             .add("callback", "example"); // The query parameter format should be 
 
         // when
-        HttpResponse<?> response = client.toBlocking().exchange(request, OneOfIpstring.class);
+        HttpResponse<?> response = client.toBlocking().exchange(request, Ip.class);
 
         // then
         Assertions.assertEquals(HttpStatus.OK, response.status());

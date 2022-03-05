@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getIp**
-> Ip | string getIp()
+> Ip getIp()
 
 
 ### Example
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Ip | string**
+**Ip**
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 
 ### HTTP response details

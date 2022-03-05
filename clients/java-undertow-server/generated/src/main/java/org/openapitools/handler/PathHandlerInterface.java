@@ -45,8 +45,8 @@ public interface PathHandlerInterface {
      * </li>
      * </ul>
      *
-     * <p><b>Produces</b>: [{mediaType=*/*}]</p>
-     * <p><b>Returns</b>: {@link OneOfIpstring}</p>
+     * <p><b>Produces</b>: [{mediaType=application/json}, {mediaType=application/javascript}, {mediaType=text/plain}]</p>
+     * <p><b>Returns</b>: {@link Ip}</p>
      *
      * <p><b>Responses</b>:</p>
      * <ul>

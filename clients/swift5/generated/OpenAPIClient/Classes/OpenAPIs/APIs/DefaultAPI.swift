@@ -29,7 +29,7 @@ open class DefaultAPI {
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func getIp(format: Format_getIp? = nil, callback: String? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: GetIp200?, _ error: Error?) -> Void)) -> RequestTask {
+    open class func getIp(format: Format_getIp? = nil, callback: String? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: Ip?, _ error: Error?) -> Void)) -> RequestTask {
         return getIpWithRequestBuilder(format: format, callback: callback).execute(apiResponseQueue) { result in
             switch result {
             case let .success(response):
@@ -45,9 +45,9 @@ open class DefaultAPI {
      - GET /
      - parameter format: (query) Response format (optional)
      - parameter callback: (query) JSONP callback function name (optional)
-     - returns: RequestBuilder<GetIp200> 
+     - returns: RequestBuilder<Ip> 
      */
-    open class func getIpWithRequestBuilder(format: Format_getIp? = nil, callback: String? = nil) -> RequestBuilder<GetIp200> {
+    open class func getIpWithRequestBuilder(format: Format_getIp? = nil, callback: String? = nil) -> RequestBuilder<Ip> {
         let localVariablePath = "/"
         let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
         let localVariableParameters: [String: Any]? = nil
@@ -64,7 +64,7 @@ open class DefaultAPI {
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
 
-        let localVariableRequestBuilder: RequestBuilder<GetIp200>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let localVariableRequestBuilder: RequestBuilder<Ip>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }

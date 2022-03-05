@@ -16,8 +16,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <param name="format">Response format</param>
         /// <param name="callback">JSONP callback function name</param>
-        /// <returns>OneOfIpstring</returns>
-        OneOfIpstring GetIp (string format, string callback);
+        /// <returns>Ip</returns>
+        Ip GetIp (string format, string callback);
     }
 
     /// <summary>
@@ -78,8 +78,8 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <param name="format">Response format</param>
         /// <param name="callback">JSONP callback function name</param>
-        /// <returns>OneOfIpstring</returns>
-        public OneOfIpstring GetIp (string format, string callback)
+        /// <returns>Ip</returns>
+        public Ip GetIp (string format, string callback)
         {
             
 
@@ -106,7 +106,7 @@ namespace Org.OpenAPITools.Api
             else if (((int)response.StatusCode) == 0)
                 throw new ApiException ((int)response.StatusCode, "Error calling GetIp: " + response.ErrorMessage, response.ErrorMessage);
 
-            return (OneOfIpstring) ApiClient.Deserialize(response.Content, typeof(OneOfIpstring), response.Headers);
+            return (Ip) ApiClient.Deserialize(response.Content, typeof(Ip), response.Headers);
         }
 
     }

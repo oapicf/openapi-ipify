@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -16,13 +15,13 @@ import javax.validation.Valid;
 
 @Path("")
 @Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2022-03-05T05:32:09.321755Z[Etc/UTC]")public class DefaultApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2022-03-05T14:56:36.889023Z[Etc/UTC]")public class DefaultApi {
 
     @GET
-    @Produces({ "*/*" })
-    @ApiOperation(value = "Get your public IP address", notes = "", response = OneOfIpstring.class, tags={  })
+    @Produces({ "application/json", "application/javascript", "text/plain" })
+    @ApiOperation(value = "Get your public IP address", notes = "", response = Ip.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Your public IP address", response = OneOfIpstring.class)
+        @ApiResponse(code = 200, message = "Your public IP address", response = Ip.class)
     })
     public Response getIp(@QueryParam("format")  @ApiParam("Response format")  String format,@QueryParam("callback")  @ApiParam("JSONP callback function name")  String paramCallback) {
         return Response.ok().entity("magic!").build();

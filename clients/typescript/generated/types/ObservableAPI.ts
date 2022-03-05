@@ -26,7 +26,7 @@ export class ObservableDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<Ip | string> {
+    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<Ip> {
         const requestContextPromise = this.requestFactory.getIp(format, callback, _options);
 
         // build promise chain

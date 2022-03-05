@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_ip**
-> bool, date, datetime, dict, float, int, list, str, none_type get_ip()
+> Ip get_ip()
 
 Get your public IP address
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bool, date, datetime, dict, float, int, list, str, none_type**
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 
 ### HTTP response details

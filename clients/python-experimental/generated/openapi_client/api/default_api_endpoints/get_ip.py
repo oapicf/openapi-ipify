@@ -115,53 +115,18 @@ request_query_param_callback = api_client.QueryParameter(
 )
 _path = '/'
 _method = 'GET'
-
-
-class SchemaFor200ResponseBody(
-    ComposedSchema
-):
-
-    @classmethod
-    @property
-    def _composed_schemas(cls):
-        # we need this here to make our import statements work
-        # we must store _composed_schemas in here so the code is only run
-        # when we invoke this method. If we kept this at the class
-        # level we would get an error because the class level
-        # code would be run when this module is imported, and these composed
-        # classes don't exist yet because their module has not finished
-        # loading
-        oneOf_1 = StrSchema
-        return {
-            'allOf': [
-            ],
-            'oneOf': [
-                Ip,
-                oneOf_1,
-            ],
-            'anyOf': [
-            ],
-        }
-
-    def __new__(
-        cls,
-        *args: typing.Union[dict, frozendict, str, date, datetime, int, float, decimal.Decimal, None, list, tuple, bytes],
-        _instantiation_metadata: typing.Optional[InstantiationMetadata] = None,
-        **kwargs: typing.Type[Schema],
-    ) -> 'SchemaFor200ResponseBody':
-        return super().__new__(
-            cls,
-            *args,
-            _instantiation_metadata=_instantiation_metadata,
-            **kwargs,
-        )
+SchemaFor200ResponseBodyApplicationJson = Ip
+SchemaFor200ResponseBodyApplicationJavascript = StrSchema
+SchemaFor200ResponseBodyTextPlain = StrSchema
 
 
 @dataclass
 class ApiResponseFor200(api_client.ApiResponse):
     response: urllib3.HTTPResponse
     body: typing.Union[
-        SchemaFor200ResponseBody,
+        SchemaFor200ResponseBodyApplicationJson,
+        SchemaFor200ResponseBodyApplicationJavascript,
+        SchemaFor200ResponseBodyTextPlain,
     ]
     headers: Unset = unset
 
@@ -169,15 +134,21 @@ class ApiResponseFor200(api_client.ApiResponse):
 _response_for_200 = api_client.OpenApiResponse(
     response_cls=ApiResponseFor200,
     content={
-        '*/*': api_client.MediaType(
-            schema=SchemaFor200ResponseBody),
+        'application/json': api_client.MediaType(
+            schema=SchemaFor200ResponseBodyApplicationJson),
+        'application/javascript': api_client.MediaType(
+            schema=SchemaFor200ResponseBodyApplicationJavascript),
+        'text/plain': api_client.MediaType(
+            schema=SchemaFor200ResponseBodyTextPlain),
     },
 )
 _status_code_to_response = {
     '200': _response_for_200,
 }
 _all_accept_content_types = (
-    '*/*',
+    'application/json',
+    'application/javascript',
+    'text/plain',
 )
 
 

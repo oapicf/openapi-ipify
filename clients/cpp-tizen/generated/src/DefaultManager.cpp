@@ -51,14 +51,14 @@ static gpointer __DefaultManagerthreadFunc(gpointer data)
 static bool getIpProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(OneOf&lt;Ip,string&gt;, Error, void* )
-	= reinterpret_cast<void(*)(OneOf&lt;Ip,string&gt;, Error, void* )> (voidHandler);
+	void(* handler)(Ip, Error, void* )
+	= reinterpret_cast<void(*)(Ip, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
 	
-	OneOf&lt;Ip,string&gt; out;
+	Ip out;
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
@@ -66,12 +66,12 @@ static bool getIpProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, vo
 
 
 
-		if (isprimitive("OneOf&lt;Ip,string&gt;")) {
+		if (isprimitive("Ip")) {
 			pJson = json_from_string(data, NULL);
-			jsonToValue(&out, pJson, "OneOf&lt;Ip,string&gt;", "OneOf&lt;Ip,string&gt;");
+			jsonToValue(&out, pJson, "Ip", "Ip");
 			json_node_free(pJson);
 
-			if ("OneOf&lt;Ip,string&gt;" == "std::string") {
+			if ("Ip" == "std::string") {
 				string* val = (std::string*)(&out);
 				if (val->empty() && p_chunk.size>4) {
 					*val = string(p_chunk.memory, p_chunk.size);
@@ -105,7 +105,7 @@ static bool getIpProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, vo
 
 static bool getIpHelper(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(OneOf&lt;Ip,string&gt;, Error, void* )
+	void(* handler)(Ip, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -190,7 +190,7 @@ static bool getIpHelper(char * accessToken,
 
 bool DefaultManager::getIpAsync(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(OneOf&lt;Ip,string&gt;, Error, void* )
+	void(* handler)(Ip, Error, void* )
 	, void* userData)
 {
 	return getIpHelper(accessToken,
@@ -200,7 +200,7 @@ bool DefaultManager::getIpAsync(char * accessToken,
 
 bool DefaultManager::getIpSync(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(OneOf&lt;Ip,string&gt;, Error, void* )
+	void(* handler)(Ip, Error, void* )
 	, void* userData)
 {
 	return getIpHelper(accessToken,

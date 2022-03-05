@@ -8,7 +8,6 @@ import akka.http.scaladsl.unmarshalling.FromEntityUnmarshaller
 import akka.http.scaladsl.unmarshalling.FromStringUnmarshaller
 import org.openapitools.server.AkkaHttpHelper._
 import org.openapitools.server.model.Ip
-import org.openapitools.server.model.OneOfIpstring
 
 
 class DefaultApi(
@@ -32,20 +31,20 @@ class DefaultApi(
 
 trait DefaultApiService {
 
-  def getIp200(responseOneOfIpstring: OneOfIpstring)(implicit toEntityMarshallerOneOfIpstring: ToEntityMarshaller[OneOfIpstring]): Route =
-    complete((200, responseOneOfIpstring))
+  def getIp200(responseIp: Ip)(implicit toEntityMarshallerIp: ToEntityMarshaller[Ip]): Route =
+    complete((200, responseIp))
   /**
-   * Code: 200, Message: Your public IP address, DataType: OneOfIpstring
+   * Code: 200, Message: Your public IP address, DataType: Ip
    */
   def getIp(format: Option[String], callback: Option[String])
-      (implicit toEntityMarshallerOneOfIpstring: ToEntityMarshaller[OneOfIpstring]): Route
+      (implicit toEntityMarshallerIp: ToEntityMarshaller[Ip]): Route
 
 }
 
 trait DefaultApiMarshaller {
 
 
-  implicit def toEntityMarshallerOneOfIpstring: ToEntityMarshaller[OneOfIpstring]
+  implicit def toEntityMarshallerIp: ToEntityMarshaller[Ip]
 
 }
 

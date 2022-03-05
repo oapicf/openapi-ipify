@@ -15,7 +15,6 @@
 
 import ApiClient from "../ApiClient";
 import Ip from '../model/Ip';
-import OneOfIpstring from '../model/OneOfIpstring';
 
 /**
 * Default service.
@@ -40,7 +39,7 @@ export default class DefaultApi extends ApiClient {
      * @param {Object} opts Optional parameters
      * @param {String} opts.format Response format
      * @param {String} opts.callback JSONP callback function name
-     * @return {Promise<OneOfIpstring>}
+     * @return {Promise<Ip>}
      */
     async getIp(opts) {
       opts = opts || {};
@@ -60,8 +59,8 @@ export default class DefaultApi extends ApiClient {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['*/*'];
-      let returnType = OneOfIpstring;
+      let accepts = ['application/json', 'application/javascript', 'text/plain'];
+      let returnType = Ip;
 
       return this.callApi(
         '/', 'GET',

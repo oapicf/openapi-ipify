@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getIp
 
-> OneOfIpstring getIp(opts)
+> Ip getIp(opts)
 
 Get your public IP address
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -52,5 +52,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: application/json, application/javascript, text/plain
 

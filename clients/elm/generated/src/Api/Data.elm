@@ -16,11 +16,8 @@
 
 module Api.Data exposing
     ( Ip
-    , IpString
     , encodeIp
-    , encodeIpString
     , ipDecoder
-    , ipStringDecoder
     )
 
 import Api
@@ -35,10 +32,6 @@ import Json.Encode
 type alias Ip =
     { ip : String
     }
-
-
-type alias IpString =
-    { }
 
 
 -- ENCODER
@@ -64,25 +57,6 @@ encodeIpPairs model =
     pairs
 
 
-encodeIpString : IpString -> Json.Encode.Value
-encodeIpString =
-    encodeObject << encodeIpStringPairs
-
-
-encodeIpStringWithTag : ( String, String ) -> IpString -> Json.Encode.Value
-encodeIpStringWithTag (tagField, tag) model =
-    encodeObject (encodeIpStringPairs model ++ [ encode tagField Json.Encode.string tag ])
-
-
-encodeIpStringPairs : IpString -> List EncodedField
-encodeIpStringPairs model =
-    let
-        pairs =
-            ]
-    in
-    pairs
-
-
 -- DECODER
 
 
@@ -90,11 +64,6 @@ ipDecoder : Json.Decode.Decoder Ip
 ipDecoder =
     Json.Decode.succeed Ip
         |> decode "ip" Json.Decode.string 
-
-
-ipStringDecoder : Json.Decode.Decoder IpString
-ipStringDecoder =
-    Json.Decode.succeed IpString
 
 
 

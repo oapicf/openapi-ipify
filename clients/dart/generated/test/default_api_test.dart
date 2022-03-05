@@ -19,7 +19,7 @@ void main() {
   group('tests for DefaultApi', () {
     // Get your public IP address
     //
-    //Future<OneOfIpstring> getIp({ String format, String callback }) async
+    //Future<Ip> getIp({ String format, String callback }) async
     test('test getIp', () async {
       // TODO
     });

@@ -53,7 +53,7 @@ export class DefaultApi {
      * @param callback JSONP callback function name
      */
     public getIp(format?: 'json' | 'jsonp', callback?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: models.models.Ip | string;  },
+    { response: JQueryXHR; body: models.Ip;  },
     { response: JQueryXHR; errorThrown: string }
     > {
         let localVarPath = this.basePath + '/';
@@ -74,7 +74,9 @@ export class DefaultApi {
 
         // to determine the Accept header
         let produces: string[] = [
-            '*/*'
+            'application/json', 
+            'application/javascript', 
+            'text/plain'
         ];
 
 
@@ -98,11 +100,11 @@ export class DefaultApi {
         }
 
         let dfd = $.Deferred<
-            { response: JQueryXHR; body: models.models.Ip | string;  },
+            { response: JQueryXHR; body: models.Ip;  },
             { response: JQueryXHR; errorThrown: string }
         >();
         $.ajax(requestOptions).then(
-            (data: models.models.Ip | string, textStatus: string, jqXHR: JQueryXHR) =>
+            (data: models.Ip, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})

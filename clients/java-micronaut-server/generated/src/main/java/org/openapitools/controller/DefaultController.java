@@ -19,7 +19,6 @@ import io.micronaut.security.annotation.Secured;
 import io.micronaut.security.rules.SecurityRule;
 import reactor.core.publisher.Mono;
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,7 +28,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 import io.swagger.annotations.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2022-03-05T05:05:48.296709Z[Etc/UTC]")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2022-03-05T14:55:00.539192Z[Etc/UTC]")
 @Controller("${context-path}")
 public class DefaultController {
     /**
@@ -37,25 +36,25 @@ public class DefaultController {
      *
      * @param _format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return OneOfIpstring
+     * @return Ip
      */
     @ApiOperation(
         value = "Get your public IP address",
         nickname = "getIp",
-        response = OneOfIpstring.class,
+        response = Ip.class,
         authorizations = {},
         tags={})
     @ApiResponses(value = {
-        @ApiResponse(code = 200, message = "Your public IP address", response = OneOfIpstring.class)})
+        @ApiResponse(code = 200, message = "Your public IP address", response = Ip.class)})
     @Get(uri="/")
-    @Produces(value = {})
+    @Produces(value = {"application/json", "application/javascript", "text/plain"})
     @Secured(SecurityRule.IS_ANONYMOUS)
-    public Mono<OneOfIpstring> getIp(
+    public Mono<Ip> getIp(
         @QueryValue(value="format") @Nullable String _format, 
         @QueryValue(value="callback") @Nullable String paramCallback
     ) {
         // TODO implement getIp() body;
-        Mono<OneOfIpstring> result = Mono.empty();
+        Mono<Ip> result = Mono.empty();
         return result;
     }
 }

@@ -17,7 +17,6 @@ open DefaultApiHandlerTestsHelper
 open OpenAPI.DefaultApiHandler
 open OpenAPI.DefaultApiHandlerParams
 open OpenAPI.Model.Ip
-open OpenAPI.Model.OneOfIpstring
 
 module DefaultApiHandlerTests =
 

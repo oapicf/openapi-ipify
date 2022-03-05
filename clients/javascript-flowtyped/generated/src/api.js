@@ -124,7 +124,7 @@ export const DefaultApiFetchParamCreator = function (configuration?: Configurati
 };
 
 export type DefaultApiType = { 
-    getIp(format?: 'json' | 'jsonp', callback?: string, options?: RequestOptions): Promise<Ip | string>,
+    getIp(format?: 'json' | 'jsonp', callback?: string, options?: RequestOptions): Promise<Ip>,
 }
 
 /**
@@ -139,7 +139,7 @@ export const DefaultApi = function(configuration?: Configuration, fetch: FetchAP
          * @summary Get your public IP address
          * @throws {RequiredError}
          */
-        getIp(format?: 'json' | 'jsonp', callback?: string, options?: RequestOptions = {}): Promise<Ip | string> {
+        getIp(format?: 'json' | 'jsonp', callback?: string, options?: RequestOptions = {}): Promise<Ip> {
             const localVarFetchArgs = DefaultApiFetchParamCreator(configuration).getIp(format, callback, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {

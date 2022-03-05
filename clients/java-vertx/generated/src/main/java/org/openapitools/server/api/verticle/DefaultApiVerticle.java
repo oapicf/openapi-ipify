@@ -10,7 +10,6 @@ import io.vertx.core.logging.LoggerFactory;
 
 import org.openapitools.server.api.model.Ip;
 import org.openapitools.server.api.MainApiException;
-import org.openapitools.server.api.model.OneOfIpstring;
 
 import java.util.List;
 import java.util.Map;

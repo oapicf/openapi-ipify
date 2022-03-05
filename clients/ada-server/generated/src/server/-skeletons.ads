@@ -26,7 +26,7 @@ package .Skeletons is
       (Server : in out Server_Type;
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
-       Result  : out .Models.OneOfIpstring_Type;
+       Result  : out .Models.Ip_Type;
        Context : in out Swagger.Servers.Context_Type) is abstract;
 
    generic
@@ -69,7 +69,7 @@ package .Skeletons is
          procedure Get_Ip
             (Format : in Swagger.Nullable_UString;
              Callback : in Swagger.Nullable_UString;
-             Result  : out .Models.OneOfIpstring_Type;
+             Result  : out .Models.Ip_Type;
              Context : in out Swagger.Servers.Context_Type);
 
       private

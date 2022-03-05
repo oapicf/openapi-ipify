@@ -8,7 +8,7 @@ Feature | HTTP request | Description
 
 
 # **ip**
-> ip (format:  detachable STRING_32 ; callback:  detachable STRING_32 ): detachable ONE_OF_IPSTRING
+> ip (format:  detachable STRING_32 ; callback:  detachable STRING_32 ): detachable IP
 
 
 Get your public IP address
@@ -23,7 +23,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ONE_OF_IPSTRING**](oneOf&lt;Ip,string&gt;.md)
+[**IP**](Ip.md)
 
 ### Authorization
 
@@ -32,7 +32,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

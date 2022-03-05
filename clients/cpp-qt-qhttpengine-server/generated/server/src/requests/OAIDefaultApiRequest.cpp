@@ -72,7 +72,7 @@ void OAIDefaultApiRequest::getIpRequest(){
 
 
 
-void OAIDefaultApiRequest::getIpResponse(const OAIOneOfIpstring& res){
+void OAIDefaultApiRequest::getIpResponse(const OAIIp& res){
     setSocketResponseHeaders();
     QJsonDocument resDoc(::OpenAPI::toJsonValue(res).toObject());
     socket->writeJson(resDoc);
@@ -82,7 +82,7 @@ void OAIDefaultApiRequest::getIpResponse(const OAIOneOfIpstring& res){
 }
 
 
-void OAIDefaultApiRequest::getIpError(const OAIOneOfIpstring& res, QNetworkReply::NetworkError error_type, QString& error_str){
+void OAIDefaultApiRequest::getIpError(const OAIIp& res, QNetworkReply::NetworkError error_type, QString& error_str){
     Q_UNUSED(error_type); // TODO: Remap error_type to QHttpEngine::Socket errors
     setSocketResponseHeaders();
     Q_UNUSED(error_str);  // response will be used instead of error string

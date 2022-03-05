@@ -38,7 +38,7 @@ More information can be found inside [Inversion of Control guide section](https:
 <a name="getIp"></a>
 # **getIp**
 ```java
-Mono<OneOfIpstring> DefaultApi.getIp(_formatparamCallback)
+Mono<Ip> DefaultApi.getIp(_formatparamCallback)
 ```
 
 Get your public IP address
@@ -51,11 +51,11 @@ Name | Type | Description  | Notes
 
 
 ### Return type
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 
 
 ### HTTP request headers
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: `application/json`, `application/javascript`, `text/plain`
 

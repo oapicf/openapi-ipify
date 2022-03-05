@@ -26,7 +26,7 @@ class ApiClient extends OAGAC\AbstractApiClient
      */
     public function getIpRaw(
         \App\DTO\GetIpParameterData $parameters,
-        string $responseMediaType = '*_/_*'
+        string $responseMediaType = 'application/json'
     ): ResponseInterface
     {
         $request = $this->createRequest('GET', '/', [], $this->getQueryParameters($parameters));
@@ -45,7 +45,7 @@ class ApiClient extends OAGAC\AbstractApiClient
      */
     public function getIp(
         \App\DTO\GetIpParameterData $parameters,
-        string $responseMediaType = '*_/_*'
+        string $responseMediaType = 'application/json'
     ): array
     {
         $response = $this->getIpRaw($parameters, $responseMediaType);
@@ -54,7 +54,7 @@ class ApiClient extends OAGAC\AbstractApiClient
         {
             case 200:
                 /* Your public IP address */
-                $responseContent = new OneOfIpString();
+                $responseContent = new \App\DTO\Ip();
                 break;
         }
         $this->parseBody($response, $responseContent);
@@ -65,7 +65,7 @@ class ApiClient extends OAGAC\AbstractApiClient
      * Get your public IP address
      * @param \App\DTO\GetIpParameterData $parameters
      * @param string $responseMediaType
-     * @return OneOfIpString
+     * @return \App\DTO\Ip
      * @throws ClientExceptionInterface
      * @throws DT\Exception\InvalidData
      * @throws OAGAC\Exception\InvalidResponseBodySchema
@@ -73,8 +73,8 @@ class ApiClient extends OAGAC\AbstractApiClient
      */
     public function getIpResult(
         \App\DTO\GetIpParameterData $parameters,
-        string $responseMediaType = '*_/_*'
-    ): OneOfIpString
+        string $responseMediaType = 'application/json'
+    ): \App\DTO\Ip
     {
         return $this->getSuccessfulContent(...$this->getIp($parameters, $responseMediaType));
     }

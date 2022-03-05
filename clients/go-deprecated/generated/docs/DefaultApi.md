@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetIp
 
-> OneOfIpstring GetIp(ctx, optional)
+> Ip GetIp(ctx, optional)
 
 Get your public IP address
 
@@ -34,7 +34,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](oneOf&lt;Ip,string&gt;.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -43,7 +43,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

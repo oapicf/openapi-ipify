@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -31,8 +30,8 @@ public class DefaultApiTest {
     public void getIpTest() {
         String _format = null;
         String paramCallback = null;
-        // OneOfIpstring response = api.getIp(_format, paramCallback).block();
-        // Mono<OneOfIpstring> asyncResponse = api.getIp(_format, paramCallback);
+        // Ip response = api.getIp(_format, paramCallback).block();
+        // Mono<Ip> asyncResponse = api.getIp(_format, paramCallback);
         // TODO: test validations
     }
 

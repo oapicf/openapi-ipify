@@ -28,7 +28,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOf<Ip,string>**](OneOf&lt;Ip,string&gt;.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -37,7 +37,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: */*
+- **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

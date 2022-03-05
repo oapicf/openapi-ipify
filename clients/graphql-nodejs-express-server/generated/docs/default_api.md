@@ -9,6 +9,6 @@ Method | HTTP request | Description
 
 <a name="GetIp"></a>
 # **GetIp**
-> OneOfIpstring GetIp(format, callback)
+> Ip GetIp(format, callback)
 
 Get your public IP address

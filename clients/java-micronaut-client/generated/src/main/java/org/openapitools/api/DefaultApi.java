@@ -18,7 +18,6 @@ import io.micronaut.http.client.annotation.Client;
 import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
 import org.openapitools.model.Ip;
-import org.openapitools.model.OneOfIpstring;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +27,7 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2022-03-05T05:05:40.923594Z[Etc/UTC]")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2022-03-05T14:54:55.066661Z[Etc/UTC]")
 @Client("${base-path}")
 public interface DefaultApi {
     /**
@@ -36,11 +35,11 @@ public interface DefaultApi {
      *
      * @param _format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return OneOfIpstring
+     * @return Ip
      */
     @Get(uri="/")
-    @Consumes(value={"*/*"})
-    Mono<OneOfIpstring> getIp(
+    @Consumes(value={"application/json"})
+    Mono<Ip> getIp(
         @QueryValue(value="format") @Nullable String _format, 
         @QueryValue(value="callback") @Nullable String paramCallback
   );

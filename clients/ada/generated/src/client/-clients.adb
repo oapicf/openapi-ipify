@@ -18,11 +18,13 @@ package body .Clients is
       (Client : in out Client_Type;
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
-       Result : out .Models.OneOfIpstring_Type) is
+       Result : out .Models.Ip_Type) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
-      Client.Set_Accept ((1 => Swagger.Clients.*_*));
+      Client.Set_Accept ((Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.APPLICATION_JAVASCRIPT,
+                          Swagger.Clients.TEXT_PLAIN));
 
       URI.Add_Param ("format", Format);
       URI.Add_Param ("callback", Callback);

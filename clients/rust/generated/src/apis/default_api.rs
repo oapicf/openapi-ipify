@@ -23,7 +23,7 @@ pub enum GetIpError {
 }
 
 
-pub async fn get_ip(configuration: &configuration::Configuration, format: Option<&str>, callback: Option<&str>) -> Result<crate::models::OneOfIpstring, Error<GetIpError>> {
+pub async fn get_ip(configuration: &configuration::Configuration, format: Option<&str>, callback: Option<&str>) -> Result<crate::models::Ip, Error<GetIpError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

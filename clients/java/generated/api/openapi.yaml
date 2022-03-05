@@ -38,22 +38,26 @@ paths:
       responses:
         "200":
           content:
-            '*/*':
+            application/json:
               schema:
-                oneOf:
-                - $ref: '#/components/schemas/Ip'
-                - $ref: '#/components/schemas/IpString'
+                $ref: '#/components/schemas/Ip'
+            application/javascript:
+              schema:
+                type: string
+            text/plain:
+              schema:
+                type: string
           description: Your public IP address
       summary: Get your public IP address
-      x-accepts: '*/*'
+      x-accepts: application/json
 components:
   schemas:
     Ip:
+      example:
+        ip: ip
       properties:
         ip:
           type: string
       required:
       - ip
-    IpString:
-      type: string
 

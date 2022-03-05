@@ -22,7 +22,6 @@ import scalaz.concurrent.Task
 import HelperCodecs._
 
 import org.openapitools.client.api.Ip
-import org.openapitools.client.api.OneOfIpstring
 
 object DefaultApi {
 
@@ -30,8 +29,8 @@ object DefaultApi {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def getIp(host: String, format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[OneOfIpstring] = {
-    implicit val returnTypeDecoder: EntityDecoder[OneOfIpstring] = jsonOf[OneOfIpstring]
+  def getIp(host: String, format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[Ip] = {
+    implicit val returnTypeDecoder: EntityDecoder[Ip] = jsonOf[Ip]
 
     val path = "/"
 
@@ -46,7 +45,7 @@ object DefaultApi {
       uri           <- Task.fromDisjunction(Uri.fromString(host + path))
       uriWithParams =  uri.copy(query = queryParams)
       req           =  Request(method = httpMethod, uri = uriWithParams, headers = headers.put(contentType))
-      resp          <- client.expect[OneOfIpstring](req)
+      resp          <- client.expect[Ip](req)
 
     } yield resp
   }
@@ -58,8 +57,8 @@ class HttpServiceDefaultApi(service: HttpService) {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def getIp(format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[OneOfIpstring] = {
-    implicit val returnTypeDecoder: EntityDecoder[OneOfIpstring] = jsonOf[OneOfIpstring]
+  def getIp(format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[Ip] = {
+    implicit val returnTypeDecoder: EntityDecoder[Ip] = jsonOf[Ip]
 
     val path = "/"
 
@@ -74,7 +73,7 @@ class HttpServiceDefaultApi(service: HttpService) {
       uri           <- Task.fromDisjunction(Uri.fromString(path))
       uriWithParams =  uri.copy(query = queryParams)
       req           =  Request(method = httpMethod, uri = uriWithParams, headers = headers.put(contentType))
-      resp          <- client.expect[OneOfIpstring](req)
+      resp          <- client.expect[Ip](req)
 
     } yield resp
   }

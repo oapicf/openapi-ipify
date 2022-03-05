@@ -118,7 +118,7 @@ populate_request_param(OperationID, Name, Req0, ValidatorState) ->
 
 
 validate_response('GetIp', 200, Body, ValidatorState) ->
-    validate_response_body('oneOf&lt;Ip,string&gt;', 'oneOf&lt;Ip,string&gt;', Body, ValidatorState);
+    validate_response_body('Ip', 'Ip', Body, ValidatorState);
 
 
 validate_response(_OperationID, _Code, _Body, _ValidatorState) ->

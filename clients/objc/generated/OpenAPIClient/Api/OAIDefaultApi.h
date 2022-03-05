@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 #import "OAIIp.h"
-#import "OAIOneOfIpString.h"
 #import "OAIApi.h"
 
 /**
@@ -32,10 +31,10 @@ extern NSInteger kOAIDefaultApiMissingParamErrorCode;
 /// 
 ///  code:200 message:"Your public IP address"
 ///
-/// @return OAIOneOfIpString*
+/// @return OAIIp*
 -(NSURLSessionTask*) getIpWithFormat: (NSString*) format
     callback: (NSString*) callback
-    completionHandler: (void (^)(OAIOneOfIpString* output, NSError* error)) handler;
+    completionHandler: (void (^)(OAIIp* output, NSError* error)) handler;
 
 
 

@@ -1,7 +1,6 @@
 package com.prokarma.pkmst.controller;
 
 import com.prokarma.pkmst.model.Ip;
-import com.prokarma.pkmst.model.OneOfIpstring;
 
 import io.swagger.annotations.*;
 
@@ -24,7 +23,7 @@ import java.io.IOException;
  * @author pkmst
  *
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2022-03-05T05:06:02.377909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2022-03-05T14:55:12.147359Z[Etc/UTC]")
 @Controller
 public class DefaultApiController implements DefaultApi {
     private final ObjectMapper objectMapper;
@@ -33,11 +32,16 @@ public class DefaultApiController implements DefaultApi {
         this.objectMapper = objectMapper;
     }
 
-    public ResponseEntity<OneOfIpstring> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp")  @RequestParam(value = "format", required = false) String format,
+    public ResponseEntity<Ip> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp")  @RequestParam(value = "format", required = false) String format,
         @ApiParam(value = "JSONP callback function name")  @RequestParam(value = "callback", required = false) String paramCallback,
         @RequestHeader(value = "Accept", required = false) String accept) throws Exception {
         // do some magic!
-        return new ResponseEntity<OneOfIpstring>(HttpStatus.OK);
+
+        if (accept != null && accept.contains("application/json")) {
+            return new ResponseEntity<Ip>(objectMapper.readValue("", Ip.class), HttpStatus.OK);
+        }
+
+        return new ResponseEntity<Ip>(HttpStatus.OK);
     }
 
 }

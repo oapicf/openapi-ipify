@@ -17,7 +17,7 @@
 export default {
     Query: {
 
-        // @return OneOfIpstring
+        // @return Ip
         GetIp: ($format, $callback) => {
             return {
                 "format": "format_example",

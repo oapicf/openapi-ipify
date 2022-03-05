@@ -32,7 +32,7 @@ export class DefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIp (format?: 'json' | 'jsonp', callback?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.models.Ip | string> {
+    public getIp (format?: 'json' | 'jsonp', callback?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Ip> {
         const localVarPath = this.basePath + '/';
 
         let queryParameters: any = {};

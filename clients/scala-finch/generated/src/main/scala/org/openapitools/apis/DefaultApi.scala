@@ -4,7 +4,6 @@ import java.io._
 import org.openapitools._
 import org.openapitools.models._
 import org.openapitools.models.Ip
-import org.openapitools.models.OneOf&lt;Ip,string&gt;
 import io.finch.circe._
 import io.circe.generic.semiauto._
 import com.twitter.concurrent.AsyncStream
@@ -50,9 +49,9 @@ object DefaultApi {
 
         /**
         * 
-        * @return An endpoint representing a OneOf&lt;Ip,string&gt;
+        * @return An endpoint representing a Ip
         */
-        private def getIp(da: DataAccessor): Endpoint[OneOf&lt;Ip,string&gt;] =
+        private def getIp(da: DataAccessor): Endpoint[Ip] =
         get("" :: paramOption("format") :: paramOption("callback")) { (format: Option[String], callback: Option[String]) =>
           da.Default_getIp(format, callback) match {
             case Left(error) => checkError(error)

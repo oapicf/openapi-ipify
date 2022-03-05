@@ -140,7 +140,7 @@ void DefaultApiResource::handler_GET_internal(const std::shared_ptr<restbed::Ses
 
 
     int status_code = 500;
-    std::shared_ptr<OneOfIpstring> resultObject = nullptr;
+    std::shared_ptr<Ip> resultObject = std::make_shared<Ip>();
     std::string result = "";
 
     try {
@@ -168,7 +168,7 @@ void DefaultApiResource::handler_GET_internal(const std::shared_ptr<restbed::Ses
 }
 
 
-std::pair<int, std::shared_ptr<OneOfIpstring>> DefaultApiResource::handler_GET(
+std::pair<int, std::shared_ptr<Ip>> DefaultApiResource::handler_GET(
         std::string const & format, std::string const & callback)
 {
     throw DefaultApiException(501, "Not implemented");

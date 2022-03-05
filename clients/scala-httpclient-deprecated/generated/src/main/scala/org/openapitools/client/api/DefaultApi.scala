@@ -15,7 +15,6 @@ package org.openapitools.client.api
 import java.text.SimpleDateFormat
 
 import org.openapitools.client.model.Ip
-import org.openapitools.client.model.OneOfIpstring
 import org.openapitools.client.{ApiInvoker, ApiException}
 
 import collection.mutable
@@ -81,9 +80,9 @@ class DefaultApi(
    *
    * @param format Response format (optional)
    * @param callback JSONP callback function name (optional)
-   * @return OneOfIpstring
+   * @return Ip
    */
-  def getIp(format: Option[String] = None, callback: Option[String] = None): Option[OneOfIpstring] = {
+  def getIp(format: Option[String] = None, callback: Option[String] = None): Option[Ip] = {
     val await = Try(Await.result(getIpAsync(format, callback), Duration.Inf))
     await match {
       case Success(i) => Some(await.get)
@@ -97,9 +96,9 @@ class DefaultApi(
    *
    * @param format Response format (optional)
    * @param callback JSONP callback function name (optional)
-   * @return Future(OneOfIpstring)
+   * @return Future(Ip)
    */
-  def getIpAsync(format: Option[String] = None, callback: Option[String] = None): Future[OneOfIpstring] = {
+  def getIpAsync(format: Option[String] = None, callback: Option[String] = None): Future[Ip] = {
       helper.getIp(format, callback)
   }
 
@@ -109,7 +108,7 @@ class DefaultApiAsyncHelper(client: TransportClient, config: SwaggerConfig) exte
 
   def getIp(format: Option[String] = None,
     callback: Option[String] = None
-    )(implicit reader: ClientResponseReader[OneOfIpstring]): Future[OneOfIpstring] = {
+    )(implicit reader: ClientResponseReader[Ip]): Future[Ip] = {
     // create path and map variables
     val path = (addFmt("/"))
 

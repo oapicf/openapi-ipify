@@ -33,7 +33,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * Get your public IP address
      */
-    async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Ip | string>> {
+    async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Ip>> {
         const queryParameters: any = {};
 
         if (requestParameters.format !== undefined) {
@@ -53,13 +53,13 @@ export class DefaultApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => Ip | stringFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => IpFromJSON(jsonValue));
     }
 
     /**
      * Get your public IP address
      */
-    async getIp(requestParameters: GetIpRequest = {}, initOverrides?: RequestInit): Promise<Ip | string> {
+    async getIp(requestParameters: GetIpRequest = {}, initOverrides?: RequestInit): Promise<Ip> {
         const response = await this.getIpRaw(requestParameters, initOverrides);
         return await response.value();
     }

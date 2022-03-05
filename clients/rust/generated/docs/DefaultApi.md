@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## get_ip
 
-> crate::models::OneOfIpstring get_ip(format, callback)
+> crate::models::Ip get_ip(format, callback)
 Get your public IP address
 
 ### Parameters
@@ -23,7 +23,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::OneOfIpstring**](oneOf<Ip,string>.md)
+[**crate::models::Ip**](Ip.md)
 
 ### Authorization
 
@@ -32,7 +32,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **getIp**
 ```swift
-    open class func getIp(format: Format_getIp? = nil, callback: String? = nil, completion: @escaping (_ data: GetIp200?, _ error: Error?) -> Void)
+    open class func getIp(format: Format_getIp? = nil, callback: String? = nil, completion: @escaping (_ data: Ip?, _ error: Error?) -> Void)
 ```
 
 Get your public IP address
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetIp200**](GetIp200.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -53,7 +53,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

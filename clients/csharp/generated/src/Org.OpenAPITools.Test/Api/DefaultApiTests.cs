@@ -73,7 +73,7 @@ namespace Org.OpenAPITools.Test
             //string format = null;
             //string callback = null;
             //var response = instance.GetIp(format, callback);
-            //Assert.IsInstanceOf(typeof(OneOfIpstring), response, "response is OneOfIpstring");
+            //Assert.IsInstanceOf(typeof(Ip), response, "response is Ip");
         }
         
     }

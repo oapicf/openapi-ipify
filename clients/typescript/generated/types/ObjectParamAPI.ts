@@ -33,7 +33,7 @@ export class ObjectDefaultApi {
      * Get your public IP address
      * @param param the request object
      */
-    public getIp(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<Ip | string> {
+    public getIp(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<Ip> {
         return this.api.getIp(param.format, param.callback,  options).toPromise();
     }
 

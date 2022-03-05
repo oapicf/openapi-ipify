@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_ip**
-> OneOfIpstring get_ip(format=format, param_callback=param_callback)
+> Ip get_ip(format=format, param_callback=param_callback)
 
 Get your public IP address
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIpstring**](OneOfIpstring.md)
+[**Ip**](Ip.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/json, application/javascript, text/plain
 
 ### HTTP response details
 | Status code | Description | Response headers |

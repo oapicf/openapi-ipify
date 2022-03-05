@@ -32,8 +32,8 @@ func (s *DefaultApiService) GetIp(ctx context.Context, format string, callback s
 	// TODO - update GetIp with the required logic for this service method.
 	// Add api_default_service.go to the .openapi-generator-ignore to avoid overwriting this service implementation when updating open api generation.
 
-	//TODO: Uncomment the next line to return response Response(200, OneOfIpstring{}) or use other options such as http.Ok ...
-	//return Response(200, OneOfIpstring{}), nil
+	//TODO: Uncomment the next line to return response Response(200, Ip{}) or use other options such as http.Ok ...
+	//return Response(200, Ip{}), nil
 
 	return Response(http.StatusNotImplemented, nil), errors.New("GetIp method not implemented")
 }

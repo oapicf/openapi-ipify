@@ -63,7 +63,7 @@ class DefaultApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: OneOfIpstring
+        :rtype: Ip
         """
         kwargs['_return_http_data_only'] = True
         return self.get_ip_with_http_info(**kwargs)  # noqa: E501
@@ -102,7 +102,7 @@ class DefaultApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(OneOfIpstring, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(Ip, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -150,13 +150,13 @@ class DefaultApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+            ['application/json', 'application/javascript', 'text/plain'])  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         response_types_map = {
-            200: "OneOfIpstring",
+            200: "Ip",
         }
 
         return self.api_client.call_api(

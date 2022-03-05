@@ -51,7 +51,7 @@ stringFromFormat model =
 
 
 
-getIp : Maybe Format -> Maybe String -> Api.Request Api.Data.OneOf&lt;Ip,string&gt;
+getIp : Maybe Format -> Maybe String -> Api.Request Api.Data.Ip
 getIp format_query callback_query =
     Api.request
         "GET"
@@ -60,4 +60,4 @@ getIp format_query callback_query =
         [ ( "format", Maybe.map stringFromFormat format_query ), ( "callback", Maybe.map identity callback_query ) ]
         []
         Nothing
-        Api.Data.oneOfltIpstringgtDecoder
+        Api.Data.ipDecoder

@@ -36,7 +36,7 @@ DefaultApi::~DefaultApi()
 {
 }
 
-pplx::task<std::shared_ptr<OneOfIpstring>> DefaultApi::getIp(boost::optional<utility::string_t> format, boost::optional<utility::string_t> callback) const
+pplx::task<std::shared_ptr<Ip>> DefaultApi::getIp(boost::optional<utility::string_t> format, boost::optional<utility::string_t> callback) const
 {
 
 
@@ -49,7 +49,9 @@ pplx::task<std::shared_ptr<OneOfIpstring>> DefaultApi::getIp(boost::optional<uti
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
-    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("*/*") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/javascript") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -145,7 +147,7 @@ pplx::task<std::shared_ptr<OneOfIpstring>> DefaultApi::getIp(boost::optional<uti
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::shared_ptr<OneOfIpstring> localVarResult(nullptr);
+        std::shared_ptr<Ip> localVarResult(new Ip());
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {

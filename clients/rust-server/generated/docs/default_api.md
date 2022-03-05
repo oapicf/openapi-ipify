@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getIp**
-> swagger::OneOf2<models::Ip,models::IpString> getIp(optional)
+> models::Ip getIp(optional)
 Get your public IP address
 
 ### Required Parameters
@@ -27,7 +27,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**swagger::OneOf2<models::Ip,models::IpString>**](swagger::OneOf2<models::Ip,models::IpString>.md)
+[**models::Ip**](Ip.md)
 
 ### Authorization
 
@@ -36,7 +36,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: */*
+ - **Accept**: application/javascript, application/json, text/plain
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

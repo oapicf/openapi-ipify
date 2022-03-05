@@ -17,7 +17,6 @@ local basexx = require "basexx"
 
 -- model import
 local openapiclient_ip = require "openapiclient.model.ip"
-local openapiclient_one_of_ipstring = require "openapiclient.model.one_of_ipstring"
 
 local default_api = {}
 local default_api_mt = {
@@ -57,8 +56,8 @@ function default_api:get_ip(format, callback)
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "*/*" }
-	req.headers:upsert("content-type", "*/*")
+	--local var_accept = { "application/json", "application/javascript", "text/plain" }
+	req.headers:upsert("content-type", "application/json")
 
 
 	-- make the HTTP call
@@ -79,7 +78,7 @@ function default_api:get_ip(format, callback)
 		if result == nil then
 			return nil, err3
 		end
-		return openapiclient_one_of_ipstring.cast(result), headers
+		return openapiclient_ip.cast(result), headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
