@@ -10,5 +10,5 @@ rvm:
 script:
   - bundle install --path vendor/bundle
   - bundle exec rspec
-  - gem build openapi_client.gemspec
-  - gem install ./openapi_client-1.0.0.gem
+  - gem build openapi_ipify.gemspec
+  - gem install ./openapi_ipify-1.0.0-pre.0.gem

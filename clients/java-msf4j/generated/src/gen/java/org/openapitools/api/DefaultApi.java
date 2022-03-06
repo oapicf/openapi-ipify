@@ -26,7 +26,7 @@ import javax.ws.rs.*;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2022-03-05T14:55:06.415890Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2022-03-05T23:35:33.464711Z[Etc/UTC]")
 public class DefaultApi  {
    private final DefaultApiService delegate = DefaultApiServiceFactory.getDefaultApi();
 

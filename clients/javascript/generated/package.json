@@ -1,5 +1,5 @@
 {
-  "name": "openapi_ipify",
+  "name": "openapi-ipify",
   "version": "1.0.0-pre.0",
   "description": "OpenAPI_client_for_ipify_a_simple_public_IP_address_API",
   "license": "MIT",

@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# openapiipify.DefaultApi
 
 All URIs are relative to *https://api.ipify.org*
 
@@ -17,19 +17,19 @@ Get your public IP address
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import default_api
-from openapi_client.model.ip import Ip
+import openapiipify
+from openapiipify.api import default_api
+from openapiipify.model.ip import Ip
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ipify.org
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = openapiipify.Configuration(
     host = "https://api.ipify.org"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient() as api_client:
+with openapiipify.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
     format = "json" # str | Response format (optional)
@@ -41,7 +41,7 @@ with openapi_client.ApiClient() as api_client:
         # Get your public IP address
         api_response = api_instance.get_ip(format=format, param_callback=param_callback)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except openapiipify.ApiException as e:
         print("Exception when calling DefaultApi->get_ip: %s\n" % e)
 ```
 

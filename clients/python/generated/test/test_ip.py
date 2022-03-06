@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.ip import Ip
+import openapiipify
+from openapiipify.model.ip import Ip
 
 
 class TestIp(unittest.TestCase):

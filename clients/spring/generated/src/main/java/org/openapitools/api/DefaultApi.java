@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-05T15:02:07.848792Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-05T23:57:03.578964Z[Etc/UTC]")
 @Validated
 @Tag(name = "default", description = "the default API")
 public interface DefaultApi {

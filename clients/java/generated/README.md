@@ -1,8 +1,8 @@
-# openapi-java-client
+# openapiipify
 
 openapi-ipify
 - API version: 1.0.0-pre.0
-  - Build date: 2022-03-05T14:54:36.838837Z[Etc/UTC]
+  - Build date: 2022-03-05T23:35:09.008352Z[Etc/UTC]
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -39,8 +39,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
+  <groupId>com.cliffano</groupId>
+  <artifactId>openapiipify</artifactId>
   <version>1.0.0-pre.0</version>
   <scope>compile</scope>
 </dependency>
@@ -52,12 +52,12 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
+    mavenCentral()     // Needed if the 'openapiipify' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'openapiipify' jar has been published to the local maven repo.
   }
 
   dependencies {
-     implementation "org.openapitools:openapi-java-client:1.0.0-pre.0"
+     implementation "com.cliffano:openapiipify:1.0.0-pre.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapi-java-client-1.0.0-pre.0.jar`
+* `target/openapiipify-1.0.0-pre.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -81,11 +81,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.DefaultApi;
+import com.cliffano.openapiipify.ApiClient;
+import com.cliffano.openapiipify.ApiException;
+import com.cliffano.openapiipify.Configuration;
+import com.cliffano.openapiipify.models.*;
+import com.cliffano.openapiipify.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {

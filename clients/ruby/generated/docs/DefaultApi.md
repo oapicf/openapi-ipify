@@ -1,4 +1,4 @@
-# OpenapiClient::DefaultApi
+# OpenApiIpifyClient::DefaultApi
 
 All URIs are relative to *https://api.ipify.org*
 
@@ -17,9 +17,9 @@ Get your public IP address
 
 ```ruby
 require 'time'
-require 'openapi_client'
+require 'openapi_ipify'
 
-api_instance = OpenapiClient::DefaultApi.new
+api_instance = OpenApiIpifyClient::DefaultApi.new
 opts = {
   format: 'json', # String | Response format
   callback: 'callback_example' # String | JSONP callback function name
@@ -29,7 +29,7 @@ begin
   # Get your public IP address
   result = api_instance.get_ip(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue OpenApiIpifyClient::ApiError => e
   puts "Error when calling DefaultApi->get_ip: #{e}"
 end
 ```
@@ -47,7 +47,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Ip>
-rescue OpenapiClient::ApiError => e
+rescue OpenApiIpifyClient::ApiError => e
   puts "Error when calling DefaultApi->get_ip_with_http_info: #{e}"
 end
 ```

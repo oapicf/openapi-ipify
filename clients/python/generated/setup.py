@@ -11,8 +11,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "openapi-client"
-VERSION = "1.0.0"
+NAME = "openapiipify"
+VERSION = "1.0.0-pre.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -31,7 +31,7 @@ setup(
     description="openapi-ipify",
     author="Cliffano Subagio",
     author_email="blah@cliffano.com",
-    url="",
+    url="https://github.com/cliffano/openapi-ipify",
     keywords=["OpenAPI", "OpenAPI-Generator", "openapi-ipify"],
     python_requires=">=3.6",
     install_requires=REQUIRES,

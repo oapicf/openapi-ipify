@@ -1,4 +1,4 @@
-# OpenapiClient::Ip
+# OpenApiIpifyClient::Ip
 
 ## Properties
 
@@ -9,9 +9,9 @@
 ## Example
 
 ```ruby
-require 'openapi_client'
+require 'openapi_ipify'
 
-instance = OpenapiClient::Ip.new(
+instance = OpenApiIpifyClient::Ip.new(
   ip: null
 )
 ```

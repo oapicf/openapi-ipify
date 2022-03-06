@@ -17,7 +17,7 @@ Get your public IP address
 ### Example
 
 ```javascript
-import OpenapiIpify from 'openapi_ipify';
+import OpenapiIpify from 'openapi-ipify';
 
 let apiInstance = new OpenapiIpify.DefaultApi();
 let opts = {

@@ -30,7 +30,7 @@ import javax.annotation.Generated;
   Ip.JSON_PROPERTY_IP
 })
 @JsonTypeName("Ip")
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2022-03-05T14:54:55.066661Z[Etc/UTC]")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2022-03-05T23:35:24.748985Z[Etc/UTC]")
 @Introspected
 public class Ip {
     public static final String JSON_PROPERTY_IP = "ip";
