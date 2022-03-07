@@ -1,7 +1,7 @@
 {
-    "packageName": "openapiipify",
-    "packageVersion": "1.0.0-pre.0",
-    "packageUrl": "https://github.com/cliffano/openapi-ipify",
-    "gitUserId": "cliffano",
-    "gitRepoId": "openapi-ipify"
-  }
+  "packageName": "openapiipify",
+  "packageVersion": "2.0.0",
+  "packageUrl": "https://github.com/cliffano/openapi-ipify",
+  "gitUserId": "cliffano",
+  "gitRepoId": "openapi-ipify"
+}

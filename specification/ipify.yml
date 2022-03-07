@@ -1,6 +1,6 @@
-openapi: "3.0.0"
+openapi: 3.0.0
 info:
-  version: 1.0.0-pre.0
+  version: 2.0.0
   title: openapi-ipify
   description: OpenAPI client for ipify, a simple public IP address API
   license:
@@ -23,7 +23,9 @@ paths:
           required: false
           schema:
             type: string
-            enum: [json, jsonp]
+            enum:
+              - json
+              - jsonp
         - name: callback
           in: query
           description: JSONP callback function name
@@ -34,13 +36,13 @@ paths:
         '200':
           description: Your public IP address
           content:
-            'application/json':
+            application/json:
               schema:
-                $ref: "#/components/schemas/Ip"
-            'application/javascript':
+                $ref: '#/components/schemas/Ip'
+            application/javascript:
               schema:
                 type: string
-            'text/plain':
+            text/plain:
               schema:
                 type: string
 components:
