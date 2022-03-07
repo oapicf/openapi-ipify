@@ -1,6 +1,6 @@
 {
   "artifactId": "openapiipify",
-  "artifactVersion": "2.0.0",
+  "artifactVersion": "2.0.1-pre.0",
   "artifactUrl": "https://github.com/cliffano/openapi-ipify",
   "artifactDescription": "Ipify API client generated from Swagger / Open API specification",
   "groupId": "com.cliffano",
