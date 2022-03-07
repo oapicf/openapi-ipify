@@ -15,7 +15,7 @@ Published packages
 
 | Language | Package | Status |
 |----------|---------|--------|
-| JavaScript | [openapi-ipify]((http://www.npmjs.com/package/openapi-ipify)) | [![Published Version](https://img.shields.io/npm/v/openapi-ipify.svg)](http://www.npmjs.com/package/openapi-ipify) |
+| JavaScript | [openapi_ipify]((http://www.npmjs.com/package/openapi_ipify)) | [![Published Version](https://img.shields.io/npm/v/openapi_ipify.svg)](http://www.npmjs.com/package/openapi_ipify) |
 | Python | [openapiipify]((https://pypi.python.org/pypi/openapiipify)) | [![Published Version](https://img.shields.io/pypi/v/openapiipify.svg)](https://pypi.python.org/pypi/openapiipify) |
 | Ruby | [openapi_ipify]((https://rubygems.org/gems/openapi_ipify)) | [![Published Version](https://img.shields.io/gem/v/openapi_ipify.svg)](https://rubygems.org/gems/openapi_ipify) |
 
@@ -24,7 +24,7 @@ Version Matrix
 
 | OpenAPI Ipify Version | OpenAPI Version | OpenAPI Generator Version |
 |-----------------------|-----------------|---------------------------|
-| 1.0.0 | 3.0.0 | 5.4.0 |
+| 2.0.0 | 3.0.0 | 5.4.0 |
 
 Usage
 -----
