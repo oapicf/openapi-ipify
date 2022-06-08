@@ -3,7 +3,7 @@ LANGS_PRIMARY = java javascript python ruby
 oag_version = 5.4.0
 version ?= 2.0.1-pre.0
 
-ci: clean deps generate test-javascript test-python test-ruby doc
+ci: clean deps generate generate-primary test-javascript test-python test-ruby doc
 local-ci: clean deps local-generate test-javascript test-python test-ruby doc
 
 clean:
@@ -20,7 +20,7 @@ conf-placeholder:
 	done
 
 local-generate:
-	LOCAL=true make generate
+	LOCAL=true make generate generate-primary
 
 generate:
 	if [ "${LOCAL}" = "true" ]; then \
