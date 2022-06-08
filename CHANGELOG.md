@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Add generate-primary to ci and local-generate targets
+- Upgrade OpenAPI Generator to 6.0.0
 
 ## 2.0.0 - 2022-03-07
 ### Added
