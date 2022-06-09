@@ -6,7 +6,7 @@ import org.openapitools.vertxweb.server.ApiResponse;
 
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
-import io.vertx.ext.web.handler.impl.HttpStatusException;
+import io.vertx.ext.web.handler.HttpException;
 
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class DefaultApiImpl implements DefaultApi {
     public Future<ApiResponse<Ip>> getIp(String format, String paramCallback) {
-        return Future.failedFuture(new HttpStatusException(501));
+        return Future.failedFuture(new HttpException(501));
     }
 
 }

@@ -4,13 +4,14 @@ import org.openapitools.model.Ip;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import jakarta.inject.Inject;
-import reactor.core.publisher.Mono;
-
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.HashSet;
 
 
 /**
@@ -27,12 +28,17 @@ public class DefaultApiTest {
      * Get your public IP address
      */
     @Test
+    @Disabled("Not Implemented")
     public void getIpTest() {
-        String _format = null;
-        String paramCallback = null;
-        // Ip response = api.getIp(_format, paramCallback).block();
-        // Mono<Ip> asyncResponse = api.getIp(_format, paramCallback);
-        // TODO: test validations
+        // given
+        String _format = "example";
+        String paramCallback = "example";
+
+        // when
+        Ip body = api.getIp(_format, paramCallback).block();
+
+        // then
+        // TODO implement the getIpTest()
     }
 
     

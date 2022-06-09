@@ -1,6 +1,8 @@
 .openapi-generator-ignore
 README.md
 build.sbt
+docs/DefaultApi.md
+docs/Ip.md
 pom.xml
 project/build.properties
 src/main/resources/reference.conf

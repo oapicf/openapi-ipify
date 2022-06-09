@@ -225,12 +225,12 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
 /// Request parser for `Api`.
 pub struct ApiRequestParser;
 impl<T> RequestParser<T> for ApiRequestParser {
-    fn parse_operation_id(request: &Request<T>) -> Result<&'static str, ()> {
+    fn parse_operation_id(request: &Request<T>) -> Option<&'static str> {
         let path = paths::GLOBAL_REGEX_SET.matches(request.uri().path());
         match request.method() {
             // GetIp - GET /
-            &hyper::Method::GET if path.matched(paths::ID_) => Ok("GetIp"),
-            _ => Err(()),
+            &hyper::Method::GET if path.matched(paths::ID_) => Some("GetIp"),
+            _ => None,
         }
     }
 }

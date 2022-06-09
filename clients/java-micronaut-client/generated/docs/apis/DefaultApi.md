@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.ipify.org*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address |
 
 
 ## Creating DefaultApi
@@ -44,10 +44,10 @@ Mono<Ip> DefaultApi.getIp(_formatparamCallback)
 Get your public IP address
 
 ### Parameters
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **_format** | `String`| Response format | [optional parameter] [enum: `json`, `jsonp`]
- **paramCallback** | `String`| JSONP callback function name | [optional parameter]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **_format** | `String`| Response format | [optional parameter] [enum: `json`, `jsonp`] |
+| **paramCallback** | `String`| JSONP callback function name | [optional parameter] |
 
 
 ### Return type

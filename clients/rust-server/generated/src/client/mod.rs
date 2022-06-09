@@ -436,11 +436,13 @@ impl<S, C> Api<C> for Client<S, C> where
             200 => {
                 let body = response.into_body();
                 let body = body
-                        .to_raw()
+                        .into_raw()
                         .map_err(|e| ApiError(format!("Failed to read response: {}", e))).await?;
                 let body = str::from_utf8(&body)
                     .map_err(|e| ApiError(format!("Response was not valid UTF8: {}", e)))?;
-                let body = serde_json::from_str::<models::Ip>(body)?;
+                let body = serde_json::from_str::<models::Ip>(body).map_err(|e| {
+                    ApiError(format!("Response body did not match the schema: {}", e))
+                })?;
                 Ok(GetIpResponse::YourPublicIPAddress
                     (body)
                 )
@@ -449,7 +451,7 @@ impl<S, C> Api<C> for Client<S, C> where
                 let headers = response.headers().clone();
                 let body = response.into_body()
                        .take(100)
-                       .to_raw().await;
+                       .into_raw().await;
                 Err(ApiError(format!("Unexpected response code {}:\n{:?}\n\n{}",
                     code,
                     headers,

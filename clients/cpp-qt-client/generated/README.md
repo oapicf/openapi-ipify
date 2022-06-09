@@ -4,7 +4,7 @@
 
 openapi-ipify
 
-- API version: 1.0.0-pre.0
+- API version: 2.0.1-pre.0
 
 OpenAPI client for ipify, a simple public IP address API
 

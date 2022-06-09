@@ -1,7 +1,7 @@
 # openapi-client
 
 openapi-ipify
-- API version: 1.0.0-pre.0
+- API version: 2.0.1-pre.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -60,18 +60,66 @@ libraryDependencies += "org.openapitools" % "openapi-client" % "1.0.0"
 
 ## Getting Started
 
+Please follow the [installation](#installation) instruction and execute the following Java code:
+
+```scala
+
+import org.openapitools.client.core._
+import org.openapitools.client.model._
+import org.openapitools.client.api.DefaultApi
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object DefaultApiExample extends App {
+
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+    // Create invoker to execute requests
+    val apiInvoker = ApiInvoker()
+    val apiInstance = DefaultApi("https://api.ipify.org")
+    val format: String = format_example // String | Response format
+
+    val callback: String = callback_example // String | JSONP callback function name
+
+    val request = apiInstance.getIp(format, callback)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(org.openapitools.client.core.ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling DefaultApi#getIp")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) =>
+            System.err.println("Exception when calling DefaultApi#getIp")
+            exception.printStackTrace();
+    }
+
+}
+
+```
+
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.ipify.org*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | **getIp** | **GET** / | Get your public IP address
+*DefaultApi* | [**getIp**](docs/DefaultApi.md#getIp) | **GET** / | Get your public IP address
 
 
 ## Documentation for Models
 
- - [Ip](Ip.md)
+ - [Ip](docs/Ip.md)
 
 
 ## Documentation for Authorization

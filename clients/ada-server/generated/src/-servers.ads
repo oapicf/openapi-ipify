@@ -9,7 +9,7 @@
 --
 --  Then, you can drop this edit note comment.
 --  ------------ EDIT NOTE ------------
-with Swagger.Servers;
+with {{openApiPackageName}.Servers;
 with .Models;
 with .Skeletons;
 package .Servers is
@@ -25,7 +25,7 @@ package .Servers is
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
        Result  : out .Models.Ip_Type;
-       Context : in out Swagger.Servers.Context_Type);
+       Context : in out {{openApiPackageName}.Servers.Context_Type);
 
    package Server_Impl is
       new .Skeletons.Shared_Instance (Server_Type);

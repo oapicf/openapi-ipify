@@ -7,5 +7,5 @@ open_api_server_default_getip:
     path:     /
     methods:  [GET]
     defaults:
-        _controller: open_api_server.controller.default:getIpAction
+        _controller: open_api_server.controller.default::getIpAction
 

@@ -1,5 +1,6 @@
 .babelrc
 .gitignore
+.openapi-generator-ignore
 .travis.yml
 README.md
 docs/DefaultApi.md
@@ -11,3 +12,5 @@ src/ApiClient.js
 src/api/DefaultApi.js
 src/index.js
 src/model/Ip.js
+test/api/DefaultApi.spec.js
+test/model/Ip.spec.js

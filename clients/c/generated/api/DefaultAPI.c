@@ -121,9 +121,10 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format , c
                     localVarBodyParameters,
                     "GET");
 
-    if (apiClient->response_code == 200) {
-        printf("%s\n","Your public IP address");
-    }
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","Your public IP address");
+    //}
     //nonprimitive not container
     cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
     ip_t *elementToReturn = ip_parseFromJSON(DefaultAPIlocalVarJSON);

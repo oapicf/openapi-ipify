@@ -79,7 +79,7 @@ Type | Description | Notes
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | ApiResponseFor200 | Your public IP address 
+200 | ApiResponseFor200 | Your public IP address
 
 #### ApiResponseFor200
 Name | Type | Description  | Notes

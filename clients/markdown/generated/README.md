@@ -5,9 +5,9 @@
 
 All URIs are relative to *https://api.ipify.org*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*DefaultApi* | [**getIp**](Apis/DefaultApi.md#getip) | **GET** / | Get your public IP address
+| Class | Method | HTTP request | Description |
+|------------ | ------------- | ------------- | -------------|
+| *DefaultApi* | [**getIp**](Apis/DefaultApi.md#getip) | **GET** / | Get your public IP address |
 
 
 <a name="documentation-for-models"></a>

@@ -4,11 +4,11 @@ info:
     email: blah@cliffano.com
     name: Cliffano Subagio
     url: http://blog.cliffano.com
-  description: OpenAPI client for ipify, a simple public IP address API
+  description: "OpenAPI client for ipify, a simple public IP address API"
   license:
     name: MIT
   title: openapi-ipify
-  version: 1.0.0-pre.0
+  version: 2.0.1-pre.0
 servers:
 - url: https://api.ipify.org
 paths:

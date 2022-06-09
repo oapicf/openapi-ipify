@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.ipify.org*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address |
 
 
 <a name="getIp"></a>
@@ -15,10 +15,10 @@ Get your public IP address
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **String**| Response format | [optional] [default to null] [enum: json, jsonp]
- **callback** | **String**| JSONP callback function name | [optional] [default to null]
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **format** | **String**| Response format | [optional] [default to null] [enum: json, jsonp] |
+| **callback** | **String**| JSONP callback function name | [optional] [default to null] |
 
 ### Return type
 

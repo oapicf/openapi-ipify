@@ -3,7 +3,7 @@
 
 context("Test DefaultApi")
 
-api.instance <- DefaultApi$new()
+api_instance <- DefaultApi$new()
 
 test_that("GetIp", {
   # tests for GetIp
@@ -16,4 +16,3 @@ test_that("GetIp", {
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
-

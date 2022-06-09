@@ -2,7 +2,7 @@ h1. openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-*Version:* 1.0.0-pre.0
+*Version:* 2.0.1-pre.0
 
 ----
 
@@ -22,14 +22,14 @@ h3. getIp
     || Protocol | {noformat:nopanel=true}https{noformat} |
     || Path | {noformat:nopanel=true}/{noformat} |
     || Base Path | {noformat:nopanel=true}https://api.ipify.org{noformat} |
-    || Produces | {noformat:nopanel=true}application/jsonapplication/javascripttext/plain{noformat} |
+    || Produces | {noformat:nopanel=true}application/json application/javascript text/plain {noformat} |
 ----
 h4. Parameters
 
 
 
 h5. Query Parameters
-        ||Name||Description||Required||Default||Pattern||
+        ||Name||Description||Type||Required||Default||Pattern||Enum||Example||
         |format |Response format | String | (x) |null |  | [json, jsonp] ||callback |JSONP callback function name | String | (x) |null |  |  |
 ----
 h4. Responses
@@ -72,6 +72,6 @@ h2. Models
         
 
         
-        ||Field Name||Required||Type||Description||Enum||
-         |ip |(/) |{noformat:nopanel=true}String{noformat} | |  |
+        ||Field Name||Required||Type||Description||Enum||Example||
+         |ip |(/) |{noformat:nopanel=true}String{noformat} |  |  | null
          

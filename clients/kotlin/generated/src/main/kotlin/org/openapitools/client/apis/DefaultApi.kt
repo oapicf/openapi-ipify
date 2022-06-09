@@ -3,7 +3,7 @@
  *
  * OpenAPI client for ipify, a simple public IP address API
  *
- * The version of the OpenAPI document: 1.0.0-pre.0
+ * The version of the OpenAPI document: 2.0.1-pre.0
  * Contact: blah@cliffano.com
  *
  * Please note:
@@ -21,6 +21,7 @@
 package org.openapitools.client.apis
 
 import java.io.IOException
+import okhttp3.OkHttpClient
 
 import org.openapitools.client.models.Ip
 
@@ -33,13 +34,14 @@ import org.openapitools.client.infrastructure.ClientError
 import org.openapitools.client.infrastructure.ServerException
 import org.openapitools.client.infrastructure.ServerError
 import org.openapitools.client.infrastructure.MultiValueMap
+import org.openapitools.client.infrastructure.PartConfig
 import org.openapitools.client.infrastructure.RequestConfig
 import org.openapitools.client.infrastructure.RequestMethod
 import org.openapitools.client.infrastructure.ResponseType
 import org.openapitools.client.infrastructure.Success
 import org.openapitools.client.infrastructure.toMultiValue
 
-class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = ApiClient.defaultClient) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
@@ -52,25 +54,24 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
      */
      enum class Format_getIp(val value: kotlin.String) {
          @Json(name = "json") json("json"),
-         @Json(name = "jsonp") jsonp("jsonp"),
-         ;
+         @Json(name = "jsonp") jsonp("jsonp")
      }
 
     /**
-    * Get your public IP address
-    * 
-    * @param format Response format (optional)
-    * @param paramCallback JSONP callback function name (optional)
-    * @return Ip
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    * @throws UnsupportedOperationException If the API returns an informational or redirection response
-    * @throws ClientException If the API returns a client error response
-    * @throws ServerException If the API returns a server error response
-    */
+     * Get your public IP address
+     * 
+     * @param format Response format (optional)
+     * @param paramCallback JSONP callback function name (optional)
+     * @return Ip
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     * @throws UnsupportedOperationException If the API returns an informational or redirection response
+     * @throws ClientException If the API returns a client error response
+     * @throws ServerException If the API returns a server error response
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getIp(format: Format_getIp?, paramCallback: kotlin.String?) : Ip {
+    fun getIp(format: Format_getIp? = null, paramCallback: kotlin.String? = null) : Ip {
         val localVarResponse = getIpWithHttpInfo(format = format, paramCallback = paramCallback)
 
         return when (localVarResponse.responseType) {
@@ -89,14 +90,14 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     }
 
     /**
-    * Get your public IP address
-    * 
-    * @param format Response format (optional)
-    * @param paramCallback JSONP callback function name (optional)
-    * @return ApiResponse<Ip?>
-    * @throws IllegalStateException If the request is not correctly configured
-    * @throws IOException Rethrows the OkHttp execute method exception
-    */
+     * Get your public IP address
+     * 
+     * @param format Response format (optional)
+     * @param paramCallback JSONP callback function name (optional)
+     * @return ApiResponse<Ip?>
+     * @throws IllegalStateException If the request is not correctly configured
+     * @throws IOException Rethrows the OkHttp execute method exception
+     */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
     fun getIpWithHttpInfo(format: Format_getIp?, paramCallback: kotlin.String?) : ApiResponse<Ip?> {
@@ -108,12 +109,12 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     }
 
     /**
-    * To obtain the request config of the operation getIp
-    *
-    * @param format Response format (optional)
-    * @param paramCallback JSONP callback function name (optional)
-    * @return RequestConfig
-    */
+     * To obtain the request config of the operation getIp
+     *
+     * @param format Response format (optional)
+     * @param paramCallback JSONP callback function name (optional)
+     * @return RequestConfig
+     */
     fun getIpRequestConfig(format: Format_getIp?, paramCallback: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()

@@ -8,7 +8,7 @@ description:    .
                 .
                 base path: https://api.ipify.org
                 .
-                openapi-ipify API version: 1.0.0-pre.0
+                openapi-ipify API version: 2.0.1-pre.0
                 .
                 OpenAPI version: 3.0.0
                 .
@@ -35,7 +35,7 @@ library
       lib
   ghc-options: -Wall -funbox-strict-fields
   build-depends:
-      aeson >=1.0 && <2.0
+      aeson >=2.0 && <3.0
     , base >=4.7 && <5.0
     , base64-bytestring >1.0 && <2.0
     , bytestring >=0.10.0

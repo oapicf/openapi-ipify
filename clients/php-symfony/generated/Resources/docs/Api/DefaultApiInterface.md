@@ -9,11 +9,10 @@ Method | HTTP request | Description
 
 ## Service Declaration
 ```yaml
-# src/Acme/MyBundle/Resources/services.yml
+# config/services.yml
 services:
     # ...
-    acme.my_bundle.api.default:
-        class: Acme\MyBundle\Api\DefaultApi
+    Acme\MyBundle\Api\DefaultApi:
         tags:
             - { name: "open_api_server.api", api: "default" }
     # ...
@@ -41,7 +40,7 @@ class DefaultApi implements DefaultApiInterface
     /**
      * Implementation of DefaultApiInterface#getIp
      */
-    public function getIp($format = null, $callback = null)
+    public function getIp($format = null, $callback = null, &$responseCode, array &$responseHeaders): array|\OpenAPI\Server\Model\Ip
     {
         // Implement the operation ...
     }

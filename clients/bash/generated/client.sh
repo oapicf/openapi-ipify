@@ -467,7 +467,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}openapi-ipify command line client (API version 1.0.0-pre.0)${OFF}
+${BOLD}${WHITE}openapi-ipify command line client (API version 2.0.1-pre.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -528,7 +528,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://api.ipify.org')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}openapi-ipify command line client (API version 1.0.0-pre.0)${OFF}"
+    echo -e "${BOLD}${WHITE}openapi-ipify command line client (API version 2.0.1-pre.0)${OFF}"
     echo ""
     echo -e "License: MIT"
     echo -e "Contact: blah@cliffano.com"
@@ -548,7 +548,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}openapi-ipify command line client (API version 1.0.0-pre.0)${OFF}"
+    echo -e "${BOLD}openapi-ipify command line client (API version 2.0.1-pre.0)${OFF}"
     echo ""
 }
 

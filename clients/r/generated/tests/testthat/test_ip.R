@@ -3,7 +3,7 @@
 
 context("Test Ip")
 
-model.instance <- Ip$new()
+model_instance <- Ip$new()
 
 test_that("ip", {
   # tests for the property `ip` (character)
@@ -11,4 +11,3 @@ test_that("ip", {
   # uncomment below to test the property
   #expect_equal(model.instance$`ip`, "EXPECTED_RESULT")
 })
-

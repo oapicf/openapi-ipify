@@ -1,9 +1,0 @@
-.gitignore
-.openapi-generator-ignore
-api.module.ts
-api/DefaultApi.ts
-api/api.ts
-git_push.sh
-index.ts
-model/Ip.ts
-model/models.ts

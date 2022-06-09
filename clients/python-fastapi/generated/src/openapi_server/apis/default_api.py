@@ -30,6 +30,7 @@ router = APIRouter()
     },
     tags=["default"],
     summary="Get your public IP address",
+    response_model_by_alias=True,
 )
 async def get_ip(
     format: str = Query(None, description="Response format"),

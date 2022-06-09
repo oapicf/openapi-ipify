@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 1.0.0-pre.0
+API version: 2.0.1-pre.0
 Contact: blah@cliffano.com
 */
 
@@ -51,7 +51,7 @@ func (o *Ip) GetIp() string {
 // GetIpOk returns a tuple with the Ip field value
 // and a boolean to check if the value has been set.
 func (o *Ip) GetIpOk() (*string, bool) {
-	if o == nil  {
+	if o == nil {
 		return nil, false
 	}
 	return &o.Ip, true

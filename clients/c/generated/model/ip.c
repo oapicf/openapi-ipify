@@ -37,7 +37,6 @@ cJSON *ip_convertToJSON(ip_t *ip) {
     if (!ip->ip) {
         goto fail;
     }
-    
     if(cJSON_AddStringToObject(item, "ip", ip->ip) == NULL) {
     goto fail; //String
     }
