@@ -1,6 +1,6 @@
 {
   "name": "openapi_ipify",
-  "version": "2.0.1-pre.0",
+  "version": "3.0.1-pre.0",
   "description": "OpenAPI_client_for_ipify_a_simple_public_IP_address_API",
   "license": "MIT",
   "main": "src/index.js",

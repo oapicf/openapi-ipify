@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 2.0.1-pre.0
+API version: 3.0.1-pre.0
 Contact: blah@cliffano.com
 */
 
@@ -42,7 +42,7 @@ var (
 	xmlCheck  = regexp.MustCompile(`(?i:(?:application|text)/xml)`)
 )
 
-// APIClient manages communication with the openapi-ipify API v2.0.1-pre.0
+// APIClient manages communication with the openapi-ipify API v3.0.1-pre.0
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration

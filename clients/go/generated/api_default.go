@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 2.0.1-pre.0
+API version: 3.0.1-pre.0
 Contact: blah@cliffano.com
 */
 

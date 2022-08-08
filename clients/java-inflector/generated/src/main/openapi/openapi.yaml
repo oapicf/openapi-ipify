@@ -8,7 +8,7 @@ info:
   license:
     name: MIT
   title: openapi-ipify
-  version: 2.0.1-pre.0
+  version: 3.0.1-pre.0
 servers:
 - url: https://api.ipify.org
 paths:

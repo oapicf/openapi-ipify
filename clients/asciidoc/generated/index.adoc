@@ -1,6 +1,6 @@
 = openapi-ipify
 blah@cliffano.com
-2.0.1-pre.0
+3.0.1-pre.0
 :toc: left
 :numbered:
 :toclevels: 3

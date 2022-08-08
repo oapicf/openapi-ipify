@@ -6,7 +6,7 @@
  *
  * @package OpenAPIServer\Api
  * @author  OpenAPI Generator team
- * @version 2.0.1-pre.0
+ * @version 3.0.1-pre.0
  * @link    https://github.com/openapitools/openapi-generator
  */
 

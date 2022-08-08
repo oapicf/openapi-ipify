@@ -1,4 +1,4 @@
-(defproject openapi-ipify "2.0.1-pre.0"
+(defproject openapi-ipify "3.0.1-pre.0"
   :description "OpenAPI client for ipify, a simple public IP address API"
   :url "http://blog.cliffano.com"
   :license {:name "MIT"}

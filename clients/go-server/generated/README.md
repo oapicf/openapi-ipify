@@ -12,8 +12,8 @@ To see how to make this your own, look here:
 
 [README](https://openapi-generator.tech)
 
-- API version: 2.0.1-pre.0
-- Build date: 2022-06-09T11:13:20.214343Z[Etc/UTC]
+- API version: 3.0.1-pre.0
+- Build date: 2022-08-08T12:58:14.736538Z[Etc/UTC]
 For more information, please visit [http://blog.cliffano.com](http://blog.cliffano.com)
 
 
