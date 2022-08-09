@@ -27,13 +27,6 @@ Version matrix
 | 3.0.0 | 3.0.0 | 6.0.0 |
 | 2.0.0 | 3.0.0 | 5.4.0 |
 
-Usage
------
-
-Generate API clients for languages supported by OpenAPI Generator:
-
-    make generate-all GEN_BASE_DIR=<path/to/openapi-ipify>
-
 Installation
 ------------
 
