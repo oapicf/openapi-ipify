@@ -19,7 +19,7 @@ Published packages
 | Python | [openapiipify]((https://pypi.python.org/pypi/openapiipify)) | [![Published Version](https://img.shields.io/pypi/v/openapiipify.svg)](https://pypi.python.org/pypi/openapiipify) |
 | Ruby | [openapi_ipify]((https://rubygems.org/gems/openapi_ipify)) | [![Published Version](https://img.shields.io/gem/v/openapi_ipify.svg)](https://rubygems.org/gems/openapi_ipify) |
 
-Version Matrix
+Version matrix
 --------------
 
 | OpenAPI Ipify Version | OpenAPI Version | OpenAPI Generator Version |
@@ -30,9 +30,9 @@ Version Matrix
 Usage
 -----
 
-Generate API clients of the currently supported languages:
+Generate API clients for languages supported by OpenAPI Generator:
 
-    make generate GEN_BASE_DIR=<path/to/openapi-ipify>
+    make generate-all GEN_BASE_DIR=<path/to/openapi-ipify>
 
 Installation
 ------------
