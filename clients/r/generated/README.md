@@ -29,7 +29,7 @@ git clone https://github.com/GIT_USER_ID/GIT_REPO_ID
 cd GIT_REPO_ID
 R CMD build .
 R CMD check openapi_1.0.0.tar.gz --no-manual
-R CMD INSTALL openapi_1.0.0.tar.gz
+R CMD INSTALL --preclean openapi_1.0.0.tar.gz
 ```
 
 ### Install the package
@@ -43,6 +43,11 @@ To install directly from Github, use `devtools`:
 install.packages("devtools")
 library(devtools)
 install_github("GIT_USER_ID/GIT_REPO_ID")
+```
+
+To install the package from a local file:
+```R
+install.packages("openapi_1.0.0.tar.gz", repos = NULL, type = "source")
 ```
 
 ### Usage

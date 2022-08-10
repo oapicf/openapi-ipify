@@ -1,7 +1,9 @@
+.formatter.exs
 .gitignore
 .openapi-generator-ignore
 README.md
 config/config.exs
+config/runtime.exs
 lib/openapi_ipify/api/default.ex
 lib/openapi_ipify/connection.ex
 lib/openapi_ipify/deserializer.ex

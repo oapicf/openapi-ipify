@@ -6,7 +6,7 @@
  *)
 
 let get_ip ?format ?callback () =
-    let open Lwt in
+    let open Lwt.Infix in
     let uri = Request.build_uri "/" in
     let headers = Request.default_headers in
     let uri = Request.maybe_add_query_param uri "format" Enums.show_format format in

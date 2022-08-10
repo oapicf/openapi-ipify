@@ -14,7 +14,7 @@ To see how to make this your own, look here:
 [README]((https://openapi-generator.tech))
 
 - API version: 3.0.1-pre.0
-- Build date: 2022-08-08T13:00:37.185655Z[Etc/UTC]
+- Build date: 2022-08-10T13:03:40.473797Z[Etc/UTC]
 
 For more information, please visit [http://blog.cliffano.com](http://blog.cliffano.com)
 

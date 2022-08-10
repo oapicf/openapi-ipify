@@ -29,20 +29,22 @@
 
 namespace OpenAPI\Server\Model;
 
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
  * IpTest Class Doc Comment
  *
- * @category    Class */
-// * @description Ip
-/**
+ * @category    Class
+ * @description Ip
  * @package     OpenAPI\Server\Tests\Model
  * @author      openapi-generator contributors
  * @link        https://github.com/openapitools/openapi-generator
+ * @coversDefaultClass \OpenAPI\Server\Model\Ip
  */
 class IpTest extends TestCase
 {
+    protected Ip|MockObject $object;
 
     /**
      * Setup before running any test case
@@ -56,6 +58,7 @@ class IpTest extends TestCase
      */
     public function setUp(): void
     {
+         $this->object = $this->getMockBuilder(Ip::class)->getMockForAbstractClass();
     }
 
     /**
@@ -73,17 +76,23 @@ class IpTest extends TestCase
     }
 
     /**
-     * Test "Ip"
+     * @group integration
+     * @small
      */
-    public function testIp()
+    public function testTestClassExists(): void
     {
-        $testIp = new Ip();
+        $this->assertTrue(class_exists(Ip::class));
+        $this->assertInstanceOf(Ip::class, $this->object);
     }
 
     /**
      * Test attribute "ip"
+     *
+     * @group unit
+     * @small
      */
-    public function testPropertyIp()
+    public function testPropertyIp(): void
     {
+        $this->markTestSkipped('Test for property ip not implemented');
     }
 }

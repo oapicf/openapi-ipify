@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2022-08-08T12:59:02.321410Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2022-08-10T13:01:35.398672Z[Etc/UTC]")
 public class Ip {
 
   @JsonProperty("ip")

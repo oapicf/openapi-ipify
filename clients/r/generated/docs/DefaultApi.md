@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **GetIp**
-> Ip GetIp(format=var.format, callback=var.callback)
+> Ip GetIp(format = var.format, callback = var.callback)
 
 Get your public IP address
 
@@ -16,12 +16,12 @@ Get your public IP address
 ```R
 library(openapi)
 
-var.format <- 'format_example' # character | Response format
-var.callback <- 'callback_example' # character | JSONP callback function name
+var_format <- 'format_example' # character | Response format
+var_callback <- 'callback_example' # character | JSONP callback function name
 
 #Get your public IP address
-api.instance <- DefaultApi$new()
-result <- api.instance$GetIp(format=var.format, callback=var.callback)
+api_instance <- DefaultApi$new()
+result <- api_instance$GetIp(format = var_format, callback = var_callback)
 dput(result)
 ```
 

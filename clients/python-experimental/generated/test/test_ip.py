@@ -14,22 +14,12 @@ import unittest
 
 import openapi_client
 from openapi_client.model.ip import Ip
+from openapi_client import configuration
 
 
 class TestIp(unittest.TestCase):
     """Ip unit test stubs"""
-
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
-    def test_Ip(self):
-        """Test Ip"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = Ip()  # noqa: E501
-        pass
+    _configuration = configuration.Configuration()
 
 
 if __name__ == '__main__':

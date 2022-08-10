@@ -2,10 +2,9 @@
 
 All URIs are relative to *https://api.ipify.org*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetIp**](DefaultApi.md#getip) | **GET** / | Get your public IP address
-
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetIp**](DefaultApi.md#getip) | **GET** / | Get your public IP address |
 
 <a name="getip"></a>
 # **GetIp**
@@ -41,8 +40,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DefaultApi.GetIp: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling DefaultApi.GetIp: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -50,12 +49,32 @@ namespace Example
 }
 ```
 
+#### Using the GetIpWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get your public IP address
+    ApiResponse<Ip> response = apiInstance.GetIpWithHttpInfo(format, callback);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DefaultApi.GetIpWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **string**| Response format | [optional] 
- **callback** | **string**| JSONP callback function name | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **format** | **string** | Response format | [optional]  |
+| **callback** | **string** | JSONP callback function name | [optional]  |
 
 ### Return type
 

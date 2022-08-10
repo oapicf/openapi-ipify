@@ -4,7 +4,7 @@ defmodule OpenapiIpify.Mixfile do
   def project do
     [app: :openapi_ipify,
      version: "3.0.1-pre.0",
-     elixir: "~> 1.6",
+     elixir: "~> 1.10",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      package: package(),
@@ -31,15 +31,16 @@ defmodule OpenapiIpify.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:tesla, "~> 1.2"},
-      {:poison, "~> 3.0"}
+      {:tesla, "~> 1.4"},
+      {:poison, "~> 3.0"},
+      {:ex_doc, "~> 0.28", only: :dev, runtime: false}
     ]
   end
 
    defp package() do
     [
       name: "openapi_ipify",
-      files: ~w(lib mix.exs README* LICENSE*),
+      files: ~w(.formatter.exs config lib mix.exs README* LICENSE*),
       licenses: [""]
     ]
   end

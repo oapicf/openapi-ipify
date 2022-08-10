@@ -28,10 +28,6 @@
 
 namespace OpenAPI\Server\Tests\Api;
 
-use OpenAPI\Server\Configuration;
-use OpenAPI\Server\ApiClient;
-use OpenAPI\Server\ApiException;
-use OpenAPI\Server\ObjectSerializer;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -42,6 +38,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  * @package  OpenAPI\Server\Tests\Api
  * @author   openapi-generator contributors
  * @link     https://github.com/openapitools/openapi-generator
+ * @coversDefaultClass \OpenAPI\Server\Api\DefaultApiInterface
  */
 class DefaultApiInterfaceTest extends WebTestCase
 {
@@ -85,16 +82,21 @@ class DefaultApiInterfaceTest extends WebTestCase
      * Get your public IP address.
      *
      */
-    public function testGetIp()
+    public function testGetIp(): void
     {
         $client = self::$client;
 
         $path = '/';
 
         $crawler = $client->request('GET', $path);
+        $this->markTestSkipped('Test for getIp not implemented');
     }
 
-    protected function genTestData($regexp)
+    /**
+     * @param string $regexp
+     * @return mixed
+     */
+    protected function genTestData(string $regexp)
     {
         $grammar  = new \Hoa\File\Read('hoa://Library/Regex/Grammar.pp');
         $compiler = \Hoa\Compiler\Llk\Llk::load($grammar);

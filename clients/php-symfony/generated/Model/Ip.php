@@ -42,29 +42,29 @@ use JMS\Serializer\Annotation\SerializedName;
 class Ip 
 {
         /**
-     * @var string
+     * @var string|null
      * @SerializedName("ip")
      * @Assert\NotNull()
      * @Assert\Type("string")
      * @Type("string")
      */
-    protected $ip;
+    protected ?string $ip = null;
 
     /**
      * Constructor
-     * @param mixed[] $data Associated array of property values initializing the model
+     * @param array|null $data Associated array of property values initializing the model
      */
     public function __construct(array $data = null)
     {
-        $this->ip = isset($data['ip']) ? $data['ip'] : null;
+        $this->ip = $data['ip'] ?? null;
     }
 
     /**
      * Gets ip.
      *
-     * @return string
+     * @return string|null
      */
-    public function getIp()
+    public function getIp(): ?string
     {
         return $this->ip;
     }
@@ -72,11 +72,11 @@ class Ip
     /**
      * Sets ip.
      *
-     * @param string $ip
+     * @param string|null $ip
      *
      * @return $this
      */
-    public function setIp($ip)
+    public function setIp(?string $ip): self
     {
         $this->ip = $ip;
 

@@ -14,8 +14,10 @@
 
 
 import * as runtime from '../runtime';
+import type {
+  Ip,
+} from '../models';
 import {
-    Ip,
     IpFromJSON,
     IpToJSON,
 } from '../models';
@@ -33,7 +35,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * Get your public IP address
      */
-    async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit | runtime.InitOverideFunction): Promise<runtime.ApiResponse<Ip>> {
+    async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Ip>> {
         const queryParameters: any = {};
 
         if (requestParameters.format !== undefined) {
@@ -59,7 +61,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * Get your public IP address
      */
-    async getIp(requestParameters: GetIpRequest = {}, initOverrides?: RequestInit | runtime.InitOverideFunction): Promise<Ip> {
+    async getIp(requestParameters: GetIpRequest = {}, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Ip> {
         const response = await this.getIpRaw(requestParameters, initOverrides);
         return await response.value();
     }

@@ -107,6 +107,7 @@ class DefaultController extends Controller
             // Make the call to the business logic
             $responseCode = 200;
             $responseHeaders = [];
+
             $result = $handler->getIp($format, $callback, $responseCode, $responseHeaders);
 
             // Find default response message
@@ -130,7 +131,7 @@ class DefaultController extends Controller
                     ]
                 )
             );
-        } catch (Exception $fallthrough) {
+        } catch (\Throwable $fallthrough) {
             return $this->createErrorResponse(new HttpException(500, 'An unsuspected error occurred.', $fallthrough));
         }
     }

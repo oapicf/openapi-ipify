@@ -48,12 +48,13 @@ interface DefaultApiInterface
      *
      * Get your public IP address
      *
-     * @param  \string $format  Response format (optional)
-     * @param  \string $callback  JSONP callback function name (optional)
-     * @param  \array   $responseHeaders  Additional HTTP headers to return with the response ()
+     * @param  string|null $format  Response format (optional)
+     * @param  string|null $callback  JSONP callback function name (optional)
+     * @param  int     &$responseCode    The HTTP Response Code
+     * @param  array   $responseHeaders  Additional HTTP headers to return with the response ()
      *
-     * @return \OpenAPI\Server\Model\Ip
+     * @return array|object|null
      */
-    public function getIp($format = null, $callback = null, &$responseCode, array &$responseHeaders): array|\OpenAPI\Server\Model\Ip;
+    public function getIp(?string $format, ?string $callback, int &$responseCode, array &$responseHeaders): array|object|null;
 
 }

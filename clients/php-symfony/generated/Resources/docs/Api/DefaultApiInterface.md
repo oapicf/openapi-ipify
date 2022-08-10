@@ -40,7 +40,7 @@ class DefaultApi implements DefaultApiInterface
     /**
      * Implementation of DefaultApiInterface#getIp
      */
-    public function getIp($format = null, $callback = null, &$responseCode, array &$responseHeaders): array|\OpenAPI\Server\Model\Ip
+    public function getIp(?string $format, ?string $callback, int &$responseCode, array &$responseHeaders): array|object|null
     {
         // Implement the operation ...
     }

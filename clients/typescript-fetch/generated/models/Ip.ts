@@ -27,6 +27,16 @@ export interface Ip {
     ip: string;
 }
 
+/**
+ * Check if a given object implements the Ip interface.
+ */
+export function instanceOfIp(value: object): boolean {
+    let isInstance = true;
+    isInstance = isInstance && "ip" in value;
+
+    return isInstance;
+}
+
 export function IpFromJSON(json: any): Ip {
     return IpFromJSONTyped(json, false);
 }
