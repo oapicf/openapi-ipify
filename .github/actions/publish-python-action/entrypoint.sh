@@ -1,5 +1,5 @@
 #!/bin/bash
-make deps generate-primary
+make generate-primary
 
 rm -f ~/.pypirc && touch ~/.pypirc
 echo "[pypi]" > ~/.pypirc
