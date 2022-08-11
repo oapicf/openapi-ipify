@@ -20,7 +20,7 @@ generate-primary:
 		GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/openapi-ipify
 
 publish-javascript:
-	make -f Makefile-swaggy-c publish-javascript
+	make --environment-overrides -f Makefile-swaggy-c publish-javascript
 
 publish-python:
 	make -f Makefile-swaggy-c publish-python
