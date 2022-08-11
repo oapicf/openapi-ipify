@@ -1,4 +1,4 @@
-version ?= 3.1.1-pre.0
+version ?= 3.1.1
 SPEC_URI=specification/ipify.yml
 
 ci:
