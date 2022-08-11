@@ -28,8 +28,8 @@ publish-python:
 publish-ruby:
 	make -f Makefile-swaggy-c publish-ruby
 
-doc-publish:
-	make -f Makefile-swaggy-c deps init-spec doc-latest doc-version doc-publish \
+doc:
+	make -f Makefile-swaggy-c deps init-spec doc-latest doc-version \
 	  SPEC_URI=${SPEC_URI} \
 		APP_VERSION=${version}
 
