@@ -1,11 +1,11 @@
 version ?= 3.1.2-pre.0
 SPEC_URI=specification/ipify.yml
 
-if [ "${GITHUB_ACTIONS}" = "true" ]; then \
-	GEN_BASE_DIR=/home/runner/work/swaggy-jenkins/swaggy-jenkins; \
-else \
-  GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/swaggy-jenkins; \
-fi
+ifdef GITHUB_ACTIONS
+GEN_BASE_DIR=/home/runner/work/swaggy-jenkins/swaggy-jenkins
+else
+GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/swaggy-jenkins
+endif
 
 ci:
 	make -f Makefile-swaggy-c ci \
