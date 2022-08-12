@@ -1,10 +1,16 @@
 version ?= 3.1.2-pre.0
 SPEC_URI=specification/ipify.yml
 
+if [ "${GITHUB_ACTIONS}" = "true" ]; then \
+	GEN_BASE_DIR=/home/runner/work/swaggy-jenkins/swaggy-jenkins; \
+else \
+  GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/swaggy-jenkins; \
+fi
+
 ci:
 	make -f Makefile-swaggy-c ci \
 	  SPEC_URI=${SPEC_URI} \
-		GEN_BASE_DIR=/home/runner/work/openapi-ipify/openapi-ipify
+		GEN_BASE_DIR=${GEN_BASE_DIR}
 
 clean:
 	make -f Makefile-swaggy-c clean
@@ -12,12 +18,12 @@ clean:
 generate-all:
 	make -f Makefile-swaggy-c clean deps init-spec generate-all build-javascript build-python build-ruby test-javascript test-python test-ruby \
 	  SPEC_URI=${SPEC_URI} \
-		GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/openapi-ipify
+		GEN_BASE_DIR=${GEN_BASE_DIR}
 
 generate-primary:
 	make -f Makefile-swaggy-c clean deps init-spec generate-primary build-javascript build-python build-ruby test-javascript test-python test-ruby \
 	  SPEC_URI=${SPEC_URI} \
-		GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/openapi-ipify
+		GEN_BASE_DIR=${GEN_BASE_DIR}
 
 publish-javascript:
 	make --environment-overrides -f Makefile-swaggy-c publish-javascript

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix GEN_BASE_DIR passing
+
 ## 3.1.1 - 2022-08-11
 ### Fixed
 - Fix package publishing GH Actions
