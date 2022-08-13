@@ -147,6 +147,7 @@ build-python:
 
 build-ruby:
 	cd clients/ruby/generated/ && \
+	  find . -name '*.gem' -delete && \
 	  gem install bundler --version=1.17.3 && \
 	  bundle install --binstubs && \
 	  gem build *.gemspec && \
