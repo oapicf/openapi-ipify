@@ -1,6 +1,6 @@
 #!/bin/bash
 export NODE_AUTH_TOKEN="${NPMJS_TOKEN}"
-make generate-primary
+make clean deps init-spec generate-primary build-javascript test-javascript
 
 rm -f ~/.npmrc && touch ~/.npmrc
 echo "Provisioning npm config..."

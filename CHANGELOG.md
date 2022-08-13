@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add Swaggy C configuration file
+
+### Changed
+- Switch to use Swaggy C as main Makefile
+
 ### Fixed
 - Fix GEN_BASE_DIR passing
 
