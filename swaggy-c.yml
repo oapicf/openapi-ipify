@@ -3,4 +3,4 @@ version: 3.1.2-pre.0
 base_dir:
   github_actions: /home/runner/work/openapi-ipify/openapi-ipify
   local: /Users/cliffano/dev/workspace-studio/openapi-ipify
-app_version: 3.2.1
+app_version: 3.2.2-pre.0
