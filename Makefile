@@ -2,9 +2,9 @@ version ?= 3.1.2-pre.0
 SPEC_URI=specification/ipify.yml
 
 ifdef GITHUB_ACTIONS
-GEN_BASE_DIR=/home/runner/work/swaggy-jenkins/swaggy-jenkins
+GEN_BASE_DIR=/home/runner/work/openapi-ipify/openapi-ipify
 else
-GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/swaggy-jenkins
+GEN_BASE_DIR=/Users/cliffano/dev/workspace-studio/openapi-ipify
 endif
 
 ci:
