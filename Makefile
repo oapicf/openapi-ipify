@@ -24,28 +24,34 @@ LOCAL_SPEC_PATH = stage/specification.yml
 # and they will be parsed using yq https://github.com/mikefarah/yq
 # Example:
 # ---
-# app_version:1.2.3
 # spec_uri: specification/someapp.yml
-# gen_base_dir:
+# version:1.2.3
+# base_dir:
 #   github_actions: /home/runner/work/someapp/someapp
 #   local: /home/someuser/someapp
-
-# APP_VERSION is version of the application using Swaggy C
-APP_VERSION ?= $(yq .app_version swaggy-c.yml)
 
 # SPEC_URI is the location where the OpenAPI specification is located, for example:
 # - local file path: spec/some-app.yaml
 # - remote URL: https://some-app.com/some-app.yaml
-SPEC_URI=$(yq .spec_uri swaggy-c.yml)
+SPEC_URI=$(shell yq .spec_uri swaggy-c.yml)
 
-# GEN_BASE_DIR is the absolute path where the project base directory is located, for example:
+# APP_VERSION is version of the application using Swaggy C
+APP_VERSION ?= $(shell yq .version swaggy-c.yml)
+
+# APP_BASE_DIR is the absolute path where the application base directory is located, for example:
 # - MacOS user workspace directory: /Users/some-user/some-path/some-app
 # - GitHub Actions directory: /home/runner/work/some-app/some-app
 ifdef GITHUB_ACTIONS
-GEN_BASE_DIR=$(yq .gen_base_dir.github_actions swaggy-c.yml)
+APP_BASE_DIR=$(shell yq .base_dir.github_actions swaggy-c.yml)
 else
-GEN_BASE_DIR=$(yq .gen_base_dir.local swaggy-c.yml)
+APP_BASE_DIR=$(shell yq .base_dir.local swaggy-c.yml)
 endif
+
+$(info ################################################################)
+$(info Building Swaggy C application with user configurations:)
+$(info - OpenAPI specification URI: ${SPEC_URI})
+$(info - Application version: ${APP_VERSION})
+$(info - Application base directory: ${APP_BASE_DIR})
 
 ################################################################
 # Base targets
@@ -90,13 +96,13 @@ generate: generate-all
 
 # Generate API clients for all languages, this is separate from generate-primary target due to
 # the possibility of different command arguments
-# This target requires GEN_BASE_DIR parameter to be supplied by user
+# This target requires APP_BASE_DIR parameter to be supplied by user
 generate-all:
 	for lang in ${LANGS_ALL} ; do \
 	  docker \
 		  run \
 		  --rm \
-		  -v $(GEN_BASE_DIR):/local openapitools/openapi-generator-cli:v$(OPENAPI_GENERATOR_VERSION) \
+		  -v $(APP_BASE_DIR):/local openapitools/openapi-generator-cli:v$(OPENAPI_GENERATOR_VERSION) \
 		  generate \
 		  --input-spec /local/$(LOCAL_SPEC_PATH) \
 		  --config /local/clients/$$lang/conf.json \
@@ -105,13 +111,13 @@ generate-all:
 	done
 
 # Generate API clients for primary languages only
-# This target requires GEN_BASE_DIR parameter to be supplied by user
+# This target requires APP_BASE_DIR parameter to be supplied by user
 generate-primary:
 	for lang in ${LANGS_PRIMARY} ; do \
 	  docker \
 		  run \
 		  --rm \
-		  -v $(GEN_BASE_DIR):/local openapitools/openapi-generator-cli:v$(OPENAPI_GENERATOR_VERSION) \
+		  -v $(APP_BASE_DIR):/local openapitools/openapi-generator-cli:v$(OPENAPI_GENERATOR_VERSION) \
 		  generate \
 		  --input-spec /local/$(LOCAL_SPEC_PATH) \
 		  --config /local/clients/$$lang/conf.json \

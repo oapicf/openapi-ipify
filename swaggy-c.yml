@@ -1,6 +1,6 @@
 ---
-app_version: 3.1.2-pre.0
 spec_uri: specification/ipify.yml
-gen_base_dir:
+version: 3.1.2-pre.0
+base_dir:
   github_actions: /home/runner/work/openapi-ipify/openapi-ipify
   local: /Users/cliffano/dev/workspace-studio/openapi-ipify
