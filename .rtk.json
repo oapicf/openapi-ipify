@@ -39,7 +39,7 @@
       "path": "swaggy-c.yml",
       "type": "yaml",
       "params": {
-        "property": "app_version"
+        "property": "version"
       }
     },
     {
