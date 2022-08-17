@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add contact details to Swaggy C config file
+
+### Changed
+- Update Swaggy C to include contact updates on init-spec
+
 ## 3.2.1 - 2022-08-13
 ### Fixed
 - Fix Ruby publishing to handle previously built gem
