@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add contact details to Swaggy C config file
 
 ### Changed
-- Update Swaggy C to include contact updates on init-spec
+- Upgrade Swaggy C to 1.1.0
 
 ## 3.2.1 - 2022-08-13
 ### Fixed
