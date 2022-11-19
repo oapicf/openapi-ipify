@@ -2,14 +2,16 @@ defmodule OpenapiIpify.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :openapi_ipify,
-     version: "3.0.1-pre.0",
-     elixir: "~> 1.10",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     package: package(),
-     description: "OpenAPI client for ipify, a simple public IP address API",
-     deps: deps()]
+    [
+      app: :openapi_ipify,
+      version: "3.2.2-pre.0",
+      elixir: "~> 1.10",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      package: package(),
+      description: "OpenAPI client for ipify, a simple public IP address API",
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
@@ -37,11 +39,10 @@ defmodule OpenapiIpify.Mixfile do
     ]
   end
 
-   defp package() do
-    [
-      name: "openapi_ipify",
-      files: ~w(.formatter.exs config lib mix.exs README* LICENSE*),
-      licenses: [""]
-    ]
+   defp package do
+      [
+        name: "openapi_ipify",
+        files: ~w(.formatter.exs config lib mix.exs README* LICENSE*),
+      ]
   end
 end

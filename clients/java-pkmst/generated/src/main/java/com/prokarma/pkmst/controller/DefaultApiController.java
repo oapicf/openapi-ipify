@@ -23,7 +23,7 @@ import java.io.IOException;
  * @author pkmst
  *
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2022-08-10T13:01:24.010048Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2022-11-19T01:28:23.703592Z[Etc/UTC]")
 @Controller
 public class DefaultApiController implements DefaultApi {
     private final ObjectMapper objectMapper;
@@ -37,7 +37,17 @@ public class DefaultApiController implements DefaultApi {
         @RequestHeader(value = "Accept", required = false) String accept) throws Exception {
         // do some magic!
 
+        if (accept != null && accept.contains("application/javascript")) {
+            return new ResponseEntity<Ip>(objectMapper.readValue("", Ip.class), HttpStatus.OK);
+        }
+
+
         if (accept != null && accept.contains("application/json")) {
+            return new ResponseEntity<Ip>(objectMapper.readValue("", Ip.class), HttpStatus.OK);
+        }
+
+
+        if (accept != null && accept.contains("text/plain")) {
             return new ResponseEntity<Ip>(objectMapper.readValue("", Ip.class), HttpStatus.OK);
         }
 

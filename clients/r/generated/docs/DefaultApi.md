@@ -16,11 +16,15 @@ Get your public IP address
 ```R
 library(openapi)
 
-var_format <- 'format_example' # character | Response format
-var_callback <- 'callback_example' # character | JSONP callback function name
+# Get your public IP address
+#
+# prepare function argument(s)
+var_format <- "format_example" # character | Response format (Optional)
+var_callback <- "callback_example" # character | JSONP callback function name (Optional)
 
-#Get your public IP address
 api_instance <- DefaultApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$GetIp(format = var_format, callback = var_callbackdata_file = "result.txt")
 result <- api_instance$GetIp(format = var_format, callback = var_callback)
 dput(result)
 ```

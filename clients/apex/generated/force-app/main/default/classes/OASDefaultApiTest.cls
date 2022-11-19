@@ -26,7 +26,21 @@ private class OASDefaultApiTest {
         api = new OASDefaultApi(new OASClient());
 
         js = JSON.serialize(OASIp.getExample());
+        res.setHeader('Content-Type', 'application/javascript');
+        res.setBody(js);
+        expectedResponse = OASIp.getExample();
+        response = (OASIp) api.getIp(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(OASIp.getExample());
         res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = OASIp.getExample();
+        response = (OASIp) api.getIp(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(OASIp.getExample());
+        res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = OASIp.getExample();
         response = (OASIp) api.getIp(params);

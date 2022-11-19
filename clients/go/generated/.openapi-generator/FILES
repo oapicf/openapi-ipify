@@ -13,4 +13,5 @@ go.mod
 go.sum
 model_ip.go
 response.go
+test/api_default_test.go
 utils.go

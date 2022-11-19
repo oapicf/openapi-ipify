@@ -12,10 +12,8 @@ DependencyInjection/OpenAPIServerExtension.php
 Model/Ip.php
 OpenAPIServerBundle.php
 README.md
-Resources/config/routing.yml
-Resources/config/services.yml
-Resources/docs/Api/DefaultApiInterface.md
-Resources/docs/Model/Ip.md
+Resources/config/routing.yaml
+Resources/config/services.yaml
 Service/JmsSerializer.php
 Service/SerializerInterface.php
 Service/StrictJsonDeserializationVisitor.php
@@ -27,8 +25,10 @@ Tests/Api/DefaultApiInterfaceTest.php
 Tests/AppKernel.php
 Tests/Controller/ControllerTest.php
 Tests/Model/IpTest.php
-Tests/test_config.yml
+Tests/test_config.yaml
 autoload.php
 composer.json
+docs/Api/DefaultApiInterface.md
+docs/Model/Ip.md
 git_push.sh
 phpunit.xml.dist

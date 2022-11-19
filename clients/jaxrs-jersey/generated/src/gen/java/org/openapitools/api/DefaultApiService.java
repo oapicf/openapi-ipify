@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import org.openapitools.api.*;
-import org.openapitools.model.*;
 
 import org.glassfish.jersey.media.multipart.FormDataBodyPart;
 
@@ -15,7 +14,7 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2022-08-10T13:01:45.677932Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2022-11-19T01:28:46.639521Z[Etc/UTC]")
 public abstract class DefaultApiService {
     public abstract Response getIp(String format,String paramCallback,SecurityContext securityContext) throws NotFoundException;
 }

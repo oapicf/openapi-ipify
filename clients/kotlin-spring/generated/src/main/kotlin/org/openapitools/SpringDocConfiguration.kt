@@ -24,14 +24,14 @@ class SpringDocConfiguration {
                     .contact(
                         Contact()
                             .name("Cliffano Subagio")
-                            .url("http://blog.cliffano.com")
+                            .url("https://github.com/cliffano/openapi-ipify")
                             .email("blah@cliffano.com")
                     )
                     .license(
                         License()
                             .name("MIT")
                                                 )
-                    .version("3.0.1-pre.0")
+                    .version("3.2.2-pre.0")
             )
     }
 }

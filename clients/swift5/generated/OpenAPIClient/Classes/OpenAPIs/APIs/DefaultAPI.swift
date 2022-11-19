@@ -54,8 +54,8 @@ open class DefaultAPI {
 
         var localVariableUrlComponents = URLComponents(string: localVariableURLString)
         localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
-            "format": format?.encodeToJSON(),
-            "callback": callback?.encodeToJSON(),
+            "format": (wrappedValue: format?.encodeToJSON(), isExplode: true),
+            "callback": (wrappedValue: callback?.encodeToJSON(), isExplode: true),
         ])
 
         let localVariableNillableHeaders: [String: Any?] = [
@@ -66,6 +66,6 @@ open class DefaultAPI {
 
         let localVariableRequestBuilder: RequestBuilder<Ip>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
 
-        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters, requiresAuthentication: false)
     }
 }

@@ -4,14 +4,14 @@
     "contact" : {
       "email" : "blah@cliffano.com",
       "name" : "Cliffano Subagio",
-      "url" : "http://blog.cliffano.com"
+      "url" : "https://github.com/cliffano/openapi-ipify"
     },
     "description" : "OpenAPI client for ipify, a simple public IP address API",
     "license" : {
       "name" : "MIT"
     },
     "title" : "openapi-ipify",
-    "version" : "3.0.1-pre.0"
+    "version" : "3.2.2-pre.0"
   },
   "servers" : [ {
     "url" : "https://api.ipify.org"

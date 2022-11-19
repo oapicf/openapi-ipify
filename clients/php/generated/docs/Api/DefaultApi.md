@@ -1,10 +1,10 @@
 # OpenAPI\Client\DefaultApi
 
-All URIs are relative to https://api.ipify.org.
+All URIs are relative to https://api.ipify.org, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getIp()**](DefaultApi.md#getIp) | **GET** / | Get your public IP address
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getIp()**](DefaultApi.md#getIp) | **GET** / | Get your public IP address |
 
 
 ## `getIp()`
@@ -41,10 +41,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **string**| Response format | [optional]
- **callback** | **string**| JSONP callback function name | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **format** | **string**| Response format | [optional] |
+| **callback** | **string**| JSONP callback function name | [optional] |
 
 ### Return type
 

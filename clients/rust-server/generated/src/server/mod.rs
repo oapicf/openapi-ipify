@@ -98,7 +98,7 @@ impl<T, C> Service<T, C> where
 {
     pub fn new(api_impl: T) -> Self {
         Service {
-            api_impl: api_impl,
+            api_impl,
             marker: PhantomData
         }
     }
@@ -111,7 +111,7 @@ impl<T, C> Clone for Service<T, C> where
     fn clone(&self) -> Self {
         Service {
             api_impl: self.api_impl.clone(),
-            marker: self.marker.clone(),
+            marker: self.marker,
         }
     }
 }
@@ -137,14 +137,14 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
         let (method, uri, headers) = (parts.method, parts.uri, parts.headers);
         let path = paths::GLOBAL_REGEX_SET.matches(uri.path());
 
-        match &method {
+        match method {
 
             // GetIp - GET /
-            &hyper::Method::GET if path.matched(paths::ID_) => {
+            hyper::Method::GET if path.matched(paths::ID_) => {
                 // Query parameters (note that non-required or collection query parameters will ignore garbage values, rather than causing a 400 response)
                 let query_params = form_urlencoded::parse(uri.query().unwrap_or_default().as_bytes()).collect::<Vec<_>>();
                 let param_format = query_params.iter().filter(|e| e.0 == "format").map(|e| e.1.to_owned())
-                    .nth(0);
+                    .next();
                 let param_format = match param_format {
                     Some(param_format) => {
                         let param_format =
@@ -161,7 +161,7 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                     None => None,
                 };
                 let param_callback = query_params.iter().filter(|e| e.0 == "callback").map(|e| e.1.to_owned())
-                    .nth(0);
+                    .next();
                 let param_callback = match param_callback {
                     Some(param_callback) => {
                         let param_callback =
@@ -186,7 +186,7 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                                 let mut response = Response::new(Body::empty());
                                 response.headers_mut().insert(
                                             HeaderName::from_static("x-span-id"),
-                                            HeaderValue::from_str((&context as &dyn Has<XSpanIdString>).get().0.clone().to_string().as_str())
+                                            HeaderValue::from_str((&context as &dyn Has<XSpanIdString>).get().0.clone().as_str())
                                                 .expect("Unable to create X-Span-ID header value"));
 
                                         match result {
@@ -227,9 +227,9 @@ pub struct ApiRequestParser;
 impl<T> RequestParser<T> for ApiRequestParser {
     fn parse_operation_id(request: &Request<T>) -> Option<&'static str> {
         let path = paths::GLOBAL_REGEX_SET.matches(request.uri().path());
-        match request.method() {
+        match *request.method() {
             // GetIp - GET /
-            &hyper::Method::GET if path.matched(paths::ID_) => Some("GetIp"),
+            hyper::Method::GET if path.matched(paths::ID_) => Some("GetIp"),
             _ => None,
         }
     }

@@ -13,9 +13,10 @@ pub struct Ip {
 }
 
 impl Ip {
+    #[allow(clippy::new_without_default)]
     pub fn new(ip: String, ) -> Ip {
         Ip {
-            ip: ip,
+            ip,
         }
     }
 }
@@ -25,12 +26,14 @@ impl Ip {
 /// Should be implemented in a serde serializer
 impl std::string::ToString for Ip {
     fn to_string(&self) -> String {
-        let mut params: Vec<String> = vec![];
+        let params: Vec<Option<String>> = vec![
 
-        params.push("ip".to_string());
-        params.push(self.ip.to_string());
+            Some("ip".to_string()),
+            Some(self.ip.to_string()),
 
-        params.join(",").to_string()
+        ];
+
+        params.into_iter().flatten().collect::<Vec<_>>().join(",")
     }
 }
 
@@ -41,8 +44,9 @@ impl std::str::FromStr for Ip {
     type Err = String;
 
     fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        /// An intermediate representation of the struct to use for parsing.
         #[derive(Default)]
-        // An intermediate representation of the struct to use for parsing.
+        #[allow(dead_code)]
         struct IntermediateRep {
             pub ip: Vec<String>,
         }
@@ -50,7 +54,7 @@ impl std::str::FromStr for Ip {
         let mut intermediate_rep = IntermediateRep::default();
 
         // Parse into intermediate representation
-        let mut string_iter = s.split(',').into_iter();
+        let mut string_iter = s.split(',');
         let mut key_result = string_iter.next();
 
         while key_result.is_some() {
@@ -60,8 +64,10 @@ impl std::str::FromStr for Ip {
             };
 
             if let Some(key) = key_result {
+                #[allow(clippy::match_single_binding)]
                 match key {
-                    "ip" => intermediate_rep.ip.push(<String as std::str::FromStr>::from_str(val).map_err(|x| format!("{}", x))?),
+                    #[allow(clippy::redundant_clone)]
+                    "ip" => intermediate_rep.ip.push(<String as std::str::FromStr>::from_str(val).map_err(|x| x.to_string())?),
                     _ => return std::result::Result::Err("Unexpected key while parsing Ip".to_string())
                 }
             }
@@ -72,7 +78,7 @@ impl std::str::FromStr for Ip {
 
         // Use the intermediate representation to return the struct
         std::result::Result::Ok(Ip {
-            ip: intermediate_rep.ip.into_iter().next().ok_or("ip missing in Ip".to_string())?,
+            ip: intermediate_rep.ip.into_iter().next().ok_or_else(|| "ip missing in Ip".to_string())?,
         })
     }
 }

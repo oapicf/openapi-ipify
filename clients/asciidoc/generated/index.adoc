@@ -1,6 +1,6 @@
 = openapi-ipify
 blah@cliffano.com
-3.0.1-pre.0
+3.2.2-pre.0
 :toc: left
 :numbered:
 :toclevels: 3
@@ -9,7 +9,7 @@ blah@cliffano.com
 :specDir: 
 :snippetDir: 
 :generator-template: v1 2019-12-20
-:info-url: http://blog.cliffano.com
+:info-url: https://github.com/cliffano/openapi-ipify
 :app-name: openapi-ipify
 
 [abstract]

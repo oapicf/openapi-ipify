@@ -3,7 +3,7 @@
  *
  * OpenAPI client for ipify, a simple public IP address API
  *
- * OpenAPI document version: 3.0.1-pre.0
+ * OpenAPI document version: 3.2.2-pre.0
  * Maintained by: blah@cliffano.com
  *
  * AUTO-GENERATED FILE, DO NOT MODIFY!
@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaUndertowServerCodegen", date = "2022-08-10T13:01:29.145926Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaUndertowServerCodegen", date = "2022-11-19T01:28:28.335962Z[Etc/UTC]")
 public class Ip   {
   
   private String ip;

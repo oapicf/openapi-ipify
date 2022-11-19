@@ -1,6 +1,6 @@
-(defproject openapi-ipify "3.0.1-pre.0"
+(defproject openapi-ipify "3.2.2-pre.0"
   :description "OpenAPI client for ipify, a simple public IP address API"
-  :url "http://blog.cliffano.com"
+  :url "https://github.com/cliffano/openapi-ipify"
   :license {:name "MIT"}
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [metosin/spec-tools "0.7.0"]

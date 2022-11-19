@@ -9,16 +9,16 @@
     <Version>1.0.0</Version>
     <AssemblyName>Org.OpenAPITools</AssemblyName>
     <PackageId>Org.OpenAPITools</PackageId>
-    <UserSecretsId>78a9bdb5-7ef4-4cb5-836b-aab2647af7e3</UserSecretsId>
+    <UserSecretsId>e86f1826-120d-46a3-bc89-05d93cade3fb</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.0"/>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.0.0"/>
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.0.0"/>
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.4.0"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0"/>
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
     <PackageReference Include="JsonSubTypes" Version="1.8.0" />
   </ItemGroup>
   <ItemGroup>
