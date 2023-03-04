@@ -81,7 +81,7 @@ Contact: blah@cliffano.com
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Org.OpenAPITools\Org.OpenAPITools.csproj">
-          <Project>{91D54EAF-B8A2-4CB1-8C49-CCD7AD34BFA2}</Project>
+          <Project>{2242C007-4712-4B1D-8E27-A79305181BD0}</Project>
           <Name>Org.OpenAPITools</Name>
       </ProjectReference>
   </ItemGroup>

@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 .travis.yml
 Org.OpenAPITools.sln
 README.md
@@ -8,6 +9,8 @@ docs/DefaultApi.md
 docs/Ip.md
 git_push.sh
 mono_nunit_test.sh
+src/Org.OpenAPITools.Test/Api/DefaultApiTests.cs
+src/Org.OpenAPITools.Test/Model/IpTests.cs
 src/Org.OpenAPITools.Test/Org.OpenAPITools.Test.csproj
 src/Org.OpenAPITools.Test/packages.config
 src/Org.OpenAPITools/Api/DefaultApi.cs

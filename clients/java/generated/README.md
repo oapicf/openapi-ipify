@@ -2,7 +2,7 @@
 
 openapi-ipify
 - API version: 3.3.1-pre.0
-  - Build date: 2023-03-04T02:34:06.507995Z[Etc/UTC]
+  - Build date: 2023-03-04T11:27:47.040594Z[Etc/UTC]
 
 OpenAPI client for ipify, a simple public IP address API
 

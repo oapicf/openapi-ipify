@@ -27,7 +27,7 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2023-03-04T02:34:12.899120Z[Etc/UTC]")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2023-03-04T11:27:52.871639Z[Etc/UTC]")
 @Client("${openapi-micronaut-client-base-path}")
 public interface DefaultApi {
     /**
