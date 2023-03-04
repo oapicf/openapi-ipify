@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade Swaggy C to 2.0.1
+- Replace python with python-nextgen
+
 ## 3.3.0 - 2022-11-19
 ### Added
 - Add contact details to Swaggy C config file

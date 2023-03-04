@@ -1,9 +1,9 @@
 #!/bin/bash
-make clean deps init-spec generate-primary build-python test-python
+make clean deps init-spec generate-primary build-python-nextgen test-python-nextgen
 
 rm -f ~/.pypirc && touch ~/.pypirc
 echo "[pypi]" > ~/.pypirc
 echo "username = __token__" >> ~/.pypirc
 echo "password = ${PYPI_TOKEN}" >> ~/.pypirc
 
-make publish-python
+make publish-python-nextgen
