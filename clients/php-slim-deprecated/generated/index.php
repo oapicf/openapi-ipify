@@ -6,7 +6,7 @@
  *
  * @package OpenAPIServer\Api
  * @author  OpenAPI Generator team
- * @version 3.2.2-pre.0
+ * @version 3.3.1-pre.0
  * @link    https://github.com/openapitools/openapi-generator
  */
 
@@ -63,7 +63,7 @@ $config['settings'] = [
     // 'addContentLengthHeader' => true,
 
     /**
-     * Filename for caching the FastRoute routes. Must be set to to a valid filename within
+     * Filename for caching the FastRoute routes. Must be set to a valid filename within
      * a writeable directory. If the file does not exist, then it is created with the correct
      * cache information on first run.
      * Set to false to disable the FastRoute cache system.

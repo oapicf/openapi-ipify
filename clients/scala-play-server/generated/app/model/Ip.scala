@@ -5,7 +5,7 @@ import play.api.libs.json._
 /**
   * Represents the Swagger definition for Ip.
   */
-@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2022-11-19T01:31:07.277757Z[Etc/UTC]")
+@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2023-03-04T02:38:01.915925Z[Etc/UTC]")
 case class Ip(
   ip: String
 )

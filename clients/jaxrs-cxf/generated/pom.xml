@@ -5,7 +5,7 @@
   <packaging>war</packaging>
   <name>openapi-cxf-server</name>
   <description>OpenAPI client for ipify, a simple public IP address API</description>
-  <version>3.2.2-pre.0</version>
+  <version>3.3.1-pre.0</version>
 
 
   <build>
@@ -211,7 +211,7 @@
     <beanvalidation-version>2.0.2</beanvalidation-version>
     <cxf-version>3.3.0</cxf-version>
     <jackson-jaxrs-version>2.9.9</jackson-jaxrs-version>
-    <jakarta-annotation-version>1.3.5</jakarta-annotation-version>
+        <jakarta-annotation-version>1.3.5</jakarta-annotation-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 </project>

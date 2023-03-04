@@ -16,7 +16,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
 @RequestScoped
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2022-11-19T01:28:43.900722Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2023-03-04T02:34:45.562211Z[Etc/UTC]")
 public class DefaultApiServiceImpl implements DefaultApiService {
       @Override
       public Response getIp(String format, String paramCallback, SecurityContext securityContext) {

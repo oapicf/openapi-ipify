@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaInflectorServerCodegen", date = "2022-11-19T01:28:12.914736Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaInflectorServerCodegen", date = "2023-03-04T02:34:10.130704Z[Etc/UTC]")
 public class Ip   {
   @JsonProperty("ip")
   private String ip;

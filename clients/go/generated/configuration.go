@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 3.2.2-pre.0
+API version: 3.3.1-pre.0
 Contact: blah@cliffano.com
 */
 
@@ -29,21 +29,6 @@ func (c contextKey) String() string {
 }
 
 var (
-	// ContextOAuth2 takes an oauth2.TokenSource as authentication for the request.
-	ContextOAuth2 = contextKey("token")
-
-	// ContextBasicAuth takes BasicAuth as authentication for the request.
-	ContextBasicAuth = contextKey("basic")
-
-	// ContextAccessToken takes a string oauth2 access token as authentication for the request.
-	ContextAccessToken = contextKey("accesstoken")
-
-	// ContextAPIKeys takes a string apikey as authentication for the request
-	ContextAPIKeys = contextKey("apiKeys")
-
-	// ContextHttpSignatureAuth takes HttpSignatureAuth as authentication for the request.
-	ContextHttpSignatureAuth = contextKey("httpsignature")
-
 	// ContextServerIndex uses a server configuration from the index.
 	ContextServerIndex = contextKey("serverIndex")
 

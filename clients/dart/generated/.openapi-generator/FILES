@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 analysis_options.yaml
@@ -18,5 +17,3 @@ lib/auth/http_bearer_auth.dart
 lib/auth/oauth.dart
 lib/model/ip.dart
 pubspec.yaml
-test/default_api_test.dart
-test/ip_test.dart

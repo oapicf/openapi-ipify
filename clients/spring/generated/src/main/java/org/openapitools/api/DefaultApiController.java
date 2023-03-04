@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-11-19T01:31:14.571590Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-03-04T02:38:15.551913Z[Etc/UTC]")
 @Controller
 @RequestMapping("${openapi.openapiIpify.base-path:}")
 public class DefaultApiController implements DefaultApi {

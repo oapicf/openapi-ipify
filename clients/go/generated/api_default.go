@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 3.2.2-pre.0
+API version: 3.3.1-pre.0
 Contact: blah@cliffano.com
 */
 
@@ -81,10 +81,10 @@ func (a *DefaultApiService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response
 	localVarFormParams := url.Values{}
 
 	if r.format != nil {
-		localVarQueryParams.Add("format", parameterToString(*r.format, ""))
+		parameterAddToQuery(localVarQueryParams, "format", r.format, "")
 	}
 	if r.callback != nil {
-		localVarQueryParams.Add("callback", parameterToString(*r.callback, ""))
+		parameterAddToQuery(localVarQueryParams, "callback", r.callback, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -13,7 +13,7 @@ import io.swagger.v3.oas.models.security.SecurityScheme;
 @Configuration
 public class SpringDocConfiguration {
 
-    @Bean
+    @Bean(name = "org.openapitools.configuration.SpringDocConfiguration.apiInfo")
     OpenAPI apiInfo() {
         return new OpenAPI()
                 .info(
@@ -31,7 +31,7 @@ public class SpringDocConfiguration {
                                                 .name("MIT")
                                                 .url("http://unlicense.org")
                                 )
-                                .version("3.2.2-pre.0")
+                                .version("3.3.1-pre.0")
                 )
         ;
     }

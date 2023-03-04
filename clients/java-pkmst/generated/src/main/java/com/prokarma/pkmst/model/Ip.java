@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Ip
  */
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2022-11-19T01:28:23.703592Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2023-03-04T02:34:21.396931Z[Etc/UTC]")
 public class Ip   {
   @JsonProperty("ip")
   private String ip;

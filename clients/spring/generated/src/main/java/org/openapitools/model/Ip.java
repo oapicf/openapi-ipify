@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-11-19T01:31:14.571590Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-03-04T02:38:15.551913Z[Etc/UTC]")
 public class Ip {
 
   @JsonProperty("ip")
@@ -34,7 +34,7 @@ public class Ip {
    * @return ip
   */
   @NotNull 
-  @Schema(name = "ip", required = true)
+  @Schema(name = "ip", requiredMode = Schema.RequiredMode.REQUIRED)
   public String getIp() {
     return ip;
   }

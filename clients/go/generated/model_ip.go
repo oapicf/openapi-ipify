@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 3.2.2-pre.0
+API version: 3.3.1-pre.0
 Contact: blah@cliffano.com
 */
 
@@ -14,6 +14,9 @@ package openapi
 import (
 	"encoding/json"
 )
+
+// checks if the Ip type satisfies the MappedNullable interface at compile time
+var _ MappedNullable = &Ip{}
 
 // Ip struct for Ip
 type Ip struct {
@@ -52,7 +55,7 @@ func (o *Ip) GetIp() string {
 // and a boolean to check if the value has been set.
 func (o *Ip) GetIpOk() (*string, bool) {
 	if o == nil {
-    return nil, false
+		return nil, false
 	}
 	return &o.Ip, true
 }
@@ -63,11 +66,17 @@ func (o *Ip) SetIp(v string) {
 }
 
 func (o Ip) MarshalJSON() ([]byte, error) {
-	toSerialize := map[string]interface{}{}
-	if true {
-		toSerialize["ip"] = o.Ip
+	toSerialize,err := o.ToMap()
+	if err != nil {
+		return []byte{}, err
 	}
 	return json.Marshal(toSerialize)
+}
+
+func (o Ip) ToMap() (map[string]interface{}, error) {
+	toSerialize := map[string]interface{}{}
+	toSerialize["ip"] = o.Ip
+	return toSerialize, nil
 }
 
 type NullableIp struct {

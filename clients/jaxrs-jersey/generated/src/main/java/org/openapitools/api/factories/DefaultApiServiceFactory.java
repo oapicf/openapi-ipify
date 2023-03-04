@@ -3,7 +3,7 @@ package org.openapitools.api.factories;
 import org.openapitools.api.DefaultApiService;
 import org.openapitools.api.impl.DefaultApiServiceImpl;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2022-11-19T01:28:46.639521Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2023-03-04T02:34:48.993233Z[Etc/UTC]")
 public class DefaultApiServiceFactory {
     private static final DefaultApiService service = new DefaultApiServiceImpl();
 

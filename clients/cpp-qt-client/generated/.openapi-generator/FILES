@@ -1,6 +1,6 @@
-.openapi-generator-ignore
 README.md
 client/CMakeLists.txt
+client/Config.cmake.in
 client/OAIDefaultApi.cpp
 client/OAIDefaultApi.h
 client/OAIEnum.h
