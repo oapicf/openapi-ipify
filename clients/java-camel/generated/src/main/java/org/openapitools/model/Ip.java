@@ -18,11 +18,26 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2023-03-04T11:28:16.058762Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2023-08-04T12:26:42.035378Z[Etc/UTC]")
 public class Ip {
 
-  @JsonProperty("ip")
   private String ip;
+
+  /**
+   * Default constructor
+   * @deprecated Use {@link Ip#Ip(String)}
+   */
+  @Deprecated
+  public Ip() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public Ip(String ip) {
+    this.ip = ip;
+  }
 
   public Ip ip(String ip) {
     this.ip = ip;
@@ -35,6 +50,7 @@ public class Ip {
   */
   @NotNull 
   @Schema(name = "ip", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("ip")
   public String getIp() {
     return ip;
   }

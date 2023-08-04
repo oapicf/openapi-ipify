@@ -81,7 +81,8 @@ Class | Method | HTTP request | Description
 - [Ip](docs/Model/Ip.md)
 
 ## Authorization
-All endpoints do not require authorization.
+Endpoints do not require authorization.
+
 ## Tests
 
 To run the tests, use:

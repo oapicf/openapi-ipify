@@ -20,6 +20,8 @@
 #include <unistd.h>
 #endif
 
+#include "ApiBase.h"
+
 #include "DefaultApiImpl.h"
 
 #define PISTACHE_SERVER_THREADS     2
@@ -76,13 +78,16 @@ int main() {
     opts.maxResponseSize(PISTACHE_SERVER_MAX_RESPONSE_SIZE);
     httpEndpoint->init(opts);
 
+    auto apiImpls = std::vector<std::shared_ptr<ApiBase>>();
     
-    DefaultApiImpl DefaultApiserver(router);
-    DefaultApiserver.init();
+    apiImpls.push_back(std::make_shared<DefaultApiImpl>(router));
+
+    for (auto api : apiImpls) {
+        api->init();
+    }
 
     httpEndpoint->setHandler(router->handler());
     httpEndpoint->serve();
 
     httpEndpoint->shutdown();
-
 }

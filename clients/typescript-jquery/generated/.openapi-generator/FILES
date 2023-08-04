@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 api/DefaultApi.ts
 api/api.ts
 configuration.ts

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**Get-Ip**](DefaultApi.md#Get-Ip) | **GET** / | Get your public IP address
 
 
-<a name="Get-Ip"></a>
+<a id="Get-Ip"></a>
 # **Get-Ip**
 > Ip Get-Ip<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Format] <String><br>

@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaUndertowServerCodegen", date = "2023-03-04T11:28:07.896994Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaUndertowServerCodegen", date = "2023-08-04T12:26:34.055281Z[Etc/UTC]")
 public class Ip   {
   
   private String ip;

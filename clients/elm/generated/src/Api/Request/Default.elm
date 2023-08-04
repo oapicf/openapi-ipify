@@ -19,7 +19,7 @@ module Api.Request.Default exposing
     )
 
 import Api
-import Api.Data
+import Api.Data exposing (..)
 import Dict
 import Http
 import Json.Decode
@@ -49,8 +49,6 @@ stringFromFormat model =
 
 
 
-
-
 getIp : Maybe Format -> Maybe String -> Api.Request Api.Data.Ip
 getIp format_query callback_query =
     Api.request
@@ -61,3 +59,4 @@ getIp format_query callback_query =
         []
         Nothing
         Api.Data.ipDecoder
+

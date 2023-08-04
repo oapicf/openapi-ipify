@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import com.cliffano.openapiipify.JSON;
 /**
  * Ip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-04T11:27:47.040594Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T12:26:13.575424Z[Etc/UTC]")
 public class Ip {
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
@@ -66,7 +70,6 @@ public class Ip {
    * @return ip
   **/
   @javax.annotation.Nonnull
-
   public String getIp() {
     return ip;
   }

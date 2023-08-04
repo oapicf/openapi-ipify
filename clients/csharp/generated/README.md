@@ -115,6 +115,8 @@ Class | Method | HTTP request | Description
  - [Model.Ip](docs/Ip.md)
 
 
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
+Endpoints do not require authorization.
+

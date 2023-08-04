@@ -1,10 +1,8 @@
-.openapi-generator-ignore
 README.md
 lib/Models/Helpers.cpp
 lib/Models/Helpers.h
 lib/Models/Ip.cpp
 lib/Models/Ip.h
-lib/TestFiles/IpTest.cpp
 lib/service/DefaultApi.cpp
 lib/service/DefaultApi.h
 lib/service/Response.h

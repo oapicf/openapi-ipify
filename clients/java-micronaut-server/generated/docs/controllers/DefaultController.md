@@ -8,7 +8,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getIp**](#getIp) | **GET** / | Get your public IP address
 
-<a name="getIp"></a>
+<a id="getIp"></a>
 # **getIp**
 ```java
 Mono<Ip> DefaultController.getIp(_formatparamCallback)

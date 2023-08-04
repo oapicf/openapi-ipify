@@ -2,7 +2,6 @@
 .github/workflows/r-client.yaml
 .gitignore
 .lintr
-.openapi-generator-ignore
 .travis.yml
 DESCRIPTION
 NAMESPACE
@@ -15,5 +14,3 @@ docs/DefaultApi.md
 docs/Ip.md
 git_push.sh
 tests/testthat.R
-tests/testthat/test_default_api.R
-tests/testthat/test_ip.R

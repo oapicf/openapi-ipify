@@ -6,7 +6,7 @@ import play.api.libs.json._
 import play.api.mvc._
 import model.Ip
 
-@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2023-03-04T11:31:56.596618Z[Etc/UTC]")
+@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2023-08-04T12:29:50.723207Z[Etc/UTC]")
 @Singleton
 class DefaultApiController @Inject()(cc: ControllerComponents, api: DefaultApi) extends AbstractController(cc) {
   /**

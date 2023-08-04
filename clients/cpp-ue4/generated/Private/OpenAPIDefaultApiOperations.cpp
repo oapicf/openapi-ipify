@@ -60,11 +60,6 @@ bool OpenAPIDefaultApi::GetIpRequest::EnumFromString(const FString& EnumAsString
 	return FromString(EnumAsString, EnumValue);
 }
 
-inline FStringFormatArg ToStringFormatArg(const OpenAPIDefaultApi::GetIpRequest::FormatEnum& Value)
-{
-	return FStringFormatArg(ToString(Value));
-}
-
 inline void WriteJsonValue(JsonWriter& Writer, const OpenAPIDefaultApi::GetIpRequest::FormatEnum& Value)
 {
 	WriteJsonValue(Writer, ToString(Value));

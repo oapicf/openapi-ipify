@@ -14,7 +14,7 @@ package openapi
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 )
@@ -81,10 +81,10 @@ func (a *DefaultApiService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response
 	localVarFormParams := url.Values{}
 
 	if r.format != nil {
-		parameterAddToQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
 	}
 	if r.callback != nil {
-		parameterAddToQuery(localVarQueryParams, "callback", r.callback, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "callback", r.callback, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -113,9 +113,9 @@ func (a *DefaultApiService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

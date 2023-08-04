@@ -6,7 +6,7 @@ All URIs are relative to *https://api.ipify.org*
 |--------|--------------|-------------|
 | [**GetIp**](DefaultApi.md#getip) | **GET** / | Get your public IP address |
 
-<a name="getip"></a>
+<a id="getip"></a>
 # **GetIp**
 > Ip GetIp (string format = null, string callback = null)
 

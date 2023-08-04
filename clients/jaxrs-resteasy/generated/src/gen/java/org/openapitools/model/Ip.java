@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.validation.constraints.*;
 import io.swagger.annotations.*;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2023-03-04T11:28:29.535805Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2023-08-04T12:26:58.336703Z[Etc/UTC]")
 public class Ip   {
   
   private String ip;

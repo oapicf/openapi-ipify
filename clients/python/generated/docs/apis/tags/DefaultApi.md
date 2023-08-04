@@ -1,4 +1,4 @@
-<a name="__pageTop"></a>
+<a id="__pageTop"></a>
 # openapiipify.apis.tags.default_api.DefaultApi
 
 All URIs are relative to *https://api.ipify.org*
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**get_ip**](#get_ip) | **get** / | Get your public IP address
 
 # **get_ip**
-<a name="get_ip"></a>
+<a id="get_ip"></a>
 > Ip get_ip()
 
 Get your public IP address

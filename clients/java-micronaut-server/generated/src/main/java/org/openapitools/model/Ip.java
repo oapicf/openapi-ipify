@@ -29,7 +29,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
   Ip.JSON_PROPERTY_IP
 })
 @JsonTypeName("Ip")
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2023-03-04T11:27:55.836717Z[Etc/UTC]")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2023-08-04T12:26:22.939466Z[Etc/UTC]")
 @Introspected
 public class Ip {
     public static final String JSON_PROPERTY_IP = "ip";
@@ -100,3 +100,4 @@ public class Ip {
     }
 
 }
+

@@ -143,7 +143,7 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
             hyper::Method::GET if path.matched(paths::ID_) => {
                 // Query parameters (note that non-required or collection query parameters will ignore garbage values, rather than causing a 400 response)
                 let query_params = form_urlencoded::parse(uri.query().unwrap_or_default().as_bytes()).collect::<Vec<_>>();
-                let param_format = query_params.iter().filter(|e| e.0 == "format").map(|e| e.1.to_owned())
+                let param_format = query_params.iter().filter(|e| e.0 == "format").map(|e| e.1.clone())
                     .next();
                 let param_format = match param_format {
                     Some(param_format) => {
@@ -160,7 +160,7 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                     },
                     None => None,
                 };
-                let param_callback = query_params.iter().filter(|e| e.0 == "callback").map(|e| e.1.to_owned())
+                let param_callback = query_params.iter().filter(|e| e.0 == "callback").map(|e| e.1.clone())
                     .next();
                 let param_callback = match param_callback {
                     Some(param_callback) => {

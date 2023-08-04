@@ -13,7 +13,7 @@
 
 package com.cliffano.openapiipify;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-04T11:27:47.040594Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-04T12:26:13.575424Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";

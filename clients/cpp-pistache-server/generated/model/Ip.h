@@ -64,8 +64,8 @@ public:
     std::string getIp() const;
     void setIp(std::string const& value);
 
-    friend void to_json(nlohmann::json& j, const Ip& o);
-    friend void from_json(const nlohmann::json& j, Ip& o);
+    friend  void to_json(nlohmann::json& j, const Ip& o);
+    friend  void from_json(const nlohmann::json& j, Ip& o);
 protected:
     std::string m_Ip;
 

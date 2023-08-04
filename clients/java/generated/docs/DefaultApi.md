@@ -7,7 +7,7 @@ All URIs are relative to *https://api.ipify.org*
 | [**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address |
 
 
-<a name="getIp"></a>
+<a id="getIp"></a>
 # **getIp**
 > Ip getIp(format, paramCallback)
 

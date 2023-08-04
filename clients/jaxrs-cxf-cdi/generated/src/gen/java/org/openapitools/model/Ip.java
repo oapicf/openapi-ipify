@@ -16,7 +16,6 @@ public class Ip   {
   
   private String ip;
 
-
   /**
    **/
   public Ip ip(String ip) {

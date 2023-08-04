@@ -2,7 +2,7 @@
 
 openapi-ipify
 - API version: 3.3.1-pre.0
-  - Build date: 2023-03-04T11:27:47.040594Z[Etc/UTC]
+  - Build date: 2023-08-04T12:26:13.575424Z[Etc/UTC]
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -124,10 +124,11 @@ Class | Method | HTTP request | Description
  - [Ip](docs/Ip.md)
 
 
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
-Authentication schemes defined for the API:
+Endpoints do not require authorization.
+
 
 ## Recommendation
 
