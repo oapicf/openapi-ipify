@@ -45,8 +45,8 @@ export default class DefaultApi {
     /**
      * Get your public IP address
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.format Response format
-     * @param {String} opts.callback JSONP callback function name
+     * @param {module:model/String} [format] Response format
+     * @param {String} [callback] JSONP callback function name
      * @param {module:api/DefaultApi~getIpCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Ip}
      */

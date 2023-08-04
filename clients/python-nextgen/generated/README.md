@@ -41,12 +41,15 @@ Then import the package:
 import openapiipify
 ```
 
+### Tests
+
+Execute `pytest` to run the tests.
+
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-from __future__ import print_function
 
 import time
 import openapiipify
@@ -92,9 +95,11 @@ Class | Method | HTTP request | Description
  - [Ip](docs/Ip.md)
 
 
+<a id="documentation-for-authorization"></a>
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+Endpoints do not require authorization.
+
 
 ## Author
 

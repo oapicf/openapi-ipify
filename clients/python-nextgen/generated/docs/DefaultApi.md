@@ -15,12 +15,13 @@ Get your public IP address
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import os
 import openapiipify
+from openapiipify.models.ip import Ip
 from openapiipify.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ipify.org
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapiipify.Configuration(
@@ -43,6 +44,7 @@ with openapiipify.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling DefaultApi->get_ip: %s\n" % e)
 ```
+
 
 ### Parameters
 
