@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade Swaggy C to 3.0.1
+
 ## 4.0.0 - 2023-08-05
 ### Changed
 - Upgrade Swaggy C to 2.1.1

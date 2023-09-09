@@ -4,6 +4,9 @@ contact:
   name: Cliffano Subagio
   url: https://github.com/cliffano/openapi-ipify
   email: blah@cliffano.com
+scm:
+  git_user: cliffano
+  git_repo: openapi-ipify
 base_dir:
   github_actions: /home/runner/work/openapi-ipify/openapi-ipify
   local: /Users/cliffano/dev/workspace-studio/openapi-ipify

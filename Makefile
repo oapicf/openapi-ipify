@@ -4,7 +4,7 @@
 ################################################################
 
 # The version of Swaggy C
-SWAGGY_C_VERSION = 2.1.1-pre.0
+SWAGGY_C_VERSION = 3.0.1
 
 # The version of OpenAPI Generator (https://openapi-generator.tech/) used for generating the API clients
 OPENAPI_GENERATOR_VERSION = 6.6.0
@@ -42,6 +42,10 @@ APP_VERSION ?= $(shell yq .version swaggy-c.yml)
 CONTACT_NAME ?= $(shell yq .contact.name swaggy-c.yml)
 CONTACT_URL ?= $(shell yq .contact.url swaggy-c.yml)
 CONTACT_EMAIL ?= $(shell yq .contact.email swaggy-c.yml)
+
+# SCM details to be amended to the OpenAPI Generator configuration .git_* properties
+SCM_GIT_USER ?= $(shell yq .scm.git_user swaggy-c.yml)
+SCM_GIT_REPO ?= $(shell yq .scm.git_repo swaggy-c.yml)
 
 # APP_BASE_DIR is the absolute path where the application base directory is located, for example:
 # - MacOS user workspace directory: /Users/some-user/some-path/some-app
@@ -91,11 +95,11 @@ init-spec: stage
 	fi
 	yq -i '.info.contact.name = "$(CONTACT_NAME)" | .info.contact.url = "$(CONTACT_URL)" | .info.contact.email = "$(CONTACT_EMAIL)"' "$(LOCAL_SPEC_PATH)"
 
-# Initiailise empty configuration file for all languages
+# Initialise basic configuration file for all languages
 init-langs-config:
 	for lang in ${LANGS_ALL} ; do \
 	  mkdir -p clients/$$lang/; \
-		echo "{}" > clients/$$lang/conf.json; \
+		echo "{\n  \"gitUserId\": \"$(SCM_GIT_USER)\",\n  \"gitRepoId\": \"$(SCM_GIT_REPO)\"\n}" > clients/$$lang/conf.json; \
 	done
 
 # Update Makefile to the latest version on origin's main branch
@@ -104,7 +108,7 @@ update-to-latest:
 
 # Update Makefile to the version defined in TARGET_SWAGGY_C_VERSION parameter
 update-to-version:
-	curl https://raw.githubusercontent.com/cliffano/swaggy-c/v$(TARGET_SWAGGY_C_VERSION)/Makefile -o Makefile
+	curl https://raw.githubusercontent.com/cliffano/swaggy-c/v$(TARGET_SWAGGY_C_VERSION)/src/Makefile-swaggy-c -o Makefile
 
 ################################################################
 # API clients generate targets
