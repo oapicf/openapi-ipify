@@ -48,7 +48,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
     /**
      * enum for parameter format
      */
-     enum class Format_getIp(val value: kotlin.String) {
+     enum class FormatGetIp(val value: kotlin.String) {
          @Json(name = "json") json("json"),
          @Json(name = "jsonp") jsonp("jsonp")
      }
@@ -67,7 +67,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getIp(format: Format_getIp? = null, paramCallback: kotlin.String? = null) : Ip {
+    fun getIp(format: FormatGetIp? = null, paramCallback: kotlin.String? = null) : Ip {
         val localVarResponse = getIpWithHttpInfo(format = format, paramCallback = paramCallback)
 
         return when (localVarResponse.responseType) {
@@ -96,7 +96,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun getIpWithHttpInfo(format: Format_getIp?, paramCallback: kotlin.String?) : ApiResponse<Ip?> {
+    fun getIpWithHttpInfo(format: FormatGetIp?, paramCallback: kotlin.String?) : ApiResponse<Ip?> {
         val localVariableConfig = getIpRequestConfig(format = format, paramCallback = paramCallback)
 
         return request<Unit, Ip>(
@@ -111,12 +111,12 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      * @param paramCallback JSONP callback function name (optional)
      * @return RequestConfig
      */
-    fun getIpRequestConfig(format: Format_getIp?, paramCallback: kotlin.String?) : RequestConfig<Unit> {
+    fun getIpRequestConfig(format: FormatGetIp?, paramCallback: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
                 if (format != null) {
-                    put("format", listOf(format.toString()))
+                    put("format", listOf(format.value))
                 }
                 if (paramCallback != null) {
                     put("callback", listOf(paramCallback.toString()))

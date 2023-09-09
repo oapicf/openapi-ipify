@@ -68,7 +68,7 @@ Step 4: Implement the API calls:
 
 ```php
 <?php
-// src/Acme/MyBundle/Api/DefaultApiInterface.php
+// src/Acme/MyBundle/Api/DefaultApi.php
 
 namespace Acme\MyBundle\Api;
 

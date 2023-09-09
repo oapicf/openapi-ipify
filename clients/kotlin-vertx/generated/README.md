@@ -19,21 +19,21 @@ This runs all tests and packages the library.
 * Supports collection formats for query parameters: csv, tsv, ssv, pipes.
 * Some Kotlin and Java types are fully qualified to avoid conflicts with types defined in OpenAPI definitions.
 
-    <a id="documentation-for-api-endpoints"></a>
-    ## Documentation for API Endpoints
+<a id="documentation-for-api-endpoints"></a>
+## Documentation for API Endpoints
 
-    All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api.ipify.org*
 
-    Class | Method | HTTP request | Description
-    ------------ | ------------- | ------------- | -------------
-    *DefaultApi* | [**getIp**](docs/DefaultApi.md#getip) | **GET** / | Get your public IP address
-    
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**getIp**](docs/DefaultApi.md#getip) | **GET** / | Get your public IP address
 
-    <a id="documentation-for-models"></a>
-    ## Documentation for Models
 
-         - [org.openapitools.server.api.model.Ip](docs/Ip.md)
-        
+<a id="documentation-for-models"></a>
+## Documentation for Models
+
+ - [org.openapitools.server.api.model.Ip](docs/Ip.md)
+
 
 <a id="documentation-for-authorization"></a>
 ## Documentation for Authorization

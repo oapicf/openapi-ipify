@@ -50,7 +50,7 @@ public:
 private:
     void initializeModel();
 
-    QString ip;
+    QString m_ip;
     bool m_ip_isSet;
     bool m_ip_isValid;
 };

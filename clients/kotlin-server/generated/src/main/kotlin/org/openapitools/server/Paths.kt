@@ -11,10 +11,10 @@
 */
 package org.openapitools.server
 
-import io.ktor.locations.*
+import io.ktor.resources.*
+import kotlinx.serialization.*
 import org.openapitools.server.models.*
 
-@KtorExperimentalLocationsAPI
 object Paths {
     /**
      * Get your public IP address
@@ -22,6 +22,6 @@ object Paths {
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
      */
-    @Location("/") class getIp(val format: kotlin.String? = null, val paramCallback: kotlin.String? = null)
+    @Serializable @Resource("/") class getIp(val format: kotlin.String? = null, val paramCallback: kotlin.String? = null)
 
 }

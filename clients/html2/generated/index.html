@@ -918,6 +918,7 @@ ul.nav-tabs {
                         <ul class="nav nav-tabs nav-tabs-examples">
                           <li class="active"><a href="#examples-Default-getIp-0-curl">Curl</a></li>
                           <li class=""><a href="#examples-Default-getIp-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Default-getIp-0-dart">Dart</a></li>
                           <li class=""><a href="#examples-Default-getIp-0-android">Android</a></li>
                           <!--<li class=""><a href="#examples-Default-getIp-0-groovy">Groovy</a></li>-->
                           <li class=""><a href="#examples-Default-getIp-0-objc">Obj-C</a></li>
@@ -963,6 +964,24 @@ public class DefaultApiExample {
         }
     }
 }
+</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Default-getIp-0-dart">
+                            <pre class="prettyprint"><code class="language-dart">import 'package:openapi/api.dart';
+
+final api_instance = DefaultApi();
+
+final String format = new String(); // String | Response format
+final String callback = new String(); // String | JSONP callback function name
+
+try {
+    final result = await api_instance.getIp(format, callback);
+    print(result);
+} catch (e) {
+    print('Exception when calling DefaultApi->getIp: $e\n');
+}
+
 </code></pre>
                           </div>
 

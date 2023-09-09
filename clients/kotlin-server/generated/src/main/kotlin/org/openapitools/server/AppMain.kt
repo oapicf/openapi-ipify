@@ -1,26 +1,27 @@
 package org.openapitools.server
 
-import com.codahale.metrics.Slf4jReporter
-import io.ktor.application.*
-import io.ktor.features.*
-import io.ktor.gson.*
+import io.ktor.server.application.*
+import io.ktor.serialization.gson.*
 import io.ktor.http.*
-import io.ktor.locations.*
-import io.ktor.metrics.dropwizard.*
+import io.ktor.server.resources.*
+import io.ktor.server.plugins.autohead.*
+import io.ktor.server.plugins.compression.*
+import io.ktor.server.plugins.contentnegotiation.*
+import io.ktor.server.plugins.defaultheaders.*
+import io.ktor.server.plugins.hsts.*
+import com.codahale.metrics.Slf4jReporter
+import io.ktor.server.metrics.dropwizard.*
 import java.util.concurrent.TimeUnit
-import io.ktor.routing.*
-import io.ktor.util.*
+import io.ktor.server.routing.*
 import org.openapitools.server.apis.DefaultApi
 
 
 
-@KtorExperimentalAPI
-@KtorExperimentalLocationsAPI
 fun Application.main() {
     install(DefaultHeaders)
     install(DropwizardMetrics) {
         val reporter = Slf4jReporter.forRegistry(registry)
-            .outputTo(log)
+            .outputTo(this@main.log)
             .convertRatesTo(TimeUnit.SECONDS)
             .convertDurationsTo(TimeUnit.MILLISECONDS)
             .build()
@@ -32,7 +33,7 @@ fun Application.main() {
     install(AutoHeadResponse) // see https://ktor.io/docs/autoheadresponse.html
     install(Compression, ApplicationCompressionConfiguration()) // see https://ktor.io/docs/compression.html
     install(HSTS, ApplicationHstsConfiguration()) // see https://ktor.io/docs/hsts.html
-    install(Locations) // see https://ktor.io/docs/features-locations.html
+    install(Resources)
     install(Routing) {
         DefaultApi()
     }

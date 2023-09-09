@@ -47,7 +47,7 @@ void OAIIp::fromJson(QString jsonString) {
 
 void OAIIp::fromJsonObject(QJsonObject json) {
 
-    m_ip_isValid = ::OpenAPI::fromJsonValue(ip, json[QString("ip")]);
+    m_ip_isValid = ::OpenAPI::fromJsonValue(m_ip, json[QString("ip")]);
     m_ip_isSet = !json[QString("ip")].isNull() && m_ip_isValid;
 }
 
@@ -61,17 +61,17 @@ QString OAIIp::asJson() const {
 QJsonObject OAIIp::asJsonObject() const {
     QJsonObject obj;
     if (m_ip_isSet) {
-        obj.insert(QString("ip"), ::OpenAPI::toJsonValue(ip));
+        obj.insert(QString("ip"), ::OpenAPI::toJsonValue(m_ip));
     }
     return obj;
 }
 
 QString OAIIp::getIp() const {
-    return ip;
+    return m_ip;
 }
 void OAIIp::setIp(const QString &ip) {
-    this->ip = ip;
-    this->m_ip_isSet = true;
+    m_ip = ip;
+    m_ip_isSet = true;
 }
 
 bool OAIIp::is_ip_Set() const{

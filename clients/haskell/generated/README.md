@@ -50,7 +50,7 @@ main = do
   manager <- newManager tlsManagerSettings
 
   -- Create the client (all endpoint functions will be available)
-  Openapi-ipifyBackend{..} <- API.createOpenapi-ipifyClient
+  let Openapi-ipifyBackend{..} = API.createOpenapi-ipifyClient
 
   -- Any Openapi-ipify API call can go here, e.g. here we call `getSomeEndpoint`
   API.callOpenapi-ipify (mkClientEnv manager url) getSomeEndpoint

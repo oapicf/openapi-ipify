@@ -6,7 +6,7 @@ api/openapi.yaml
 api_default.go
 client.go
 configuration.go
-docs/DefaultApi.md
+docs/DefaultAPI.md
 docs/Ip.md
 git_push.sh
 go.mod

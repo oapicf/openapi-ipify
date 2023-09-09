@@ -28,7 +28,7 @@ import javax.validation.Valid;
 @JsonPropertyOrder({
   Ip.JSON_PROPERTY_IP
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2023-09-09T05:58:17.742989Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2023-09-09T14:25:45.665309Z[Etc/UTC]")
 public class Ip   {
   public static final String JSON_PROPERTY_IP = "ip";
   @JsonProperty(JSON_PROPERTY_IP)
@@ -64,7 +64,7 @@ public class Ip   {
       return false;
     }
     Ip ip = (Ip) o;
-    return Objects.equals(this.ip, ip.ip);
+    return Objects.equals(ip, ip.ip);
   }
 
   @Override

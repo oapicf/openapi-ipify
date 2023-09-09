@@ -1,10 +1,10 @@
-# \DefaultApi
+# \DefaultAPI
 
 All URIs are relative to *https://api.ipify.org*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetIp**](DefaultApi.md#GetIp) | **Get** / | Get your public IP address
+[**GetIp**](DefaultAPI.md#GetIp) | **Get** / | Get your public IP address
 
 
 
@@ -32,13 +32,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultApi.GetIp(context.Background()).Format(format).Callback(callback).Execute()
+    resp, r, err := apiClient.DefaultAPI.GetIp(context.Background()).Format(format).Callback(callback).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.GetIp``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.GetIp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `GetIp`: Ip
-    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.GetIp`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.GetIp`: %v\n", resp)
 }
 ```
 

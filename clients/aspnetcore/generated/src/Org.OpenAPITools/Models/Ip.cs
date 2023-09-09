@@ -27,11 +27,11 @@ namespace Org.OpenAPITools.Models
     public partial class Ip : IEquatable<Ip>
     {
         /// <summary>
-        /// Gets or Sets _Ip
+        /// Gets or Sets VarIp
         /// </summary>
         [Required]
         [DataMember(Name="ip", EmitDefaultValue=false)]
-        public string _Ip { get; set; }
+        public string VarIp { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -41,7 +41,7 @@ namespace Org.OpenAPITools.Models
         {
             var sb = new StringBuilder();
             sb.Append("class Ip {\n");
-            sb.Append("  _Ip: ").Append(_Ip).Append("\n");
+            sb.Append("  VarIp: ").Append(VarIp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -52,7 +52,7 @@ namespace Org.OpenAPITools.Models
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
         {
-            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
 
         /// <summary>
@@ -79,9 +79,9 @@ namespace Org.OpenAPITools.Models
 
             return 
                 (
-                    _Ip == other._Ip ||
-                    _Ip != null &&
-                    _Ip.Equals(other._Ip)
+                    VarIp == other.VarIp ||
+                    VarIp != null &&
+                    VarIp.Equals(other.VarIp)
                 );
         }
 
@@ -95,8 +95,8 @@ namespace Org.OpenAPITools.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
-                    if (_Ip != null)
-                    hashCode = hashCode * 59 + _Ip.GetHashCode();
+                    if (VarIp != null)
+                    hashCode = hashCode * 59 + VarIp.GetHashCode();
                 return hashCode;
             }
         }

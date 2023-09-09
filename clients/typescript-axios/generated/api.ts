@@ -46,12 +46,12 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @summary Get your public IP address
-         * @param {'json' | 'jsonp'} [format] Response format
+         * @param {GetIpFormatEnum} [format] Response format
          * @param {string} [callback] JSONP callback function name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getIp: async (format?: 'json' | 'jsonp', callback?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getIp: async (format?: GetIpFormatEnum, callback?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -96,12 +96,12 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get your public IP address
-         * @param {'json' | 'jsonp'} [format] Response format
+         * @param {GetIpFormatEnum} [format] Response format
          * @param {string} [callback] JSONP callback function name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getIp(format?: 'json' | 'jsonp', callback?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ip>> {
+        async getIp(format?: GetIpFormatEnum, callback?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ip>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIp(format, callback, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -118,12 +118,12 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         /**
          * 
          * @summary Get your public IP address
-         * @param {'json' | 'jsonp'} [format] Response format
+         * @param {GetIpFormatEnum} [format] Response format
          * @param {string} [callback] JSONP callback function name
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getIp(format?: 'json' | 'jsonp', callback?: string, options?: any): AxiosPromise<Ip> {
+        getIp(format?: GetIpFormatEnum, callback?: string, options?: any): AxiosPromise<Ip> {
             return localVarFp.getIp(format, callback, options).then((request) => request(axios, basePath));
         },
     };
@@ -139,15 +139,24 @@ export class DefaultApi extends BaseAPI {
     /**
      * 
      * @summary Get your public IP address
-     * @param {'json' | 'jsonp'} [format] Response format
+     * @param {GetIpFormatEnum} [format] Response format
      * @param {string} [callback] JSONP callback function name
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, options?: AxiosRequestConfig) {
+    public getIp(format?: GetIpFormatEnum, callback?: string, options?: AxiosRequestConfig) {
         return DefaultApiFp(this.configuration).getIp(format, callback, options).then((request) => request(this.axios, this.basePath));
     }
 }
+
+/**
+ * @export
+ */
+export const GetIpFormatEnum = {
+    Json: 'json',
+    Jsonp: 'jsonp'
+} as const;
+export type GetIpFormatEnum = typeof GetIpFormatEnum[keyof typeof GetIpFormatEnum];
 
 

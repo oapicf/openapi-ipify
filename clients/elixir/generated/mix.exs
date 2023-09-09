@@ -9,7 +9,9 @@ defmodule OpenapiIpify.Mixfile do
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       package: package(),
-      description: "OpenAPI client for ipify, a simple public IP address API",
+      description: """
+      OpenAPI client for ipify, a simple public IP address API
+      """,
       deps: deps()
     ]
   end
@@ -33,9 +35,10 @@ defmodule OpenapiIpify.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:tesla, "~> 1.4"},
-      {:poison, "~> 3.0"},
-      {:ex_doc, "~> 0.28", only: :dev, runtime: false}
+      {:tesla, "~> 1.7"},
+      {:jason, "~> 1.4"},
+      {:ex_doc, "~> 0.30", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.3", only: [:dev, :test], runtime: false}
     ]
   end
 

@@ -19,7 +19,7 @@ package body .Servers is
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
        Result  : out .Models.Ip_Type;
-       Context : in out {{openApiPackageName}.Servers.Context_Type) is
+       Context : in out Swagger.Servers.Context_Type) is
    begin
       null;
    end Get_Ip;

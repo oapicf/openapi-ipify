@@ -5,7 +5,7 @@ import model.Ip
 /**
   * Provides a default implementation for [[DefaultApi]].
   */
-@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2023-09-09T06:00:42.122790Z[Etc/UTC]")
+@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2023-09-09T14:29:11.334504Z[Etc/UTC]")
 class DefaultApiImpl extends DefaultApi {
   /**
     * @inheritdoc

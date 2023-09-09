@@ -13,7 +13,7 @@
 
 package com.cliffano.openapiipify;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-09T05:57:39.228315Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-09T14:24:53.034907Z[Etc/UTC]")
 public class Configuration {
     public static final String VERSION = "4.0.1-pre.0";
 

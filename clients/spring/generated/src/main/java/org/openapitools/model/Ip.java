@@ -18,16 +18,11 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-09T06:00:50.435581Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2023-09-09T14:29:24.371816Z[Etc/UTC]")
 public class Ip {
 
   private String ip;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Ip#Ip(String)}
-   */
-  @Deprecated
   public Ip() {
     super();
   }

@@ -1,4 +1,4 @@
-import { ResponseContext, RequestContext, HttpFile } from '../http/http';
+import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/http';
 import { Configuration} from '../configuration'
 
 import { Ip } from '../models/Ip';
@@ -26,6 +26,14 @@ export class ObjectDefaultApi {
 
     public constructor(configuration: Configuration, requestFactory?: DefaultApiRequestFactory, responseProcessor?: DefaultApiResponseProcessor) {
         this.api = new ObservableDefaultApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Get your public IP address
+     * @param param the request object
+     */
+    public getIpWithHttpInfo(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<HttpInfo<Ip>> {
+        return this.api.getIpWithHttpInfo(param.format, param.callback,  options).toPromise();
     }
 
     /**

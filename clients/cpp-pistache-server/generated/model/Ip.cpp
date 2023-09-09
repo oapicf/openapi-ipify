@@ -66,7 +66,7 @@ bool Ip::operator!=(const Ip& rhs) const
 
 void to_json(nlohmann::json& j, const Ip& o)
 {
-    j = nlohmann::json();
+    j = nlohmann::json::object();
     j["ip"] = o.m_Ip;
     
 }

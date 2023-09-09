@@ -1,4 +1,0 @@
-name: 'Publish Python-nextgen'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'

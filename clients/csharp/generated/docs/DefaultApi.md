@@ -2,20 +2,17 @@
 
 All URIs are relative to *https://api.ipify.org*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetIp**](DefaultApi.md#getip) | **GET** / | Get your public IP address
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetIp**](DefaultApi.md#getip) | **GET** / | Get your public IP address |
 
-
-
-## GetIp
-
-> Ip GetIp (string format = null, string callback = null)
+<a id="getip"></a>
+# **GetIp**
+> Ip GetIp (string? format = null, string? callback = null)
 
 Get your public IP address
 
 ### Example
-
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -29,10 +26,11 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://api.ipify.org";
-            var apiInstance = new DefaultApi(Configuration.Default);
-            var format = "json";  // string | Response format (optional) 
-            var callback = "callback_example";  // string | JSONP callback function name (optional) 
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.ipify.org";
+            var apiInstance = new DefaultApi(config);
+            var format = "json";  // string? | Response format (optional) 
+            var callback = "callback_example";  // string? | JSONP callback function name (optional) 
 
             try
             {
@@ -40,10 +38,10 @@ namespace Example
                 Ip result = apiInstance.GetIp(format, callback);
                 Debug.WriteLine(result);
             }
-            catch (ApiException e)
+            catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DefaultApi.GetIp: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling DefaultApi.GetIp: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -51,13 +49,32 @@ namespace Example
 }
 ```
 
+#### Using the GetIpWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get your public IP address
+    ApiResponse<Ip> response = apiInstance.GetIpWithHttpInfo(format, callback);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DefaultApi.GetIpWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **string**| Response format | [optional] 
- **callback** | **string**| JSONP callback function name | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **format** | **string?** | Response format | [optional]  |
+| **callback** | **string?** | JSONP callback function name | [optional]  |
 
 ### Return type
 
@@ -69,8 +86,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/javascript, text/plain
 
 
 ### HTTP response details
@@ -78,8 +95,5 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Your public IP address |  -  |
 
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

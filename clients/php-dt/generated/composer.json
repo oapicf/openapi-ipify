@@ -1,7 +1,20 @@
 {
     "name": "cliffano/openapi-ipify",
     "description": "",
+    "keywords": [
+        "openapi",
+        "php",
+        "sdk",
+        "api"
+    ],
+    "homepage": "https://openapi-generator.tech",
     "license": "unlicense",
+    "authors": [
+        {
+            "name": "OpenAPI",
+            "homepage": "https://openapi-generator.tech"
+        }
+    ],
     "version": "1.0.0",
     "type": "library",
     "require": {

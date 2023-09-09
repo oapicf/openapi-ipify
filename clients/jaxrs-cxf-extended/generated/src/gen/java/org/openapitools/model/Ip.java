@@ -39,6 +39,23 @@ public class Ip  {
 
 
   @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Ip ip = (Ip) o;
+    return Objects.equals(ip, ip.ip);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(ip);
+  }
+
+  @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Ip {\n");

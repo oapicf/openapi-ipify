@@ -11,12 +11,11 @@
 package openapi
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
 
-// GetIp - Get your public IP address
-func GetIp(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{})
+type DefaultAPI struct {
+	// Get /
+	// Get your public IP address
+	GetIp gin.HandlerFunc
 }

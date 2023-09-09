@@ -1,4 +1,4 @@
-import { ResponseContext, RequestContext, HttpFile } from '../http/http';
+import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/http';
 import { Configuration} from '../configuration'
 
 import { Ip } from '../models/Ip';
@@ -14,6 +14,16 @@ export class PromiseDefaultApi {
         responseProcessor?: DefaultApiResponseProcessor
     ) {
         this.api = new ObservableDefaultApi(configuration, requestFactory, responseProcessor);
+    }
+
+    /**
+     * Get your public IP address
+     * @param format Response format
+     * @param callback JSONP callback function name
+     */
+    public getIpWithHttpInfo(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<HttpInfo<Ip>> {
+        const result = this.api.getIpWithHttpInfo(format, callback, _options);
+        return result.toPromise();
     }
 
     /**

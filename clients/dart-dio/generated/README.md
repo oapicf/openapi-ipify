@@ -54,7 +54,7 @@ final String callback = callback_example; // String | JSONP callback function na
 try {
     final response = await api.getIp(format, callback);
     print(response);
-} catch on DioError (e) {
+} catch on DioException (e) {
     print("Exception when calling DefaultApi->getIp: $e\n");
 }
 

@@ -3,7 +3,7 @@ blah@cliffano.com
 4.0.1-pre.0
 :toc: left
 :numbered:
-:toclevels: 3
+:toclevels: 4
 :source-highlighter: highlightjs
 :keywords: openapi, rest, openapi-ipify
 :specDir: 
@@ -84,7 +84,7 @@ Get your public IP address
 
 ===== Responses
 
-.http response codes
+.HTTP Response Codes
 [cols="2,3,1"]
 |===
 | Code | Message | Datatype

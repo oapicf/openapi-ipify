@@ -16,24 +16,24 @@ import (
 	"errors"
 )
 
-// DefaultApiService is a service that implements the logic for the DefaultApiServicer
-// This service should implement the business logic for every endpoint for the DefaultApi API.
+// DefaultAPIService is a service that implements the logic for the DefaultAPIServicer
+// This service should implement the business logic for every endpoint for the DefaultAPI API.
 // Include any external packages or services that will be required by this service.
-type DefaultApiService struct {
+type DefaultAPIService struct {
 }
 
-// NewDefaultApiService creates a default api service
-func NewDefaultApiService() DefaultApiServicer {
-	return &DefaultApiService{}
+// NewDefaultAPIService creates a default api service
+func NewDefaultAPIService() DefaultAPIServicer {
+	return &DefaultAPIService{}
 }
 
 // GetIp - Get your public IP address
-func (s *DefaultApiService) GetIp(ctx context.Context, format string, callback string) (ImplResponse, error) {
+func (s *DefaultAPIService) GetIp(ctx context.Context, format string, callback string) (ImplResponse, error) {
 	// TODO - update GetIp with the required logic for this service method.
 	// Add api_default_service.go to the .openapi-generator-ignore to avoid overwriting this service implementation when updating open api generation.
 
-	//TODO: Uncomment the next line to return response Response(200, Ip{}) or use other options such as http.Ok ...
-	//return Response(200, Ip{}), nil
+	// TODO: Uncomment the next line to return response Response(200, Ip{}) or use other options such as http.Ok ...
+	// return Response(200, Ip{}), nil
 
 	return Response(http.StatusNotImplemented, nil), errors.New("GetIp method not implemented")
 }

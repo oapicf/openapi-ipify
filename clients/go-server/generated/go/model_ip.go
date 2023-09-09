@@ -10,6 +10,9 @@
 
 package openapi
 
+
+
+
 type Ip struct {
 
 	Ip string `json:"ip"`
@@ -29,14 +32,7 @@ func AssertIpRequired(obj Ip) error {
 	return nil
 }
 
-// AssertRecurseIpRequired recursively checks if required fields are not zero-ed in a nested slice.
-// Accepts only nested slice of Ip (e.g. [][]Ip), otherwise ErrTypeAssertionError is thrown.
-func AssertRecurseIpRequired(objSlice interface{}) error {
-	return AssertRecurseInterfaceRequired(objSlice, func(obj interface{}) error {
-		aIp, ok := obj.(Ip)
-		if !ok {
-			return ErrTypeAssertionError
-		}
-		return AssertIpRequired(aIp)
-	})
+// AssertIpConstraints checks if the values respects the defined constraints
+func AssertIpConstraints(obj Ip) error {
+	return nil
 }

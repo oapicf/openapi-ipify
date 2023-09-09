@@ -16,11 +16,11 @@
 import * as runtime from '../runtime';
 import type {
   Ip,
-} from '../models';
+} from '../models/index';
 import {
     IpFromJSON,
     IpToJSON,
-} from '../models';
+} from '../models/index';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;

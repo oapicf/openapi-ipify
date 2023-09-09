@@ -1,4 +1,4 @@
-import { ResponseContext, RequestContext, HttpFile } from '../http/http';
+import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/http';
 import { Configuration} from '../configuration'
 import { Observable, of, from } from '../rxjsStub';
 import {mergeMap, map} from  '../rxjsStub';
@@ -25,7 +25,7 @@ export class ObservableDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<Ip> {
+    public getIpWithHttpInfo(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<HttpInfo<Ip>> {
         const requestContextPromise = this.requestFactory.getIp(format, callback, _options);
 
         // build promise chain
@@ -40,8 +40,17 @@ export class ObservableDefaultApi {
                 for (let middleware of this.configuration.middleware) {
                     middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
                 }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getIp(rsp)));
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.getIpWithHttpInfo(rsp)));
             }));
+    }
+
+    /**
+     * Get your public IP address
+     * @param format Response format
+     * @param callback JSONP callback function name
+     */
+    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<Ip> {
+        return this.getIpWithHttpInfo(format, callback, _options).pipe(map((apiResponse: HttpInfo<Ip>) => apiResponse.data));
     }
 
 }

@@ -37,8 +37,8 @@ namespace org::openapitools::server::api
 class  DefaultApi : public ApiBase {
 public:
     explicit DefaultApi(const std::shared_ptr<Pistache::Rest::Router>& rtr);
-    virtual ~DefaultApi() = default;
-    void init();
+    ~DefaultApi() override = default;
+    void init() override;
 
     static const std::string base;
 

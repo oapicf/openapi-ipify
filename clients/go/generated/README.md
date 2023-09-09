@@ -78,7 +78,7 @@ All URIs are relative to *https://api.ipify.org*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**GetIp**](docs/DefaultApi.md#getip) | **Get** / | Get your public IP address
+*DefaultAPI* | [**GetIp**](docs/DefaultAPI.md#getip) | **Get** / | Get your public IP address
 
 
 ## Documentation For Models

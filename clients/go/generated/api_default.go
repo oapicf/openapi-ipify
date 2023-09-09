@@ -20,12 +20,12 @@ import (
 )
 
 
-// DefaultApiService DefaultApi service
-type DefaultApiService service
+// DefaultAPIService DefaultAPI service
+type DefaultAPIService service
 
 type ApiGetIpRequest struct {
 	ctx context.Context
-	ApiService *DefaultApiService
+	ApiService *DefaultAPIService
 	format *string
 	callback *string
 }
@@ -52,7 +52,7 @@ GetIp Get your public IP address
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiGetIpRequest
 */
-func (a *DefaultApiService) GetIp(ctx context.Context) ApiGetIpRequest {
+func (a *DefaultAPIService) GetIp(ctx context.Context) ApiGetIpRequest {
 	return ApiGetIpRequest{
 		ApiService: a,
 		ctx: ctx,
@@ -61,7 +61,7 @@ func (a *DefaultApiService) GetIp(ctx context.Context) ApiGetIpRequest {
 
 // Execute executes the request
 //  @return Ip
-func (a *DefaultApiService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response, error) {
+func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -69,7 +69,7 @@ func (a *DefaultApiService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response
 		localVarReturnValue  *Ip
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.GetIp")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.GetIp")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}

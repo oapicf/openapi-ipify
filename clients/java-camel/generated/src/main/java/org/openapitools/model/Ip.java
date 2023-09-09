@@ -18,16 +18,11 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2023-09-09T05:58:06.879978Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2023-09-09T14:25:30.843892Z[Etc/UTC]")
 public class Ip {
 
   private String ip;
 
-  /**
-   * Default constructor
-   * @deprecated Use {@link Ip#Ip(String)}
-   */
-  @Deprecated
   public Ip() {
     super();
   }

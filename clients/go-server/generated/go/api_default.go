@@ -18,25 +18,25 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// DefaultApiController binds http requests to an api service and writes the service results to the http response
-type DefaultApiController struct {
-	service DefaultApiServicer
+// DefaultAPIController binds http requests to an api service and writes the service results to the http response
+type DefaultAPIController struct {
+	service DefaultAPIServicer
 	errorHandler ErrorHandler
 }
 
-// DefaultApiOption for how the controller is set up.
-type DefaultApiOption func(*DefaultApiController)
+// DefaultAPIOption for how the controller is set up.
+type DefaultAPIOption func(*DefaultAPIController)
 
-// WithDefaultApiErrorHandler inject ErrorHandler into controller
-func WithDefaultApiErrorHandler(h ErrorHandler) DefaultApiOption {
-	return func(c *DefaultApiController) {
+// WithDefaultAPIErrorHandler inject ErrorHandler into controller
+func WithDefaultAPIErrorHandler(h ErrorHandler) DefaultAPIOption {
+	return func(c *DefaultAPIController) {
 		c.errorHandler = h
 	}
 }
 
-// NewDefaultApiController creates a default api controller
-func NewDefaultApiController(s DefaultApiServicer, opts ...DefaultApiOption) Router {
-	controller := &DefaultApiController{
+// NewDefaultAPIController creates a default api controller
+func NewDefaultAPIController(s DefaultAPIServicer, opts ...DefaultAPIOption) Router {
+	controller := &DefaultAPIController{
 		service:      s,
 		errorHandler: DefaultErrorHandler,
 	}
@@ -48,11 +48,10 @@ func NewDefaultApiController(s DefaultApiServicer, opts ...DefaultApiOption) Rou
 	return controller
 }
 
-// Routes returns all the api routes for the DefaultApiController
-func (c *DefaultApiController) Routes() Routes {
-	return Routes{ 
-		{
-			"GetIp",
+// Routes returns all the api routes for the DefaultAPIController
+func (c *DefaultAPIController) Routes() Routes {
+	return Routes{
+		"GetIp": Route{
 			strings.ToUpper("Get"),
 			"/",
 			c.GetIp,
@@ -61,7 +60,7 @@ func (c *DefaultApiController) Routes() Routes {
 }
 
 // GetIp - Get your public IP address
-func (c *DefaultApiController) GetIp(w http.ResponseWriter, r *http.Request) {
+func (c *DefaultAPIController) GetIp(w http.ResponseWriter, r *http.Request) {
 	query := r.URL.Query()
 	formatParam := query.Get("format")
 	callbackParam := query.Get("callback")
@@ -73,5 +72,4 @@ func (c *DefaultApiController) GetIp(w http.ResponseWriter, r *http.Request) {
 	}
 	// If no error, encode the body and the result code
 	EncodeJSONResponse(result.Body, &result.Code, w)
-
 }
