@@ -1,5 +1,5 @@
 spec_uri: specification/ipify.yml
-version: 5.0.0
+version: 5.0.1-pre.0
 contact:
   name: Cliffano Subagio
   url: https://github.com/cliffano/openapi-ipify
