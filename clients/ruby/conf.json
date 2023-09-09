@@ -6,5 +6,7 @@
   "gemAuthorEmail": "blah@cliffano.com",
   "gemHomepage": "https://github.com/cliffano/openapi-ipify",
   "gemLicense": "MIT",
-  "gemRequiredRubyVersion": ">= 2.0"
+  "gemRequiredRubyVersion": ">= 2.0",
+  "gitUserId": "cliffano",
+  "gitRepoId": "openapi-ipify"
 }
