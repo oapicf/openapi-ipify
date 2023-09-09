@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 Build.ps1
 README.md
 appveyor.yml
@@ -13,3 +14,5 @@ src/PSOpenAPITools/Private/HttpSignatureAuth.ps1
 src/PSOpenAPITools/Private/Out-DebugParameter.ps1
 src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
+tests/Api/DefaultApi.Tests.ps1
+tests/Model/Ip.Tests.ps1

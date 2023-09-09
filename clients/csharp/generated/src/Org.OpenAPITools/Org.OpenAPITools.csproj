@@ -4,7 +4,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-The version of the OpenAPI document: 3.3.1-pre.0
+The version of the OpenAPI document: 4.0.1-pre.0
 Contact: blah@cliffano.com
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -12,7 +12,7 @@ Contact: blah@cliffano.com
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AC392CDF-4CC9-44DC-9D6C-E8F8FA001CA4}</ProjectGuid>
+    <ProjectGuid>{9608B8F5-9116-4757-9ECF-44386B847F57}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Org.OpenAPITools</RootNamespace>

@@ -11,7 +11,7 @@ This lightweight extensible client library is [PSR-7](https://www.php-fig.org/ps
 
 ## How to use
 
-This library can be used either as a separate package (just deploy generated files to your package repository and add dependency `"git_user_id/git_repo_id":"1.0.0"` to your project `composer.json`) or as a part of your project (just copy generated code from `src` and merge generated `composer.json` into your project `composer.json`).
+This library can be used either as a separate package (just deploy generated files to your package repository and add dependency `"cliffano/openapi-ipify":"1.0.0"` to your project `composer.json`) or as a part of your project (just copy generated code from `src` and merge generated `composer.json` into your project `composer.json`).
 
 First you need an implementation for [PSR-7](https://packagist.org/packages/psr/http-message) and [PSR-17](https://packagist.org/packages/psr/http-factory) interfaces. Usually it is a single package, and your project might already have one among its dependencies (for example if it is some web service). Otherwise, https://packagist.org/providers/psr/http-message-implementation and https://packagist.org/providers/psr/http-factory-implementation may help to find some suitable options.
 

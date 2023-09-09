@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
@@ -14,3 +15,5 @@ lib/Model/Ip.php
 lib/Model/ModelInterface.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/DefaultApiTest.php
+test/Model/IpTest.php

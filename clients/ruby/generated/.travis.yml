@@ -8,4 +8,4 @@ script:
   - bundle install --path vendor/bundle
   - bundle exec rspec
   - gem build openapi_ipify.gemspec
-  - gem install ./openapi_ipify-3.3.1-pre.0.gem
+  - gem install ./openapi_ipify-4.0.1-pre.0.gem

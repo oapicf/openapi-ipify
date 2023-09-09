@@ -12,7 +12,7 @@ import org.openapitools.model.*;
 
 import org.openapitools.model.Ip;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaInflectorServerCodegen", date = "2023-08-04T12:26:17.447134Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaInflectorServerCodegen", date = "2023-09-09T05:57:42.488158Z[Etc/UTC]")
 public class DefaultController  {
   /**
    * Uncomment and implement as you see fit.  These operations will map

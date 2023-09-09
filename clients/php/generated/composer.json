@@ -1,4 +1,5 @@
 {
+    "name": "cliffano/openapi-ipify",
     "description": "OpenAPI client for ipify, a simple public IP address API",
     "keywords": [
         "openapitools",

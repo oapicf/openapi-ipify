@@ -4,7 +4,7 @@ defmodule OpenapiIpify.Mixfile do
   def project do
     [
       app: :openapi_ipify,
-      version: "3.3.1-pre.0",
+      version: "4.0.1-pre.0",
       elixir: "~> 1.10",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
