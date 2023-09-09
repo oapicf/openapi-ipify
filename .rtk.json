@@ -22,7 +22,7 @@
       }
     },
     {
-      "path": "clients/python-nextgen/conf.json",
+      "path": "clients/python/conf.json",
       "type": "json",
       "params": {
         "property": "packageVersion"
@@ -63,7 +63,7 @@
       }
     },
     {
-      "path": ".github/workflows/publish-python-nextgen-workflow.yaml",
+      "path": ".github/workflows/publish-python-workflow.yaml",
       "type": "yaml",
       "params": {
         "property": "jobs.build.steps[0].with.ref",
