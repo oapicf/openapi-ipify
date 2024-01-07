@@ -1,4 +1,4 @@
-# PSOpenAPITools.PSOpenAPITools/Api.DefaultApi
+# PSOpenAPITools.PSOpenAPITools\Api.DefaultApi
 
 All URIs are relative to *https://api.ipify.org*
 

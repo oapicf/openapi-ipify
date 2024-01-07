@@ -14,6 +14,6 @@ typedef enum  { openapi_ipify_getIp_FORMAT_NULL = 0, openapi_ipify_getIp_FORMAT_
 // Get your public IP address
 //
 ip_t*
-DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format , char * callback );
+DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char *callback);
 
 

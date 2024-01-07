@@ -14,6 +14,7 @@ Get your public IP address
 
 ### Example
 
+
 ```python
 import time
 import os
@@ -49,6 +50,7 @@ with openapiipify.ApiClient(configuration) as api_client:
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**| Response format | [optional] 
@@ -68,6 +70,7 @@ No authorization required
  - **Accept**: application/json, application/javascript, text/plain
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Your public IP address |  -  |

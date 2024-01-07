@@ -1,8 +1,8 @@
 # openapiipify
 
 openapi-ipify
-- API version: 4.0.1-pre.0
-  - Build date: 2023-09-09T14:24:53.034907Z[Etc/UTC]
+- API version: 5.0.1-pre.0
+  - Build date: 2024-01-07T07:44:30.214618529Z[Etc/UTC]
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.cliffano</groupId>
   <artifactId>openapiipify</artifactId>
-  <version>4.0.1-pre.0</version>
+  <version>5.0.1-pre.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.cliffano:openapiipify:4.0.1-pre.0"
+     implementation "com.cliffano:openapiipify:5.0.1-pre.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapiipify-4.0.1-pre.0.jar`
+* `target/openapiipify-5.0.1-pre.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

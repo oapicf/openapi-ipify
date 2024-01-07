@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 4.0.1-pre.0
+API version: 5.0.1-pre.0
 Contact: blah@cliffano.com
 */
 
@@ -13,6 +13,8 @@ package openapi
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the Ip type satisfies the MappedNullable interface at compile time
@@ -22,6 +24,8 @@ var _ MappedNullable = &Ip{}
 type Ip struct {
 	Ip string `json:"ip"`
 }
+
+type _Ip Ip
 
 // NewIp instantiates a new Ip object
 // This constructor will assign default values to properties that have it defined,
@@ -77,6 +81,43 @@ func (o Ip) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["ip"] = o.Ip
 	return toSerialize, nil
+}
+
+func (o *Ip) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"ip",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err;
+	}
+
+	for _, requiredProperty := range(requiredProperties) {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varIp := _Ip{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	decoder.DisallowUnknownFields()
+	err = decoder.Decode(&varIp)
+
+	if err != nil {
+		return err
+	}
+
+	*o = Ip(varIp)
+
+	return err
 }
 
 type NullableIp struct {

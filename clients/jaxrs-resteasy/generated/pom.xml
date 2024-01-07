@@ -5,7 +5,7 @@
     <artifactId>openapi-jaxrs-resteasy-server</artifactId>
     <packaging>war</packaging>
     <name>openapi-jaxrs-resteasy-server</name>
-    <version>4.0.1-pre.0</version>
+    <version>5.0.1-pre.0</version>
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
@@ -187,7 +187,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <swagger-core-version>1.5.22</swagger-core-version>
-        <jackson-version>2.11.2</jackson-version>
+        <jackson-version>2.15.2</jackson-version>
         <jetty-version>9.2.9.v20150224</jetty-version>
         <resteasy-version>3.13.0.Final</resteasy-version>
         <slf4j-version>1.6.3</slf4j-version>

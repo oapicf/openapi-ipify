@@ -20,25 +20,25 @@ Get your public IP address
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/cliffano/openapi-ipify"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/cliffano/openapi-ipify"
 )
 
 func main() {
-    format := "format_example" // string | Response format (optional)
-    callback := "callback_example" // string | JSONP callback function name (optional)
+	format := "format_example" // string | Response format (optional)
+	callback := "callback_example" // string | JSONP callback function name (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultAPI.GetIp(context.Background()).Format(format).Callback(callback).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.GetIp``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetIp`: Ip
-    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.GetIp`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.GetIp(context.Background()).Format(format).Callback(callback).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.GetIp``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetIp`: Ip
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.GetIp`: %v\n", resp)
 }
 ```
 

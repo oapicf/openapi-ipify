@@ -23,7 +23,7 @@ import javax.validation.Valid;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2023-09-09T14:25:53.346814Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2024-01-07T07:47:40.972815786Z[Etc/UTC]")
 public interface DefaultApi  {
 
     @GET

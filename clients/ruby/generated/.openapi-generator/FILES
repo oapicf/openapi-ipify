@@ -19,7 +19,5 @@ lib/openapi_ipify/models/ip.rb
 lib/openapi_ipify/version.rb
 openapi_ipify.gemspec
 spec/api/default_api_spec.rb
-spec/api_client_spec.rb
-spec/configuration_spec.rb
 spec/models/ip_spec.rb
 spec/spec_helper.rb

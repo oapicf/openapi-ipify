@@ -13,8 +13,8 @@ To see how to make this your own, look here:
 
 [README]((https://openapi-generator.tech))
 
-- API version: 4.0.1-pre.0
-- Build date: 2023-09-09T14:28:39.236181Z[Etc/UTC]
+- API version: 5.0.1-pre.0
+- Build date: 2024-01-07T07:55:44.570748763Z[Etc/UTC]
 
 For more information, please visit [https://github.com/cliffano/openapi-ipify](https://github.com/cliffano/openapi-ipify)
 

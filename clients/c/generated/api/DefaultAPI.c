@@ -67,7 +67,7 @@ end:
 // Get your public IP address
 //
 ip_t*
-DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format , char * callback )
+DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char *callback)
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -93,7 +93,7 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format , c
         keyQuery_format = strdup("format");
         valueQuery_format = (format);
         keyPairQuery_format = keyValuePair_create(keyQuery_format, (void *)strdup(getIp_FORMAT_ToString(
-		valueQuery_format)));
+        valueQuery_format)));
         list_addElement(localVarQueryParameters,keyPairQuery_format);
     }
 

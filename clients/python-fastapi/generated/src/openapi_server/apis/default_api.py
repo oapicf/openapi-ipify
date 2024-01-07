@@ -42,7 +42,7 @@ for _, name, _ in pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + "."):
     response_model_by_alias=True,
 )
 async def get_ip(
-    format: str = Query(None, description="Response format"),
-    param_callback: str = Query(None, description="JSONP callback function name"),
+    format: str = Query(None, description="Response format", alias="format"),
+    param_callback: str = Query(None, description="JSONP callback function name", alias="callback"),
 ) -> Ip:
     ...

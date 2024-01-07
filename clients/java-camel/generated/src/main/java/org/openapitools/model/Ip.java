@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2023-09-09T14:25:30.843892Z[Etc/UTC]")
+@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2024-01-07T07:46:31.536455015Z[Etc/UTC]")
 public class Ip {
 
   private String ip;

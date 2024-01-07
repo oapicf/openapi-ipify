@@ -10,7 +10,8 @@ import java.util.LinkedHashSet;
 import java.io.FileInputStream;
 import play.libs.Files.TemporaryFile;
 import javax.validation.constraints.*;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2023-09-09T14:25:16.019045Z[Etc/UTC]")
+import javax.validation.Valid;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2024-01-07T07:45:42.539855972Z[Etc/UTC]")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
     public Ip getIp(Http.Request request, String format, String paramCallback) throws Exception {

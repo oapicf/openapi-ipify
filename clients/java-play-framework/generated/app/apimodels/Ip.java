@@ -5,10 +5,11 @@ import java.util.Set;
 import javax.validation.*;
 import java.util.Objects;
 import javax.validation.constraints.*;
+import javax.validation.Valid;
 /**
  * Ip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2023-09-09T14:25:16.019045Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2024-01-07T07:45:42.539855972Z[Etc/UTC]")
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Ip   {
   @JsonProperty("ip")

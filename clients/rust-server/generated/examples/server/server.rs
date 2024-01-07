@@ -110,7 +110,6 @@ impl<C> Api<C> for Server<C> where C: Has<XSpanIdString> + Send + Sync
         callback: Option<String>,
         context: &C) -> Result<GetIpResponse, ApiError>
     {
-        let context = context.clone();
         info!("get_ip({:?}, {:?}) - X-Span-ID: {:?}", format, callback, context.get().0.clone());
         Err(ApiError("Generic failure".into()))
     }
