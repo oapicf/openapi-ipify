@@ -30,7 +30,7 @@ object OpenAPIInfo {
   val apiInfo = ApiInfo(
     """openapi-ipify""",
     """OpenAPI client for ipify, a simple public IP address API""",
-    """https://github.com/cliffano/openapi-ipify""",
+    """https://github.com/oapicf/openapi-ipify""",
     """blah@cliffano.com""",
     """MIT""",
     """http://apache.org/licenses/LICENSE-2.0.html""")

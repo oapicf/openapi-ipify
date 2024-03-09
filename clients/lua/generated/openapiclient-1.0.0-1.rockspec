@@ -1,7 +1,7 @@
 package = "openapiclient"
 version = "1.0.0-1"
 source = {
-	url = "https://github.com/cliffano/openapi-ipify.git"
+	url = "https://github.com/oapicf/openapi-ipify.git"
 }
 
 description = {

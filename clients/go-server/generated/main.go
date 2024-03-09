@@ -14,7 +14,7 @@ import (
 	"log"
 	"net/http"
 
-	openapi "github.com/cliffano/openapi-ipify/go"
+	openapi "github.com/oapicf/openapi-ipify/go"
 )
 
 func main() {

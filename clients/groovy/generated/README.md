@@ -1,4 +1,4 @@
-# 
+#
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -8,7 +8,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 - Package version: 5.0.1-pre.0
 - Build date: 2024-01-07T07:42:48.396646200Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
-For more information, please visit [https://github.com/cliffano/openapi-ipify](https://github.com/cliffano/openapi-ipify)
+For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
 
 ## Requirements
 
@@ -42,7 +42,7 @@ apiInstance.getIp(format, paramCallback)
     // on success
     def result = (Ip)it
     println result
-    
+
 }
     {
     // on failure

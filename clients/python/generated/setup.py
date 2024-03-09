@@ -37,7 +37,7 @@ setup(
     description="openapi-ipify",
     author="Cliffano Subagio",
     author_email="blah@cliffano.com",
-    url="https://github.com/cliffano/openapi-ipify",
+    url="https://github.com/oapicf/openapi-ipify",
     keywords=["OpenAPI", "OpenAPI-Generator", "openapi-ipify"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),

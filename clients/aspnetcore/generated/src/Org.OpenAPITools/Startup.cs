@@ -71,7 +71,7 @@ namespace Org.OpenAPITools
                 .AddSwaggerGen(c =>
                 {
                     c.EnableAnnotations(enableAnnotationsForInheritance: true, enableAnnotationsForPolymorphism: true);
-                    
+
                     c.SwaggerDoc("5.0.1-pre.0", new OpenApiInfo
                     {
                         Title = "openapi-ipify",
@@ -80,7 +80,7 @@ namespace Org.OpenAPITools
                         Contact = new OpenApiContact
                         {
                             Name = "Cliffano Subagio",
-                            Url = new Uri("https://github.com/cliffano/openapi-ipify"),
+                            Url = new Uri("https://github.com/oapicf/openapi-ipify"),
                             Email = "blah@cliffano.com"
                         },
                         License = new OpenApiLicense

@@ -23,7 +23,7 @@ class SpringDocConfiguration {
                     .contact(
                         Contact()
                             .name("Cliffano Subagio")
-                            .url("https://github.com/cliffano/openapi-ipify")
+                            .url("https://github.com/oapicf/openapi-ipify")
                             .email("blah@cliffano.com")
                     )
                     .license(

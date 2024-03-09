@@ -5,7 +5,7 @@
   "author": "OpenAPI-Generator Contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cliffano/openapi-ipify.git"
+    "url": "https://github.com/oapicf/openapi-ipify.git"
   },
   "keywords": [
     "fetch",

@@ -1,6 +1,6 @@
 package handlers
 import (
-	"github.com/cliffano/openapi-ipify/models"
+	"github.com/oapicf/openapi-ipify/models"
 	"github.com/labstack/echo/v4"
 	"net/http"
 )

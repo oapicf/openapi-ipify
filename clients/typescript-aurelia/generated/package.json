@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cliffano/openapi-ipify.git"
+    "url": "https://github.com/oapicf/openapi-ipify.git"
   },
   "license": "Unlicense",
   "main": "./dist/Api.js",

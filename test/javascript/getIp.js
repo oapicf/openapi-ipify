@@ -9,7 +9,7 @@ describe('ipify', function() {
         assert.equal(error, null);
         // TODO: disabled for now due to undefined data being returned
         // assert.equal(typeof data, 'string');
-        // see https://github.com/cliffano/openapi-ipify/issues/13
+        // see https://github.com/oapicf/openapi-ipify/issues/13
         assert.equal(typeof response.text, 'string');
         assert.equal(response.res.statusCode, 200);
         done();
@@ -42,7 +42,7 @@ describe('ipify', function() {
       var callback = function(error, data, response) {
         assert.equal(error, null);
         // TODO: disabled for now due to undefined data being returned
-        // see https://github.com/cliffano/openapi-ipify/issues/13
+        // see https://github.com/oapicf/openapi-ipify/issues/13
         // assert.equal(typeof data, 'string');
         assert.equal(response.res.statusCode, 200);
         done();
@@ -58,7 +58,7 @@ describe('ipify', function() {
       var callback = function(error, data, response) {
         assert.equal(error, null);
         // TODO: disabled for now due to undefined data being returned
-        // see https://github.com/cliffano/openapi-ipify/issues/13
+        // see https://github.com/oapicf/openapi-ipify/issues/13
         // assert.equal(typeof data, 'string');
         assert.equal(response.res.statusCode, 200);
         done();

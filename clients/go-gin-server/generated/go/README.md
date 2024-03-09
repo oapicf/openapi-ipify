@@ -14,7 +14,7 @@ To see how to make this your own, look here:
 
 - API version: 5.0.1-pre.0
 - Build date: 2024-01-07T07:42:23.180308410Z[Etc/UTC]
-For more information, please visit [https://github.com/cliffano/openapi-ipify](https://github.com/cliffano/openapi-ipify)
+For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
 
 ### Running the server
 

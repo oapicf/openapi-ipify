@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Cliffano Subagio"]
   s.email       = ["blah@cliffano.com"]
-  s.homepage    = "https://github.com/cliffano/openapi-ipify"
+  s.homepage    = "https://github.com/oapicf/openapi-ipify"
   s.summary     = "openapi-ipify Ruby Gem"
   s.description = "OpenAPI client for ipify, a simple public IP address API"
   s.license     = "MIT"

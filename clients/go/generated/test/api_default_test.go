@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/cliffano/openapi-ipify"
+	openapiclient "github.com/oapicf/openapi-ipify"
 )
 
 func Test_openapi_DefaultAPIService(t *testing.T) {

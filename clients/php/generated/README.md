@@ -2,7 +2,7 @@
 
 OpenAPI client for ipify, a simple public IP address API
 
-For more information, please visit [https://github.com/cliffano/openapi-ipify](https://github.com/cliffano/openapi-ipify).
+For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify).
 
 ## Installation & Usage
 
@@ -20,11 +20,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/cliffano/openapi-ipify.git"
+      "url": "https://github.com/oapicf/openapi-ipify.git"
     }
   ],
   "require": {
-    "cliffano/openapi-ipify": "*@dev"
+    "oapicf/openapi-ipify": "*@dev"
   }
 }
 ```

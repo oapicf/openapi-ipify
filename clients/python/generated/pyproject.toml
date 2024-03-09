@@ -5,7 +5,7 @@ description = "openapi-ipify"
 authors = ["Cliffano Subagio <blah@cliffano.com>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/cliffano/openapi-ipify"
+repository = "https://github.com/oapicf/openapi-ipify"
 keywords = ["OpenAPI", "OpenAPI-Generator", "openapi-ipify"]
 include = ["openapiipify/py.typed"]
 

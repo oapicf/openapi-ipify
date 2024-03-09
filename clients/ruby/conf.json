@@ -4,7 +4,7 @@
   "gemVersion": "5.1.1-pre.0",
   "gemAuthor": "Cliffano Subagio",
   "gemAuthorEmail": "blah@cliffano.com",
-  "gemHomepage": "https://github.com/cliffano/openapi-ipify",
+  "gemHomepage": "https://github.com/oapicf/openapi-ipify",
   "gemLicense": "MIT",
   "gemRequiredRubyVersion": ">= 2.0",
   "gitUserId": "cliffano",

@@ -16,7 +16,7 @@ import (
 	// WARNING!
 	// Pass --git-repo-id and --git-user-id properties when generating the code
 	//
-	sw "github.com/cliffano/openapi-ipify/go"
+	sw "github.com/oapicf/openapi-ipify/go"
 )
 
 func main() {

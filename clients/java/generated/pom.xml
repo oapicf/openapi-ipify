@@ -6,18 +6,18 @@
     <packaging>jar</packaging>
     <name>openapiipify</name>
     <version>5.0.1-pre.0</version>
-    <url>https://github.com/cliffano/openapi-ipify</url>
+    <url>https://github.com/oapicf/openapi-ipify</url>
     <description>Ipify API client generated from Swagger / Open API specification</description>
     <scm>
-        <connection>scm:git:git@github.com:cliffano/openapi-ipify.git</connection>
-        <developerConnection>scm:git:git@github.com:cliffano/openapi-ipify.git</developerConnection>
-        <url>https://github.com/cliffano/openapi-ipify</url>
+        <connection>scm:git:git@github.com:oapicf/openapi-ipify.git</connection>
+        <developerConnection>scm:git:git@github.com:oapicf/openapi-ipify.git</developerConnection>
+        <url>https://github.com/oapicf/openapi-ipify</url>
     </scm>
 
     <licenses>
         <license>
             <name>MIT</name>
-            <url>https://github.com/cliffano/openapi-ipify/blob/master/LICENSE</url>
+            <url>https://github.com/oapicf/openapi-ipify/blob/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>

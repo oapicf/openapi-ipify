@@ -4,7 +4,7 @@
     "contact" : {
       "email" : "blah@cliffano.com",
       "name" : "Cliffano Subagio",
-      "url" : "https://github.com/cliffano/openapi-ipify"
+      "url" : "https://github.com/oapicf/openapi-ipify"
     },
     "description" : "OpenAPI client for ipify, a simple public IP address API",
     "license" : {

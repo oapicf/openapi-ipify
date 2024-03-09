@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cliffano/openapi-ipify/handlers"
+	"github.com/oapicf/openapi-ipify/handlers"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )

@@ -1,4 +1,4 @@
-module github.com/cliffano/openapi-ipify
+module github.com/oapicf/openapi-ipify
 
 go 1.16
 

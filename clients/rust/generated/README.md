@@ -2,7 +2,7 @@
 
 OpenAPI client for ipify, a simple public IP address API
 
-For more information, please visit [https://github.com/cliffano/openapi-ipify](https://github.com/cliffano/openapi-ipify)
+For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
 
 ## Overview
 

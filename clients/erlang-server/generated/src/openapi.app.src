@@ -15,5 +15,5 @@
     ]},
     {modules, []},
     {licenses, ["MIT"]},
-    {links, ["https://github.com/cliffano/openapi-ipify"]}
+    {links, ["https://github.com/oapicf/openapi-ipify"]}
 ]}.
