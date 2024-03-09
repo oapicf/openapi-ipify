@@ -54,4 +54,4 @@ Install Ruby client:
 Colophon
 --------
 
-* [API Documentation](https://cliffano.github.io/openapi-ipify/api/latest/)
+* [API Documentation](https://oapicf.github.io/openapi-ipify/api/latest/)
