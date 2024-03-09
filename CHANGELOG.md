@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Handover repo to OpenAPI Clients Factory project
+
 ## 5.1.0 - 2024-01-07
 ### Changed
 - Upgrade Swaggy C to 4.1.0
