@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@latest
         with:
           token: ${{ secrets.OAPICF_GITHUB_TOKEN }}
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@latest
         with:
           node-version: '16'
       - uses: ./.github/actions/ci-action

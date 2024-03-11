@@ -11,7 +11,7 @@ jobs:
         with:
           token: ${{ secrets.OAPICF_GITHUB_TOKEN }}
           ref: main
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@latest
         with:
           node-version: '16'
       - run: make deps init-spec doc-latest doc-version
