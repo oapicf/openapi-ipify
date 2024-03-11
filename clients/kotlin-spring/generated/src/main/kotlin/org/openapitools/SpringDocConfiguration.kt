@@ -22,15 +22,15 @@ class SpringDocConfiguration {
                     .description("OpenAPI client for ipify, a simple public IP address API")
                     .contact(
                         Contact()
-                            .name("Cliffano Subagio")
+                            .name("OpenAPI Clients Factory")
                             .url("https://github.com/oapicf/openapi-ipify")
-                            .email("blah@cliffano.com")
+                            .email("blah+oapicf@cliffano.com")
                     )
                     .license(
                         License()
                             .name("MIT")
                                                 )
-                    .version("5.0.1-pre.0")
+                    .version("5.1.1-pre.0")
             )
     }
 }

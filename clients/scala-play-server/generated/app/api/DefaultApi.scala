@@ -3,7 +3,7 @@ package api
 import play.api.libs.json._
 import model.Ip
 
-@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2024-01-07T07:56:56.890776493Z[Etc/UTC]")
+@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2024-03-11T07:49:00.716879801Z[Etc/UTC]")
 trait DefaultApi {
   /**
     * Get your public IP address

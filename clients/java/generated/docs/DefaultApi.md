@@ -16,11 +16,11 @@ Get your public IP address
 ### Example
 ```java
 // Import classes:
-import com.cliffano.openapiipify.ApiClient;
-import com.cliffano.openapiipify.ApiException;
-import com.cliffano.openapiipify.Configuration;
-import com.cliffano.openapiipify.models.*;
-import com.cliffano.openapiipify.api.DefaultApi;
+import com.github.openapiipify.ApiClient;
+import com.github.openapiipify.ApiException;
+import com.github.openapiipify.Configuration;
+import com.github.openapiipify.models.*;
+import com.github.openapiipify.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -18,7 +18,7 @@ public class Bootstrap extends HttpServlet {
       .description("OpenAPI client for ipify, a simple public IP address API")
       .termsOfService("")
       .contact(new Contact()
-        .email("blah@cliffano.com"))
+        .email("blah+oapicf@cliffano.com"))
       .license(new License()
         .name("MIT")
         .url("http://unlicense.org"));

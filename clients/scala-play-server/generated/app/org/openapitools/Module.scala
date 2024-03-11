@@ -4,7 +4,7 @@ import api._
 import play.api.inject.{Binding, Module => PlayModule}
 import play.api.{Configuration, Environment}
 
-@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2024-01-07T07:56:56.890776493Z[Etc/UTC]")
+@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2024-03-11T07:49:00.716879801Z[Etc/UTC]")
 class Module extends PlayModule {
   override def bindings(environment: Environment, configuration: Configuration): Seq[Binding[_]] = Seq(
     bind[DefaultApi].to[DefaultApiImpl]

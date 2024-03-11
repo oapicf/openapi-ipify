@@ -1,8 +1,8 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "com.cliffano",
+    organization := "com.github",
     name := "openapiipify",
-    version := "5.0.1-pre.0",
+    version := "5.1.1-pre.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

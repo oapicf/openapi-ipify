@@ -1,4 +1,4 @@
-package com.cliffano.openapiipify;
+package com.github.openapiipify;
 
 import java.util.HashSet;
 

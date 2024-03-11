@@ -1,10 +1,10 @@
 # C++ Qt API client
 
-#
+# 
 
 openapi-ipify
 
-- API version: 5.0.1-pre.0
+- API version: 5.1.1-pre.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -58,7 +58,7 @@ QString Example::create(){
 
 void Example::exampleFunction1(){
      OAIDefaultApi apiInstance;
-
+     
       QEventLoop loop;
       connect(&apiInstance, &OAIDefaultApi::getIpSignal, [&]() {
           loop.quit();
@@ -145,7 +145,7 @@ Authentication schemes defined for the API:
 
 ## Author
 
-blah@cliffano.com
+blah+oapicf@cliffano.com
 
 
 ## License

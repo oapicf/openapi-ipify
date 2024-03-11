@@ -21,7 +21,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="openapi-ipify",
-    author_email="blah@cliffano.com",
+    author_email="blah+oapicf@cliffano.com",
     url="",
     keywords=["OpenAPI", "openapi-ipify"],
     install_requires=REQUIRES,

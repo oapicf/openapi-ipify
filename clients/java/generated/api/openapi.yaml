@@ -1,14 +1,14 @@
 openapi: 3.0.0
 info:
   contact:
-    email: blah@cliffano.com
-    name: Cliffano Subagio
+    email: blah+oapicf@cliffano.com
+    name: OpenAPI Clients Factory
     url: https://github.com/oapicf/openapi-ipify
   description: "OpenAPI client for ipify, a simple public IP address API"
   license:
     name: MIT
   title: openapi-ipify
-  version: 5.0.1-pre.0
+  version: 5.1.1-pre.0
 servers:
 - url: https://api.ipify.org
 paths:

@@ -1,8 +1,8 @@
 # openapiipify
 
 openapi-ipify
-- API version: 5.0.1-pre.0
-  - Build date: 2024-01-07T07:44:30.214618529Z[Etc/UTC]
+- API version: 5.1.1-pre.0
+  - Build date: 2024-03-11T07:46:01.529698409Z[Etc/UTC]
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -39,9 +39,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.cliffano</groupId>
+  <groupId>com.github</groupId>
   <artifactId>openapiipify</artifactId>
-  <version>5.0.1-pre.0</version>
+  <version>5.1.1-pre.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.cliffano:openapiipify:5.0.1-pre.0"
+     implementation "com.github:openapiipify:5.1.1-pre.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapiipify-5.0.1-pre.0.jar`
+* `target/openapiipify-5.1.1-pre.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -81,11 +81,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import com.cliffano.openapiipify.ApiClient;
-import com.cliffano.openapiipify.ApiException;
-import com.cliffano.openapiipify.Configuration;
-import com.cliffano.openapiipify.models.*;
-import com.cliffano.openapiipify.api.DefaultApi;
+import com.github.openapiipify.ApiClient;
+import com.github.openapiipify.ApiException;
+import com.github.openapiipify.Configuration;
+import com.github.openapiipify.models.*;
+import com.github.openapiipify.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -136,5 +136,5 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 ## Author
 
-blah@cliffano.com
+blah+oapicf@cliffano.com
 

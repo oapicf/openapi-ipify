@@ -3,8 +3,8 @@
  *
  * OpenAPI client for ipify, a simple public IP address API
  *
- * OpenAPI document version: 5.0.1-pre.0
- * Maintained by: blah@cliffano.com
+ * OpenAPI document version: 5.1.1-pre.0
+ * Maintained by: blah+oapicf@cliffano.com
  *
  * AUTO-GENERATED FILE, DO NOT MODIFY!
  */
@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaUndertowServerCodegen", date = "2024-01-07T07:45:56.898473014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaUndertowServerCodegen", date = "2024-03-11T07:46:21.504410023Z[Etc/UTC]")
 public class Ip   {
   
   private String ip;

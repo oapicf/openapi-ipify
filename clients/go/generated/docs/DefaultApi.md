@@ -53,8 +53,8 @@ Other parameters are passed through a pointer to a apiGetIpRequest struct via th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **string** | Response format |
- **callback** | **string** | JSONP callback function name |
+ **format** | **string** | Response format | 
+ **callback** | **string** | JSONP callback function name | 
 
 ### Return type
 

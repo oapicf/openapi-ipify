@@ -1,13 +1,13 @@
 = openapi-ipify
-blah@cliffano.com
-5.0.1-pre.0
+blah+oapicf@cliffano.com
+5.1.1-pre.0
 :toc: left
 :numbered:
 :toclevels: 4
 :source-highlighter: highlightjs
 :keywords: openapi, rest, openapi-ipify
-:specDir:
-:snippetDir:
+:specDir: 
+:snippetDir: 
 :generator-template: v1 2019-12-20
 :info-url: https://github.com/oapicf/openapi-ipify
 :app-name: openapi-ipify
@@ -57,16 +57,16 @@ Get your public IP address
 |Name| Description| Required| Default| Pattern
 
 | format
-| Response format
+| Response format 
 | -
 | null
-|
+| 
 
 | callback
-| JSONP callback function name
+| JSONP callback function name 
 | -
 | null
-|
+| 
 
 |===
 
@@ -123,7 +123,7 @@ endif::internal-generation[]
 
 
 [#Ip]
-=== _Ip_
+=== _Ip_ 
 
 
 
@@ -134,9 +134,9 @@ endif::internal-generation[]
 
 | ip
 | X
-| String
-|
-|
+| String 
+| 
+|  
 
 |===
 
