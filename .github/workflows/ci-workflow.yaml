@@ -10,7 +10,7 @@ jobs:
           token: ${{ secrets.OAPICF_GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
       - uses: ./.github/actions/ci-action
       - run: npm install -g gh-pages
       - run: CACHE_DIR=/tmp gh-pages --dist doc/ --user "pakkunbot <blah+pakkun@cliffano.com>" --repo "https://cliffano:${{ secrets.OAPICF_GITHUB_TOKEN }}@github.com/oapicf/openapi-ipify.git"
