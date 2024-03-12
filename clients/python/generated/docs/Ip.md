@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of Ip from a JSON string
 ip_instance = Ip.from_json(json)
 # print the JSON string representation of the object
-print Ip.to_json()
+print(Ip.to_json())
 
 # convert the object into a dict
 ip_dict = ip_instance.to_dict()

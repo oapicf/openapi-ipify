@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import io.swagger.annotations.*;
 import javax.validation.Valid;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2024-03-11T07:46:42.544086061Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2024-03-12T12:45:25.598922914Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class Ip   {
   
   private String ip;
@@ -39,7 +39,7 @@ public class Ip   {
       return false;
     }
     Ip ip = (Ip) o;
-    return Objects.equals(ip, ip.ip);
+    return Objects.equals(this.ip, ip.ip);
   }
 
   @Override

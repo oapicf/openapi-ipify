@@ -98,10 +98,10 @@ export class DefaultService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext}): Observable<Ip>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext}): Observable<HttpResponse<Ip>>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext}): Observable<HttpEvent<Ip>>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext}): Observable<any> {
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<Ip>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<Ip>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<Ip>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (format !== undefined && format !== null) {
@@ -134,6 +134,11 @@ export class DefaultService {
             localVarHttpContext = new HttpContext();
         }
 
+        let localVarTransferCache: boolean | undefined = options && options.transferCache;
+        if (localVarTransferCache === undefined) {
+            localVarTransferCache = true;
+        }
+
 
         let responseType_: 'text' | 'json' | 'blob' = 'json';
         if (localVarHttpHeaderAcceptSelected) {
@@ -155,6 +160,7 @@ export class DefaultService {
                 withCredentials: this.configuration.withCredentials,
                 headers: localVarHeaders,
                 observe: observe,
+                transferCache: localVarTransferCache,
                 reportProgress: reportProgress
             }
         );

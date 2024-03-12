@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```c
 // Get your public IP address
 //
-ip_t* DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char * callback);
+ip_t* DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char *callback);
 ```
 
 ### Parameters

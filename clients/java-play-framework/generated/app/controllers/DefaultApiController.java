@@ -24,7 +24,7 @@ import com.typesafe.config.Config;
 
 import openapitools.OpenAPIUtils.ApiAction;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2024-03-11T07:46:18.866850629Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2024-03-12T12:44:05.775676483Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class DefaultApiController extends Controller {
     private final DefaultApiControllerImpInterface imp;
     private final ObjectMapper mapper;

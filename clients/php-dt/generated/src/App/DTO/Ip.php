@@ -5,15 +5,12 @@ namespace App\DTO;
 
 use Articus\DataTransfer\Annotation as DTA;
 
-/**
- */
 class Ip
 {
     /**
      * @DTA\Data(field="ip")
      * @DTA\Validator(name="Scalar", options={"type":"string"})
-     * @var string|null
      */
-    public $ip;
+    public ?string $ip = null;
 
 }

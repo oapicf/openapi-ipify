@@ -78,7 +78,7 @@ class IpTest extends TestCase
             class_exists($namespacedClassname),
             sprintf('Assertion failed that "%s" class exists', $namespacedClassname)
         );
-        $this->markTestIncomplete(
+        self::markTestIncomplete(
             'Test of "Ip" model has not been implemented yet.'
         );
     }
@@ -88,7 +88,7 @@ class IpTest extends TestCase
      */
     public function testPropertyIp()
     {
-        $this->markTestIncomplete(
+        self::markTestIncomplete(
             'Test of "ip" property in "Ip" model has not been implemented yet.'
         );
     }
@@ -103,3 +103,4 @@ class IpTest extends TestCase
         $this->assertIsArray($schemaArr);
     }
 }
+

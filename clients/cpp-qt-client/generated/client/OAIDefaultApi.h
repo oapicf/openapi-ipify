@@ -88,7 +88,7 @@ private:
 
     void getIpCallback(OAIHttpRequestWorker *worker);
 
-signals:
+Q_SIGNALS:
 
     void getIpSignal(OAIIp summary);
 
@@ -105,7 +105,7 @@ signals:
     void abortRequestsSignal();
     void allPendingRequestsCompleted();
 
-public slots:
+public Q_SLOTS:
     void tokenAvailable();
 };
 

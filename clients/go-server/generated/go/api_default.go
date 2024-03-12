@@ -61,7 +61,11 @@ func (c *DefaultAPIController) Routes() Routes {
 
 // GetIp - Get your public IP address
 func (c *DefaultAPIController) GetIp(w http.ResponseWriter, r *http.Request) {
-	query := r.URL.Query()
+	query, err := parseQuery(r.URL.RawQuery)
+	if err != nil {
+		c.errorHandler(w, r, &ParsingError{Err: err}, nil)
+		return
+	}
 	var formatParam string
 	if query.Has("format") {
 		param := query.Get("format")

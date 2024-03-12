@@ -1,4 +1,5 @@
-Project generated on : 2024-03-11T07:46:26.598391634Z[Etc/UTC]
+Project generated on : 2024-03-12T12:44:31.981588926Z[Etc/UTC]
+Generator version: 7.4.0
 
 ## Getting Started
 

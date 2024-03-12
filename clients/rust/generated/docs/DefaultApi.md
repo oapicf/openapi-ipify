@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## get_ip
 
-> crate::models::Ip get_ip(format, callback)
+> models::Ip get_ip(format, callback)
 Get your public IP address
 
 ### Parameters
@@ -23,7 +23,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::Ip**](Ip.md)
+[**models::Ip**](Ip.md)
 
 ### Authorization
 

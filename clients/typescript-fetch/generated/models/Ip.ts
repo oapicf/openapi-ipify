@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-import { exists, mapValues } from '../runtime';
+import { mapValues } from '../runtime';
 /**
  * 
  * @export
@@ -31,10 +31,8 @@ export interface Ip {
  * Check if a given object implements the Ip interface.
  */
 export function instanceOfIp(value: object): boolean {
-    let isInstance = true;
-    isInstance = isInstance && "ip" in value;
-
-    return isInstance;
+    if (!('ip' in value)) return false;
+    return true;
 }
 
 export function IpFromJSON(json: any): Ip {
@@ -42,7 +40,7 @@ export function IpFromJSON(json: any): Ip {
 }
 
 export function IpFromJSONTyped(json: any, ignoreDiscriminator: boolean): Ip {
-    if ((json === undefined) || (json === null)) {
+    if (json == null) {
         return json;
     }
     return {
@@ -52,15 +50,12 @@ export function IpFromJSONTyped(json: any, ignoreDiscriminator: boolean): Ip {
 }
 
 export function IpToJSON(value?: Ip | null): any {
-    if (value === undefined) {
-        return undefined;
-    }
-    if (value === null) {
-        return null;
+    if (value == null) {
+        return value;
     }
     return {
         
-        'ip': value.ip,
+        'ip': value['ip'],
     };
 }
 

@@ -19,7 +19,7 @@ import com.google.gson.Gson
 import org.openapitools.server.api.model.Ip
 
 class DefaultApiVertxProxyHandler(private val vertx: Vertx, private val service: DefaultApi, topLevel: Boolean, private val timeoutSeconds: Long) : ProxyHandler() {
-    private val timerID: Long
+    private lateinit var timerID: Long
     private var lastAccessed: Long = 0
     init {
         try {

@@ -29,7 +29,7 @@ public:
     virtual ~OAIDefaultApiHandler();
 
 
-public slots:
+public Q_SLOTS:
     virtual void getIp(QString format, QString callback);
     
 

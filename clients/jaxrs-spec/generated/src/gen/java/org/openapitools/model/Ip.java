@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 
 @JsonTypeName("Ip")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2024-03-11T07:46:48.275631235Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2024-03-12T12:45:46.902587985Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class Ip   {
   private @Valid String ip;
 

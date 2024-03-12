@@ -14,7 +14,6 @@
 
 
 import unittest
-import datetime
 
 from openapiipify.models.ip import Ip
 

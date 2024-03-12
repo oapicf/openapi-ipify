@@ -127,17 +127,20 @@ endif::internal-generation[]
 
 
 
+
 [.fields-Ip]
-[cols="2,1,2,4,1"]
+[cols="2,1,1,2,4,1"]
 |===
-| Field Name| Required| Type| Description| Format
+| Field Name| Required| Nullable | Type| Description | Format
 
 | ip
 | X
-| String 
 | 
-|  
+|   String  
+| 
+|     
 
 |===
+
 
 

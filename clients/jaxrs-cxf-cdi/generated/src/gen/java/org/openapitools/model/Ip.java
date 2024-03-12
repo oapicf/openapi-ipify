@@ -46,7 +46,7 @@ public class Ip   {
       return false;
     }
     Ip ip = (Ip) o;
-    return Objects.equals(ip, ip.ip);
+    return Objects.equals(this.ip, ip.ip);
   }
 
   @Override

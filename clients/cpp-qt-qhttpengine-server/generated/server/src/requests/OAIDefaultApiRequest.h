@@ -53,7 +53,7 @@ public:
 
     void setResponseHeaders(const QMultiMap<QString,QString>& headers);
 
-signals:
+Q_SIGNALS:
     void getIp(QString format, QString callback);
     
 

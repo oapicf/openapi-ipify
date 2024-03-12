@@ -5,6 +5,7 @@
 openapi-ipify
 
 - API version: 5.1.1-pre.0
+- Generator version: 7.4.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -35,7 +36,7 @@ class Example : public QObject {
     Q_OBJECT
     QString create();
     QString create();
-public slots:
+public Q_SLOTS:
    void exampleFunction1();
 };
 

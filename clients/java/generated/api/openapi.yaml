@@ -49,7 +49,7 @@ paths:
                 type: string
           description: Your public IP address
       summary: Get your public IP address
-      x-accepts: application/json
+      x-accepts: "application/javascript,application/json,text/plain"
 components:
   schemas:
     Ip:

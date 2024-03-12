@@ -3,6 +3,7 @@
 .travis.yml
 README.md
 bin/autodoc
+cpanfile
 docs/DefaultApi.md
 docs/Ip.md
 git_push.sh

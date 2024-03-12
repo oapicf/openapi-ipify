@@ -16,8 +16,6 @@ Get your public IP address
 
 
 ```python
-import time
-import os
 import openapiipify
 from openapiipify.models.ip import Ip
 from openapiipify.rest import ApiException

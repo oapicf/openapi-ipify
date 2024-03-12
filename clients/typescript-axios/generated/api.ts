@@ -103,9 +103,9 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          */
         async getIp(format?: GetIpFormatEnum, callback?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ip>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIp(format, callback, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['DefaultApi.getIp']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['DefaultApi.getIp']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };

@@ -147,7 +147,7 @@ void OAIDefaultApi::enableResponseCompression() {
 }
 
 void OAIDefaultApi::abortRequests() {
-    emit abortRequestsSignal();
+    Q_EMIT abortRequestsSignal();
 }
 
 QString OAIDefaultApi::getParamStylePrefix(const QString &style) {
@@ -230,7 +230,7 @@ void OAIDefaultApi::getIp(const ::OpenAPI::OptionalParam<QString> &format, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.value())));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(format.stringValue()));
     }
     if (callback.hasValue())
     {
@@ -245,7 +245,7 @@ void OAIDefaultApi::getIp(const ::OpenAPI::OptionalParam<QString> &format, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("callback")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(callback.value())));
+        fullPath.append(QUrl::toPercentEncoding("callback")).append(querySuffix).append(QUrl::toPercentEncoding(callback.stringValue()));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -267,7 +267,7 @@ void OAIDefaultApi::getIp(const ::OpenAPI::OptionalParam<QString> &format, const
     connect(this, &OAIDefaultApi::abortRequestsSignal, worker, &QObject::deleteLater);
     connect(worker, &QObject::destroyed, this, [this]() {
         if (findChildren<OAIHttpRequestWorker*>().count() == 0) {
-            emit allPendingRequestsCompleted();
+            Q_EMIT allPendingRequestsCompleted();
         }
     });
 
@@ -285,8 +285,8 @@ void OAIDefaultApi::getIpCallback(OAIHttpRequestWorker *worker) {
     worker->deleteLater();
 
     if (worker->error_type == QNetworkReply::NoError) {
-        emit getIpSignal(output);
-        emit getIpSignalFull(worker, output);
+        Q_EMIT getIpSignal(output);
+        Q_EMIT getIpSignalFull(worker, output);
     } else {
 
 #if defined(_MSC_VER)
@@ -303,8 +303,8 @@ void OAIDefaultApi::getIpCallback(OAIHttpRequestWorker *worker) {
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
 
-        emit getIpSignalE(output, error_type, error_str);
-        emit getIpSignalEFull(worker, error_type, error_str);
+        Q_EMIT getIpSignalE(output, error_type, error_str);
+        Q_EMIT getIpSignalEFull(worker, error_type, error_str);
 
 #if defined(_MSC_VER)
 #pragma warning(pop)
@@ -314,8 +314,8 @@ void OAIDefaultApi::getIpCallback(OAIHttpRequestWorker *worker) {
 #pragma GCC diagnostic pop
 #endif
 
-        emit getIpSignalError(output, error_type, error_str);
-        emit getIpSignalErrorFull(worker, error_type, error_str);
+        Q_EMIT getIpSignalError(output, error_type, error_str);
+        Q_EMIT getIpSignalErrorFull(worker, error_type, error_str);
     }
 }
 

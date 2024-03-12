@@ -79,7 +79,7 @@ public class DefaultControllerTest {
         // given
         String uri = UriTemplate.of("/").expand(new HashMap<>());
         MutableHttpRequest<?> request = HttpRequest.GET(uri)
-            .accept("application/json");
+            .accept("application/javascript,application/json,text/plain");
         request.getParameters()
             .add("format", "example") // The query parameter format should be 
             .add("callback", "example"); // The query parameter format should be 

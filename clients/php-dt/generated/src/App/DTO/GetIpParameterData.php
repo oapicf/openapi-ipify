@@ -15,17 +15,15 @@ class GetIpParameterData
      * @DTA\Data(subset="query", field="format", nullable=true)
      * @DTA\Strategy(subset="query", name="QueryStringScalar", options={"type":"string"})
      * @DTA\Validator(subset="query", name="QueryStringScalar", options={"type":"string"})
-     * @var string|null
      */
-    public $format;
+    public ?string $format = null;
 
     /**
      * JSONP callback function name
      * @DTA\Data(subset="query", field="callback", nullable=true)
      * @DTA\Strategy(subset="query", name="QueryStringScalar", options={"type":"string"})
      * @DTA\Validator(subset="query", name="QueryStringScalar", options={"type":"string"})
-     * @var string|null
      */
-    public $callback;
+    public ?string $callback = null;
 
 }

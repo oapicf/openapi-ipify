@@ -75,7 +75,7 @@ class DefaultApiTest extends TestCase
      */
     public function testGetIp()
     {
-        $this->markTestIncomplete(
+        self::markTestIncomplete(
             'Test of "getIp" method has not been implemented yet.'
         );
     }

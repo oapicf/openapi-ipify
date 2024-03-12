@@ -65,7 +65,7 @@
           }
         },
         "summary" : "Get your public IP address",
-        "x-accepts" : "application/json",
+        "x-accepts" : "application/javascript,application/json,text/plain",
         "x-serviceid" : "getIp",
         "x-serviceid-varname" : "GETIP_SERVICE_ID"
       }

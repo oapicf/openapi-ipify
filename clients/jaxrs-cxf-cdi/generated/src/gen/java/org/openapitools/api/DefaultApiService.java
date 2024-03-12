@@ -12,10 +12,13 @@ import java.util.List;
 
 import java.io.InputStream;
 
+import javax.validation.constraints.*;
+import javax.validation.Valid;
+
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2024-03-11T07:46:36.835781338Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2024-03-12T12:45:07.499348263Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public interface DefaultApiService {
       public Response getIp(String format, String paramCallback, SecurityContext securityContext);
 }

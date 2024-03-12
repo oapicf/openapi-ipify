@@ -67,7 +67,7 @@ void OAIDefaultApiRequest::getIpRequest(){
     
 
 
-    emit getIp(format, callback);
+    Q_EMIT getIp(format, callback);
 }
 
 

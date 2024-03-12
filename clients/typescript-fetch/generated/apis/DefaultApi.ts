@@ -38,12 +38,12 @@ export class DefaultApi extends runtime.BaseAPI {
     async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Ip>> {
         const queryParameters: any = {};
 
-        if (requestParameters.format !== undefined) {
-            queryParameters['format'] = requestParameters.format;
+        if (requestParameters['format'] != null) {
+            queryParameters['format'] = requestParameters['format'];
         }
 
-        if (requestParameters.callback !== undefined) {
-            queryParameters['callback'] = requestParameters.callback;
+        if (requestParameters['callback'] != null) {
+            queryParameters['callback'] = requestParameters['callback'];
         }
 
         const headerParameters: runtime.HTTPHeaders = {};

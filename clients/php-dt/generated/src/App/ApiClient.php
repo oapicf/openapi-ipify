@@ -50,6 +50,8 @@ class ApiClient extends OAGAC\AbstractApiClient
     {
         $response = $this->getIpRaw($parameters, $responseMediaType);
         $responseContent = null;
+        $contentStrategy = null;
+        $contentValidator = null;
         switch ($response->getStatusCode())
         {
             case 200:
@@ -57,7 +59,7 @@ class ApiClient extends OAGAC\AbstractApiClient
                 $responseContent = new \App\DTO\Ip();
                 break;
         }
-        $this->parseBody($response, $responseContent);
+        $this->parseBody($response, $responseContent, $contentStrategy, $contentValidator);
         return [$responseContent, $response->getHeaders(), $response->getStatusCode(), $response->getReasonPhrase()];
     }
 
