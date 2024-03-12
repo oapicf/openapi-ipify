@@ -14,7 +14,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2024-03-12T12:45:15.712900663Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2024-03-12T13:24:36.923303473Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class DefaultApiServiceImpl extends DefaultApiService {
     @Override
     public Response getIp(String format, String paramCallback, SecurityContext securityContext) throws NotFoundException {
