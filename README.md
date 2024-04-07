@@ -13,11 +13,11 @@ The API clients are generated using [OpenAPI Generator](https://openapi-generato
 Published packages
 ------------------
 
-| Language | Package | Status |
-|----------|---------|--------|
-| JavaScript | [openapi_ipify]((http://www.npmjs.com/package/openapi_ipify)) | [![Published Version](https://img.shields.io/npm/v/openapi_ipify.svg)](http://www.npmjs.com/package/openapi_ipify) |
-| Python | [openapiipify]((https://pypi.python.org/pypi/openapiipify)) | [![Published Version](https://img.shields.io/pypi/v/openapiipify.svg)](https://pypi.python.org/pypi/openapiipify) |
-| Ruby | [openapi_ipify]((https://rubygems.org/gems/openapi_ipify)) | [![Published Version](https://img.shields.io/gem/v/openapi_ipify.svg)](https://rubygems.org/gems/openapi_ipify) |
+| Language | Package | Status | Documentation |
+|----------|---------|--------|---------------|
+| JavaScript | [openapi_ipify]((http://www.npmjs.com/package/openapi_ipify)) | [![Published Version](https://img.shields.io/npm/v/openapi_ipify.svg)](http://www.npmjs.com/package/openapi_ipify) | [README](https://github.com/oapicf/openapi-ipify/blob/main/clients/javascript/generated/README.md) |
+| Python | [openapiipify]((https://pypi.python.org/pypi/openapiipify)) | [![Published Version](https://img.shields.io/pypi/v/openapiipify.svg)](https://pypi.python.org/pypi/openapiipify) | [README](https://github.com/oapicf/openapi-ipify/blob/main/clients/python/generated/README.md) |
+| Ruby | [openapi_ipify]((https://rubygems.org/gems/openapi_ipify)) | [![Published Version](https://img.shields.io/gem/v/openapi_ipify.svg)](https://rubygems.org/gems/openapi_ipify) | [README](https://github.com/oapicf/openapi-ipify/blob/main/clients/ruby/generated/README.md) |
 
 Version matrix
 --------------
