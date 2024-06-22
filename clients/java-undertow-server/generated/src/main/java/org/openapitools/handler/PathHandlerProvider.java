@@ -3,7 +3,7 @@
  *
  * OpenAPI client for ipify, a simple public IP address API
  *
- * OpenAPI document version: 5.1.1-pre.0
+ * OpenAPI document version: 5.2.1-pre.0
  * Maintained by: blah+oapicf@cliffano.com
  *
  * AUTO-GENERATED FILE, DO NOT MODIFY!

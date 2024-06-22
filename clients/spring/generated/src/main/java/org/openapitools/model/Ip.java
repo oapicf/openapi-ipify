@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * Ip
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-12T13:27:46.574426355Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-06-22T01:02:53.057288469Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 public class Ip {
 
   private String ip;

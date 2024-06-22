@@ -10,17 +10,14 @@ use validator::{Validate, ValidationErrors};
 use crate::{header, types::*};
 
 #[allow(unused_imports)]
-use crate::models;
+use crate::{apis, models};
 
-use crate::{Api,
-     GetIpResponse
-};
 
 /// Setup API Server.
 pub fn new<I, A>(api_impl: I) -> Router
 where
     I: AsRef<A> + Clone + Send + Sync + 'static,
-    A: Api + 'static,
+    A: apis::default::Default + 'static,
 {
     // build our application with a route
     Router::new()
@@ -44,7 +41,6 @@ Ok((
   query_params,
 ))
 }
-
 /// GetIp - GET /
 #[tracing::instrument(skip_all)]
 async fn get_ip<I, A>(
@@ -56,7 +52,7 @@ async fn get_ip<I, A>(
 ) -> Result<Response, StatusCode>
 where 
     I: AsRef<A> + Send + Sync,
-    A: Api,
+    A: apis::default::Default,
 {
 
       #[allow(clippy::redundant_closure)]
@@ -86,7 +82,7 @@ where
 
   let resp = match result {
                                             Ok(rsp) => match rsp {
-                                                GetIpResponse::Status200_YourPublicIPAddress
+                                                apis::default::GetIpResponse::Status200_YourPublicIPAddress
                                                     (body)
                                                 => {
 

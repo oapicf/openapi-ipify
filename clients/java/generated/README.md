@@ -1,9 +1,9 @@
 # openapiipify
 
 openapi-ipify
-- API version: 5.1.1-pre.0
-  - Build date: 2024-03-12T13:23:49.397562455Z[Etc/UTC]
-  - Generator version: 7.4.0
+- API version: 5.2.1-pre.0
+  - Build date: 2024-06-22T00:02:31.294781411Z[Etc/UTC]
+  - Generator version: 7.6.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -40,9 +40,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.github</groupId>
+  <groupId>com.github.oapicf</groupId>
   <artifactId>openapiipify</artifactId>
-  <version>5.1.1-pre.0</version>
+  <version>5.2.1-pre.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -58,7 +58,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github:openapiipify:5.1.1-pre.0"
+     implementation "com.github.oapicf:openapiipify:5.2.1-pre.0"
   }
 ```
 
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapiipify-5.1.1-pre.0.jar`
+* `target/openapiipify-5.2.1-pre.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -82,11 +82,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import com.github.openapiipify.ApiClient;
-import com.github.openapiipify.ApiException;
-import com.github.openapiipify.Configuration;
-import com.github.openapiipify.models.*;
-import com.github.openapiipify.api.DefaultApi;
+import com.github.oapicf.openapiipify.ApiClient;
+import com.github.oapicf.openapiipify.ApiException;
+import com.github.oapicf.openapiipify.Configuration;
+import com.github.oapicf.openapiipify.models.*;
+import com.github.oapicf.openapiipify.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {

@@ -15,9 +15,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 
 @JsonTypeName("Ip")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2024-03-12T13:24:45.672438891Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2024-06-22T00:03:37.810591439Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 public class Ip   {
-  private @Valid String ip;
+  private String ip;
 
   /**
    **/
@@ -29,8 +29,7 @@ public class Ip   {
   
   @ApiModelProperty(required = true, value = "")
   @JsonProperty("ip")
-  @NotNull
-  public String getIp() {
+  @NotNull public String getIp() {
     return ip;
   }
 

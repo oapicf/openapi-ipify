@@ -3,7 +3,7 @@ openapi-ipify
 
 OpenAPI client for ipify, a simple public IP address API
 
-API version: 5.1.1-pre.0
+API version: 5.2.1-pre.0
 Contact: blah+oapicf@cliffano.com
 */
 
@@ -42,7 +42,7 @@ var (
 	queryDescape    = strings.NewReplacer( "%5B", "[", "%5D", "]" )
 )
 
-// APIClient manages communication with the openapi-ipify API v5.1.1-pre.0
+// APIClient manages communication with the openapi-ipify API v5.2.1-pre.0
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -163,7 +163,7 @@ func parameterAddToHeaderOrQuery(headerOrQueryParams interface{}, keyPrefix stri
 					return
 				}
 				if t, ok := obj.(time.Time); ok {
-					parameterAddToHeaderOrQuery(headerOrQueryParams, keyPrefix, t.Format(time.RFC3339), collectionType)
+					parameterAddToHeaderOrQuery(headerOrQueryParams, keyPrefix, t.Format(time.RFC3339Nano), collectionType)
 					return
 				}
 				value = v.Type().String() + " value"

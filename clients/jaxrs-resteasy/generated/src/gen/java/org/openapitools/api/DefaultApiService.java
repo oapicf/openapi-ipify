@@ -16,7 +16,7 @@ import javax.validation.Valid;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2024-03-12T13:24:39.747108883Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2024-06-22T00:03:31.071369800Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 public interface DefaultApiService {
       Response getIp(String format,String paramCallback,SecurityContext securityContext)
       throws NotFoundException;

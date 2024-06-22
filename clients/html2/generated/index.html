@@ -853,6 +853,7 @@ ul.nav-tabs {
   }
 };
 
+
     var errs = {};
   </script>
 
@@ -887,7 +888,7 @@ ul.nav-tabs {
         <div id="header">
           <div id="api-_">
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
-              <div class="app-desc">Version: 5.1.1-pre.0</div>
+              <div class="app-desc">Version: 5.2.1-pre.0</div>
             <hr>
             <div id="app-description" class="app-desc">
                 OpenAPI client for ipify, a simple public IP address API
@@ -1243,41 +1244,65 @@ JSONP callback function name
 
 
                             <div class="tab-content" id="responses-Default-getIp-200-wrapper" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-Default-getIp-200-schema">
-                                  <div id="responses-Default-getIp-schema-200" class="exampleStyle">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = ;
-                                        var schema = findNode('schema',schemaWrapper).schema;
-                                        if (!schema) {
-                                          schema = schemaWrapper.schema;
-                                        }
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
+                              <div class="tab-pane active" id="responses-Default-getIp-200-schema">
+                                <div id="responses-Default-getIp-schema-200" class="exampleStyle">
+                                  <script>
+                                    $(document).ready(function() {
+                                      var schemaWrapper = {
+  "description" : "Your public IP address",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Ip"
+      }
+    },
+    "application/javascript" : {
+      "schema" : {
+        "type" : "string"
+      }
+    },
+    "text/plain" : {
+      "schema" : {
+        "type" : "string"
+      }
+    }
+  }
+};
+                                      var schema = findNode('schema',schemaWrapper).schema;
+                                      if (!schema) {
+                                        schema = schemaWrapper.schema;
+                                      }
+                                      if (schema == null) {
+                                        return;
+                                      }
+                                      if (schema.$ref != null) {
+                                        schema = defsParser.$refs.get(schema.$ref);
+                                        if (schema.properties != null) {
                                           Object.keys(schema.properties).forEach( (item) => {
                                             if (schema.properties[item].$ref != null) {
                                               schema.properties[item] = defsParser.$refs.get(schema.properties[item].$ref);
                                             }
                                           });
-                                        } else if (schema.items != null && schema.items.$ref != null) {
-                                            schema.items = defsParser.$refs.get(schema.items.$ref);
-                                        } else {
-                                          schemaWrapper.definitions = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
                                         }
+                                      } else if (schema.items != null && schema.items.$ref != null) {
+                                        schema.items = defsParser.$refs.get(schema.items.$ref);
+                                      } else {
+                                        schemaWrapper.definitions = Object.assign({}, defs);
+                                        $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                          console.log(err);
+                                        });
+                                      }
 
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-Default-getIp-200-schema-data').val(JSON.stringify(schema));
-                                        var result = $('#responses-Default-getIp-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-Default-getIp-200-schema-data' type='hidden' value=''></input>
+                                      var view = new JSONSchemaView(schema, 3);
+                                      $('#responses-Default-getIp-200-schema-data').val(JSON.stringify(schema));
+                                      var result = $('#responses-Default-getIp-schema-200');
+                                      result.empty();
+                                      result.append(view.render());
+                                    });
+                                  </script>
                                 </div>
+                                <input id='responses-Default-getIp-200-schema-data' type='hidden' value=''></input>
+                              </div>
                             </div>
                         </article>
                       </div>
@@ -2396,7 +2421,7 @@ var JSONSchemaView = (function () {
     // Determine if a schema is an array
     this.isArray = !this.isAny && this.schema && this.schema.type === 'array';
 
-    this.isObject = this.schema && (this.schema.type === 'object' || this.schema.properties || this.schema.anyOf || this.schema.oneof || this.schema.allOf);
+    this.isObject = this.schema && (this.schema.type === 'object' || this.schema.properties || this.schema.anyOf || this.schema.oneOf || this.schema.allOf);
 
     // Determine if a schema is a primitive
     this.isPrimitive = !this.isAny && !this.isArray && !this.isObject;

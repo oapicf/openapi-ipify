@@ -18,7 +18,7 @@ your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:openapi_ipify, "~> 5.1.1-pre.0"}]
+  [{:openapi_ipify, "~> 5.2.1-pre.0"}]
 end
 ```
 
