@@ -1,6 +1,6 @@
 {
   "artifactId": "openapiipify",
-  "artifactVersion": "5.2.1-pre.0",
+  "artifactVersion": "5.3.0",
   "artifactUrl": "https://github.com/oapicf/openapi-ipify",
   "artifactDescription": "Ipify API client generated from Swagger / Open API specification",
   "groupId": "com.github.oapicf",
