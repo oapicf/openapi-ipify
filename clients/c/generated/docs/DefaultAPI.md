@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```c
 // Get your public IP address
 //
-ip_t* DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char *callback);
+char* DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char *callback);
 ```
 
 ### Parameters
@@ -23,7 +23,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[ip_t](ip.md) *
+char*
+
 
 
 ### Authorization
@@ -33,7 +34,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

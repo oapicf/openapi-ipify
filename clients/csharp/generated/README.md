@@ -94,7 +94,7 @@ namespace Example
             try
             {
                 // Get your public IP address
-                Ip result = apiInstance.GetIp(format, callback);
+                string result = apiInstance.GetIp(format, callback);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -122,7 +122,6 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Model.Ip](docs/Ip.md)
 
 
 <a id="documentation-for-authorization"></a>

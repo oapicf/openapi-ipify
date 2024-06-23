@@ -197,9 +197,9 @@ impl<T, C> hyper::service::Service<(Request<Body>, C)> for Service<T, C> where
                                                     *response.status_mut() = StatusCode::from_u16(200).expect("Unable to turn 200 into a StatusCode");
                                                     response.headers_mut().insert(
                                                         CONTENT_TYPE,
-                                                        HeaderValue::from_str("application/json")
+                                                        HeaderValue::from_str("text/plain")
                                                             .expect("Unable to create Content-Type header for GET_IP_YOUR_PUBLIC_IP_ADDRESS"));
-                                                    let body_content = serde_json::to_string(&body).expect("impossible to fail to serialize");
+                                                    let body_content = body;
                                                     *response.body_mut() = Body::from(body_content);
                                                 },
                                             },

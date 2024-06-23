@@ -2,7 +2,6 @@ QT += network
 
 HEADERS += \
 # Models
-    $${PWD}/OAIIp.h \
 # APIs
     $${PWD}/OAIDefaultApi.h \
 # Others
@@ -17,7 +16,6 @@ HEADERS += \
 
 SOURCES += \
 # Models
-    $${PWD}/OAIIp.cpp \
 # APIs
     $${PWD}/OAIDefaultApi.cpp \
 # Others

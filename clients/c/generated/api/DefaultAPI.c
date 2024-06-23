@@ -66,7 +66,7 @@ end:
 
 // Get your public IP address
 //
-ip_t*
+char*
 DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, char *callback)
 {
     list_t    *localVarQueryParameters = list_createList();
@@ -108,9 +108,9 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, ch
         keyPairQuery_callback = keyValuePair_create(keyQuery_callback, valueQuery_callback);
         list_addElement(localVarQueryParameters,keyPairQuery_callback);
     }
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarHeaderType,"application/javascript"); //produces
     list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/javascript"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -125,15 +125,9 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, ch
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","Your public IP address");
     //}
-    //nonprimitive not container
-    cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-    ip_t *elementToReturn = ip_parseFromJSON(DefaultAPIlocalVarJSON);
-    cJSON_Delete(DefaultAPIlocalVarJSON);
-    if(elementToReturn == NULL) {
-        // return 0;
-    }
+    //primitive return type simple
+    char* elementToReturn =  strdup((char*)apiClient->dataReceived);
 
-    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;

@@ -43,7 +43,6 @@ Import the following:
 #import <OpenAPIClient/OAIApiClient.h>
 #import <OpenAPIClient/OAIDefaultConfiguration.h>
 // load models
-#import <OpenAPIClient/OAIIp.h>
 // load API classes for accessing endpoints
 #import <OpenAPIClient/OAIDefaultApi.h>
 
@@ -68,7 +67,7 @@ OAIDefaultApi *apiInstance = [[OAIDefaultApi alloc] init];
 // Get your public IP address
 [apiInstance getIpWithFormat:format
     callback:callback
-              completionHandler: ^(OAIIp* output, NSError* error) {
+              completionHandler: ^(NSString* output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -90,7 +89,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [OAIIp](docs/OAIIp.md)
 
 
 ## Documentation For Authorization

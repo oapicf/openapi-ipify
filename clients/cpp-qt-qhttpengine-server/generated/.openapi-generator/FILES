@@ -15,8 +15,6 @@ server/src/models/OAIHelpers.cpp
 server/src/models/OAIHelpers.h
 server/src/models/OAIHttpFileElement.cpp
 server/src/models/OAIHttpFileElement.h
-server/src/models/OAIIp.cpp
-server/src/models/OAIIp.h
 server/src/models/OAIObject.h
 server/src/requests/OAIDefaultApiRequest.cpp
 server/src/requests/OAIDefaultApiRequest.h

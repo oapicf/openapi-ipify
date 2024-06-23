@@ -16,7 +16,6 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
-local openapiclient_ip = require "openapiclient.model.ip"
 
 local default_api = {}
 local default_api_mt = {
@@ -56,8 +55,8 @@ function default_api:get_ip(format, callback)
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "application/json", "application/javascript", "text/plain" }
-	req.headers:upsert("content-type", "application/json")
+	--local var_accept = { "text/plain", "application/javascript", "application/json" }
+	req.headers:upsert("content-type", "text/plain")
 
 
 	-- make the HTTP call
@@ -78,7 +77,7 @@ function default_api:get_ip(format, callback)
 		if result == nil then
 			return nil, err3
 		end
-		return openapiclient_ip.cast(result), headers
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

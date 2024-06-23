@@ -8,7 +8,6 @@ openapi_server/controllers/default_controller.py
 openapi_server/controllers/security_controller.py
 openapi_server/models/__init__.py
 openapi_server/models/base_model.py
-openapi_server/models/ip.py
 openapi_server/openapi/openapi.yaml
 openapi_server/typing_utils.py
 openapi_server/util.py

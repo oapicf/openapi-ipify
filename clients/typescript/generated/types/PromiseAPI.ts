@@ -1,7 +1,6 @@
 import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/http';
 import { Configuration} from '../configuration'
 
-import { Ip } from '../models/Ip';
 import { ObservableDefaultApi } from './ObservableAPI';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
@@ -21,7 +20,7 @@ export class PromiseDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIpWithHttpInfo(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<HttpInfo<Ip>> {
+    public getIpWithHttpInfo(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<HttpInfo<string>> {
         const result = this.api.getIpWithHttpInfo(format, callback, _options);
         return result.toPromise();
     }
@@ -31,7 +30,7 @@ export class PromiseDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<Ip> {
+    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Promise<string> {
         const result = this.api.getIp(format, callback, _options);
         return result.toPromise();
     }

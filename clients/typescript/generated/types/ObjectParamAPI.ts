@@ -1,7 +1,6 @@
 import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/http';
 import { Configuration} from '../configuration'
 
-import { Ip } from '../models/Ip';
 
 import { ObservableDefaultApi } from "./ObservableAPI";
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
@@ -32,7 +31,7 @@ export class ObjectDefaultApi {
      * Get your public IP address
      * @param param the request object
      */
-    public getIpWithHttpInfo(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<HttpInfo<Ip>> {
+    public getIpWithHttpInfo(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<HttpInfo<string>> {
         return this.api.getIpWithHttpInfo(param.format, param.callback,  options).toPromise();
     }
 
@@ -40,7 +39,7 @@ export class ObjectDefaultApi {
      * Get your public IP address
      * @param param the request object
      */
-    public getIp(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<Ip> {
+    public getIp(param: DefaultApiGetIpRequest = {}, options?: Configuration): Promise<string> {
         return this.api.getIp(param.format, param.callback,  options).toPromise();
     }
 

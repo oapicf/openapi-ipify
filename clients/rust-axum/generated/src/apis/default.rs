@@ -13,7 +13,7 @@ use crate::{models, types::*};
 pub enum GetIpResponse {
     /// Your public IP address
     Status200_YourPublicIPAddress
-    (models::Ip)
+    (String)
 }
 
 

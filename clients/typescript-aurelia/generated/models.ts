@@ -10,8 +10,3 @@
  * Do not edit the class manually.
  */
 
-
-export interface Ip {
-  ip: string;
-}
-

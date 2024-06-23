@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="Get-Ip"></a>
 # **Get-Ip**
-> Ip Get-Ip<br>
+> String Get-Ip<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Format] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Callback] <String><br>
 
@@ -38,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ip**](Ip.md) (PSCustomObject)
+**String**
 
 ### Authorization
 
@@ -47,7 +47,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

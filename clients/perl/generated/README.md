@@ -238,7 +238,6 @@ use WWW::OpenAPIClient::DefaultApi;
 
 To load the models:
 ```perl
-use WWW::OpenAPIClient::Object::Ip;
 
 ````
 
@@ -253,7 +252,6 @@ use warnings;
 use WWW::OpenAPIClient::DefaultApi;
 
 # load the models
-use WWW::OpenAPIClient::Object::Ip;
 
 # for displaying the API response data
 use Data::Dumper;
@@ -285,7 +283,6 @@ Class | Method | HTTP request | Description
 
 
 # DOCUMENTATION FOR MODELS
- - [WWW::OpenAPIClient::Object::Ip](docs/Ip.md)
 
 
 # DOCUMENTATION FOR AUTHORIZATION

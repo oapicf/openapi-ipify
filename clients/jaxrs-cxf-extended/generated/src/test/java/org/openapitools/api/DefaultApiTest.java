@@ -13,7 +13,6 @@
 
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
@@ -71,7 +70,7 @@ public class DefaultApiTest {
         String paramCallback = null;
 
         // TODO: delete this line and uncomment the next
-        // Ip response = api.getIp(format, paramCallback);
+        // String response = api.getIp(format, paramCallback);
         // TODO: complete test assertions
     }
     

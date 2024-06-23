@@ -3,21 +3,15 @@ package org.openapitools.server.api
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.model.StatusCodes
-import akka.http.scaladsl.marshalling.ToEntityMarshaller
-import akka.http.scaladsl.unmarshalling.FromEntityUnmarshaller
-import akka.http.scaladsl.unmarshalling.FromStringUnmarshaller
 import org.openapitools.server.AkkaHttpHelper._
-import org.openapitools.server.model.Ip
 
 
 class DefaultApi(
-    defaultService: DefaultApiService,
-    defaultMarshaller: DefaultApiMarshaller
+    defaultService: DefaultApiService
 ) {
 
   
-  import defaultMarshaller._
-
+  
   lazy val route: Route =
     path() { 
       get { 
@@ -31,20 +25,13 @@ class DefaultApi(
 
 trait DefaultApiService {
 
-  def getIp200(responseIp: Ip)(implicit toEntityMarshallerIp: ToEntityMarshaller[Ip]): Route =
-    complete((200, responseIp))
+  def getIp200(responseString: String)(implicit toEntityMarshallerString: ToEntityMarshaller[String]): Route =
+    complete((200, responseString))
   /**
-   * Code: 200, Message: Your public IP address, DataType: Ip
+   * Code: 200, Message: Your public IP address, DataType: String
    */
-  def getIp(format: Option[String], callback: Option[String])
-      (implicit toEntityMarshallerIp: ToEntityMarshaller[Ip]): Route
+  def getIp(format: Option[String], callback: Option[String]): Route
 
 }
 
-trait DefaultApiMarshaller {
-
-
-  implicit def toEntityMarshallerIp: ToEntityMarshaller[Ip]
-
-}
 

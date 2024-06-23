@@ -35,7 +35,7 @@ void OAIDefaultApiHandler::getIp(QString format, QString callback) {
     auto reqObj = qobject_cast<OAIDefaultApiRequest*>(sender());
     if( reqObj != nullptr )
     {
-        OAIIp res;
+        QString res;
         reqObj->getIpResponse(res);
     }
 }

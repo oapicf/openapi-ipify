@@ -13,7 +13,6 @@
 
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
@@ -69,7 +68,7 @@ public class DefaultApiTest {
     public void getIpTest() {
         String format = null;
         String paramCallback = null;
-        //Ip response = api.getIp(format, paramCallback);
+        //String response = api.getIp(format, paramCallback);
         //assertNotNull(response);
         // TODO: test validations
 

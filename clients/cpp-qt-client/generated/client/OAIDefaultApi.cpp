@@ -281,7 +281,8 @@ void OAIDefaultApi::getIpCallback(OAIHttpRequestWorker *worker) {
     if (worker->error_type != QNetworkReply::NoError) {
         error_str = QString("%1, %2").arg(worker->error_str, QString(worker->response));
     }
-    OAIIp output(QString(worker->response));
+    QString output;
+    ::OpenAPI::fromStringValue(QString(worker->response), output);
     worker->deleteLater();
 
     if (worker->error_type == QNetworkReply::NoError) {

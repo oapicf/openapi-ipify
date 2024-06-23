@@ -25,7 +25,7 @@ package .Servers is
       (Server : in out Server_Type;
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
-       Result  : out .Models.Ip_Type;
+       Result  : out Swagger.UString;
        Context : in out Swagger.Servers.Context_Type);
 
    package Server_Impl is

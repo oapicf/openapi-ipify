@@ -31,7 +31,6 @@
 #include <corvusoft/restbed/service.hpp>
 #include <corvusoft/restbed/settings.hpp>
 
-#include "Ip.h"
 #include <string>
 
 namespace org {
@@ -80,9 +79,9 @@ public:
     /////////////////////////////////////////////////////
     // Set these to implement the server functionality //
     /////////////////////////////////////////////////////
-    std::function<std::pair<int, Ip>(
+    std::function<std::pair<int, std::string>(
         std::string & format, std::string & callback)> handler_GET_func =
-            [](std::string &, std::string &) -> std::pair<int, Ip>
+            [](std::string &, std::string &) -> std::pair<int, std::string>
                 { throw DefaultApiException(501, "Not implemented"); };
 
 
@@ -92,7 +91,7 @@ protected:
     // override these to implement the server functionality //
     //////////////////////////////////////////////////////////
 
-    virtual std::pair<int, Ip> handler_GET(
+    virtual std::pair<int, std::string> handler_GET(
         std::string & format, std::string & callback);
 
 

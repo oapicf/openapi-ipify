@@ -844,14 +844,6 @@ ul.nav-tabs {
   <script>
     // Script section to load models into a JS Var
     var defs = {}
-    defs["Ip"] = {
-  "required" : [ "ip" ],
-  "properties" : {
-    "ip" : {
-      "type" : "string"
-    }
-  }
-};
 
 
     var errs = {};
@@ -933,7 +925,7 @@ ul.nav-tabs {
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Default-getIp-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X GET \
- -H "Accept: application/json,application/javascript,text/plain" \
+ -H "Accept: text/plain,application/javascript,application/json" \
  "https://api.ipify.org/?format=format_example&callback=callback_example"
 </code></pre>
                           </div>
@@ -955,7 +947,7 @@ public class DefaultApiExample {
         String callback = callback_example; // String | JSONP callback function name
 
         try {
-            Ip result = apiInstance.getIp(format, callback);
+            'String' result = apiInstance.getIp(format, callback);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#getIp");
@@ -994,7 +986,7 @@ public class DefaultApiExample {
         String callback = callback_example; // String | JSONP callback function name
 
         try {
-            Ip result = apiInstance.getIp(format, callback);
+            'String' result = apiInstance.getIp(format, callback);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#getIp");
@@ -1018,7 +1010,7 @@ String *callback = callback_example; // JSONP callback function name (optional) 
 // Get your public IP address
 [apiInstance getIpWith:format
     callback:callback
-              completionHandler: ^(Ip output, NSError* error) {
+              completionHandler: ^('String' output, NSError* error) {
     if (output) {
         NSLog(@"%@", output);
     }
@@ -1074,7 +1066,7 @@ namespace Example
 
             try {
                 // Get your public IP address
-                Ip result = apiInstance.getIp(format, callback);
+                'String' result = apiInstance.getIp(format, callback);
                 Debug.WriteLine(result);
             } catch (Exception e) {
                 Debug.Print("Exception when calling DefaultApi.getIp: " + e.Message );
@@ -1251,9 +1243,9 @@ JSONP callback function name
                                       var schemaWrapper = {
   "description" : "Your public IP address",
   "content" : {
-    "application/json" : {
+    "text/plain" : {
       "schema" : {
-        "$ref" : "#/components/schemas/Ip"
+        "type" : "string"
       }
     },
     "application/javascript" : {
@@ -1261,7 +1253,7 @@ JSONP callback function name
         "type" : "string"
       }
     },
-    "text/plain" : {
+    "application/json" : {
       "schema" : {
         "type" : "string"
       }

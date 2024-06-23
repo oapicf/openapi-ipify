@@ -9,7 +9,7 @@ All URIs are relative to *https://api.ipify.org*
 
 <a name="getIp"></a>
 # **getIp**
-> Ip getIp(format, callback)
+> String getIp(format, callback)
 
 Get your public IP address
 
@@ -22,7 +22,7 @@ Get your public IP address
 
 ### Return type
 
-[**Ip**](../Models/Ip.md)
+**String**
 
 ### Authorization
 
@@ -31,5 +31,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+- **Accept**: text/plain, application/javascript, application/json
 

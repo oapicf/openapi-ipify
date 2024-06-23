@@ -9,7 +9,7 @@ All URIs are relative to *https://api.ipify.org*
 
 ## get_ip
 
-> <Ip> get_ip(opts)
+> String get_ip(opts)
 
 Get your public IP address
 
@@ -38,7 +38,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Ip>, Integer, Hash)> get_ip_with_http_info(opts)
+> <Array(String, Integer, Hash)> get_ip_with_http_info(opts)
 
 ```ruby
 begin
@@ -46,7 +46,7 @@ begin
   data, status_code, headers = api_instance.get_ip_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Ip>
+  p data # => String
 rescue OpenApiIpifyClient::ApiError => e
   puts "Error when calling DefaultApi->get_ip_with_http_info: #{e}"
 end
@@ -61,7 +61,7 @@ end
 
 ### Return type
 
-[**Ip**](Ip.md)
+**String**
 
 ### Authorization
 
@@ -70,5 +70,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+- **Accept**: text/plain, application/javascript, application/json
 

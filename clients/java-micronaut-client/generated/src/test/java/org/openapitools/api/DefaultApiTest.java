@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -34,7 +33,7 @@ public class DefaultApiTest {
         String paramCallback = "example";
 
         // when
-        Ip body = api.getIp(_format, paramCallback).block();
+        String body = api.getIp(_format, paramCallback).block();
 
         // then
         // TODO implement the getIpTest()

@@ -6,7 +6,6 @@ A [Giraffe](https://github.com/giraffe-fsharp/Giraffe) server stub for the OpenA
 
 The following models have been auto-generated from the provided OpenAPI schema:
 
-- model/IpModel.fs
 
 ## Operations
 

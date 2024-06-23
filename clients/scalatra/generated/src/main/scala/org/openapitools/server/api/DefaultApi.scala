@@ -12,7 +12,6 @@
 
 package org.openapitools.server.api
 
-import org.openapitools.server.model.Ip
 
 import java.io.File
 
@@ -39,7 +38,7 @@ class DefaultApi(implicit val swagger: Swagger) extends ScalatraServlet
   }
   
 
-  val getIpOperation = (apiOperation[Ip]("getIp")
+  val getIpOperation = (apiOperation[String]("getIp")
     summary "Get your public IP address"
     parameters(queryParam[String]("format").description("").optional, queryParam[String]("callback").description("").optional)
   )

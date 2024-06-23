@@ -1,7 +1,7 @@
 #tag Interface
 Protected Interface DefaultApiCallbackHandler
 	#tag Method, Flags = &h0
-		Sub GetIpCallback(status As OpenAPIClient.OpenAPIClientException, Optional data As OpenAPIClient.Models.Ip)
+		Sub GetIpCallback(status As OpenAPIClient.OpenAPIClientException, Optional data As String)
 		  
 		End Sub
 	#tag EndMethod

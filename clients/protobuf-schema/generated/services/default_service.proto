@@ -15,10 +15,9 @@ syntax = "proto3";
 package openapitools.services.defaultservice;
 
 import "google/protobuf/empty.proto";
-import public "models/ip.proto";
 
 service DefaultService {
-  rpc GetIp (GetIpRequest) returns (Ip);
+  rpc GetIp (GetIpRequest) returns (GetIpResponse);
 
 }
 
@@ -28,5 +27,9 @@ message GetIpRequest {
   // JSONP callback function name
   string callback = 2;
 
+}
+
+message GetIpResponse {
+  string data = 1;
 }
 

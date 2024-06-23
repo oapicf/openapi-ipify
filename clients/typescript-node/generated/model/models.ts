@@ -1,6 +1,5 @@
 import localVarRequest from 'request';
 
-export * from './ip';
 
 import * as fs from 'fs';
 
@@ -15,7 +14,6 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { Ip } from './ip';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -33,7 +31,6 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
-    "Ip": Ip,
 }
 
 export class ObjectSerializer {

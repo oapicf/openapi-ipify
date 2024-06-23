@@ -1,6 +1,5 @@
 package org.openapitools.vertxweb.server.api;
 
-import org.openapitools.vertxweb.server.model.Ip;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import io.vertx.core.json.jackson.DatabindCodec;

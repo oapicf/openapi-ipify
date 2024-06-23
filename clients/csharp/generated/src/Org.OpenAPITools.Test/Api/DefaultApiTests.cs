@@ -19,8 +19,6 @@ using Xunit;
 
 using Org.OpenAPITools.Client;
 using Org.OpenAPITools.Api;
-// uncomment below to import models
-//using Org.OpenAPITools.Model;
 
 namespace Org.OpenAPITools.Test.Api
 {
@@ -65,7 +63,7 @@ namespace Org.OpenAPITools.Test.Api
             //string? format = null;
             //string? callback = null;
             //var response = instance.GetIp(format, callback);
-            //Assert.IsType<Ip>(response);
+            //Assert.IsType<string>(response);
         }
     }
 }

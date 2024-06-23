@@ -130,7 +130,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OpenapiIpify.Ip](docs/Ip.md)
 
 
 ## Documentation for Authorization

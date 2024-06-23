@@ -55,7 +55,6 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [org.openapitools.server.models.Ip](docs/Ip.md)
 
 
 <a id="documentation-for-authorization"></a>

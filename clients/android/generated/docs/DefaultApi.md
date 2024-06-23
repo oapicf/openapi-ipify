@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getIp
 
-> Ip getIp(format, callback)
+> String getIp(format, callback)
 
 Get your public IP address
 
@@ -24,7 +24,7 @@ DefaultApi apiInstance = new DefaultApi();
 String format = null; // String | Response format
 String callback = null; // String | JSONP callback function name
 try {
-    Ip result = apiInstance.getIp(format, callback);
+    String result = apiInstance.getIp(format, callback);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#getIp");
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ip**](Ip.md)
+**String**
 
 ### Authorization
 
@@ -51,5 +51,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+- **Accept**: text/plain, application/javascript, application/json
 

@@ -51,7 +51,7 @@ Map<String, Object> params = new Map<String, Object>{
 
 try {
     // cross your fingers
-    OASIp result = api.getIp(params);
+    String result = api.getIp(params);
     System.debug(result);
 } catch (OAS.ApiException e) {
     // ...handle your exceptions
@@ -69,7 +69,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OASIp](OASIp.md)
 
 
 ## Documentation for Authorization

@@ -22,7 +22,6 @@ from fastapi import (  # noqa: F401
 )
 
 from openapi_server.models.extra_models import TokenModel  # noqa: F401
-from openapi_server.models.ip import Ip
 
 
 router = APIRouter()
@@ -35,7 +34,7 @@ for _, name, _ in pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + "."):
 @router.get(
     "/",
     responses={
-        200: {"model": Ip, "description": "Your public IP address"},
+        200: {"model": str, "description": "Your public IP address"},
     },
     tags=["default"],
     summary="Get your public IP address",
@@ -44,5 +43,5 @@ for _, name, _ in pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + "."):
 async def get_ip(
     format: str = Query(None, description="Response format", alias="format"),
     param_callback: str = Query(None, description="JSONP callback function name", alias="callback"),
-) -> Ip:
+) -> str:
     ...

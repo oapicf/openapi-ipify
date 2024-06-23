@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getIp**
-> models::Ip getIp(optional)
+> String getIp(optional)
 Get your public IP address
 
 ### Required Parameters
@@ -27,7 +27,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**models::Ip**](Ip.md)
+[**String**](string.md)
 
 ### Authorization
 

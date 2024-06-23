@@ -1,6 +1,5 @@
 package org.openapitools.vertxweb.server.api;
 
-import org.openapitools.vertxweb.server.model.Ip;
 
 import org.openapitools.vertxweb.server.ApiResponse;
 
@@ -14,7 +13,7 @@ import java.util.Map;
 // Implement this class
 
 public class DefaultApiImpl implements DefaultApi {
-    public Future<ApiResponse<Ip>> getIp(String format, String paramCallback) {
+    public Future<ApiResponse<String>> getIp(String format, String paramCallback) {
         return Future.failedFuture(new HttpException(501));
     }
 

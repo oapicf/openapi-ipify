@@ -18,7 +18,6 @@ import com.lightbend.lagom.scaladsl.api.{Service, ServiceCall}
 import play.api.libs.json._
 import com.lightbend.lagom.scaladsl.api.deser.PathParamSerializer
 
-import io.swagger.client.model.Ip
 
 trait DefaultApi extends Service {
 
@@ -37,9 +36,9 @@ trait DefaultApi extends Service {
     *  
     * @param format Response format (optional) 
     * @param callback JSONP callback function name (optional)
-    * @return Ip
+    * @return String
     */
-  def getIp(format: Option[DefaultApiFormatEnum.DefaultApiFormatEnum]callback:           Option[String] = None): ServiceCall[NotUsed ,Ip]
+  def getIp(format: Option[DefaultApiFormatEnum.DefaultApiFormatEnum]callback:           Option[String] = None): ServiceCall[NotUsed ,String]
   
 
         object DefaultApiFormatEnum extends Enumeration {

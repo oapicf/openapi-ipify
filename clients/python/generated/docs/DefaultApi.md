@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_ip**
-> Ip get_ip(format=format, param_callback=param_callback)
+> str get_ip(format=format, param_callback=param_callback)
 
 Get your public IP address
 
@@ -17,7 +17,6 @@ Get your public IP address
 
 ```python
 import openapiipify
-from openapiipify.models.ip import Ip
 from openapiipify.rest import ApiException
 from pprint import pprint
 
@@ -56,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ip**](Ip.md)
+**str**
 
 ### Authorization
 
@@ -65,7 +64,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 ### HTTP response details
 

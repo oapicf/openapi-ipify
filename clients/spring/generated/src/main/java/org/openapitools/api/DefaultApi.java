@@ -5,7 +5,6 @@
  */
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -32,7 +31,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-06-22T01:02:53.057288469Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-06-23T05:16:32.438923231Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 @Validated
 @Tag(name = "default", description = "the default API")
 public interface DefaultApi {
@@ -53,41 +52,22 @@ public interface DefaultApi {
         summary = "Get your public IP address",
         responses = {
             @ApiResponse(responseCode = "200", description = "Your public IP address", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = Ip.class)),
-                @Content(mediaType = "application/javascript", schema = @Schema(implementation = Ip.class)),
-                @Content(mediaType = "text/plain", schema = @Schema(implementation = Ip.class))
+                @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "application/javascript", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))
             })
         }
     )
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/",
-        produces = { "application/json", "application/javascript", "text/plain" }
+        produces = { "text/plain", "application/javascript", "application/json" }
     )
     
-    default ResponseEntity<Ip> getIp(
+    default ResponseEntity<String> getIp(
         @Parameter(name = "format", description = "Response format", in = ParameterIn.QUERY) @Valid @RequestParam(value = "format", required = false) String format,
         @Parameter(name = "callback", description = "JSONP callback function name", in = ParameterIn.QUERY) @Valid @RequestParam(value = "callback", required = false) String paramCallback
     ) {
-        getRequest().ifPresent(request -> {
-            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
-                if (mediaType.isCompatibleWith(MediaType.valueOf("application/javascript"))) {
-                    String exampleString = "Custom MIME type example not yet supported: application/javascript";
-                    ApiUtil.setExampleResponse(request, "application/javascript", exampleString);
-                    break;
-                }
-                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"ip\" : \"ip\" }";
-                    ApiUtil.setExampleResponse(request, "application/json", exampleString);
-                    break;
-                }
-                if (mediaType.isCompatibleWith(MediaType.valueOf("text/plain"))) {
-                    String exampleString = "Custom MIME type example not yet supported: text/plain";
-                    ApiUtil.setExampleResponse(request, "text/plain", exampleString);
-                    break;
-                }
-            }
-        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

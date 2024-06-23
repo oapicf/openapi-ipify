@@ -6,10 +6,10 @@ BuildSteps=Build Automation;Build Automation.xojo_code;&h000000005D9877FF;&h0000
 Module=OpenAPIClient;OpenAPIClient.xojo_code;&h000000001FF397FF;&h0000000000000000;false
 Class=OpenAPIClientException;OpenAPIClient/OpenAPIClientException.xojo_code;&h0000000054B007FF;&h000000001FF397FF;false
 Module=Models;OpenAPIClient/Models.xojo_code;&h000000002FF397FF;&h000000001FF397FF;false
-Class=Ip;OpenAPIClient/Models/Ip.xojo_code;&h000000000186CAFF;&h000000002FF397FF;false
+
 Module=APIs;OpenAPIClient/APIs.xojo_code;&h000000003FF397FF;&h000000001FF397FF;false
-Class=DefaultApi;OpenAPIClient/APIs/DefaultApi.xojo_code;&h000000000186EAFF;&h000000003FF397FF;false
-Class=DefaultApiCallbackHandler;OpenAPIClient/APIs/DefaultApiCallbackHandler.xojo_code;&h000000000186EAFF;&h000000003FF397FF;false
+Class=DefaultApi;OpenAPIClient/APIs/DefaultApi.xojo_code;&h000000000186CAFF;&h000000003FF397FF;false
+Class=DefaultApiCallbackHandler;OpenAPIClient/APIs/DefaultApiCallbackHandler.xojo_code;&h000000000186CAFF;&h000000003FF397FF;false
 Class=Mock;Mock.xojo_code;&h000000002FF407FF;&h0000000000000000;false
 MajorVersion=1
 MinorVersion=0

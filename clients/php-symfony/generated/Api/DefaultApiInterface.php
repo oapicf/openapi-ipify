@@ -30,7 +30,6 @@
 namespace OpenAPI\Server\Api;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use OpenAPI\Server\Model\Ip;
 
 /**
  * DefaultApiInterface Interface Doc Comment

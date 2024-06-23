@@ -10,6 +10,5 @@ go/error.go
 go/helpers.go
 go/impl.go
 go/logger.go
-go/model_ip.go
 go/routers.go
 main.go

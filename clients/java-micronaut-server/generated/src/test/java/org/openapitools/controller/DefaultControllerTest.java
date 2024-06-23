@@ -1,6 +1,5 @@
 package org.openapitools.controller;
 
-import org.openapitools.model.Ip;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;
@@ -61,7 +60,7 @@ public class DefaultControllerTest {
         String paramCallback = "example";
 
         // when
-        Ip result = controller.getIp(_format, paramCallback).block();
+        String result = controller.getIp(_format, paramCallback).block();
 
         // then
         Assertions.assertTrue(true);
@@ -79,15 +78,15 @@ public class DefaultControllerTest {
         // given
         String uri = UriTemplate.of("/").expand(new HashMap<>());
         MutableHttpRequest<?> request = HttpRequest.GET(uri)
-            .accept("[Ljava.lang.String;@75504cef")
-            .accept("[Ljava.lang.String;@75504cef")
-            .accept("[Ljava.lang.String;@75504cef");
+            .accept("[Ljava.lang.String;@47dd778")
+            .accept("[Ljava.lang.String;@47dd778")
+            .accept("[Ljava.lang.String;@47dd778");
         request.getParameters()
             .add("format", "example") // The query parameter format should be 
             .add("callback", "example"); // The query parameter format should be 
 
         // when
-        HttpResponse<?> response = client.toBlocking().exchange(request, Ip.class);
+        HttpResponse<?> response = client.toBlocking().exchange(request, String.class);
 
         // then
         Assertions.assertEquals(HttpStatus.OK, response.status());

@@ -8,10 +8,10 @@ Protected Class DefaultApi
 		  // - parameter format: (query) Response format (optional, default to Sample)
 		  // - parameter callback: (query) JSONP callback function name (optional, default to Sample)
 		  //
-		  // Invokes DefaultApiCallbackHandler.GetIpCallback(Ip) on completion. 
+		  // Invokes DefaultApiCallbackHandler.GetIpCallback(String) on completion. 
 		  //
 		  // - GET /
-		  // - defaultResponse: Nil
+		  // - defaultResponse: Sample
 		  //
 		  //
 		  
@@ -45,34 +45,14 @@ Protected Class DefaultApi
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function GetIpPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As OpenAPIClient.OpenAPIClientException, Content As String, ByRef outData As OpenAPIClient.Models.Ip) As Boolean
+		Private Function GetIpPrivateFuncDeserializeResponse(HTTPStatus As Integer, Headers As InternetHeaders, error As OpenAPIClient.OpenAPIClientException, Content As String, ByRef outData As String) As Boolean
 		  Dim contentType As String = Headers.Value("Content-Type")
 		  Dim contentEncoding As TextEncoding = OpenAPIClient.EncodingFromContentType(contentType)
 		  Content = DefineEncoding(Content, contentEncoding)
 		  
 		  If HTTPStatus > 199 and HTTPStatus < 300 then
 		    If contentType.LeftB(16) = "application/json" then
-		      
-			  outData = New OpenAPIClient.Models.Ip
-			  Try
-		        Xoson.fromJSON(outData, Content.toText())
-
-		      Catch e As JSONException
-		        error.Message = error.Message + " with JSON parse exception: " + e.Message
-		        error.ErrorNumber = kErrorInvalidJSON
-		        Return False
-		        
-		      Catch e As Xojo.Data.InvalidJSONException
-		        error.Message = error.Message + " with Xojo.Data.JSON parse exception: " + e.Message
-		        error.ErrorNumber = kErrorInvalidJSON
-		        Return False
-		        
-		      Catch e As Xoson.XosonException
-		        error.Message = error.Message + " with Xoson parse exception: " + e.Message
-		        error.ErrorNumber = kErrorXosonProblem
-		        Return False
-
-		      End Try
+		      outData = Content
 		      
 		      
 		    ElseIf contentType.LeftB(19) = "multipart/form-data" then
@@ -106,7 +86,7 @@ Protected Class DefaultApi
 		  If sender <> nil Then sender.Close()
 
 		  Dim error As New OpenAPIClient.OpenAPIClientException(Code)
-		  Dim data As OpenAPIClient.Models.Ip
+		  Dim data As String
 		  CallbackHandler.GetIpCallback(error, data)
 		End Sub
 	#tag EndMethod
@@ -120,7 +100,7 @@ Protected Class DefaultApi
 		  
 		  Dim error As New OpenAPIClient.OpenAPIClientException(HTTPStatus, "", Content)
 		  
-		  Dim data As OpenAPIClient.Models.Ip
+		  Dim data As String
 		  Call GetIpPrivateFuncDeserializeResponse(HTTPStatus, Headers, error, Content, data)
 		  
 		  CallbackHandler.GetIpCallback(error, data)

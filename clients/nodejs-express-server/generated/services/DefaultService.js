@@ -6,7 +6,7 @@ const Service = require('./Service');
 *
 * format String Response format (optional)
 * callback String JSONP callback function name (optional)
-* returns Ip
+* returns String
 * */
 const getIp = ({ format, callback }) => new Promise(
   async (resolve, reject) => {

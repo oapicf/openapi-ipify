@@ -3,10 +3,8 @@
 README.md
 api_client.ecf
 docs/DEFAULT_API.md
-docs/IP.md
 src/api/default_api.e
 src/api_client.e
-src/domain/ip.e
 src/framework/api_client_request.e
 src/framework/api_client_response.e
 src/framework/api_error.e

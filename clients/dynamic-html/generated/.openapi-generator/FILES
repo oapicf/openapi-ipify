@@ -7,7 +7,6 @@ docs/assets/js/bootstrap.js
 docs/assets/js/jquery-1.8.3.min.js
 docs/assets/js/main.js
 docs/index.html
-docs/models/Ip.html
 docs/operations/DefaultApi.html
 main.js
 package.json

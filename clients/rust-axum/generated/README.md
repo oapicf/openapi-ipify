@@ -12,7 +12,7 @@ server, you can easily generate a server stub.
 To see how to make this your own, look here: [README]((https://openapi-generator.tech))
 
 - API version: 5.2.1-pre.0
-- Build date: 2024-06-22T01:03:49.386094119Z[Etc/UTC]
+- Build date: 2024-06-23T05:17:32.962571846Z[Etc/UTC]
 - Generator version: 7.6.0
 
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)

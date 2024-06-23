@@ -1,7 +1,6 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.Ip
 
 class DefaultApi {
     String basePath = "https://api.ipify.org"
@@ -30,7 +29,7 @@ class DefaultApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    Ip.class )
+                    String.class )
 
     }
 

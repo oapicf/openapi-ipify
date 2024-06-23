@@ -14,7 +14,6 @@
 package com.prokarma.pkmst.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.prokarma.pkmst.model.Ip;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -51,7 +50,7 @@ public class DefaultApiTest {
     public void getIpTest() throws Exception {
         String format = null;
         String paramCallback = null;
-    ResponseEntity<Ip> response = api.getIp(format, paramCallback , accept);
+    ResponseEntity<String> response = api.getIp(format, paramCallback , accept);
 
         // TODO: test validations
     }

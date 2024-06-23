@@ -2,7 +2,6 @@
 
 from typing import ClassVar, Dict, List, Tuple  # noqa: F401
 
-from openapi_server.models.ip import Ip
 
 
 class BaseDefaultApi:
@@ -15,5 +14,5 @@ class BaseDefaultApi:
         self,
         format: str,
         param_callback: str,
-    ) -> Ip:
+    ) -> str:
         ...

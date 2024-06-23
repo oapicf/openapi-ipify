@@ -16,8 +16,8 @@ trait DataAccessor {
 
         /**
         * 
-        * @return A Ip
+        * @return A String
         */
-        def Default_getIp(format: Option[String], callback: Option[String]): Either[CommonError,Ip] = Left(TODO)
+        def Default_getIp(format: Option[String], callback: Option[String]): Either[CommonError,String] = Left(TODO)
 
 }

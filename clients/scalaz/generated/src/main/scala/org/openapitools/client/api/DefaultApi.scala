@@ -21,7 +21,6 @@ import scalaz.concurrent.Task
 
 import HelperCodecs._
 
-import org.openapitools.client.api.Ip
 
 object DefaultApi {
 
@@ -29,8 +28,8 @@ object DefaultApi {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def getIp(host: String, format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[Ip] = {
-    implicit val returnTypeDecoder: EntityDecoder[Ip] = jsonOf[Ip]
+  def getIp(host: String, format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[String] = {
+    implicit val returnTypeDecoder: EntityDecoder[String] = jsonOf[String]
 
     val path = "/"
 
@@ -45,7 +44,7 @@ object DefaultApi {
       uri           <- Task.fromDisjunction(Uri.fromString(host + path))
       uriWithParams =  uri.copy(query = queryParams)
       req           =  Request(method = httpMethod, uri = uriWithParams, headers = headers.put(contentType))
-      resp          <- client.expect[Ip](req)
+      resp          <- client.expect[String](req)
 
     } yield resp
   }
@@ -57,8 +56,8 @@ class HttpServiceDefaultApi(service: HttpService) {
 
   def escape(value: String): String = URLEncoder.encode(value, "utf-8").replaceAll("\\+", "%20")
 
-  def getIp(format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[Ip] = {
-    implicit val returnTypeDecoder: EntityDecoder[Ip] = jsonOf[Ip]
+  def getIp(format: String, callback: String)(implicit formatQuery: QueryParam[String], callbackQuery: QueryParam[String]): Task[String] = {
+    implicit val returnTypeDecoder: EntityDecoder[String] = jsonOf[String]
 
     val path = "/"
 
@@ -73,7 +72,7 @@ class HttpServiceDefaultApi(service: HttpService) {
       uri           <- Task.fromDisjunction(Uri.fromString(path))
       uriWithParams =  uri.copy(query = queryParams)
       req           =  Request(method = httpMethod, uri = uriWithParams, headers = headers.put(contentType))
-      resp          <- client.expect[Ip](req)
+      resp          <- client.expect[String](req)
 
     } yield resp
   }

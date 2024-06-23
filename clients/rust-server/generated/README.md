@@ -14,7 +14,7 @@ To see how to make this your own, look here:
 [README]((https://openapi-generator.tech))
 
 - API version: 5.2.1-pre.0
-- Build date: 2024-06-22T00:05:26.784646704Z[Etc/UTC]
+- Build date: 2024-06-23T05:15:54.759963327Z[Etc/UTC]
 - Generator version: 7.6.0
 
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
@@ -101,7 +101,6 @@ Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Ip](docs/Ip.md)
 
 
 ## Documentation For Authorization

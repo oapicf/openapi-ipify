@@ -78,7 +78,6 @@ Class | Method | HTTP request | Description
 
 ## Models
 
-- [Ip](docs/Model/Ip.md)
 
 ## Authorization
 Endpoints do not require authorization.

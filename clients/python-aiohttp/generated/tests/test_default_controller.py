@@ -4,7 +4,6 @@ import pytest
 import json
 from aiohttp import web
 
-from openapi_server.models.ip import Ip
 
 
 pytestmark = pytest.mark.asyncio

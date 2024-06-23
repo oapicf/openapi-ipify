@@ -9,7 +9,5 @@ OpenAPIClient/APIs.xojo_code
 OpenAPIClient/APIs/DefaultApi.xojo_code
 OpenAPIClient/APIs/DefaultApiCallbackHandler.xojo_code
 OpenAPIClient/Models.xojo_code
-OpenAPIClient/Models/Ip.xojo_code
-OpenAPIClient/Models/IpOptional.xojo_code
 OpenAPIClient/OpenAPIClientException.xojo_code
 README.md

@@ -29,13 +29,12 @@
 #include <DefaultApi.h>
 
 
-#include "Ip.h"
 #include <string>
 
 namespace org::openapitools::server::api
 {
 
-using namespace org::openapitools::server::model;
+
 
 class  DefaultApiImpl : public org::openapitools::server::api::DefaultApi {
 public:

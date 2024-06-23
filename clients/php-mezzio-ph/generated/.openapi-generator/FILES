@@ -9,7 +9,6 @@ application/container.php
 composer.json
 public/index.php
 src/App/DTO/GetIpQueryData.php
-src/App/DTO/Ip.php
 src/App/Factory.php
 src/App/Handler/DefaultApi.php
 src/App/Middleware/InternalServerError.php

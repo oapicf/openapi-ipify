@@ -113,14 +113,6 @@ arbitraryReducedMaybeValue n = do
 
 -- * Models
 
-instance Arbitrary Ip where
-  arbitrary = sized genIp
-
-genIp :: Int -> Gen Ip
-genIp n =
-  Ip
-    <$> arbitrary -- ipIp :: Text
-  
 
 
 

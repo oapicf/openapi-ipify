@@ -18,8 +18,6 @@ import { HttpClient, HttpHeaders, HttpParams,
 import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
-// @ts-ignore
-import { Ip } from '../model/ip';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -99,10 +97,10 @@ export class DefaultService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<Ip>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<Ip>>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<Ip>>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json' | 'application/javascript' | 'text/plain', context?: HttpContext, transferCache?: boolean}): Observable<any> {
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<string>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<string>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<string>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (format !== undefined && format !== null) {
@@ -120,9 +118,9 @@ export class DefaultService {
         if (localVarHttpHeaderAcceptSelected === undefined) {
             // to determine the Accept header
             const httpHeaderAccepts: string[] = [
-                'application/json',
+                'text/plain',
                 'application/javascript',
-                'text/plain'
+                'application/json'
             ];
             localVarHttpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         }
@@ -153,7 +151,7 @@ export class DefaultService {
         }
 
         let localVarPath = `/`;
-        return this.httpClient.request<Ip>('get', `${this.configuration.basePath}${localVarPath}`,
+        return this.httpClient.request<string>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,

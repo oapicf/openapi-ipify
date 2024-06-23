@@ -36,5 +36,4 @@ All URIs are relative to https://api.ipify.orghttps://api.ipify.org
 ## What are the Model files for the data structures/objects?
 |Class | Description|
 |------------- | -------------|
-|*Ip* | |
 

@@ -8,9 +8,7 @@
 #
 
 # Models
-import openapiclient/models/model_ip
 
-export model_ip
 
 # APIs
 import openapiclient/apis/api_default

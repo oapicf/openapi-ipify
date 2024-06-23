@@ -8,7 +8,6 @@ import {canConsumeForm, isCodeInRange} from '../util';
 import {SecurityAuthentication} from '../auth/auth';
 
 
-import { Ip } from '../models/Ip';
 
 /**
  * no description
@@ -63,22 +62,22 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getIp
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getIpWithHttpInfo(response: ResponseContext): Promise<HttpInfo<Ip >> {
+     public async getIpWithHttpInfo(response: ResponseContext): Promise<HttpInfo<string >> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
-            const body: Ip = ObjectSerializer.deserialize(
+            const body: string = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "Ip", ""
-            ) as Ip;
+                "string", ""
+            ) as string;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 
         // Work around for missing responses in specification, e.g. for petstore.yaml
         if (response.httpStatusCode >= 200 && response.httpStatusCode <= 299) {
-            const body: Ip = ObjectSerializer.deserialize(
+            const body: string = ObjectSerializer.deserialize(
                 ObjectSerializer.parse(await response.body.text(), contentType),
-                "Ip", ""
-            ) as Ip;
+                "string", ""
+            ) as string;
             return new HttpInfo(response.httpStatusCode, response.headers, response.body, body);
         }
 

@@ -20,5 +20,4 @@ This runs all tests and packages the library.
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
- - [org.openapitools.database.models.Ip](docs/Ip.md)
 

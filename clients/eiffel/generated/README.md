@@ -28,7 +28,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [IP](docs/IP.md)
 
 
 ## Documentation For Authorization

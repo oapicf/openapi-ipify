@@ -1,4 +1,2 @@
 module.exports = {
-    "IpSample": 
-        { data: {} },
 }

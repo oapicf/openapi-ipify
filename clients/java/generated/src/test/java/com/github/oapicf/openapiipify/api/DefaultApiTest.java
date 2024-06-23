@@ -14,7 +14,6 @@
 package com.github.oapicf.openapiipify.api;
 
 import com.github.oapicf.openapiipify.ApiException;
-import com.github.oapicf.openapiipify.model.Ip;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -40,7 +39,7 @@ public class DefaultApiTest {
     public void getIpTest() throws ApiException {
         String format = null;
         String paramCallback = null;
-        Ip response = api.getIp(format, paramCallback);
+        String response = api.getIp(format, paramCallback);
         // TODO: test validations
     }
 

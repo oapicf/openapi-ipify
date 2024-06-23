@@ -5,7 +5,6 @@
  */
 package com.prokarma.pkmst.controller;
 
-import com.prokarma.pkmst.model.Ip;
 
 import io.swagger.annotations.*;
 import org.springframework.http.ResponseEntity;
@@ -19,18 +18,18 @@ import java.util.List;
  * @author pkmst
  *
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2024-06-22T00:02:55.317674714Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2024-06-23T05:13:03.733580993Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 @Api(value = "Default", description = "the Default API")
 public interface DefaultApi {
 
-    @ApiOperation(value = "Get your public IP address", notes = "", response = Ip.class, tags={  })
+    @ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Your public IP address", response = Ip.class) })
+        @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/",
-        produces = { "application/json", "application/javascript", "text/plain" }
+        produces = { "text/plain", "application/javascript", "application/json" }
     )
-    ResponseEntity<Ip> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp")  @RequestParam(value = "format", required = false) String format,@ApiParam(value = "JSONP callback function name")  @RequestParam(value = "callback", required = false) String paramCallback, @RequestHeader(value = "Accept", required = false) String accept) throws Exception;
+    ResponseEntity<String> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp")  @RequestParam(value = "format", required = false) String format,@ApiParam(value = "JSONP callback function name")  @RequestParam(value = "callback", required = false) String paramCallback, @RequestHeader(value = "Accept", required = false) String accept) throws Exception;
 
 }

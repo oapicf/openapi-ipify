@@ -6,11 +6,11 @@
 
 %% @doc Get your public IP address
 %% 
--spec get_ip(ctx:ctx()) -> {ok, openapi_ip:openapi_ip(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec get_ip(ctx:ctx()) -> {ok, binary(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 get_ip(Ctx) ->
     get_ip(Ctx, #{}).
 
--spec get_ip(ctx:ctx(), maps:map()) -> {ok, openapi_ip:openapi_ip(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+-spec get_ip(ctx:ctx(), maps:map()) -> {ok, binary(), openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 get_ip(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(openapi_api, config, #{})),

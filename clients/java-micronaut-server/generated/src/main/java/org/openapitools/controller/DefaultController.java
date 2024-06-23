@@ -20,7 +20,6 @@ import io.micronaut.security.rules.SecurityRule;
 import reactor.core.publisher.Mono;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
-import org.openapitools.model.Ip;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,7 +36,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2024-06-22T00:02:47.639569056Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2024-06-23T05:12:55.604252513Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 @Controller
 @Tag(name = "Default", description = "The Default API")
 public class DefaultController {
@@ -46,16 +45,16 @@ public class DefaultController {
      *
      * @param _format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return Ip
+     * @return String
      */
     @Operation(
         operationId = "getIp",
         summary = "Get your public IP address",
         responses = {
             @ApiResponse(responseCode = "200", description = "Your public IP address", content = {
-                @Content(mediaType = "application/json", schema = @Schema(implementation = Ip.class)),
-                @Content(mediaType = "application/javascript", schema = @Schema(implementation = Ip.class)),
-                @Content(mediaType = "text/plain", schema = @Schema(implementation = Ip.class))
+                @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "application/javascript", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))
             })
         },
         parameters = {
@@ -64,9 +63,9 @@ public class DefaultController {
         }
     )
     @Get(uri="/")
-    @Produces(value = {"application/json", "application/javascript", "text/plain"})
+    @Produces(value = {"text/plain", "application/javascript", "application/json"})
     @Secured({SecurityRule.IS_ANONYMOUS})
-    public Mono<Ip> getIp(
+    public Mono<String> getIp(
         @QueryValue(value="format") @Nullable String _format, 
         @QueryValue(value="callback") @Nullable String paramCallback
     ) {

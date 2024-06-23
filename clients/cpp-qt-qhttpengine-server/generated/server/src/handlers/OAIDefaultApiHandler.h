@@ -15,7 +15,6 @@
 
 #include <QObject>
 
-#include "OAIIp.h"
 #include <QString>
 
 namespace OpenAPI {

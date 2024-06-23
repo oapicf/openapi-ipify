@@ -16,14 +16,12 @@ import org.openapitools.client.ApiInvoker;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.Pair;
 
-import org.openapitools.client.model.*;
 
 import java.util.*;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
-import org.openapitools.client.model.Ip;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -60,9 +58,9 @@ public class DefaultApi {
   * 
    * @param format Response format
    * @param callback JSONP callback function name
-   * @return Ip
+   * @return String
   */
-  public Ip getIp (String format, String callback) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public String getIp (String format, String callback) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -94,7 +92,7 @@ public class DefaultApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (Ip) ApiInvoker.deserialize(localVarResponse, "", Ip.class);
+         return (String) ApiInvoker.deserialize(localVarResponse, "", String.class);
       } else {
          return null;
       }
@@ -120,7 +118,7 @@ public class DefaultApi {
    * 
    * @param format Response format   * @param callback JSONP callback function name
   */
-  public void getIp (String format, String callback, final Response.Listener<Ip> responseListener, final Response.ErrorListener errorListener) {
+  public void getIp (String format, String callback, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -162,7 +160,7 @@ public class DefaultApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((Ip) ApiInvoker.deserialize(localVarResponse,  "", Ip.class));
+              responseListener.onResponse((String) ApiInvoker.deserialize(localVarResponse,  "", String.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

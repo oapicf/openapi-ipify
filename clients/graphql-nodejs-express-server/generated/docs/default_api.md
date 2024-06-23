@@ -9,6 +9,6 @@ Method | HTTP request | Description
 
 <a name="GetIp"></a>
 # **GetIp**
-> Ip GetIp(format, callback)
+> String! GetIp(format, callback)
 
 Get your public IP address

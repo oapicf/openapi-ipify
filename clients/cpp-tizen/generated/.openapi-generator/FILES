@@ -8,8 +8,6 @@ src/Error.cpp
 src/Error.h
 src/Helpers.cpp
 src/Helpers.h
-src/Ip.cpp
-src/Ip.h
 src/NetClient.cpp
 src/NetClient.h
 src/Object.h

@@ -32,7 +32,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Ip](docs/Ip.md)
 
 
 To get access to the crate's generated documentation, use:

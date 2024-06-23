@@ -10,7 +10,7 @@ All URIs are relative to https://api.ipify.org, except if the operation defines 
 ## `getIp()`
 
 ```php
-getIp($format, $callback): \OpenAPI\Client\Model\Ip
+getIp($format, $callback): string
 ```
 
 Get your public IP address
@@ -48,7 +48,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Ip**](../Model/Ip.md)
+**string**
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`, `application/javascript`, `text/plain`
+- **Accept**: `text/plain`, `application/javascript`, `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

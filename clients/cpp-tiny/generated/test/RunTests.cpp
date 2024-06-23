@@ -1,6 +1,4 @@
 
-#include "IpTest.cpp"
-
 
 
 void setUp(){}
@@ -9,15 +7,7 @@ void tearDown(){}
 
 void runTests(){
     
-    
-    RUN_TEST(test_Ip_ip_is_assigned_from_json);
-    
-    
 
-    
-    
-    RUN_TEST(test_Ip_ip_is_converted_to_json);
-    
     
 
 

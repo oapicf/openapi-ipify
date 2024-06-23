@@ -15,9 +15,6 @@ import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
-import type {
-    Ip,
-} from '../models';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;
@@ -32,16 +29,16 @@ export class DefaultApi extends BaseAPI {
     /**
      * Get your public IP address
      */
-    getIp({ format, callback }: GetIpRequest): Observable<Ip>
-    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<AjaxResponse<Ip>>
-    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<Ip | AjaxResponse<Ip>> {
+    getIp({ format, callback }: GetIpRequest): Observable<string>
+    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<AjaxResponse<string>>
+    getIp({ format, callback }: GetIpRequest, opts?: OperationOpts): Observable<string | AjaxResponse<string>> {
 
         const query: HttpQuery = {};
 
         if (format != null) { query['format'] = format; }
         if (callback != null) { query['callback'] = callback; }
 
-        return this.request<Ip>({
+        return this.request<string>({
             url: '/',
             method: 'GET',
             query,

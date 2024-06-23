@@ -15,4 +15,3 @@
 
 
 # import models into model package
-from openapiipify.models.ip import Ip

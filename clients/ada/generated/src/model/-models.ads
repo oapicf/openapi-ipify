@@ -14,29 +14,4 @@ package .Models is
    pragma Style_Checks ("-bmrIu");
 
 
-
-   type Ip_Type is
-     record
-       Ip : Swagger.UString;
-     end record;
-
-
-   package Ip_Type_Vectors is
-      new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => .Models.Ip_Type);
-
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in .Models.Ip_Type);
-   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
-                        Name  : in String;
-                        Value : in Ip_Type_Vectors.Vector);
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : out .Models.Ip_Type);
-   procedure Deserialize (From  : in Swagger.Value_Type;
-                          Name  : in String;
-                          Value : in out Ip_Type_Vectors.Vector);
-
-
 end .Models;

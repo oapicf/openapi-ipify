@@ -17,7 +17,6 @@ import io.micronaut.core.annotation.*;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
-import org.openapitools.model.Ip;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +25,7 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2024-06-22T00:02:43.790599706Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2024-06-23T05:12:52.383304582Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 @Client("${openapi-micronaut-client-base-path}")
 public interface DefaultApi {
     /**
@@ -34,11 +33,11 @@ public interface DefaultApi {
      *
      * @param _format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return Ip
+     * @return String
      */
     @Get(uri="/")
-    @Consumes({"application/json", "application/javascript", "text/plain"})
-    Mono<Ip> getIp(
+    @Consumes({"text/plain", "application/javascript", "application/json"})
+    Mono<String> getIp(
         @QueryValue(value="format") @Nullable String _format, 
         @QueryValue(value="callback") @Nullable String paramCallback
     );

@@ -1,6 +1,5 @@
 package controllers;
 
-import apimodels.Ip;
 
 import play.mvc.Http;
 import java.util.List;
@@ -11,12 +10,12 @@ import java.io.FileInputStream;
 import play.libs.Files.TemporaryFile;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2024-06-22T00:02:58.878568743Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2024-06-23T05:13:07.003812967Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
-    public Ip getIp(Http.Request request, String format, String paramCallback) throws Exception {
+    public String getIp(Http.Request request, String format, String paramCallback) throws Exception {
         //Do your magic!!!
-        return new Ip();
+        return new String();
     }
 
 }

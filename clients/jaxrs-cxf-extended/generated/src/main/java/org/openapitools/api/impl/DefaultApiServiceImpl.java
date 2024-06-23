@@ -1,7 +1,6 @@
 package org.openapitools.api.impl;
 
 import org.openapitools.api.*;
-import org.openapitools.model.Ip;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -28,7 +27,7 @@ public class DefaultApiServiceImpl implements DefaultApi {
      *
      */
     @Override
-    public Ip getIp(String format, String paramCallback) {
+    public String getIp(String format, String paramCallback) {
         // TODO: Implement...
         return null;
     }

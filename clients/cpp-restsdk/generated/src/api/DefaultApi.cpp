@@ -36,7 +36,7 @@ DefaultApi::~DefaultApi()
 {
 }
 
-pplx::task<std::shared_ptr<Ip>> DefaultApi::getIp(boost::optional<utility::string_t> format, boost::optional<utility::string_t> callback) const
+pplx::task<utility::string_t> DefaultApi::getIp(boost::optional<utility::string_t> format, boost::optional<utility::string_t> callback) const
 {
 
 
@@ -49,16 +49,16 @@ pplx::task<std::shared_ptr<Ip>> DefaultApi::getIp(boost::optional<utility::strin
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
-    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
-    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/javascript") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/javascript") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
     // use JSON if possible
     if ( localVarResponseHttpContentTypes.size() == 0 )
     {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+        localVarResponseHttpContentType = utility::conversions::to_string_t("text/plain");
     }
     // JSON
     else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
@@ -69,6 +69,11 @@ pplx::task<std::shared_ptr<Ip>> DefaultApi::getIp(boost::optional<utility::strin
     else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
     {
         localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    // plain text
+    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("text/plain")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("text/plain");
     }
     else
     {
@@ -147,13 +152,17 @@ pplx::task<std::shared_ptr<Ip>> DefaultApi::getIp(boost::optional<utility::strin
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::shared_ptr<Ip> localVarResult(new Ip());
+        utility::string_t localVarResult(utility::conversions::to_string_t(""));
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
 
             ModelBase::fromJson(localVarJson, localVarResult);
+        }
+        else if(localVarResponseHttpContentType == utility::conversions::to_string_t("text/plain"))
+        {
+            localVarResult = localVarResponse;
         }
         // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
         // {

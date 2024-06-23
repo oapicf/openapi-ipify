@@ -15,7 +15,6 @@ include/CppRestOpenAPIClient/ModelBase.h
 include/CppRestOpenAPIClient/MultipartFormData.h
 include/CppRestOpenAPIClient/Object.h
 include/CppRestOpenAPIClient/api/DefaultApi.h
-include/CppRestOpenAPIClient/model/Ip.h
 src/AnyType.cpp
 src/ApiClient.cpp
 src/ApiConfiguration.cpp
@@ -26,4 +25,3 @@ src/ModelBase.cpp
 src/MultipartFormData.cpp
 src/Object.cpp
 src/api/DefaultApi.cpp
-src/model/Ip.cpp

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getIp
 
-> getIp(getIpRequest): ApiRequest[Ip]
+> getIp(getIpRequest): ApiRequest[String]
 
 Get your public IP address
 
@@ -19,7 +19,6 @@ Get your public IP address
 
 ```scala
 // Import classes:
-import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -72,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Ip**](Ip.md)]
+ApiRequest[**String**]
 
 
 ### Authorization
@@ -82,7 +81,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+- **Accept**: text/plain, application/javascript, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

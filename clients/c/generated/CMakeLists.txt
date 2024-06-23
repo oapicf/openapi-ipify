@@ -54,7 +54,6 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/ip.c
     api/DefaultAPI.c
 
 )
@@ -66,7 +65,6 @@ set(HDRS
     include/keyValuePair.h
     external/cJSON.h
     model/object.h
-    model/ip.h
     api/DefaultAPI.h
 
 )

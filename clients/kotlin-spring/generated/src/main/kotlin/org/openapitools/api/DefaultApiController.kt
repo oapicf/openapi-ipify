@@ -1,6 +1,5 @@
 package org.openapitools.api
 
-import org.openapitools.model.Ip
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.enums.*
 import io.swagger.v3.oas.annotations.media.*
@@ -38,14 +37,14 @@ class DefaultApiController() {
         operationId = "getIp",
         description = """""",
         responses = [
-            ApiResponse(responseCode = "200", description = "Your public IP address", content = [Content(schema = Schema(implementation = Ip::class))]) ]
+            ApiResponse(responseCode = "200", description = "Your public IP address", content = [Content(schema = Schema(implementation = kotlin.String::class))]) ]
     )
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/"],
-        produces = ["application/json", "application/javascript", "text/plain"]
+        produces = ["text/plain", "application/javascript", "application/json"]
     )
-    fun getIp(@Parameter(description = "Response format", schema = Schema(allowableValues = ["json", "jsonp"])) @Valid @RequestParam(value = "format", required = false) format: kotlin.String?,@Parameter(description = "JSONP callback function name") @Valid @RequestParam(value = "callback", required = false) paramCallback: kotlin.String?): ResponseEntity<Ip> {
+    fun getIp(@Parameter(description = "Response format", schema = Schema(allowableValues = ["json", "jsonp"])) @Valid @RequestParam(value = "format", required = false) format: kotlin.String?,@Parameter(description = "JSONP callback function name") @Valid @RequestParam(value = "callback", required = false) paramCallback: kotlin.String?): ResponseEntity<kotlin.String> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 }

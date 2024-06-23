@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ```objc
 -(NSURLSessionTask*) getIpWithFormat: (NSString*) format
     callback: (NSString*) callback
-        completionHandler: (void (^)(OAIIp* output, NSError* error)) handler;
+        completionHandler: (void (^)(NSString* output, NSError* error)) handler;
 ```
 
 Get your public IP address
@@ -27,7 +27,7 @@ OAIDefaultApi*apiInstance = [[OAIDefaultApi alloc] init];
 // Get your public IP address
 [apiInstance getIpWithFormat:format
               callback:callback
-          completionHandler: ^(OAIIp* output, NSError* error) {
+          completionHandler: ^(NSString* output, NSError* error) {
                         if (output) {
                             NSLog(@"%@", output);
                         }
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OAIIp***](OAIIp.md)
+**NSString***
 
 ### Authorization
 
@@ -55,7 +55,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

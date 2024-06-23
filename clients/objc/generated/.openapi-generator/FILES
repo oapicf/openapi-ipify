@@ -25,9 +25,6 @@ OpenAPIClient/Core/OAIResponseDeserializer.h
 OpenAPIClient/Core/OAIResponseDeserializer.m
 OpenAPIClient/Core/OAISanitizer.h
 OpenAPIClient/Core/OAISanitizer.m
-OpenAPIClient/Model/OAIIp.h
-OpenAPIClient/Model/OAIIp.m
 README.md
 docs/OAIDefaultApi.md
-docs/OAIIp.md
 git_push.sh

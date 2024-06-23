@@ -3,7 +3,6 @@
 apis/DefaultApi.ts
 apis/index.ts
 index.ts
-models/Ip.ts
 models/index.ts
 runtime.ts
 servers.ts

@@ -120,7 +120,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Ip](docs/Ip.md)
 
 
 <a id="documentation-for-authorization"></a>

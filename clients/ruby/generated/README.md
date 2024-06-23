@@ -85,7 +85,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [OpenApiIpifyClient::Ip](docs/Ip.md)
 
 
 ## Documentation for Authorization

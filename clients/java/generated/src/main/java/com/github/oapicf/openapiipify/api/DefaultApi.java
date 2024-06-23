@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.github.oapicf.openapiipify.model.Ip;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -119,9 +118,9 @@ public class DefaultApi {
         }
 
         final String[] localVarAccepts = {
-            "application/json",
+            "text/plain",
             "application/javascript",
-            "text/plain"
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -150,7 +149,7 @@ public class DefaultApi {
      * 
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return Ip
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -158,8 +157,8 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public Ip getIp(String format, String paramCallback) throws ApiException {
-        ApiResponse<Ip> localVarResp = getIpWithHttpInfo(format, paramCallback);
+    public String getIp(String format, String paramCallback) throws ApiException {
+        ApiResponse<String> localVarResp = getIpWithHttpInfo(format, paramCallback);
         return localVarResp.getData();
     }
 
@@ -168,7 +167,7 @@ public class DefaultApi {
      * 
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return ApiResponse&lt;Ip&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -176,9 +175,9 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Ip> getIpWithHttpInfo(String format, String paramCallback) throws ApiException {
+    public ApiResponse<String> getIpWithHttpInfo(String format, String paramCallback) throws ApiException {
         okhttp3.Call localVarCall = getIpValidateBeforeCall(format, paramCallback, null);
-        Type localVarReturnType = new TypeToken<Ip>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -196,10 +195,10 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIpAsync(String format, String paramCallback, final ApiCallback<Ip> _callback) throws ApiException {
+    public okhttp3.Call getIpAsync(String format, String paramCallback, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIpValidateBeforeCall(format, paramCallback, _callback);
-        Type localVarReturnType = new TypeToken<Ip>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -8,4 +8,3 @@ src/gatling/resources/conf/logback.xml
 src/gatling/resources/conf/longevity.conf
 src/gatling/resources/conf/stress.conf
 src/gatling/scala/org/openapitools/client/api/DefaultApiSimulation.scala
-src/gatling/scala/org/openapitools/client/model/Ip.scala

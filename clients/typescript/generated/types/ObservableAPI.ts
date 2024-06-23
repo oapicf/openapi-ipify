@@ -2,7 +2,6 @@ import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/htt
 import { Configuration} from '../configuration'
 import { Observable, of, from } from '../rxjsStub';
 import {mergeMap, map} from  '../rxjsStub';
-import { Ip } from '../models/Ip';
 
 import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
 export class ObservableDefaultApi {
@@ -25,7 +24,7 @@ export class ObservableDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIpWithHttpInfo(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<HttpInfo<Ip>> {
+    public getIpWithHttpInfo(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<HttpInfo<string>> {
         const requestContextPromise = this.requestFactory.getIp(format, callback, _options);
 
         // build promise chain
@@ -49,8 +48,8 @@ export class ObservableDefaultApi {
      * @param format Response format
      * @param callback JSONP callback function name
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<Ip> {
-        return this.getIpWithHttpInfo(format, callback, _options).pipe(map((apiResponse: HttpInfo<Ip>) => apiResponse.data));
+    public getIp(format?: 'json' | 'jsonp', callback?: string, _options?: Configuration): Observable<string> {
+        return this.getIpWithHttpInfo(format, callback, _options).pipe(map((apiResponse: HttpInfo<string>) => apiResponse.data));
     }
 
 }

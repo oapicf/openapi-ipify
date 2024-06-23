@@ -6,4 +6,3 @@ src/main/scala/org/openapitools/client/api/DefaultApi.scala
 src/main/scala/org/openapitools/client/core/AdditionalTypeSerializers.scala
 src/main/scala/org/openapitools/client/core/DateSerializers.scala
 src/main/scala/org/openapitools/client/core/JsonSupport.scala
-src/main/scala/org/openapitools/client/model/Ip.scala

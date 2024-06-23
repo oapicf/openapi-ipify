@@ -3,7 +3,6 @@ package org.openapitools.apis
 import java.io._
 import org.openapitools._
 import org.openapitools.models._
-import org.openapitools.models.Ip
 import io.finch.circe._
 import io.circe.generic.semiauto._
 import com.twitter.concurrent.AsyncStream
@@ -49,9 +48,9 @@ object DefaultApi {
 
         /**
         * 
-        * @return An endpoint representing a Ip
+        * @return An endpoint representing a String
         */
-        private def getIp(da: DataAccessor): Endpoint[Ip] =
+        private def getIp(da: DataAccessor): Endpoint[String] =
         get("" :: paramOption("format") :: paramOption("callback")) { (format: Option[String], callback: Option[String]) =>
           da.Default_getIp(format, callback) match {
             case Left(error) => checkError(error)

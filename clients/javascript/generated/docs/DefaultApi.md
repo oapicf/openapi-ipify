@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getIp
 
-> Ip getIp(opts)
+> String getIp(opts)
 
 Get your public IP address
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ip**](Ip.md)
+**String**
 
 ### Authorization
 
@@ -52,5 +52,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+- **Accept**: text/plain, application/javascript, application/json
 

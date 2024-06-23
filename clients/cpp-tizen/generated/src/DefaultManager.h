@@ -5,7 +5,6 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "Ip.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -35,7 +34,7 @@ public:
  */
 bool getIpSync(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(Ip, Error, void* )
+	void(* handler)(std::string, Error, void* )
 	, void* userData);
 
 /*! \brief Get your public IP address. *Asynchronous*
@@ -49,7 +48,7 @@ bool getIpSync(char * accessToken,
  */
 bool getIpAsync(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(Ip, Error, void* )
+	void(* handler)(std::string, Error, void* )
 	, void* userData);
 
 

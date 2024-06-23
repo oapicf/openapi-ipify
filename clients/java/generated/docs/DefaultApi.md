@@ -9,7 +9,7 @@ All URIs are relative to *https://api.ipify.org*
 
 <a id="getIp"></a>
 # **getIp**
-> Ip getIp(format, paramCallback)
+> String getIp(format, paramCallback)
 
 Get your public IP address
 
@@ -31,7 +31,7 @@ public class Example {
     String format = "json"; // String | Response format
     String paramCallback = "paramCallback_example"; // String | JSONP callback function name
     try {
-      Ip result = apiInstance.getIp(format, paramCallback);
+      String result = apiInstance.getIp(format, paramCallback);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#getIp");
@@ -53,7 +53,7 @@ public class Example {
 
 ### Return type
 
-[**Ip**](Ip.md)
+**String**
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

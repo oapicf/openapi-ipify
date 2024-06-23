@@ -11,8 +11,6 @@ client/OAIHttpFileElement.cpp
 client/OAIHttpFileElement.h
 client/OAIHttpRequest.cpp
 client/OAIHttpRequest.h
-client/OAIIp.cpp
-client/OAIIp.h
 client/OAIOauth.cpp
 client/OAIOauth.h
 client/OAIObject.h

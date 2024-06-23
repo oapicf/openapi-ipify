@@ -4,6 +4,5 @@ api/api.ts
 configuration.ts
 git_push.sh
 index.ts
-model/Ip.ts
 model/models.ts
 variables.ts

@@ -24,7 +24,7 @@ inherit
 feature -- API Access
 
 
-	ip (format: STRING_32; callback: STRING_32): detachable IP
+	ip (format: STRING_32; callback: STRING_32): detachable STRING_32
 			-- Get your public IP address
 			-- 
 			-- 
@@ -33,7 +33,7 @@ feature -- API Access
 			-- argument: callback JSONP callback function name (optional, default to null)
 			-- 
 			-- 
-			-- Result IP
+			-- Result STRING_32
 		require
 		local
   			l_path: STRING
@@ -48,7 +48,7 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "callback", callback));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"application/json", "application/javascript", "text/plain">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/javascript", "application/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
@@ -56,7 +56,7 @@ feature -- API Access
 			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
-			elseif attached { IP } l_response.data ({ IP }) as l_data then
+			elseif attached { STRING_32 } l_response.data ({ STRING_32 }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")

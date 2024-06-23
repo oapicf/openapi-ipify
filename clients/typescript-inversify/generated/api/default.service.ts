@@ -20,7 +20,6 @@ import { IAPIConfiguration } from '../IAPIConfiguration';
 import { Headers } from '../Headers';
 import HttpResponse from '../HttpResponse';
 
-import { Ip } from '../model/ip';
 
 import { COLLECTION_FORMATS }  from '../variables';
 
@@ -43,8 +42,8 @@ export class DefaultService {
      * @param callback JSONP callback function name
      
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', headers?: Headers): Observable<Ip>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', headers?: Headers): Observable<HttpResponse<Ip>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', headers?: Headers): Observable<string>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', headers?: Headers): Observable<HttpResponse<string>>;
     public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', headers: Headers = {}): Observable<any> {
         let queryParameters: string[] = [];
         if (format !== undefined) {
@@ -54,12 +53,12 @@ export class DefaultService {
             queryParameters.push('callback='+encodeURIComponent(String(callback)));
         }
 
-        headers['Accept'] = 'application/json, application/javascript, text/plain';
+        headers['Accept'] = 'text/plain, application/javascript, application/json';
 
-        const response: Observable<HttpResponse<Ip>> = this.httpClient.get(`${this.basePath}/?${queryParameters.join('&')}`, headers);
+        const response: Observable<HttpResponse<string>> = this.httpClient.get(`${this.basePath}/?${queryParameters.join('&')}`, headers);
         if (observe === 'body') {
                return response.pipe(
-                   map((httpResponse: HttpResponse) => <Ip>(httpResponse.response))
+                   map((httpResponse: HttpResponse) => <string>(httpResponse.response))
                );
         }
         return response;

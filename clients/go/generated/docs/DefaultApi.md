@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetIp
 
-> Ip GetIp(ctx).Format(format).Callback(callback).Execute()
+> string GetIp(ctx).Format(format).Callback(callback).Execute()
 
 Get your public IP address
 
@@ -37,7 +37,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.GetIp``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetIp`: Ip
+	// response from `GetIp`: string
 	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.GetIp`: %v\n", resp)
 }
 ```
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ip**](Ip.md)
+**string**
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/javascript, text/plain
+- **Accept**: text/plain, application/javascript, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

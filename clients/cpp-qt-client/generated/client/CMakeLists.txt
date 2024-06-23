@@ -11,7 +11,6 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
 add_library(${PROJECT_NAME}
-  OAIIp.h
   OAIDefaultApi.h
   OAIHelpers.h
   OAIHttpRequest.h
@@ -21,7 +20,6 @@ add_library(${PROJECT_NAME}
   OAIServerConfiguration.h
   OAIServerVariable.h
   OAIOauth.h
-  OAIIp.cpp
   OAIDefaultApi.cpp
   OAIHelpers.cpp
   OAIHttpRequest.cpp

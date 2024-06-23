@@ -11,7 +11,6 @@
  */
 package org.openapitools.client.api
 
-import org.openapitools.client.model.Ip
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -25,16 +24,16 @@ class DefaultApi(baseUrl: String) {
 
   /**
    * Expected answers:
-   *   code 200 : Ip (Your public IP address)
+   *   code 200 : String (Your public IP address)
    * 
    * @param format Response format
    * @param callback JSONP callback function name
    */
-  def getIp(format: Option[String] = None, callback: Option[String] = None): ApiRequest[Ip] =
-    ApiRequest[Ip](ApiMethods.GET, baseUrl, "/", "application/json")
+  def getIp(format: Option[String] = None, callback: Option[String] = None): ApiRequest[String] =
+    ApiRequest[String](ApiMethods.GET, baseUrl, "/", "application/json")
       .withQueryParam("format", format)
       .withQueryParam("callback", callback)
-      .withSuccessResponse[Ip](200)
+      .withSuccessResponse[String](200)
       
 
 

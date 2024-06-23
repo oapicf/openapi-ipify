@@ -2,7 +2,6 @@
 LICENSE
 README
 app/Module.java
-app/apimodels/Ip.java
 app/controllers/ApiDocController.java
 app/controllers/DefaultApiController.java
 app/controllers/DefaultApiControllerImp.java

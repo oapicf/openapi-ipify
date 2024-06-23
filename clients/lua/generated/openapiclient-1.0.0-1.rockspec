@@ -24,6 +24,5 @@ build = {
 	type = "builtin",
 	modules = {
 		["openapiclient.api.default_api"] = "openapiclient/api/default_api.lua";
-		["openapiclient.model.ip"] = "openapiclient/model/ip.lua";
 	}
 }

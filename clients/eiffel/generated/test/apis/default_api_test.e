@@ -18,7 +18,7 @@ feature -- Test routines
             --
             -- 
         local
-            l_response: IP
+            l_response: STRING_32
             l_format: STRING_32
             l_callback: STRING_32
         do

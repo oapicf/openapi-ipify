@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -33,9 +32,9 @@ public interface DefaultApi  {
      */
     @GET
     
-    @Produces({ "application/json", "application/javascript", "text/plain" })
+    @Produces({ "text/plain", "application/javascript", "application/json" })
     @ApiOperation(value = "Get your public IP address", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Your public IP address", response = Ip.class) })
-    public Ip getIp(@QueryParam("format") String format, @QueryParam("callback") String paramCallback);
+        @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })
+    public String getIp(@QueryParam("format") String format, @QueryParam("callback") String paramCallback);
 }

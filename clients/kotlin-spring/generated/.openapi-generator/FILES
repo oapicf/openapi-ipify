@@ -9,7 +9,6 @@ src/main/kotlin/org/openapitools/SpringDocConfiguration.kt
 src/main/kotlin/org/openapitools/api/ApiUtil.kt
 src/main/kotlin/org/openapitools/api/DefaultApiController.kt
 src/main/kotlin/org/openapitools/api/Exceptions.kt
-src/main/kotlin/org/openapitools/model/Ip.kt
 src/main/resources/application.yaml
 src/main/resources/openapi.yaml
 src/test/kotlin/org/openapitools/api/DefaultApiTest.kt

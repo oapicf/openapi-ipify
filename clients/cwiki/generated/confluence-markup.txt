@@ -22,7 +22,7 @@ h3. getIp
     || Protocol | {noformat:nopanel=true}https{noformat} |
     || Path | {noformat:nopanel=true}/{noformat} |
     || Base Path | {noformat:nopanel=true}https://api.ipify.org{noformat} |
-    || Produces | {noformat:nopanel=true}application/json application/javascript text/plain {noformat} |
+    || Produces | {noformat:nopanel=true}text/plain application/javascript application/json {noformat} |
 ----
 h4. Parameters
 
@@ -36,14 +36,14 @@ h4. Responses
 
     	|| Status Code | {status:colour=Green|title=200|subtle=false} |
     	|| Message | Your public IP address |
-    	|| Response Type | Ip |
-    	|| Response Model | [Ip Model|#IpModelAnchor|Jump to model] |
+    	|| Response Type | String |
+    	|| Response Model | [String Model|#StringModelAnchor|Jump to model] |
     	|| Response Schema | {code:collapse=true}{
   "description" : "Your public IP address",
   "content" : {
-    "application/json" : {
+    "text/plain" : {
       "schema" : {
-        "$ref" : "#/components/schemas/Ip"
+        "type" : "string"
       }
     },
     "application/javascript" : {
@@ -51,7 +51,7 @@ h4. Responses
         "type" : "string"
       }
     },
-    "text/plain" : {
+    "application/json" : {
       "schema" : {
         "type" : "string"
       }
@@ -66,12 +66,3 @@ h4. Responses
 {anchor:models}
 h2. Models
 
-        {anchor:IpModelAnchor}
-        h3. Ip
-
-        
-
-        
-        ||Field Name||Required||Type||Description||Enum||Example||
-         |ip |(/) |{noformat:nopanel=true}String{noformat} |  |  | null
-         

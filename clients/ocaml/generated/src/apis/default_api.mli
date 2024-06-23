@@ -5,4 +5,4 @@
  *
  *)
 
-val get_ip : ?format:Enums.format -> ?callback:string -> unit -> Ip.t Lwt.t
+val get_ip : ?format:Enums.format -> ?callback:string -> unit -> string Lwt.t

@@ -11,7 +11,6 @@
  */
 package org.openapitools.client.api
 
-import org.openapitools.client.model.Ip
 import org.openapitools.client.core.JsonSupport._
 import sttp.client3._
 import sttp.model.Method
@@ -24,16 +23,16 @@ class DefaultApi(baseUrl: String) {
 
   /**
    * Expected answers:
-   *   code 200 : Ip (Your public IP address)
+   *   code 200 : String (Your public IP address)
    * 
    * @param format Response format
    * @param callback JSONP callback function name
    */
   def getIp(format: Option[String] = None, callback: Option[String] = None
-): Request[Either[ResponseException[String, Exception], Ip], Any] =
+): Request[Either[ResponseException[String, Exception], String], Any] =
     basicRequest
       .method(Method.GET, uri"$baseUrl/?format=${ format }&callback=${ callback }")
       .contentType("application/json")
-      .response(asJson[Ip])
+      .response(asJson[String])
 
 }

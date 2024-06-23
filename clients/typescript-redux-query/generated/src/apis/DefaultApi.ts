@@ -14,11 +14,6 @@
 
 import { HttpMethods, QueryConfig, ResponseBody, ResponseText } from 'redux-query';
 import * as runtime from '../runtime';
-import {
-    Ip,
-    IpFromJSON,
-    IpToJSON,
-} from '../models';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;
@@ -29,7 +24,7 @@ export interface GetIpRequest {
 /**
  * Get your public IP address
  */
-function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.TypedQueryConfig<T, Ip> = {}): QueryConfig<T> {
+function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.TypedQueryConfig<T, string> = {}): QueryConfig<T> {
     let queryParameters = null;
 
     queryParameters = {};
@@ -66,7 +61,7 @@ function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.Typ
 
     const { transform: requestTransform } = requestConfig;
     if (requestTransform) {
-        config.transform = (body: ResponseBody, text: ResponseBody) => requestTransform(IpFromJSON(body), text);
+        throw "OH NO";
     }
 
     return config;
@@ -75,7 +70,7 @@ function getIpRaw<T>(requestParameters: GetIpRequest, requestConfig: runtime.Typ
 /**
 * Get your public IP address
 */
-export function getIp<T>(requestParameters: GetIpRequest, requestConfig?: runtime.TypedQueryConfig<T, Ip>): QueryConfig<T> {
+export function getIp<T>(requestParameters: GetIpRequest, requestConfig?: runtime.TypedQueryConfig<T, string>): QueryConfig<T> {
     return getIpRaw(requestParameters, requestConfig);
 }
 

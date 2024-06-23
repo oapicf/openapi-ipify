@@ -13,7 +13,6 @@
 
 
 import ApiClient from './ApiClient';
-import Ip from './model/Ip';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -54,12 +53,6 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
-
-    /**
-     * The Ip model constructor.
-     * @property {module:model/Ip}
-     */
-    Ip,
 
     /**
     * The DefaultApi service constructor.

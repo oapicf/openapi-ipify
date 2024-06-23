@@ -42,7 +42,7 @@ func (r ApiGetIpRequest) Callback(callback string) ApiGetIpRequest {
 	return r
 }
 
-func (r ApiGetIpRequest) Execute() (*Ip, *http.Response, error) {
+func (r ApiGetIpRequest) Execute() (string, *http.Response, error) {
 	return r.ApiService.GetIpExecute(r)
 }
 
@@ -60,13 +60,13 @@ func (a *DefaultAPIService) GetIp(ctx context.Context) ApiGetIpRequest {
 }
 
 // Execute executes the request
-//  @return Ip
-func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response, error) {
+//  @return string
+func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (string, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *Ip
+		localVarReturnValue  string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultAPIService.GetIp")
@@ -96,7 +96,7 @@ func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (*Ip, *http.Response
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/javascript", "text/plain"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/javascript", "application/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

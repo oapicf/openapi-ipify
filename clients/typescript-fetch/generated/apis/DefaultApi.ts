@@ -14,13 +14,6 @@
 
 
 import * as runtime from '../runtime';
-import type {
-  Ip,
-} from '../models/index';
-import {
-    IpFromJSON,
-    IpToJSON,
-} from '../models/index';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;
@@ -35,7 +28,7 @@ export class DefaultApi extends runtime.BaseAPI {
     /**
      * Get your public IP address
      */
-    async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Ip>> {
+    async getIpRaw(requestParameters: GetIpRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<string>> {
         const queryParameters: any = {};
 
         if (requestParameters['format'] != null) {
@@ -55,13 +48,17 @@ export class DefaultApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => IpFromJSON(jsonValue));
+        if (this.isJsonMime(response.headers.get('content-type'))) {
+            return new runtime.JSONApiResponse<string>(response);
+        } else {
+            return new runtime.TextApiResponse(response) as any;
+        }
     }
 
     /**
      * Get your public IP address
      */
-    async getIp(requestParameters: GetIpRequest = {}, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Ip> {
+    async getIp(requestParameters: GetIpRequest = {}, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<string> {
         const response = await this.getIpRaw(requestParameters, initOverrides);
         return await response.value();
     }

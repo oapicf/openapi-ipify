@@ -1,5 +1,4 @@
 namespace OpenAPI
-open OpenAPI.Model.Ip
 open DefaultApiHandlerParams
 open DefaultApiServiceInterface
 open System.Collections.Generic
@@ -12,7 +11,7 @@ module DefaultApiServiceImplementation =
       interface IDefaultApiService with
 
         member this.GetIp () =
-            let content = "Your public IP address" :> obj :?> Ip // this cast is obviously wrong, and is only intended to allow generated project to compile   
+            let content = "Your public IP address" :> obj :?> string // this cast is obviously wrong, and is only intended to allow generated project to compile   
             GetIpStatusCode200 { content = content }
 
       //#endregion

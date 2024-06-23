@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 import org.openapitools.api.DefaultApiService;
 
 import javax.ws.rs.*;
@@ -27,7 +26,7 @@ import javax.validation.Valid;
 @Api(description = "the default API")
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2024-06-22T00:03:23.843009572Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2024-06-23T05:13:28.613742363Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 
 public class DefaultApi  {
 
@@ -39,10 +38,10 @@ public class DefaultApi  {
     @GET
     
     
-    @Produces({ "application/json", "application/javascript", "text/plain" })
-    @ApiOperation(value = "Get your public IP address", notes = "", response = Ip.class, tags={  })
+    @Produces({ "text/plain", "application/javascript", "application/json" })
+    @ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Your public IP address", response = Ip.class) })
+        @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })
     public Response getIp(@ApiParam(value = "Response format", allowableValues="json, jsonp")  @QueryParam("format") String format, @ApiParam(value = "JSONP callback function name")  @QueryParam("callback") String paramCallback) {
         return delegate.getIp(format, paramCallback, securityContext);
     }

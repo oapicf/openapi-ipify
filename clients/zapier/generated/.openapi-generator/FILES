@@ -3,7 +3,6 @@ README.md
 apis/DefaultApi.js
 authentication.js
 index.js
-models/Ip.js
 operations/actions.js
 package.json
 samples/DefaultApi.js

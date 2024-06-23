@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="src/model/Ip.fs" />
     <Compile Include="src/api/DefaultApiHandlerParams.fs" />
     <Compile Include="src/api/DefaultApiServiceInterface.fs" />
     <Compile Include="src/impl/DefaultApiService.fs" />

@@ -3,7 +3,6 @@
             [clojure.spec.alpha :as s]
             [spec-tools.core :as st]
             [orchestra.core :refer [defn-spec]]
-            [openapi-ipify.specs.ip :refer :all]
             )
   (:import (java.io File)))
 
@@ -18,16 +17,16 @@
               :query-params  {"format" format "callback" callback }
               :form-params   {}
               :content-types []
-              :accepts       ["application/json" "application/javascript" "text/plain"]
+              :accepts       ["text/plain" "application/javascript" "application/json"]
               :auth-names    []})))
 
-(defn-spec get-ip ip-spec
+(defn-spec get-ip string?
   "Get your public IP address"
   ([] (get-ip nil))
   ([optional-params any?]
    (let [res (:data (get-ip-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode ip-spec res st/string-transformer)
+        (st/decode string? res st/string-transformer)
         res))))
 
 

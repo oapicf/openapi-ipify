@@ -20,7 +20,6 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from openapiipify.models.ip import Ip
 
 from openapiipify.api_client import ApiClient, RequestSerialized
 from openapiipify.api_response import ApiResponse
@@ -57,7 +56,7 @@ class DefaultApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Ip:
+    ) -> str:
         """Get your public IP address
 
 
@@ -97,7 +96,7 @@ class DefaultApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Ip",
+            '200': "str",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -127,7 +126,7 @@ class DefaultApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Ip]:
+    ) -> ApiResponse[str]:
         """Get your public IP address
 
 
@@ -167,7 +166,7 @@ class DefaultApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Ip",
+            '200': "str",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -237,7 +236,7 @@ class DefaultApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Ip",
+            '200': "str",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -286,9 +285,9 @@ class DefaultApi:
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
             [
-                'application/json', 
+                'text/plain', 
                 'application/javascript', 
-                'text/plain'
+                'application/json'
             ]
         )
 

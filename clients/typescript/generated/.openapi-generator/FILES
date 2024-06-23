@@ -12,7 +12,6 @@ http/http.ts
 http/isomorphic-fetch.ts
 index.ts
 middleware.ts
-models/Ip.ts
 models/ObjectSerializer.ts
 models/all.ts
 package.json

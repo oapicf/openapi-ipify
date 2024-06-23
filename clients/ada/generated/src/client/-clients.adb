@@ -27,7 +27,7 @@ package body .Clients is
       (Client : in out Client_Type;
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
-       Result : out .Models.Ip_Type) is
+       Result : out Swagger.UString) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin

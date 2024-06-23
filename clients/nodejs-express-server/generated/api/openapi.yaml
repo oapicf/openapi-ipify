@@ -38,25 +38,17 @@ paths:
       responses:
         "200":
           content:
-            application/json:
+            text/plain:
               schema:
-                $ref: '#/components/schemas/Ip'
+                type: string
             application/javascript:
               schema:
                 type: string
-            text/plain:
+            application/json:
               schema:
                 type: string
           description: Your public IP address
       summary: Get your public IP address
       x-eov-operation-handler: controllers/DefaultController
 components:
-  schemas:
-    Ip:
-      example:
-        ip: ip
-      properties:
-        ip:
-          type: string
-      required:
-      - ip
+  schemas: {}

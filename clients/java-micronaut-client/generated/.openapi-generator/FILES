@@ -7,7 +7,6 @@ README.md
 build.gradle
 docs/apis/DefaultApi.md
 docs/apis/auth.md
-docs/models/Ip.md
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -18,8 +17,6 @@ mvnw.bat
 pom.xml
 settings.gradle
 src/main/java/org/openapitools/api/DefaultApi.java
-src/main/java/org/openapitools/model/Ip.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
 src/test/java/org/openapitools/api/DefaultApiTest.java
-src/test/java/org/openapitools/model/IpTest.java

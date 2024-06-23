@@ -19,7 +19,7 @@ services:
 ```
 
 ## **getIp**
-> OpenAPI\Server\Model\Ip getIp($format, $callback)
+> string getIp($format, $callback)
 
 Get your public IP address
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OpenAPI\Server\Model\Ip**](../Model/Ip.md)
+**string**
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

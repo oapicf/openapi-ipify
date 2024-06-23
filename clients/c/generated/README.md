@@ -71,7 +71,6 @@ Category | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [ip_t](docs/ip.md)
 
 
 ## Documentation for Authorization

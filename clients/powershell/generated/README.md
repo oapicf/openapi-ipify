@@ -58,7 +58,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [PSOpenAPITools\Model.Ip](docs/Ip.md)
 
 
 <a id="documentation-for-authorization"></a>

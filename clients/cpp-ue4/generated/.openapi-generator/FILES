@@ -4,11 +4,9 @@ Private/OpenAPIBaseModel.cpp
 Private/OpenAPIDefaultApi.cpp
 Private/OpenAPIDefaultApiOperations.cpp
 Private/OpenAPIHelpers.cpp
-Private/OpenAPIIp.cpp
 Private/OpenAPIModule.cpp
 Private/OpenAPIModule.h
 Public/OpenAPIBaseModel.h
 Public/OpenAPIDefaultApi.h
 Public/OpenAPIDefaultApiOperations.h
 Public/OpenAPIHelpers.h
-Public/OpenAPIIp.h

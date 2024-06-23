@@ -11,7 +11,6 @@
  */
 package org.openapitools.client.core
 
-import org.openapitools.client.model._
 import org.json4s._
 import sttp.client3.json4s.SttpJson4sApi
 import scala.reflect.ClassTag

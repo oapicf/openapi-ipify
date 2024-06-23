@@ -15,7 +15,6 @@ import { Inject, Injectable, Optional } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
 import { Observable, from, of, switchMap } from 'rxjs';
-import { Ip } from '../model/ip';
 import { Configuration } from '../configuration';
 import { COLLECTION_FORMATS } from '../variables';
 
@@ -49,7 +48,7 @@ export class DefaultService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, ): Observable<AxiosResponse<Ip>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, ): Observable<AxiosResponse<string>>;
     public getIp(format?: 'json' | 'jsonp', callback?: string, ): Observable<any> {
 
         let queryParameters = new URLSearchParams();
@@ -66,9 +65,9 @@ export class DefaultService {
 
         // to determine the Accept header
         let httpHeaderAccepts: string[] = [
-            'application/json',
+            'text/plain',
             'application/javascript',
-            'text/plain'
+            'application/json'
         ];
         const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         if (httpHeaderAcceptSelected != undefined) {
@@ -84,7 +83,7 @@ export class DefaultService {
                     headers['Authorization'] = `Bearer ${accessToken}`;
                 }
 
-                return this.httpClient.get<Ip>(`${this.basePath}/`,
+                return this.httpClient.get<string>(`${this.basePath}/`,
                     {
                         params: queryParameters,
                         withCredentials: this.configuration.withCredentials,

@@ -19,12 +19,11 @@
 #' \itemize{
 #' \item \emph{ @param } format Enum < [json, jsonp] >
 #' \item \emph{ @param } callback character
-#' \item \emph{ @returnType } \link{Ip} \cr
 #'
 #'
 #' \item status code : 200 | Your public IP address
 #'
-#' \item return type : Ip
+#' \item return type : character
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -82,7 +81,7 @@ DefaultApi <- R6::R6Class(
     #' @param callback (optional) JSONP callback function name
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return Ip
+    #' @return character
     #' @export
     GetIp = function(format = NULL, callback = NULL, data_file = NULL, ...) {
       local_var_response <- self$GetIpWithHttpInfo(format, callback, data_file = data_file, ...)
@@ -105,7 +104,7 @@ DefaultApi <- R6::R6Class(
     #' @param callback (optional) JSONP callback function name
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (Ip) with additional information such as HTTP status code, headers
+    #' @return API response (character) with additional information such as HTTP status code, headers
     #' @export
     GetIpWithHttpInfo = function(format = NULL, callback = NULL, data_file = NULL, ...) {
       args <- list(...)
@@ -129,7 +128,7 @@ DefaultApi <- R6::R6Class(
       local_var_url_path <- "/"
 
       # The Accept request HTTP header
-      local_var_accepts <- list("application/json", "application/javascript", "text/plain")
+      local_var_accepts <- list("text/plain", "application/javascript", "application/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -154,7 +153,7 @@ DefaultApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response_as_text(), "Ip", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response_as_text(), "character", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

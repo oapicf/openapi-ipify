@@ -20,6 +20,6 @@ package .Clients is
       (Client : in out Client_Type;
        Format : in Swagger.Nullable_UString;
        Callback : in Swagger.Nullable_UString;
-       Result : out .Models.Ip_Type);
+       Result : out Swagger.UString);
 
 end .Clients;

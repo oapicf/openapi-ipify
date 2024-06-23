@@ -3,6 +3,5 @@
 README.md
 elm.json
 src/Api.elm
-src/Api/Data.elm
 src/Api/Request/Default.elm
 src/Api/Time.elm

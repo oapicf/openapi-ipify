@@ -23,19 +23,6 @@ import type { RequestArgs } from './base';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, operationServerMap } from './base';
 
-/**
- * 
- * @export
- * @interface Ip
- */
-export interface Ip {
-    /**
-     * 
-     * @type {string}
-     * @memberof Ip
-     */
-    'ip': string;
-}
 
 /**
  * DefaultApi - axios parameter creator
@@ -101,7 +88,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getIp(format?: GetIpFormatEnum, callback?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Ip>> {
+        async getIp(format?: GetIpFormatEnum, callback?: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getIp(format, callback, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['DefaultApi.getIp']?.[localVarOperationServerIndex]?.url;
@@ -125,7 +112,7 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getIp(format?: GetIpFormatEnum, callback?: string, options?: any): AxiosPromise<Ip> {
+        getIp(format?: GetIpFormatEnum, callback?: string, options?: any): AxiosPromise<string> {
             return localVarFp.getIp(format, callback, options).then((request) => request(axios, basePath));
         },
     };

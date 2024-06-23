@@ -17,7 +17,7 @@ namespace org::openapitools::server::api
 {
 
 using namespace org::openapitools::server::helpers;
-using namespace org::openapitools::server::model;
+
 
 const std::string DefaultApi::base = "";
 

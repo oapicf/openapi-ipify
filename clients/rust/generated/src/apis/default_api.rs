@@ -23,7 +23,7 @@ pub enum GetIpError {
 }
 
 
-pub async fn get_ip(configuration: &configuration::Configuration, format: Option<&str>, callback: Option<&str>) -> Result<models::Ip, Error<GetIpError>> {
+pub async fn get_ip(configuration: &configuration::Configuration, format: Option<&str>, callback: Option<&str>) -> Result<String, Error<GetIpError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

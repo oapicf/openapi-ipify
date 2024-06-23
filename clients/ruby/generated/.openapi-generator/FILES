@@ -8,16 +8,13 @@ Gemfile
 README.md
 Rakefile
 docs/DefaultApi.md
-docs/Ip.md
 git_push.sh
 lib/openapi_ipify.rb
 lib/openapi_ipify/api/default_api.rb
 lib/openapi_ipify/api_client.rb
 lib/openapi_ipify/api_error.rb
 lib/openapi_ipify/configuration.rb
-lib/openapi_ipify/models/ip.rb
 lib/openapi_ipify/version.rb
 openapi_ipify.gemspec
 spec/api/default_api_spec.rb
-spec/models/ip_spec.rb
 spec/spec_helper.rb

@@ -37,7 +37,7 @@ describe 'DefaultApi' do
   # @param [Hash] opts the optional parameters
   # @option opts [String] :format Response format
   # @option opts [String] :callback JSONP callback function name
-  # @return [Ip]
+  # @return [String]
   describe 'get_ip test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/

@@ -1,7 +1,6 @@
 #import "OAIDefaultApi.h"
 #import "OAIQueryParamCollection.h"
 #import "OAIApiClient.h"
-#import "OAIIp.h"
 
 
 @interface OAIDefaultApi ()
@@ -56,11 +55,11 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
 ///
 ///  @param callback JSONP callback function name (optional)
 ///
-///  @returns OAIIp*
+///  @returns NSString*
 ///
 -(NSURLSessionTask*) getIpWithFormat: (NSString*) format
     callback: (NSString*) callback
-    completionHandler: (void (^)(OAIIp* output, NSError* error)) handler {
+    completionHandler: (void (^)(NSString* output, NSError* error)) handler {
     NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/"];
 
     NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
@@ -75,7 +74,7 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"application/json", @"application/javascript", @"text/plain"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"text/plain", @"application/javascript", @"application/json"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }
@@ -104,10 +103,10 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
                               authSettings: authSettings
                         requestContentType: requestContentType
                        responseContentType: responseContentType
-                              responseType: @"OAIIp*"
+                              responseType: @"NSString*"
                            completionBlock: ^(id data, NSError *error) {
                                 if(handler) {
-                                    handler((OAIIp*)data, error);
+                                    handler((NSString*)data, error);
                                 }
                             }];
 }

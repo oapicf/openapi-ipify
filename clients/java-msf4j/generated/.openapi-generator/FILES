@@ -11,6 +11,5 @@ src/gen/java/org/openapitools/api/JacksonJsonProvider.java
 src/gen/java/org/openapitools/api/NotFoundException.java
 src/gen/java/org/openapitools/api/RFC3339DateFormat.java
 src/gen/java/org/openapitools/api/StringUtil.java
-src/gen/java/org/openapitools/model/Ip.java
 src/main/java/org/openapitools/api/factories/DefaultApiServiceFactory.java
 src/main/java/org/openapitools/api/impl/DefaultApiServiceImpl.java

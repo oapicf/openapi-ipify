@@ -13,7 +13,6 @@ export(ApiClient)
 export(ApiResponse)
 
 # Models
-export(Ip)
 
 # APIs
 export(DefaultApi)

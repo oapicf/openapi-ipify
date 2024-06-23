@@ -4,11 +4,6 @@
     <xs:schema xmlns:tns="http://localhost/soap/ServiceV1/model" targetNamespace="http://localhost/soap/ServiceV1/model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="Get_RequestMessage" type="schemas:Get_RequestMessage" />
       <xs:element name="Get_ResponseMessage" type="schemas:Get_ResponseMessage" />
-      <xs:complexType name="Ip">
-        <xs:sequence>
-          <xs:element minOccurs="1" name="ip" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
       <xs:simpleType name="Format">
         <xs:restriction base="xs:string">
           <xs:enumeration value="JSON" />
@@ -31,7 +26,7 @@
       </xs:complexType>
       <xs:complexType name="Get_ResponseMessage">
         <xs:sequence>
-          <xs:element minOccurs="1" name="Ip" type="schemas:Ip">
+          <xs:element minOccurs="1" name="String" type="schemas:String">
             <xs:annotation>
               <xs:documentation>Your public IP address</xs:documentation>
             </xs:annotation>

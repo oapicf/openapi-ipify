@@ -1,6 +1,5 @@
 namespace OpenAPI
 
-open OpenAPI.Model.Ip
 open System.Collections.Generic
 open System
 
@@ -20,7 +19,7 @@ module DefaultApiHandlerParams =
 
 
     type GetIpStatusCode200Response = {
-      content:Ip;
+      content:string;
       
     }
     type GetIpResult = GetIpStatusCode200 of GetIpStatusCode200Response

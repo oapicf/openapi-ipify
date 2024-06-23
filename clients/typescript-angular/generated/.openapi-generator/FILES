@@ -8,7 +8,6 @@ configuration.ts
 encoder.ts
 git_push.sh
 index.ts
-model/ip.ts
 model/models.ts
 param.ts
 variables.ts

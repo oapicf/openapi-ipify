@@ -13,7 +13,6 @@ All URIs are relative to *https://api.ipify.org*
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [Ip](./Models/Ip.md)
 
 
 <a name="documentation-for-authorization"></a>

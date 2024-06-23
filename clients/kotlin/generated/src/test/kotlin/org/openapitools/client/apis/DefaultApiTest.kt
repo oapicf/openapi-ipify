@@ -19,7 +19,6 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import org.openapitools.client.apis.DefaultApi
-import org.openapitools.client.models.Ip
 
 class DefaultApiTest : ShouldSpec() {
     init {
@@ -31,7 +30,7 @@ class DefaultApiTest : ShouldSpec() {
             // uncomment below to test getIp
             //val format : kotlin.String = format_example // kotlin.String | Response format
             //val paramCallback : kotlin.String = paramCallback_example // kotlin.String | JSONP callback function name
-            //val result : Ip = apiInstance.getIp(format, paramCallback)
+            //val result : kotlin.String = apiInstance.getIp(format, paramCallback)
             //result shouldBe ("TODO")
         }
 

@@ -1,5 +1,4 @@
 const samples = require('../samples/DefaultApi');
-const Ip = require('../models/Ip');
 const utils = require('../utils/utils');
 
 module.exports = {
@@ -29,7 +28,6 @@ module.exports = {
                 },
             ],
             outputFields: [
-                ...Ip.fields('', false),
             ],
             perform: async (z, bundle) => {
                 const options = {
@@ -39,7 +37,7 @@ module.exports = {
                     headers: {
                         'Authorization': 'Bearer {{bundle.authData.access_token}}',
                         'Content-Type': '',
-                        'Accept': 'application/json, application/javascript, text/plain',
+                        'Accept': 'text/plain, application/javascript, application/json',
                     },
                     params: {
                         'format': bundle.inputData?.['format'],
@@ -51,10 +49,10 @@ module.exports = {
                 return z.request(options).then((response) => {
                     response.throwForStatus();
                     const results = response.json;
-                    return results;
+                    return { data: results };
                 })
             },
-            sample: samples['IpSample']
+            sample: { data: {} }
         }
     },
 }

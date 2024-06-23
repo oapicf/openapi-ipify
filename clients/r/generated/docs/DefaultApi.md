@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **GetIp**
-> Ip GetIp(format = var.format, callback = var.callback)
+> character GetIp(format = var.format, callback = var.callback)
 
 Get your public IP address
 
@@ -38,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Ip**](Ip.md)
+**character**
 
 ### Authorization
 
@@ -47,7 +47,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

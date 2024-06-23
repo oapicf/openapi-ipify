@@ -38,20 +38,17 @@ namespace Org.OpenAPITools.Controllers
         [Route("/")]
         [ValidateModelState]
         [SwaggerOperation("GetIp")]
-        [SwaggerResponse(statusCode: 200, type: typeof(Ip), description: "Your public IP address")]
+        [SwaggerResponse(statusCode: 200, type: typeof(string), description: "Your public IP address")]
         public virtual IActionResult GetIp([FromQuery (Name = "format")]string format, [FromQuery (Name = "callback")]string callback)
         {
 
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
-            // return StatusCode(200, default(Ip));
+            // return StatusCode(200, default(string));
             string exampleJson = null;
-            exampleJson = "Custom MIME type example not yet supported: application/javascript";
-            exampleJson = "{\n  \"ip\" : \"ip\"\n}";
-            exampleJson = "Custom MIME type example not yet supported: text/plain";
             
             var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Ip>(exampleJson)
-            : default(Ip);
+            ? JsonConvert.DeserializeObject<string>(exampleJson)
+            : default(string);
             //TODO: Change the data returned
             return new ObjectResult(example);
         }

@@ -1,6 +1,5 @@
 package org.openapitools.server.api.verticle
 
-import org.openapitools.server.api.model.Ip
 import io.vertx.core.Vertx
 import io.vertx.core.json.JsonObject
 import io.vertx.core.json.JsonArray
@@ -19,7 +18,7 @@ interface DefaultApi  {
     fun init(vertx:Vertx,config:JsonObject)
     /* getIp
      * Get your public IP address */
-    suspend fun getIp(format:kotlin.String?,paramCallback:kotlin.String?,context:OperationRequest):Response<Ip>
+    suspend fun getIp(format:kotlin.String?,paramCallback:kotlin.String?,context:OperationRequest):Response<kotlin.String>
     companion object {
         const val address = "DefaultApi-service"
         suspend fun createRouterFactory(vertx: Vertx,path:String): io.vertx.ext.web.api.contract.openapi3.OpenAPI3RouterFactory {

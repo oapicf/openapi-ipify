@@ -7,6 +7,5 @@ api/default.service.ts
 configuration.ts
 git_push.sh
 index.ts
-model/ip.ts
 model/models.ts
 variables.ts

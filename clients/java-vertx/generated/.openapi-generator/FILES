@@ -3,7 +3,6 @@ README.md
 pom.xml
 src/main/java/org/openapitools/server/api/MainApiException.java
 src/main/java/org/openapitools/server/api/MainApiVerticle.java
-src/main/java/org/openapitools/server/api/model/Ip.java
 src/main/java/org/openapitools/server/api/verticle/DefaultApi.java
 src/main/java/org/openapitools/server/api/verticle/DefaultApiException.java
 src/main/java/org/openapitools/server/api/verticle/DefaultApiVerticle.java

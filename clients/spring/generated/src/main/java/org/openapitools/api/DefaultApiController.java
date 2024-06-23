@@ -1,6 +1,5 @@
 package org.openapitools.api;
 
-import org.openapitools.model.Ip;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-06-22T01:02:53.057288469Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-06-23T05:16:32.438923231Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 @Controller
 @RequestMapping("${openapi.openapiIpify.base-path:}")
 public class DefaultApiController implements DefaultApi {

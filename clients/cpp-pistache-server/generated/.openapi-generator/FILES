@@ -9,5 +9,3 @@ impl/DefaultApiImpl.h
 main-api-server.cpp
 model/Helpers.cpp
 model/Helpers.h
-model/Ip.cpp
-model/Ip.h

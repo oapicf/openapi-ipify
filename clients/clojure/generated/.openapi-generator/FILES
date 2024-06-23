@@ -4,4 +4,3 @@ git_push.sh
 project.clj
 src/openapi_ipify/api/default.clj
 src/openapi_ipify/core.clj
-src/openapi_ipify/specs/ip.clj

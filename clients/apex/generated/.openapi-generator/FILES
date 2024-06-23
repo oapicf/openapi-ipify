@@ -9,10 +9,6 @@ force-app/main/default/classes/OASDefaultApi.cls
 force-app/main/default/classes/OASDefaultApi.cls-meta.xml
 force-app/main/default/classes/OASDefaultApiTest.cls
 force-app/main/default/classes/OASDefaultApiTest.cls-meta.xml
-force-app/main/default/classes/OASIp.cls
-force-app/main/default/classes/OASIp.cls-meta.xml
-force-app/main/default/classes/OASIpTest.cls
-force-app/main/default/classes/OASIpTest.cls-meta.xml
 force-app/main/default/classes/OASResponseMock.cls
 force-app/main/default/classes/OASResponseMock.cls-meta.xml
 force-app/main/default/classes/OASTest.cls

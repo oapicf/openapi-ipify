@@ -161,7 +161,7 @@ void Resource::handler_GET_internal(const std::shared_ptr<restbed::Session> sess
     std::string callback = request->get_query_parameter("callback", "");
     
     int status_code = 500;
-    Ip resultObject = Ip{};
+    std::string resultObject = "";
     std::string result = "";
     
     try {
@@ -180,7 +180,7 @@ void Resource::handler_GET_internal(const std::shared_ptr<restbed::Session> sess
     
     std::multimap< std::string, std::string > responseHeaders {};
     static const std::vector<std::string> contentTypes{
-        "application/json","application/javascript","text/plain",
+        "text/plain","application/javascript","application/json",
     };
     static const std::string acceptTypes{
     };
@@ -191,7 +191,7 @@ void Resource::handler_GET_internal(const std::shared_ptr<restbed::Session> sess
             responseHeaders.insert(std::make_pair("Accept", acceptTypes));
         }
     
-        result = resultObject.toJsonString();
+        result = resultObject;
         returnResponse(session, 200, result.empty() ? "{}" : result, responseHeaders);
         return;
     }
@@ -201,7 +201,7 @@ void Resource::handler_GET_internal(const std::shared_ptr<restbed::Session> sess
 }
 
 
-std::pair<int, Ip> Resource::handler_GET(
+std::pair<int, std::string> Resource::handler_GET(
         std::string & format, std::string & callback)
 {
     return handler_GET_func(format, callback);

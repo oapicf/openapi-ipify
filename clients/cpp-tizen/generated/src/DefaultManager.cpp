@@ -51,14 +51,14 @@ static gpointer __DefaultManagerthreadFunc(gpointer data)
 static bool getIpProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(Ip, Error, void* )
-	= reinterpret_cast<void(*)(Ip, Error, void* )> (voidHandler);
+	void(* handler)(std::string, Error, void* )
+	= reinterpret_cast<void(*)(std::string, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
 	
-	Ip out;
+	std::string out;
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
@@ -66,23 +66,18 @@ static bool getIpProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, vo
 
 
 
-		if (isprimitive("Ip")) {
+		if (isprimitive("std::string")) {
 			pJson = json_from_string(data, NULL);
-			jsonToValue(&out, pJson, "Ip", "Ip");
+			jsonToValue(&out, pJson, "std::string", "std::string");
 			json_node_free(pJson);
 
-			if ("Ip" == "std::string") {
+			if ("std::string" == "std::string") {
 				string* val = (std::string*)(&out);
 				if (val->empty() && p_chunk.size>4) {
 					*val = string(p_chunk.memory, p_chunk.size);
 				}
 			}
 		} else {
-			
-			out.fromJson(data);
-			char *jsonStr =  out.toJson();
-			printf("\n%s\n", jsonStr);
-			g_free(static_cast<gpointer>(jsonStr));
 			
 		}
 		handler(out, error, userData);
@@ -105,7 +100,7 @@ static bool getIpProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, vo
 
 static bool getIpHelper(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(Ip, Error, void* )
+	void(* handler)(std::string, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -190,7 +185,7 @@ static bool getIpHelper(char * accessToken,
 
 bool DefaultManager::getIpAsync(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(Ip, Error, void* )
+	void(* handler)(std::string, Error, void* )
 	, void* userData)
 {
 	return getIpHelper(accessToken,
@@ -200,7 +195,7 @@ bool DefaultManager::getIpAsync(char * accessToken,
 
 bool DefaultManager::getIpSync(char * accessToken,
 	std::string format, std::string callback, 
-	void(* handler)(Ip, Error, void* )
+	void(* handler)(std::string, Error, void* )
 	, void* userData)
 {
 	return getIpHelper(accessToken,

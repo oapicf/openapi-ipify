@@ -19,7 +19,6 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.Ip
 
 import com.squareup.moshi.Json
 
@@ -58,7 +57,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      * 
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return Ip
+     * @return kotlin.String
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -67,11 +66,11 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getIp(format: FormatGetIp? = null, paramCallback: kotlin.String? = null) : Ip {
+    fun getIp(format: FormatGetIp? = null, paramCallback: kotlin.String? = null) : kotlin.String {
         val localVarResponse = getIpWithHttpInfo(format = format, paramCallback = paramCallback)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as Ip
+            ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.String
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -90,16 +89,16 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient
      * 
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
-     * @return ApiResponse<Ip?>
+     * @return ApiResponse<kotlin.String?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun getIpWithHttpInfo(format: FormatGetIp?, paramCallback: kotlin.String?) : ApiResponse<Ip?> {
+    fun getIpWithHttpInfo(format: FormatGetIp?, paramCallback: kotlin.String?) : ApiResponse<kotlin.String?> {
         val localVariableConfig = getIpRequestConfig(format = format, paramCallback = paramCallback)
 
-        return request<Unit, Ip>(
+        return request<Unit, kotlin.String>(
             localVariableConfig
         )
     }

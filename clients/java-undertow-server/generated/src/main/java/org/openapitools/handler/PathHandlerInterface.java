@@ -45,8 +45,8 @@ public interface PathHandlerInterface {
      * </li>
      * </ul>
      *
-     * <p><b>Produces</b>: [{isJson=true, mediaType=application/json}, {mediaType=application/javascript}, {mediaType=text/plain}]</p>
-     * <p><b>Returns</b>: {@link Ip}</p>
+     * <p><b>Produces</b>: [{mediaType=text/plain}, {mediaType=application/javascript}, {isJson=true, mediaType=application/json}]</p>
+     * <p><b>Returns</b>: {@link String}</p>
      *
      * <p><b>Responses</b>:</p>
      * <ul>

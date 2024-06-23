@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ipify.org*
 
 <a id="getip"></a>
 # **GetIp**
-> Ip GetIp (string? format = null, string? callback = null)
+> string GetIp (string? format = null, string? callback = null)
 
 Get your public IP address
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Get your public IP address
-                Ip result = apiInstance.GetIp(format, callback);
+                string result = apiInstance.GetIp(format, callback);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -56,7 +56,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Get your public IP address
-    ApiResponse<Ip> response = apiInstance.GetIpWithHttpInfo(format, callback);
+    ApiResponse<string> response = apiInstance.GetIpWithHttpInfo(format, callback);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -78,7 +78,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**Ip**](Ip.md)
+**string**
 
 ### Authorization
 
@@ -87,7 +87,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/javascript, text/plain
+ - **Accept**: text/plain, application/javascript, application/json
 
 
 ### HTTP response details

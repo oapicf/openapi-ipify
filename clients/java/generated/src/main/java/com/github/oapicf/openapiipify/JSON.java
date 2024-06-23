@@ -100,7 +100,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
         gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
-        gsonBuilder.registerTypeAdapterFactory(new com.github.oapicf.openapiipify.model.Ip.CustomTypeAdapterFactory());
         gson = gsonBuilder.create();
     }
 

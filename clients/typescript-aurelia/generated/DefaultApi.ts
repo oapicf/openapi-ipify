@@ -15,7 +15,6 @@ import { HttpClient } from 'aurelia-http-client';
 import { Api } from './Api';
 import { AuthStorage } from './AuthStorage';
 import {
-  Ip,
 } from './models';
 
 /**
@@ -47,7 +46,7 @@ export class DefaultApi extends Api {
    * @param params.format Response format
    * @param params.callback JSONP callback function name
    */
-  async getIp(params: IGetIpParams): Promise<Ip> {
+  async getIp(params: IGetIpParams): Promise<string> {
     // Verify required parameters are set
 
     // Create URL to call

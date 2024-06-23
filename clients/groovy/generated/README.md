@@ -6,7 +6,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: 5.2.1-pre.0
 - Package version: 5.2.1-pre.0
-- Build date: 2024-06-22T00:02:08.021155677Z[Etc/UTC]
+- Build date: 2024-06-23T05:12:06.544201823Z[Etc/UTC]
 - Generator version: 7.6.0
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
@@ -41,7 +41,7 @@ def paramCallback = "paramCallback_example" // String | JSONP callback function 
 apiInstance.getIp(format, paramCallback)
     {
     // on success
-    def result = (Ip)it
+    def result = (String)it
     println result
     
 }

@@ -26,21 +26,13 @@ import io.ktor.server.resources.head
 import io.ktor.server.resources.patch
 import io.ktor.server.routing.*
 import org.openapitools.server.infrastructure.ApiPrincipal
-import org.openapitools.server.models.Ip
 
 fun Route.DefaultApi() {
     val gson = Gson()
     val empty = mutableMapOf<String, Any?>()
 
     get<Paths.getIp> {
-        val exampleContentType = "application/javascript"
-        val exampleContentString = """Custom MIME type example not yet supported: application/javascript"""
-        
-        when (exampleContentType) {
-            "application/json" -> call.respond(gson.fromJson(exampleContentString, empty::class.java))
-            "application/xml" -> call.respondText(exampleContentString, ContentType.Text.Xml)
-            else -> call.respondText(exampleContentString)
-        }
+        call.respond(HttpStatusCode.NotImplemented)
         
     }
 

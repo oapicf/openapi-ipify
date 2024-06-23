@@ -8,7 +8,6 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
 
-import org.openapitools.server.api.model.Ip;
 import org.openapitools.server.api.MainApiException;
 
 import java.util.List;

@@ -5,7 +5,7 @@ MyApp.add_route('GET', '/', {
   "resourcePath" => "/Default",
   "summary" => "Get your public IP address",
   "nickname" => "get_ip",
-  "responseClass" => "Ip",
+  "responseClass" => "String",
   "endpoint" => "/",
   "notes" => "",
   "parameters" => [

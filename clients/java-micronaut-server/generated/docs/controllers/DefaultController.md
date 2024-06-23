@@ -11,7 +11,7 @@ Method | HTTP request | Description
 <a id="getIp"></a>
 # **getIp**
 ```java
-Mono<Ip> DefaultController.getIp(_formatparamCallback)
+Mono<String> DefaultController.getIp(_formatparamCallback)
 ```
 
 Get your public IP address
@@ -23,10 +23,10 @@ Name | Type | Description  | Notes
 **paramCallback** | `String` | JSONP callback function name | [optional parameter]
 
 ### Return type
-[**Ip**](../../docs/models/Ip.md)
+`String`
 
 
 ### HTTP request headers
  - **Accepts Content-Type**: Not defined
- - **Produces Content-Type**: `application/json`, `application/javascript`, `text/plain`
+ - **Produces Content-Type**: `text/plain`, `application/javascript`, `application/json`
 

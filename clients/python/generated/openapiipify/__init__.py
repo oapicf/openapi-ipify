@@ -32,4 +32,3 @@ from openapiipify.exceptions import ApiAttributeError
 from openapiipify.exceptions import ApiException
 
 # import models into sdk package
-from openapiipify.models.ip import Ip

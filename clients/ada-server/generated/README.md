@@ -97,7 +97,6 @@ Method | HTTP request | Description
 
 ### Models
 
- - [.Models.Ip_Type](Ip_Type.md)
 
 
 ### Authorization

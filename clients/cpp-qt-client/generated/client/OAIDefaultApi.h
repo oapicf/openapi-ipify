@@ -18,7 +18,6 @@
 #include "OAIServerConfiguration.h"
 #include "OAIOauth.h"
 
-#include "OAIIp.h"
 #include <QString>
 
 #include <QObject>
@@ -90,13 +89,13 @@ private:
 
 Q_SIGNALS:
 
-    void getIpSignal(OAIIp summary);
+    void getIpSignal(QString summary);
 
-    void getIpSignalFull(OAIHttpRequestWorker *worker, OAIIp summary);
+    void getIpSignalFull(OAIHttpRequestWorker *worker, QString summary);
 
     Q_DECL_DEPRECATED_X("Use getIpSignalError() instead")
-    void getIpSignalE(OAIIp summary, QNetworkReply::NetworkError error_type, QString error_str);
-    void getIpSignalError(OAIIp summary, QNetworkReply::NetworkError error_type, const QString &error_str);
+    void getIpSignalE(QString summary, QNetworkReply::NetworkError error_type, QString error_str);
+    void getIpSignalError(QString summary, QNetworkReply::NetworkError error_type, const QString &error_str);
 
     Q_DECL_DEPRECATED_X("Use getIpSignalErrorFull() instead")
     void getIpSignalEFull(OAIHttpRequestWorker *worker, QNetworkReply::NetworkError error_type, QString error_str);

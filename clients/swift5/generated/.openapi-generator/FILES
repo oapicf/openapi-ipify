@@ -12,7 +12,6 @@ OpenAPIClient/Classes/OpenAPIs/Extensions.swift
 OpenAPIClient/Classes/OpenAPIs/JSONDataEncoding.swift
 OpenAPIClient/Classes/OpenAPIs/JSONEncodingHelper.swift
 OpenAPIClient/Classes/OpenAPIs/Models.swift
-OpenAPIClient/Classes/OpenAPIs/Models/Ip.swift
 OpenAPIClient/Classes/OpenAPIs/OpenISO8601DateFormatter.swift
 OpenAPIClient/Classes/OpenAPIs/SynchronizedDictionary.swift
 OpenAPIClient/Classes/OpenAPIs/URLSessionImplementations.swift
@@ -20,6 +19,5 @@ OpenAPIClient/Classes/OpenAPIs/Validation.swift
 Package.swift
 README.md
 docs/DefaultAPI.md
-docs/Ip.md
 git_push.sh
 project.yml

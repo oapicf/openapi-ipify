@@ -18,7 +18,7 @@ pub const API_VERSION: &str = "5.2.1-pre.0";
 pub enum GetIpResponse {
     /// Your public IP address
     YourPublicIPAddress
-    (models::Ip)
+    (String)
 }
 
 /// API

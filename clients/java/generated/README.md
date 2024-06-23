@@ -2,7 +2,7 @@
 
 openapi-ipify
 - API version: 5.2.1-pre.0
-  - Build date: 2024-06-22T00:02:31.294781411Z[Etc/UTC]
+  - Build date: 2024-06-23T05:12:38.023131586Z[Etc/UTC]
   - Generator version: 7.6.0
 
 OpenAPI client for ipify, a simple public IP address API
@@ -97,7 +97,7 @@ public class Example {
     String format = "json"; // String | Response format
     String paramCallback = "paramCallback_example"; // String | JSONP callback function name
     try {
-      Ip result = apiInstance.getIp(format, paramCallback);
+      String result = apiInstance.getIp(format, paramCallback);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#getIp");
@@ -122,7 +122,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Ip](docs/Ip.md)
 
 
 <a id="documentation-for-authorization"></a>

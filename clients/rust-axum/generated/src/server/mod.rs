@@ -91,14 +91,10 @@ where
                                                     let mut response_headers = response.headers_mut().unwrap();
                                                     response_headers.insert(
                                                         CONTENT_TYPE,
-                                                        HeaderValue::from_str("application/json").map_err(|e| { error!(error = ?e); StatusCode::INTERNAL_SERVER_ERROR })?);
+                                                        HeaderValue::from_str("text/plain").map_err(|e| { error!(error = ?e); StatusCode::INTERNAL_SERVER_ERROR })?);
                                                   }
 
-                                                  let body_content =  tokio::task::spawn_blocking(move ||
-                                                      serde_json::to_vec(&body).map_err(|e| {
-                                                        error!(error = ?e);
-                                                        StatusCode::INTERNAL_SERVER_ERROR
-                                                      })).await.unwrap()?;
+                                                  let body_content = body;
                                                   response.body(Body::from(body_content))
                                                 },
                                             },

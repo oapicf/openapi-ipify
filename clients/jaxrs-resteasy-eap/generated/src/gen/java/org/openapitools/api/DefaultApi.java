@@ -5,7 +5,6 @@ import org.openapitools.model.*;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
-import org.openapitools.model.Ip;
 
 import java.util.List;
 import java.util.Map;
@@ -23,15 +22,15 @@ import javax.validation.Valid;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2024-06-22T00:03:34.362792615Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2024-06-23T05:13:38.150582470Z[Etc/UTC]", comments = "Generator version: 7.6.0")
 public interface DefaultApi  {
 
     @GET
     
     
-    @Produces({ "application/json", "application/javascript", "text/plain" })
-    @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = Ip.class, tags={  })
+    @Produces({ "text/plain", "application/javascript", "application/json" })
+    @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = Ip.class) })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = String.class) })
     public Response getIp(, allowableValues="json, jsonp" @QueryParam("format") String format, @QueryParam("callback") String paramCallback,@Context SecurityContext securityContext);
 }
