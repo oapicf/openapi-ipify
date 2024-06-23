@@ -35,21 +35,18 @@ paths:
       responses:
         '200':
           description: Your public IP address
+          # This used to have multiple schemas based on
+          # content type, but OAG only generates one
+          # schema for all content types, so instead
+          # of breaking the response parsing due to incompatible
+          # schema, we opted to just using string as the schema.
           content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Ip'
-            application/javascript:
-              schema:
-                type: string
             text/plain:
               schema:
                 type: string
-components:
-  schemas:
-    Ip:
-      required:
-        - ip
-      properties:
-        ip:
-          type: string
+            application/javascript:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string

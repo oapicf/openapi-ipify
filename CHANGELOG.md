@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Upgrade Swaggy C to 4.5.0
 - Upgrade OpenAPI Generator to 7.6.0
+- Switch all content types response schemas to string
 
 ## 5.2.0 - 2024-03-13
 ### Changed
