@@ -6,9 +6,9 @@ info:
   license:
     name: MIT
   contact:
-    name: Cliffano Subagio
-    url: http://blog.cliffano.com
-    email: blah@cliffano.com
+    name: OpenAPI Clients Factory
+    url: https://github.com/oapicf/openapi-ipify
+    email: blah+oapicf@cliffano.com
 servers:
   - url: https://api.ipify.org
 paths:
