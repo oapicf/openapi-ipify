@@ -5,7 +5,7 @@
     <artifactId>openapiipify</artifactId>
     <packaging>jar</packaging>
     <name>openapiipify</name>
-    <version>5.2.1-pre.0</version>
+    <version>5.3.1-pre.0</version>
     <url>https://github.com/oapicf/openapi-ipify</url>
     <description>Ipify API client generated from Swagger / Open API specification</description>
     <scm>

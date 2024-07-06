@@ -20,6 +20,6 @@ public class RestConfiguration extends RouteBuilder {
             .bindingMode(RestBindingMode.auto)
             .clientRequestValidation(false)
             .apiProperty("api.title", "openapi-ipify")
-            .apiProperty("api.version", "5.2.1-pre.0");
+            .apiProperty("api.version", "5.3.1-pre.0");
     }
 }
