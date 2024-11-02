@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Switch contact details to OpenAPI Clients Factory project
-- Upgrade Swaggy C to 4.5.1
+- Upgrade Swaggy C to 4.8.0
+- Upgrade OpenAPI Generator to 7.9.0
+- Upgrade OpenAPI specification to 3.1.0
 
 ## 5.3.0 - 2024-06-23
 ### Changed
