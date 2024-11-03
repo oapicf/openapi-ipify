@@ -28,5 +28,5 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
  - **Accepts Content-Type**: Not defined
- - **Produces Content-Type**: `text/plain`, `application/javascript`, `application/json`
+ - **Produces Content-Type**: `text/plain`, `text/javascript`, `application/json`
 

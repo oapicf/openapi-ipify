@@ -78,9 +78,9 @@ public class DefaultControllerTest {
         // given
         String uri = UriTemplate.of("/").expand(new HashMap<>());
         MutableHttpRequest<?> request = HttpRequest.GET(uri)
-            .accept("[Ljava.lang.String;@3088660d")
-            .accept("[Ljava.lang.String;@3088660d")
-            .accept("[Ljava.lang.String;@3088660d");
+            .accept("[Ljava.lang.String;@2c42b421")
+            .accept("[Ljava.lang.String;@2c42b421")
+            .accept("[Ljava.lang.String;@2c42b421");
         request.getParameters()
             .add("format", "example") // The query parameter format should be 
             .add("callback", "example"); // The query parameter format should be 

@@ -26,7 +26,7 @@ import javax.validation.Valid;
 @Api(description = "the default API")
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2024-11-02T23:02:57.285721677Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2024-11-03T00:28:25.940096779Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 
 public class DefaultApi  {
 
@@ -38,7 +38,7 @@ public class DefaultApi  {
     @GET
     
     
-    @Produces({ "text/plain", "application/javascript", "application/json" })
+    @Produces({ "text/plain", "text/javascript", "application/json" })
     @ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

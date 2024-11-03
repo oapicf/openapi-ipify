@@ -80,7 +80,7 @@ Get your public IP address
 ===== Content Type
 
 * text/plain
-* application/javascript
+* text/javascript
 * application/json
 
 ===== Responses

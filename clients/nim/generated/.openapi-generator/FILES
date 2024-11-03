@@ -1,6 +1,0 @@
-.openapi-generator-ignore
-README.md
-config.nim
-openapiclient.nim
-openapiclient/apis/api_default.nim
-sample_client.nim

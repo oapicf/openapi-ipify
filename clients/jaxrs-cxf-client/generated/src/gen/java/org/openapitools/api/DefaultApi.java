@@ -32,7 +32,7 @@ public interface DefaultApi  {
      */
     @GET
     
-    @Produces({ "text/plain", "application/javascript", "application/json" })
+    @Produces({ "text/plain", "text/javascript", "application/json" })
     @ApiOperation(value = "Get your public IP address", tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

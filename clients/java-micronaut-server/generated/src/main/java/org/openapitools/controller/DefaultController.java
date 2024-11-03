@@ -36,7 +36,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2024-11-02T23:02:03.286282172Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2024-11-03T00:27:49.087346154Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 @Controller
 @Tag(name = "Default", description = "The Default API")
 public class DefaultController {
@@ -53,7 +53,7 @@ public class DefaultController {
         responses = {
             @ApiResponse(responseCode = "200", description = "Your public IP address", content = {
                 @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)),
-                @Content(mediaType = "application/javascript", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "text/javascript", schema = @Schema(implementation = String.class)),
                 @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))
             })
         },
@@ -63,7 +63,7 @@ public class DefaultController {
         }
     )
     @Get(uri="/")
-    @Produces(value = {"text/plain", "application/javascript", "application/json"})
+    @Produces(value = {"text/plain", "text/javascript", "application/json"})
     @Secured({SecurityRule.IS_ANONYMOUS})
     public Mono<String> getIp(
         @QueryValue(value="format") @Nullable String _format, 

@@ -52,5 +52,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/javascript, application/json
+- **Accept**: text/plain, text/javascript, application/json
 

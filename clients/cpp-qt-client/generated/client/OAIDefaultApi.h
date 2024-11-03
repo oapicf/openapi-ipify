@@ -60,7 +60,7 @@ public:
     * @param[in]  format QString [optional]
     * @param[in]  callback QString [optional]
     */
-    void getIp(const ::OpenAPI::OptionalParam<QString> &format = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &callback = ::OpenAPI::OptionalParam<QString>());
+    virtual void getIp(const ::OpenAPI::OptionalParam<QString> &format = ::OpenAPI::OptionalParam<QString>(), const ::OpenAPI::OptionalParam<QString> &callback = ::OpenAPI::OptionalParam<QString>());
 
 
 private:
@@ -90,6 +90,7 @@ private:
 Q_SIGNALS:
 
     void getIpSignal(QString summary);
+
 
     void getIpSignalFull(OAIHttpRequestWorker *worker, QString summary);
 

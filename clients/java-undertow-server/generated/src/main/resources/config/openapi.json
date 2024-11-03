@@ -50,7 +50,7 @@
                   "type" : "string"
                 }
               },
-              "application/javascript" : {
+              "text/javascript" : {
                 "schema" : {
                   "type" : "string"
                 }
@@ -65,7 +65,7 @@
           }
         },
         "summary" : "Get your public IP address",
-        "x-accepts" : [ "application/javascript", "application/json", "text/plain" ]
+        "x-accepts" : [ "application/json", "text/javascript", "text/plain" ]
       }
     }
   },

@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.ipify.org*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getIp**](DefaultApi.md#getIp) | **GET** / | Get your public IP address |
 
 
 <a id="getIp"></a>
@@ -35,11 +35,10 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **kotlin.String**| Response format | [optional] [enum: json, jsonp]
- **paramCallback** | **kotlin.String**| JSONP callback function name | [optional]
+| **format** | **kotlin.String**| Response format | [optional] [enum: json, jsonp] |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **paramCallback** | **kotlin.String**| JSONP callback function name | [optional] |
 
 ### Return type
 

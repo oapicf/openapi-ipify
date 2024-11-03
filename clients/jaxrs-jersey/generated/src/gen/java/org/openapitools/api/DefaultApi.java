@@ -28,7 +28,7 @@ import javax.validation.Valid;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2024-11-02T23:03:03.386371137Z[Etc/UTC]", comments = "Generator version: 7.6.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2024-11-03T00:28:28.761031350Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DefaultApi  {
    private final DefaultApiService delegate;
 
@@ -39,7 +39,7 @@ public class DefaultApi  {
          String implClass = servletContext.getInitParameter("DefaultApi.implementation");
          if (implClass != null && !"".equals(implClass.trim())) {
             try {
-               delegate = (DefaultApiService) Class.forName(implClass).newInstance();
+               delegate = (DefaultApiService) Class.forName(implClass).getDeclaredConstructor().newInstance();
             } catch (Exception e) {
                throw new RuntimeException(e);
             }
@@ -56,7 +56,7 @@ public class DefaultApi  {
     @javax.ws.rs.GET
     
     
-    @Produces({ "text/plain", "application/javascript", "application/json" })
+    @Produces({ "text/plain", "text/javascript", "application/json" })
     @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = {
         @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = String.class)

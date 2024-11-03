@@ -2,8 +2,8 @@
 
 openapi-ipify
 - API version: 5.3.1-pre.0
-  - Build date: 2024-11-02T23:01:34.446212758Z[Etc/UTC]
-  - Generator version: 7.6.0
+  - Build date: 2024-11-03T00:27:25.892852613Z[Etc/UTC]
+  - Generator version: 7.9.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -85,7 +85,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 import com.github.oapicf.openapiipify.ApiClient;
 import com.github.oapicf.openapiipify.ApiException;
 import com.github.oapicf.openapiipify.Configuration;
-import com.github.oapicf.openapiipify.models.*;
+import com.github.oapicf.openapiipify.model.*;
 import com.github.oapicf.openapiipify.api.DefaultApi;
 
 public class Example {

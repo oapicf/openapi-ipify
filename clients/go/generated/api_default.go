@@ -81,10 +81,10 @@ func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (string, *http.Respo
 	localVarFormParams := url.Values{}
 
 	if r.format != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
 	}
 	if r.callback != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "callback", r.callback, "")
+		parameterAddToHeaderOrQuery(localVarQueryParams, "callback", r.callback, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -96,7 +96,7 @@ func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (string, *http.Respo
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/javascript", "application/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "text/javascript", "application/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

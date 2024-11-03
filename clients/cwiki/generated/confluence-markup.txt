@@ -22,7 +22,7 @@ h3. getIp
     || Protocol | {noformat:nopanel=true}https{noformat} |
     || Path | {noformat:nopanel=true}/{noformat} |
     || Base Path | {noformat:nopanel=true}https://api.ipify.org{noformat} |
-    || Produces | {noformat:nopanel=true}text/plain application/javascript application/json {noformat} |
+    || Produces | {noformat:nopanel=true}text/plain text/javascript application/json {noformat} |
 ----
 h4. Parameters
 
@@ -46,7 +46,7 @@ h4. Responses
         "type" : "string"
       }
     },
-    "application/javascript" : {
+    "text/javascript" : {
       "schema" : {
         "type" : "string"
       }

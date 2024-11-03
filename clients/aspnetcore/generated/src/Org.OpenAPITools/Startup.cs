@@ -75,7 +75,7 @@ namespace Org.OpenAPITools
                     c.SwaggerDoc("5.3.1-pre.0", new OpenApiInfo
                     {
                         Title = "openapi-ipify",
-                        Description = "openapi-ipify (ASP.NET Core 3.1)",
+                        Description = "openapi-ipify (ASP.NET Core 8.0)",
                         TermsOfService = new Uri("https://github.com/openapitools/openapi-generator"),
                         Contact = new OpenApiContact
                         {
@@ -91,7 +91,7 @@ namespace Org.OpenAPITools
                         Version = "5.3.1-pre.0",
                     });
                     c.CustomSchemaIds(type => type.FriendlyId(true));
-                    c.IncludeXmlComments($"{AppContext.BaseDirectory}{Path.DirectorySeparatorChar}{Assembly.GetEntryAssembly().GetName().Name}.xml");
+                    c.IncludeXmlComments($"{AppContext.BaseDirectory}{Path.DirectorySeparatorChar}{Assembly.GetExecutingAssembly().GetName().Name}.xml");
 
                     // Include DataAnnotation attributes on Controller Action parameters as OpenAPI validation rules (e.g required, pattern, ..)
                     // Use [ValidateModelState] on Actions to actually validate it in C# as well!
