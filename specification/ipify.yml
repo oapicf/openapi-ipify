@@ -40,7 +40,7 @@ paths:
             text/plain:
               schema:
                 type: string
-            application/javascript:
+            text/javascript:
               schema:
                 type: string
             application/json:
