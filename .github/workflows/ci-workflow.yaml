@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
         with:
@@ -11,6 +11,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - uses: ./.github/actions/ci-action
+      - uses: iamsauravsharma/create-dotenv@v2.0.1
+        with:
+          file-path: '/tmp/.env'
+        env:
+          GITHUB_ACTIONS: ${{ env.GITHUB_ACTIONS }}
+      - uses: cliffano/command-docker-action@v1.3.0
+        with:
+          command: 'make ci'
+          image: cliffano/studio:2.5.0
+          shell: bash
+          extra_path: /usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/root/.cargo/bin:/root/go/bin
+          env_file: '/tmp/.env'
       - run: npm install -g gh-pages
-      - run: CACHE_DIR=/tmp gh-pages --dist doc/ --user "pakkunbot <blah+pakkun@cliffano.com>" --repo "https://cliffano:${{ secrets.OAPICF_GITHUB_TOKEN }}@github.com/oapicf/openapi-ipify.git"
+      - run: CACHE_DIR=/tmp gh-pages --dist doc/ --user "pakkunbot <blah+pakkun@cliffano.com>" --repo "https://cliffano:${{ secrets.OAPICF_GITHUB_TOKEN }}@github.com/oapicf/openapi-okta-ip-ranges.git"
