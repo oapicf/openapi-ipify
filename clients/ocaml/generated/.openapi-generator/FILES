@@ -1,0 +1,10 @@
+.openapi-generator-ignore
+README.md
+dune
+dune-project
+openapi.opam
+src/apis/default_api.ml
+src/apis/default_api.mli
+src/support/enums.ml
+src/support/jsonSupport.ml
+src/support/request.ml

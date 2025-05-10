@@ -49,6 +49,8 @@ stringFromFormat model =
 
 
 
+{-| Get your public IP address
+-}
 getIp : Maybe Format -> Maybe String -> Api.Request String
 getIp format_query callback_query =
     Api.request

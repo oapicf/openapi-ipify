@@ -1,0 +1,9 @@
+.openapi-generator-ignore
+README.md
+apis/DefaultApi.js
+authentication.js
+index.js
+operations/actions.js
+package.json
+samples/DefaultApi.js
+utils/utils.js

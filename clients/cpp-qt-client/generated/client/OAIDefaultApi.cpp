@@ -224,7 +224,7 @@ void OAIDefaultApi::getIp(const ::OpenAPI::OptionalParam<QString> &format, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(format.stringValue()));
+        fullPath.append(QUrl::toPercentEncoding("format")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(format.stringValue())));
     }
     if (callback.hasValue())
     {
@@ -239,7 +239,7 @@ void OAIDefaultApi::getIp(const ::OpenAPI::OptionalParam<QString> &format, const
         else
             fullPath.append("?");
 
-        fullPath.append(QUrl::toPercentEncoding("callback")).append(querySuffix).append(QUrl::toPercentEncoding(callback.stringValue()));
+        fullPath.append(QUrl::toPercentEncoding("callback")).append(querySuffix).append(QUrl::toPercentEncoding(::OpenAPI::toStringValue(callback.stringValue())));
     }
     OAIHttpRequestWorker *worker = new OAIHttpRequestWorker(this, _manager);
     worker->setTimeOut(_timeOut);
@@ -254,7 +254,7 @@ void OAIDefaultApi::getIp(const ::OpenAPI::OptionalParam<QString> &format, const
 
     connect(worker, &OAIHttpRequestWorker::on_execution_finished, this, &OAIDefaultApi::getIpCallback);
     connect(this, &OAIDefaultApi::abortRequestsSignal, worker, &QObject::deleteLater);
-    connect(worker, &QObject::destroyed, this, [this]() {
+    connect(worker, &QObject::destroyed, this, [this] {
         if (findChildren<OAIHttpRequestWorker*>().count() == 0) {
             Q_EMIT allPendingRequestsCompleted();
         }

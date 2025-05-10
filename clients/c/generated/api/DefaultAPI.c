@@ -5,11 +5,6 @@
 
 #define MAX_NUMBER_LENGTH 16
 #define MAX_BUFFER_LENGTH 4096
-#define intToStr(dst, src) \
-    do {\
-    char dst[256];\
-    snprintf(dst, 256, "%ld", (long int)(src));\
-}while(0)
 
 // Functions for enum FORMAT for DefaultAPI_getIp
 
@@ -75,11 +70,14 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, ch
     list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
 
     // create the path
-    long sizeOfPath = strlen("/")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/");
+    char *localVarPath = strdup("/");
+
 
 
 
@@ -92,7 +90,7 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, ch
     {
         keyQuery_format = strdup("format");
         valueQuery_format = (format);
-        keyPairQuery_format = keyValuePair_create(keyQuery_format, (void *)strdup(getIp_FORMAT_ToString(
+        keyPairQuery_format = keyValuePair_create(keyQuery_format, strdup(getIp_FORMAT_ToString(
         valueQuery_format)));
         list_addElement(localVarQueryParameters,keyPairQuery_format);
     }
@@ -119,14 +117,17 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, ch
                     localVarHeaderType,
                     localVarContentType,
                     localVarBodyParameters,
+                    localVarBodyLength,
                     "GET");
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
     //    printf("%s\n","Your public IP address");
     //}
-    //primitive return type simple
-    char* elementToReturn =  strdup((char*)apiClient->dataReceived);
+    //primitive return type simple string
+    char* elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300)
+        elementToReturn = strdup((char*)apiClient->dataReceived);
 
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);

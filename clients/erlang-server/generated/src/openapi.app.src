@@ -4,7 +4,7 @@
    "OpenAPI client for ipify, a simple public IP address API"},
   {vsn, "1.0.0"},
   {registered, []},
-  {applications, [kernel, stdlib, public_key, ssl, inets, ranch, cowboy]},
+  {applications, [kernel, stdlib, public_key, ssl, inets, ranch, cowboy, jesse]},
   {env, []},
   {modules, []},
   {licenses, ["MIT"]},

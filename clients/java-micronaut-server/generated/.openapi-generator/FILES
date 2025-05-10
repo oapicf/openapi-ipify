@@ -2,7 +2,6 @@
 .mvn/wrapper/MavenWrapperDownloader.java
 .mvn/wrapper/maven-wrapper.jar
 .mvn/wrapper/maven-wrapper.properties
-.openapi-generator-ignore
 README.md
 build.gradle
 docs/controllers/DefaultController.md
@@ -19,4 +18,3 @@ src/main/java/org/openapitools/Application.java
 src/main/java/org/openapitools/controller/DefaultController.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
-src/test/java/org/openapitools/controller/DefaultControllerTest.java

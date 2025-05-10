@@ -22,6 +22,6 @@ object Paths {
      * @param format Response format (optional)
      * @param paramCallback JSONP callback function name (optional)
      */
-    @Serializable @Resource("/") class getIp(val format: kotlin.String? = null, val paramCallback: kotlin.String? = null)
+    @Resource("/") class getIp(val format: kotlin.String? = null, val paramCallback: kotlin.String? = null)
 
 }

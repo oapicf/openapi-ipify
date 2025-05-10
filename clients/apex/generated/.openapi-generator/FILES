@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 README.md
 config/project-scratch-def.json
 force-app/main/default/classes/OAS.cls
@@ -7,8 +6,6 @@ force-app/main/default/classes/OASClient.cls
 force-app/main/default/classes/OASClient.cls-meta.xml
 force-app/main/default/classes/OASDefaultApi.cls
 force-app/main/default/classes/OASDefaultApi.cls-meta.xml
-force-app/main/default/classes/OASDefaultApiTest.cls
-force-app/main/default/classes/OASDefaultApiTest.cls-meta.xml
 force-app/main/default/classes/OASResponseMock.cls
 force-app/main/default/classes/OASResponseMock.cls-meta.xml
 force-app/main/default/classes/OASTest.cls

@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 docs/default_api.md
 openapi3graphql-server/.gitignore
 openapi3graphql-server/README.md

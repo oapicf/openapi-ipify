@@ -1,0 +1,14 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+application/config.yml
+application/config/app.yml
+application/config/data_transfer.yml
+application/config/path_handler.yml
+application/container.php
+composer.json
+public/index.php
+src/App/DTO/GetIpQueryData.php
+src/App/Factory.php
+src/App/Handler/DefaultApi.php
+src/App/Middleware/InternalServerError.php

@@ -1,0 +1,16 @@
+.Rbuildignore
+.github/workflows/r-client.yaml
+.gitignore
+.lintr
+.openapi-generator-ignore
+.travis.yml
+DESCRIPTION
+NAMESPACE
+R/api_client.R
+R/api_response.R
+R/default_api.R
+README.md
+docs/DefaultApi.md
+git_push.sh
+tests/testthat.R
+tests/testthat/test_default_api.R

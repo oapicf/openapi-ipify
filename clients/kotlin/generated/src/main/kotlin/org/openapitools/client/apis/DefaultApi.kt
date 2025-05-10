@@ -62,6 +62,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory
      }
 
     /**
+     * GET /
      * Get your public IP address
      * 
      * @param format Response format (optional)
@@ -94,6 +95,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory
     }
 
     /**
+     * GET /
      * Get your public IP address
      * 
      * @param format Response format (optional)
@@ -131,7 +133,7 @@ class DefaultApi(basePath: kotlin.String = defaultBasePath, client: Call.Factory
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
-        localVariableHeaders["Accept"] = "application/json"
+        localVariableHeaders["Accept"] = "text/plain, application/json"
 
         return RequestConfig(
             method = RequestMethod.GET,

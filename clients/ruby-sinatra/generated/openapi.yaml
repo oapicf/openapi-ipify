@@ -1,0 +1,53 @@
+openapi: 3.1.0
+info:
+  contact:
+    email: blah+oapicf@cliffano.com
+    name: OpenAPI Clients Factory
+    url: https://github.com/oapicf/openapi-ipify
+  description: "OpenAPI client for ipify, a simple public IP address API"
+  license:
+    name: MIT
+  title: openapi-ipify
+  version: 5.3.1-pre.0
+servers:
+- url: https://api.ipify.org
+paths:
+  /:
+    get:
+      operationId: getIp
+      parameters:
+      - description: Response format
+        explode: true
+        in: query
+        name: format
+        required: false
+        schema:
+          enum:
+          - json
+          - jsonp
+          type: string
+        style: form
+      - description: JSONP callback function name
+        explode: true
+        in: query
+        name: callback
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+            text/javascript:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+          description: Your public IP address
+      summary: Get your public IP address
+components:
+  schemas: {}
