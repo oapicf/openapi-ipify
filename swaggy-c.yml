@@ -9,4 +9,6 @@ scm:
   git_repo: openapi-ipify
 base_dir:
   github_actions: /home/runner/work/openapi-ipify/openapi-ipify
-  local: /Users/cliffano/dev/workspace-studio/openapi-ipify
+  local: /Users/cliffano/dev/workspace-oapicf/openapi-ipify
+  custom: >-
+    /home/runner/work/generator-openapi-generator/generator-openapi-generator/stage/openapi-ipify/
