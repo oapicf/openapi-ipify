@@ -196,7 +196,8 @@ test-javascript: build-javascript
 	npm install validator
 	cd clients/javascript/generated/ && \
 	  npm install --dev && \
-	  npm run test
+	  npm run test && \
+	  npm link
 	mocha --timeout 5000 test/javascript/
 
 test-python: build-python
