@@ -168,8 +168,6 @@ build-javascript:
 	  npm install --dev && \
 	  npm link && \
 	  npm run build
-	cd test/javascript/ && \
-	  npm link ../../clients/javascript/generated/
 
 build-python:
 	cd clients/python/generated/ && \
@@ -196,9 +194,10 @@ test-javascript: build-javascript
 	npm install validator
 	cd clients/javascript/generated/ && \
 	  npm install --dev && \
-	  npm run test && \
-	  npm link
-	mocha --timeout 5000 test/javascript/
+	  npm run test
+	cd test/javascript/ && \
+	  npm link ../../clients/javascript/generated/ && \
+	  mocha --timeout 5000 .
 
 test-python: build-python
 	cd clients/python/generated/ && \
