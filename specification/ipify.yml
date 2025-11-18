@@ -11,7 +11,7 @@ info:
     url: https://github.com/oapicf/openapi-ipify
     email: blah+oapicf@cliffano.com
 servers:
-  - url: https://api.ipify.org
+  - url: https://api64.ipify.org
 paths:
   /:
     get:
