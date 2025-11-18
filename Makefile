@@ -165,9 +165,11 @@ generate-primary:
 build-javascript:
 	npm install -g babel-cli
 	cd clients/javascript/generated/ && \
-	  npm install --dev && \
+	  npm install && \
 	  npm link && \
 	  npm run build
+	cd test/javascript/ && \
+	  npm link ../../clients/javascript/generated/
 
 build-python:
 	cd clients/python/generated/ && \
