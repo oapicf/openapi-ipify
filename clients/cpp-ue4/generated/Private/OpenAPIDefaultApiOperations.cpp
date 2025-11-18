@@ -97,7 +97,7 @@ FString OpenAPIDefaultApi::GetIpRequest::ComputePath() const
 void OpenAPIDefaultApi::GetIpRequest::SetupHttpRequest(const FHttpRequestRef& HttpRequest) const
 {
 	static const TArray<FString> Consumes = {  };
-	//static const TArray<FString> Produces = { TEXT("text/plain"), TEXT("text/javascript"), TEXT("application/json") };
+	//static const TArray<FString> Produces = { TEXT("text/plain"), TEXT("text/javascript"), TEXT("application/javascript"), TEXT("application/json") };
 
 	HttpRequest->SetVerb(TEXT("GET"));
 

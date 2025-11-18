@@ -42,7 +42,7 @@ class DefaultApiController() {
     @RequestMapping(
         method = [RequestMethod.GET],
         value = ["/"],
-        produces = ["text/plain", "text/javascript", "application/json"]
+        produces = ["text/plain", "text/javascript", "application/javascript", "application/json"]
     )
     fun getIp(@Parameter(description = "Response format", schema = Schema(allowableValues = ["json", "jsonp"])) @Valid @RequestParam(value = "format", required = false) format: kotlin.String?,@Parameter(description = "JSONP callback function name") @Valid @RequestParam(value = "callback", required = false) paramCallback: kotlin.String?): ResponseEntity<kotlin.String> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)

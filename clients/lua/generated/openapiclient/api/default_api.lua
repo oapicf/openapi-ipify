@@ -55,7 +55,7 @@ function default_api:get_ip(format, callback)
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
 	-- TODO: create a function to select proper content-type
-	--local var_accept = { "text/plain", "text/javascript", "application/json" }
+	--local var_accept = { "text/plain", "text/javascript", "application/javascript", "application/json" }
 	req.headers:upsert("content-type", "text/plain")
 
 

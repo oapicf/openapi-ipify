@@ -74,7 +74,7 @@ NSInteger kOAIDefaultApiMissingParamErrorCode = 234513;
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.apiClient.configuration.defaultHeaders];
     [headerParams addEntriesFromDictionary:self.defaultHeaders];
     // HTTP header `Accept`
-    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"text/plain", @"text/javascript", @"application/json"]];
+    NSString *acceptHeader = [self.apiClient.sanitizer selectHeaderAccept:@[@"text/plain", @"text/javascript", @"application/javascript", @"application/json"]];
     if(acceptHeader.length > 0) {
         headerParams[@"Accept"] = acceptHeader;
     }

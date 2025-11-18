@@ -26,7 +26,7 @@ import javax.validation.Valid;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2025-05-10T03:34:30.433604200Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2025-11-18T12:21:30.809893449Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class DefaultApi  {
 
     @Inject DefaultApiService service;
@@ -34,7 +34,7 @@ public class DefaultApi  {
     @GET
     
     
-    @Produces({ "text/plain", "text/javascript", "application/json" })
+    @Produces({ "text/plain", "text/javascript", "application/javascript", "application/json" })
     @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

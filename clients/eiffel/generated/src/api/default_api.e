@@ -48,7 +48,7 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "callback", callback));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "text/javascript", "application/json">>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "text/javascript", "application/javascript", "application/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")

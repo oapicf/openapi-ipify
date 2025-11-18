@@ -53,7 +53,7 @@ export class DefaultService {
             queryParameters.push('callback='+encodeURIComponent(String(callback)));
         }
 
-        headers['Accept'] = 'text/plain, text/javascript, application/json';
+        headers['Accept'] = 'text/plain, text/javascript, application/javascript, application/json';
 
         const response: Observable<HttpResponse<string>> = this.httpClient.get(`${this.basePath}/?${queryParameters.join('&')}`, headers);
         if (observe === 'body') {

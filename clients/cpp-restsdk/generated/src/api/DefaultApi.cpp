@@ -51,6 +51,7 @@ pplx::task<utility::string_t> DefaultApi::getIp(boost::optional<utility::string_
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/javascript") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/javascript") );
     localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
 
     utility::string_t localVarResponseHttpContentType;

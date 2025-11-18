@@ -52,7 +52,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, text/javascript, application/json
+ - **Accept**: text/plain, text/javascript, application/javascript, application/json
 
 
 ### HTTP response details

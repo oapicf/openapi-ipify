@@ -23,7 +23,7 @@ JSONP callback function name
 
 .PARAMETER ReturnType
 
-Select the return type (optional): text/plain, text/javascript, application/json
+Select the return type (optional): text/plain, text/javascript, application/javascript, application/json
 
 .PARAMETER WithHttpInfo
 
@@ -44,7 +44,7 @@ function Get-Ip {
         [String]
         ${Callback},
         [String]
-        [ValidateSet("text/plain", "text/javascript", "application/json")]
+        [ValidateSet("text/plain", "text/javascript", "application/javascript", "application/json")]
         $ReturnType,
         [Switch]
         $WithHttpInfo
@@ -65,7 +65,7 @@ function Get-Ip {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'text/javascript', 'application/json')
+        $LocalVarAccepts = @('text/plain', 'text/javascript', 'application/javascript', 'application/json')
 
         if ($ReturnType) {
             # use the return type (MIME) provided by the user

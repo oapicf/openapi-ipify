@@ -180,7 +180,7 @@ void Resource::handler_GET_internal(const std::shared_ptr<restbed::Session> sess
     
     std::multimap< std::string, std::string > responseHeaders {};
     static const std::vector<std::string> contentTypes{
-        "text/plain","text/javascript","application/json",
+        "text/plain","text/javascript","application/javascript","application/json",
     };
     static const std::string acceptTypes{
     };

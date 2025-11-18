@@ -17,7 +17,7 @@
               :query-params  {"format" format "callback" callback }
               :form-params   {}
               :content-types []
-              :accepts       ["text/plain" "text/javascript" "application/json"]
+              :accepts       ["text/plain" "text/javascript" "application/javascript" "application/json"]
               :auth-names    []})))
 
 (defn-spec get-ip string?

@@ -81,6 +81,7 @@ Get your public IP address
 
 * text/plain
 * text/javascript
+* application/javascript
 * application/json
 
 ===== Responses

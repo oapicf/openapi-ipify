@@ -17,13 +17,16 @@ package body .Skeletons is
 
    use Swagger.Streams;
 
-   Mime_1 : aliased constant String := "text/javascript";
+   Mime_1 : aliased constant String := "application/javascript";
+   Mime_2 : aliased constant String := "text/javascript";
    Media_List_1 : aliased constant Swagger.Mime_List := (
-     1 => Swagger.Mime_Json,
+     1 => Mime_1'Access,
      
-     2 => Mime_1'Access,
+     2 => Swagger.Mime_Json,
      
-     3 => Swagger.Mime_Text);
+     3 => Mime_2'Access,
+     
+     4 => Swagger.Mime_Text);
 
    package body Skeleton is
 

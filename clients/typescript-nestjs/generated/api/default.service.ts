@@ -69,6 +69,7 @@ export class DefaultService {
         let httpHeaderAccepts: string[] = [
             'text/plain',
             'text/javascript',
+            'application/javascript',
             'application/json'
         ];
         const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);

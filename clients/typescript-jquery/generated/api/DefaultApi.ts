@@ -76,6 +76,7 @@ export class DefaultApi {
         let produces: string[] = [
             'text/plain', 
             'text/javascript', 
+            'application/javascript', 
             'application/json'
         ];
 

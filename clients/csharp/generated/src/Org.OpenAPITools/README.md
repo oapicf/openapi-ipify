@@ -158,7 +158,7 @@ Endpoints do not require authorization.
 - packageCompany: OpenAPI
 - packageCopyright: No Copyright
 - packageDescription: A library generated from a OpenAPI doc
-- packageGuid: {39F2BA4F-9391-4DEE-B836-97F43B443096}
+- packageGuid: {6E7395D4-6EFB-4A1F-AB71-3762C53DA029}
 - packageName: Org.OpenAPITools
 - packageTags: 
 - packageTitle: OpenAPI Library

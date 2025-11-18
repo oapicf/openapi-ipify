@@ -25,7 +25,7 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2025-05-10T03:34:15.428654655Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2025-11-18T12:21:15.860775214Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 @Client("${openapi-micronaut-client-base-path}")
 public interface DefaultApi {
     /**
@@ -36,7 +36,7 @@ public interface DefaultApi {
      * @return String
      */
     @Get(uri="/")
-    @Consumes({"text/plain", "text/javascript", "application/json"})
+    @Consumes({"text/plain", "text/javascript", "application/javascript", "application/json"})
     Mono<String> getIp(
         @QueryValue(value="format") @Nullable String _format, 
         @QueryValue(value="callback") @Nullable String paramCallback

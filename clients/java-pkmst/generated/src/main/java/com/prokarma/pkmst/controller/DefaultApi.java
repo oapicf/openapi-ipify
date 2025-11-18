@@ -18,7 +18,7 @@ import java.util.List;
  * @author pkmst
  *
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2025-05-10T03:34:18.980947964Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2025-11-18T12:21:19.385994274Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 @Api(value = "Default", description = "the Default API")
 public interface DefaultApi {
 
@@ -28,7 +28,7 @@ public interface DefaultApi {
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/",
-        produces = { "text/plain", "text/javascript", "application/json" }
+        produces = { "text/plain", "text/javascript", "application/javascript", "application/json" }
     )
     ResponseEntity<String> getIp(@ApiParam(value = "Response format", allowableValues = "json, jsonp")  @RequestParam(value = "format", required = false) String format,@ApiParam(value = "JSONP callback function name")  @RequestParam(value = "callback", required = false) String paramCallback, @RequestHeader(value = "Accept", required = false) String accept) throws Exception;
 

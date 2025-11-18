@@ -45,7 +45,7 @@ module OpenAPIClient
       # header parameters
       header_params = Hash(String, String).new
       # HTTP header "Accept" (if needed)
-      header_params["Accept"] = @api_client.select_header_accept(["text/plain", "text/javascript", "application/json"])
+      header_params["Accept"] = @api_client.select_header_accept(["text/plain", "text/javascript", "application/javascript", "application/json"])
 
       # form parameters
       form_params = Hash(Symbol, (String | ::File)).new

@@ -55,6 +55,11 @@
                   "type" : "string"
                 }
               },
+              "application/javascript" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
               "application/json" : {
                 "schema" : {
                   "type" : "string"
@@ -65,7 +70,7 @@
           }
         },
         "summary" : "Get your public IP address",
-        "x-accepts" : [ "application/json", "text/javascript", "text/plain" ],
+        "x-accepts" : [ "application/javascript", "application/json", "text/javascript", "text/plain" ],
         "x-serviceid" : "getIp",
         "x-serviceid-varname" : "GETIP_SERVICE_ID"
       }

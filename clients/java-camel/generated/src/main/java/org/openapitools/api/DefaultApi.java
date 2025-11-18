@@ -28,7 +28,7 @@ public class DefaultApi extends RouteBuilder {
                 .id("getIpApi")
                 .clientRequestValidation(false)
                 .bindingMode(RestBindingMode.off)
-                .produces("text/plain, text/javascript, application/json")
+                .produces("text/plain, text/javascript, application/javascript, application/json")
                 .outType(String.class)
                 .param()
                     .name("format")

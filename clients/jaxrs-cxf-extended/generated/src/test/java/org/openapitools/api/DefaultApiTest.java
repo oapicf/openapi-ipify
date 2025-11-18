@@ -17,6 +17,7 @@ import org.junit.Test;
 import org.junit.Before;
 import static org.junit.Assert.*;
 
+import javax.validation.Valid;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.apache.cxf.jaxrs.client.JAXRSClientFactory;

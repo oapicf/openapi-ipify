@@ -66,7 +66,7 @@ export default class DefaultApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'text/javascript', 'application/json'];
+      let accepts = ['text/plain', 'text/javascript', 'application/javascript', 'application/json'];
       let returnType = 'String';
       return this.apiClient.callApi(
         '/', 'GET',

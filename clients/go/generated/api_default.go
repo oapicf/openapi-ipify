@@ -96,7 +96,7 @@ func (a *DefaultAPIService) GetIpExecute(r ApiGetIpRequest) (string, *http.Respo
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "text/javascript", "application/json"}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "text/javascript", "application/javascript", "application/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

@@ -3,7 +3,7 @@ package org.openapitools.api;
 /**
  * The exception that can be used to store the HTTP status code returned by an API response.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2025-05-10T03:34:30.433604200Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyServerCodegen", date = "2025-11-18T12:21:30.809893449Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class ApiException extends Exception {
     /** The HTTP status code. */
     private int code;

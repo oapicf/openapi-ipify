@@ -121,6 +121,7 @@ public class DefaultApi {
         final String[] localVarAccepts = {
             "text/plain",
             "text/javascript",
+            "application/javascript",
             "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);

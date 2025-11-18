@@ -290,6 +290,7 @@ class DefaultApi:
                 [
                     'text/plain', 
                     'text/javascript', 
+                    'application/javascript', 
                     'application/json'
                 ]
             )

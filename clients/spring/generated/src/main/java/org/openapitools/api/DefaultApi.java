@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-05-10T03:35:29.523217686Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-11-18T12:22:38.197883098Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 @Validated
 @Tag(name = "default", description = "the default API")
 public interface DefaultApi {
@@ -54,6 +54,7 @@ public interface DefaultApi {
             @ApiResponse(responseCode = "200", description = "Your public IP address", content = {
                 @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)),
                 @Content(mediaType = "text/javascript", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "application/javascript", schema = @Schema(implementation = String.class)),
                 @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))
             })
         }
@@ -61,7 +62,7 @@ public interface DefaultApi {
     @RequestMapping(
         method = RequestMethod.GET,
         value = "/",
-        produces = { "text/plain", "text/javascript", "application/json" }
+        produces = { "text/plain", "text/javascript", "application/javascript", "application/json" }
     )
     
     default ResponseEntity<String> getIp(

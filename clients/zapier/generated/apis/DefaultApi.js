@@ -36,7 +36,7 @@ module.exports = {
                     removeMissingValuesFrom: { params: true, body: true },
                     headers: {
                         'Content-Type': '',
-                        'Accept': 'text/plain, text/javascript, application/json',
+                        'Accept': 'text/plain, text/javascript, application/javascript, application/json',
                     },
                     params: {
                         'format': bundle.inputData?.['format'],

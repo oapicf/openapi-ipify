@@ -15,7 +15,7 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2025-05-10T03:34:17.742084334Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2025-11-18T12:21:18.219078195Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public abstract class DefaultApiService {
     public abstract Response getIp(String format
  ,String paramCallback

@@ -265,6 +265,7 @@ namespace Org.OpenAPITools.Api
                     string[] acceptLocalVars = new string[] {
                         "text/plain",
                         "text/javascript",
+                        "application/javascript",
                         "application/json"
                     };
 

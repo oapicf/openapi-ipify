@@ -22,13 +22,13 @@ import javax.validation.Valid;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2025-05-10T03:34:31.766695956Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaResteasyEapServerCodegen", date = "2025-11-18T12:21:31.949385951Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public interface DefaultApi  {
 
     @GET
     
     
-    @Produces({ "text/plain", "text/javascript", "application/json" })
+    @Produces({ "text/plain", "text/javascript", "application/javascript", "application/json" })
     @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

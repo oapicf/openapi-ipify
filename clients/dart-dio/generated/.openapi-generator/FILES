@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 README.md
 analysis_options.yaml
 doc/DefaultApi.md
@@ -15,3 +16,4 @@ lib/src/date_serializer.dart
 lib/src/model/date.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/default_api_test.dart

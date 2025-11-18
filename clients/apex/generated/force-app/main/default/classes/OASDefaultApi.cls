@@ -47,7 +47,7 @@ public class OASDefaultApi {
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'text/javascript', 'application/json' },
+            new List<String>{ 'text/plain', 'text/javascript', 'application/javascript', 'application/json' },
             new List<String>(),
             new List<String>(),
             String.class
