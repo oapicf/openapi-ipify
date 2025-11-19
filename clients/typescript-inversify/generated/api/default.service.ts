@@ -27,7 +27,7 @@ import { COLLECTION_FORMATS }  from '../variables';
 
 @injectable()
 export class DefaultService {
-    private basePath: string = 'https://api.ipify.org';
+    private basePath: string = 'https://api64.ipify.org';
 
     constructor(@inject('IApiHttpClient') private httpClient: IHttpClient,
         @inject('IAPIConfiguration') private APIConfiguration: IAPIConfiguration ) {

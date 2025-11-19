@@ -28,7 +28,7 @@
 - (instancetype) init {
     self = [super init];
     if (self) {
-        _host = @"https://api.ipify.org";
+        _host = @"https://api64.ipify.org";
         _username = @"";
         _password = @"";
         _accessToken= @"";

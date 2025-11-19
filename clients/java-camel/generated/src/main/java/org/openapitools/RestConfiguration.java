@@ -15,7 +15,7 @@ public class RestConfiguration extends RouteBuilder {
     public void configure() throws Exception {
         restConfiguration()
             .scheme("https")
-            .host("api.ipify.org")
+            .host("api64.ipify.org")
             .component("servlet")
             .bindingMode(RestBindingMode.auto)
             .clientRequestValidation(false)

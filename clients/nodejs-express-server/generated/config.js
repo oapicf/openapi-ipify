@@ -3,7 +3,7 @@ const path = require('path');
 const config = {
   ROOT_DIR: __dirname,
   URL_PORT: 8080,
-  URL_PATH: 'https://api.ipify.org',
+  URL_PATH: 'https://api64.ipify.org',
   BASE_VERSION: '',
   CONTROLLER_DIRECTORY: path.join(__dirname, 'controllers'),
   PROJECT_DIR: __dirname,

@@ -32,11 +32,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://api.ipify.org') {
+    constructor(basePath = 'https://api64.ipify.org') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://api.ipify.org
+         * @default https://api64.ipify.org
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -594,7 +594,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://api.ipify.org",
+              'url': "https://api64.ipify.org",
               'description': "No description provided",
             }
       ];

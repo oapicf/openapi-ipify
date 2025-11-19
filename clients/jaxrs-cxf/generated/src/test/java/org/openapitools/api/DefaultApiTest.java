@@ -52,7 +52,7 @@ public class DefaultApiTest {
         List providers = new ArrayList();
         providers.add(provider);
 
-        api = JAXRSClientFactory.create("https://api.ipify.org", DefaultApi.class, providers);
+        api = JAXRSClientFactory.create("https://api64.ipify.org", DefaultApi.class, providers);
         org.apache.cxf.jaxrs.client.Client client = WebClient.client(api);
 
         ClientConfiguration config = WebClient.getConfig(client);

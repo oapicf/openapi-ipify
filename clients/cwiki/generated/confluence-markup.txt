@@ -21,7 +21,7 @@ h3. getIp
 	|| HttpMethod | {status:colour=Yellow|title=get|subtle=false} |
     || Protocol | {noformat:nopanel=true}https{noformat} |
     || Path | {noformat:nopanel=true}/{noformat} |
-    || Base Path | {noformat:nopanel=true}https://api.ipify.org{noformat} |
+    || Base Path | {noformat:nopanel=true}https://api64.ipify.org{noformat} |
     || Produces | {noformat:nopanel=true}text/plain text/javascript application/javascript application/json {noformat} |
 ----
 h4. Parameters

@@ -1,6 +1,6 @@
 # Org.OpenAPITools.Api.DefaultApi
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -27,7 +27,7 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.ipify.org";
+            config.BasePath = "https://api64.ipify.org";
             var apiInstance = new DefaultApi(config);
             var format = "json";  // string | Response format (optional) 
             var callback = "callback_example";  // string | JSONP callback function name (optional) 

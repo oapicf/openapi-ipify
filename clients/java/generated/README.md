@@ -2,7 +2,7 @@
 
 openapi-ipify
 - API version: 5.3.1-pre.0
-  - Build date: 2025-11-18T12:21:10.349404021Z[Etc/UTC]
+  - Build date: 2025-11-18T13:40:01.199478950Z[Etc/UTC]
   - Generator version: 7.12.0
 
 OpenAPI client for ipify, a simple public IP address API
@@ -91,7 +91,7 @@ import com.github.oapicf.openapiipify.api.DefaultApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.ipify.org");
+    defaultClient.setBasePath("https://api64.ipify.org");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     String format = "json"; // String | Response format
@@ -113,7 +113,7 @@ public class Example {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

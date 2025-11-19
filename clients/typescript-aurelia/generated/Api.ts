@@ -13,7 +13,7 @@
 import { HttpClient } from 'aurelia-http-client';
 import { AuthStorage } from './AuthStorage';
 
-const BASE_PATH = 'https://api.ipify.org'.replace(/\/+$/, '');
+const BASE_PATH = 'https://api64.ipify.org'.replace(/\/+$/, '');
 
 export class Api {
   basePath: string;

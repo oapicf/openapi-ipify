@@ -38,7 +38,7 @@
         </init-param>
         <init-param>
             <param-name>swagger.api.basepath</param-name>
-            <param-value>https://api.ipify.org</param-value>
+            <param-value>https://api64.ipify.org</param-value>
         </init-param>
 
         <load-on-startup>2</load-on-startup>

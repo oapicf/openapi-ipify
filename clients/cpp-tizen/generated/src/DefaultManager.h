@@ -55,7 +55,7 @@ bool getIpAsync(char * accessToken,
 
 	static std::string getBasePath()
 	{
-		return "https://api.ipify.org";
+		return "https://api64.ipify.org";
 	}
 };
 /** @}*/

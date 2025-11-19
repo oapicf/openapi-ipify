@@ -22,7 +22,7 @@ namespace OpenAPI
 {
 
 OpenAPIDefaultApi::OpenAPIDefaultApi()
-: Url(TEXT("https://api.ipify.org"))
+: Url(TEXT("https://api64.ipify.org"))
 {
 }
 

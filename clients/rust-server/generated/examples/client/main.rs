@@ -44,7 +44,7 @@ fn main() {
         .arg(Arg::with_name("host")
             .long("host")
             .takes_value(true)
-            .default_value("api.ipify.org")
+            .default_value("api64.ipify.org")
             .help("Hostname to contact"))
         .arg(Arg::with_name("port")
             .long("port")

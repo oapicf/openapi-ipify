@@ -40,6 +40,6 @@ export class ServerConfiguration<T extends { [key: string]: string }> {
     }
 }
 
-const server1 = new ServerConfiguration<{  }>("https://api.ipify.org", {  }, "");
+const server1 = new ServerConfiguration<{  }>("https://api64.ipify.org", {  }, "");
 
 export const servers = [server1];

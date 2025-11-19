@@ -1,4 +1,4 @@
-openapi-micronaut-client-base-path: "https://api.ipify.org"
+openapi-micronaut-client-base-path: "https://api64.ipify.org"
 
 micronaut:
   application:

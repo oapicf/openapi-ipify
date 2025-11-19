@@ -31,14 +31,14 @@ You can override the URL of your server (e.g. if you have a separate development
 configuration files).
 
 ```elixir
-config :openapi_ipify, base_url: "https://api.ipify.org"
+config :openapi_ipify, base_url: "https://api64.ipify.org"
 ```
 
 Multiple clients for the same API with different URLs can be created passing different `base_url`s when calling
 `OpenapiIpify.Connection.new/1`:
 
 ```elixir
-client = OpenapiIpify.Connection.new(base_url: "https://api.ipify.org")
+client = OpenapiIpify.Connection.new(base_url: "https://api64.ipify.org")
 ```
 
 [exdoc]: https://github.com/elixir-lang/ex_doc

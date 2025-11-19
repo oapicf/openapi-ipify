@@ -34,7 +34,7 @@ feature {NONE} -- Initialization
 
 feature -- Access
 
-	default_base_path: STRING = "https://api.ipify.org"
+	default_base_path: STRING = "https://api64.ipify.org"
 			-- default base path.
 
 	base_path: STRING

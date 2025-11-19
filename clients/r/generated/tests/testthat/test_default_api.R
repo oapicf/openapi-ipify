@@ -7,7 +7,7 @@ api_instance <- DefaultApi$new()
 
 test_that("GetIp", {
   # tests for GetIp
-  # base path: https://api.ipify.org
+  # base path: https://api64.ipify.org
   # Get your public IP address
   # @param format character Response format (optional)
   # @param callback character JSONP callback function name (optional)

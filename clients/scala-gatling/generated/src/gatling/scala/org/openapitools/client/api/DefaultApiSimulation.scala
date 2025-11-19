@@ -42,7 +42,7 @@ class DefaultApiSimulation extends Simulation {
 
 // Setup http protocol configuration
     val httpConf = http
-        .baseURL("https://api.ipify.org")
+        .baseURL("https://api64.ipify.org")
         .doNotTrackHeader("1")
         .acceptLanguageHeader("en-US,en;q=0.5")
         .acceptEncodingHeader("gzip, deflate")

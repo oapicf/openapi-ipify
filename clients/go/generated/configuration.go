@@ -91,7 +91,7 @@ func NewConfiguration() *Configuration {
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
-				URL: "https://api.ipify.org",
+				URL: "https://api64.ipify.org",
 				Description: "No description provided",
 			},
 		},

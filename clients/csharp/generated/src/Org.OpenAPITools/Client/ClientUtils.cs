@@ -283,7 +283,7 @@ namespace Org.OpenAPITools.Client
         /// <summary>
         /// The base path of the API
         /// </summary>
-        public const string BASE_ADDRESS = "https://api.ipify.org";
+        public const string BASE_ADDRESS = "https://api64.ipify.org";
 
         /// <summary>
         /// The scheme of the API
@@ -298,7 +298,7 @@ namespace Org.OpenAPITools.Client
         /// <summary>
         /// The host of the API
         /// </summary>
-        public const string HOST = "api.ipify.org";
+        public const string HOST = "api64.ipify.org";
 
         /// <summary>
         /// The format to use for DateTime serialization

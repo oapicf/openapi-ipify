@@ -130,7 +130,7 @@ module OpenAPIClient
     # Create a new `Configuration`.
     def initialize
       @scheme = "https"
-      @host = "api.ipify.org"
+      @host = "api64.ipify.org"
       @base_path = ""
       @server_index = 0
       @server_operation_index = {} of Symbol => String
@@ -225,7 +225,7 @@ module OpenAPIClient
     def server_settings
       [
         {
-          url: "https://api.ipify.org",
+          url: "https://api64.ipify.org",
           description: "No description provided",
         }
       ]

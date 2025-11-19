@@ -13,7 +13,7 @@
 
 package com.github.oapicf.openapiipify;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-18T12:21:10.349404021Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-11-18T13:40:01.199478950Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class Configuration {
     public static final String VERSION = "5.3.1-pre.0";
 

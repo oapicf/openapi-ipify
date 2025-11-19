@@ -172,7 +172,7 @@ Protected Class DefaultApi
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		BasePath As String = "https://api.ipify.org"
+		BasePath As String = "https://api64.ipify.org"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

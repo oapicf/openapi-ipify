@@ -1,6 +1,6 @@
 # openapiipify.DefaultApi
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,10 +20,10 @@ import openapiipify
 from openapiipify.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.ipify.org
+# Defining the host is optional and defaults to https://api64.ipify.org
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapiipify.Configuration(
-    host = "https://api.ipify.org"
+    host = "https://api64.ipify.org"
 )
 
 

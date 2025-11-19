@@ -24,7 +24,7 @@ function Get-Configuration {
     $Configuration = $Script:Configuration
 
     if ([string]::IsNullOrEmpty($Configuration["BaseUrl"])) {
-        $Configuration["BaseUrl"] = "https://api.ipify.org";
+        $Configuration["BaseUrl"] = "https://api64.ipify.org";
     }
 
     if (!$Configuration.containsKey("Username")) {
@@ -313,7 +313,7 @@ System.Collections.Hashtable[]
 function Get-HostSetting {
     return ,@(
           @{
-            "Url" = "https://api.ipify.org";
+            "Url" = "https://api64.ipify.org";
             "Description" = "No description provided";
           }
     )

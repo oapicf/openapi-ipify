@@ -31,7 +31,7 @@ module.exports = {
             ],
             perform: async (z, bundle) => {
                 const options = {
-                    url: utils.replacePathParameters('https://api.ipify.org/'),
+                    url: utils.replacePathParameters('https://api64.ipify.org/'),
                     method: 'GET',
                     removeMissingValuesFrom: { params: true, body: true },
                     headers: {

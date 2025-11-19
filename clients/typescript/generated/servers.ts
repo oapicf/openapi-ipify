@@ -49,6 +49,6 @@ export class ServerConfiguration<T extends { [key: string]: string }> implements
     }
 }
 
-export const server1 = new ServerConfiguration<{  }>("https://api.ipify.org", {  })
+export const server1 = new ServerConfiguration<{  }>("https://api64.ipify.org", {  })
 
 export const servers = [server1];

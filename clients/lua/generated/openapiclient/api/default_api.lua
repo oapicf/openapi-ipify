@@ -33,7 +33,7 @@ local function new_default_api(authority, basePath, schemes)
 	return setmetatable({
 		host = host;
 		port = port;
-		basePath = basePath or "https://api.ipify.org";
+		basePath = basePath or "https://api64.ipify.org";
 		schemes = schemes_map;
 		default_scheme = default_scheme;
 		http_username = nil;

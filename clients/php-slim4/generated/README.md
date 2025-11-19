@@ -131,7 +131,7 @@ Add required log handlers/processors/formatters in `lib/App/RegisterDependencies
 
 ## API Endpoints
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 > Important! Do not modify abstract API controllers directly! Instead extend them by implementation classes like:
 

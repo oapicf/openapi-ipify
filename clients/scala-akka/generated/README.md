@@ -79,7 +79,7 @@ object DefaultApiExample extends App {
     import system.dispatcher
     // Create invoker to execute requests
     val apiInvoker = ApiInvoker()
-    val apiInstance = DefaultApi("https://api.ipify.org")
+    val apiInstance = DefaultApi("https://api64.ipify.org")
     val format: String = format_example // String | Response format
 
     val callback: String = callback_example // String | JSONP callback function name
@@ -111,7 +111,7 @@ object DefaultApiExample extends App {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -16,7 +16,7 @@ import sttp.client3._
 import sttp.model.Method
 
 object DefaultApi {
-  def apply(baseUrl: String = "https://api.ipify.org") = new DefaultApi(baseUrl)
+  def apply(baseUrl: String = "https://api64.ipify.org") = new DefaultApi(baseUrl)
 }
 
 class DefaultApi(baseUrl: String) {

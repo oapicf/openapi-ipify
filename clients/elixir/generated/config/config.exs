@@ -7,7 +7,7 @@
 # General application configuration
 import Config
 
-config :openapi_ipify, base_url: "https://api.ipify.org"
+config :openapi_ipify, base_url: "https://api64.ipify.org"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

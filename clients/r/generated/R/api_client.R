@@ -38,7 +38,7 @@ ApiClient <- R6::R6Class(
   "ApiClient",
   public = list(
     # base path of all requests
-    base_path = "https://api.ipify.org",
+    base_path = "https://api64.ipify.org",
     # user agent in the HTTP request
     user_agent = "OpenAPI-Generator/1.0.0/r",
     # default headers in the HTTP request

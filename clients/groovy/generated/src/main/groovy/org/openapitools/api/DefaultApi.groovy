@@ -3,7 +3,7 @@ package org.openapitools.api;
 import org.openapitools.api.ApiUtils
 
 class DefaultApi {
-    String basePath = "https://api.ipify.org"
+    String basePath = "https://api64.ipify.org"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 

@@ -33,7 +33,7 @@ void OAIDefaultApi::initializeServerConfigs() {
     QList<OAIServerConfiguration> defaultConf = QList<OAIServerConfiguration>();
     //varying endpoint server
     defaultConf.append(OAIServerConfiguration(
-    QUrl("https://api.ipify.org"),
+    QUrl("https://api64.ipify.org"),
     "No description provided",
     QMap<QString, OAIServerVariable>()));
     _serverConfigs.insert("getIp", defaultConf);

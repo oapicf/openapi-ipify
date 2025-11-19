@@ -26,7 +26,7 @@ API.Client.DefaultApi = function($http, $httpParamSerializer, $injector) {
   /** @private {!string} */
   this.basePath_ = $injector.has('DefaultApiBasePath') ?
                    /** @type {!string} */ ($injector.get('DefaultApiBasePath')) :
-                   'https://api.ipify.org';
+                   'https://api64.ipify.org';
 
   /** @private {!Object<string, string>} */
   this.defaultHeaders_ = $injector.has('DefaultApiDefaultHeaders') ?

@@ -17,7 +17,7 @@ import org.openapitools.client.core.ApiKeyLocations._
 
 object DefaultApi {
 
-  def apply(baseUrl: String = "https://api.ipify.org") = new DefaultApi(baseUrl)
+  def apply(baseUrl: String = "https://api64.ipify.org") = new DefaultApi(baseUrl)
 }
 
 class DefaultApi(baseUrl: String) {

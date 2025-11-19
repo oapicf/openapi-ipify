@@ -14,7 +14,7 @@ To see how to make this your own, look here:
 [README]((https://openapi-generator.tech))
 
 - API version: 5.3.1-pre.0
-- Build date: 2025-11-18T12:22:23.735203917Z[Etc/UTC]
+- Build date: 2025-11-18T13:41:44.195773547Z[Etc/UTC]
 - Generator version: 7.12.0
 
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
@@ -119,7 +119,7 @@ See https://doc.rust-lang.org/cargo/reference/manifest.html#the-features-section
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

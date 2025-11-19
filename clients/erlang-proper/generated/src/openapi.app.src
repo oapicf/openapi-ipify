@@ -10,7 +10,7 @@
       ]
     }
   , { env
-    , [ {host, "http://api.ipify.org"}
+    , [ {host, "http://api64.ipify.org"}
       , {basic_auth, {"admin", "admin"}}
       ]
     }

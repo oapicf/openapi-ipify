@@ -121,7 +121,7 @@ api.getIp(opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

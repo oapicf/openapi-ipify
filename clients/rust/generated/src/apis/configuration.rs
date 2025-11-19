@@ -39,7 +39,7 @@ impl Configuration {
 impl Default for Configuration {
     fn default() -> Self {
         Configuration {
-            base_path: "https://api.ipify.org".to_owned(),
+            base_path: "https://api64.ipify.org".to_owned(),
             user_agent: Some("OpenAPI-Generator/5.3.1-pre.0/rust".to_owned()),
             client: reqwest::Client::new(),
             basic_auth: None,

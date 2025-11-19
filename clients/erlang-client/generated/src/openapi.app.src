@@ -9,7 +9,7 @@
      hackney,
      ctx
     ]},
-  {env, [{host, "api.ipify.org"}]},
+  {env, [{host, "api64.ipify.org"}]},
   {modules, []},
 
   {maintainers, []},

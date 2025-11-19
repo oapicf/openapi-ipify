@@ -20,7 +20,7 @@ import { Configuration } from '../configuration';
 
 
 export class DefaultApi {
-    protected basePath = 'https://api.ipify.org';
+    protected basePath = 'https://api64.ipify.org';
     public defaultHeaders: Array<string> = [];
     public defaultExtraJQueryAjaxSettings?: JQueryAjaxSettings = undefined;
     public configuration: Configuration = new Configuration();

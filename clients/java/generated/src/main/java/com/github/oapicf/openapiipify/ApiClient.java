@@ -61,10 +61,10 @@ import com.github.oapicf.openapiipify.auth.ApiKeyAuth;
  */
 public class ApiClient {
 
-    private String basePath = "https://api.ipify.org";
+    private String basePath = "https://api64.ipify.org";
     protected List<ServerConfiguration> servers = new ArrayList<ServerConfiguration>(Arrays.asList(
     new ServerConfiguration(
-      "https://api.ipify.org",
+      "https://api64.ipify.org",
       "No description provided",
       new HashMap<String, ServerVariable>()
     )
@@ -156,7 +156,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g https://api.ipify.org
+     * @param basePath Base path of the URL (e.g https://api64.ipify.org
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {

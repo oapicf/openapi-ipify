@@ -62,7 +62,7 @@ Note: You don't need to specify includes for models and include folder separatel
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Category | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

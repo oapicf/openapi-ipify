@@ -1,6 +1,6 @@
 # DefaultApi
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -25,7 +25,7 @@ import com.github.oapicf.openapiipify.api.DefaultApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.ipify.org");
+    defaultClient.setBasePath("https://api64.ipify.org");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     String format = "json"; // String | Response format

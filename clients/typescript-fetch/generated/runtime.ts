@@ -13,7 +13,7 @@
  */
 
 
-export const BASE_PATH = "https://api.ipify.org".replace(/\/+$/, "");
+export const BASE_PATH = "https://api64.ipify.org".replace(/\/+$/, "");
 
 export interface ConfigurationParameters {
     basePath?: string; // override base path

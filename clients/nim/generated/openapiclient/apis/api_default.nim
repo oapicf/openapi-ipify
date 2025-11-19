@@ -19,7 +19,7 @@ import typetraits
 import uri
 
 
-const basepath = "https://api.ipify.org"
+const basepath = "https://api64.ipify.org"
 
 template constructResult[T](response: Response): untyped =
   if response.code in {Http200, Http201, Http202, Http204, Http206}:

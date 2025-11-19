@@ -1,6 +1,6 @@
 # DEFAULT_API
 
-All URIs are relative to *https://api.ipify.org*
+All URIs are relative to *https://api64.ipify.org*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------

@@ -22,7 +22,7 @@ import { COLLECTION_FORMATS } from '../variables';
 @Injectable()
 export class DefaultService {
 
-    protected basePath = 'https://api.ipify.org';
+    protected basePath = 'https://api64.ipify.org';
     public defaultHeaders: Record<string,string> = {};
     public configuration = new Configuration();
     protected httpClient: HttpService;

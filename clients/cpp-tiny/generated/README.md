@@ -25,7 +25,7 @@ samples/client/petstore/tiny/cpp/
     └── RunTests.cpp
 ```
 
-All URIs are relative to https://api.ipify.orghttps://api.ipify.org
+All URIs are relative to https://api64.ipify.orghttps://api64.ipify.org
 
 ### DefaultApi
 |Method | HTTP request | Description|

@@ -10,7 +10,7 @@ info:
   title: openapi-ipify
   version: 5.3.1-pre.0
 servers:
-- url: https://api.ipify.org
+- url: https://api64.ipify.org
 paths:
   /:
     get:
