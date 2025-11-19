@@ -10,7 +10,7 @@ class TestIpify(unittest.TestCase):
     def test_getip_without_format(self):
 
       configuration = openapiipify.Configuration(
-          host = "https://api.ipify.org"
+          host = "https://api64.ipify.org"
       )
 
       with openapiipify.ApiClient(configuration) as api_client:
@@ -28,7 +28,7 @@ class TestIpify(unittest.TestCase):
     def test_getip_with_json_format(self):
 
       configuration = openapiipify.Configuration(
-          host = "https://api.ipify.org"
+          host = "https://api64.ipify.org"
       )
 
       with openapiipify.ApiClient(configuration) as api_client:
@@ -47,7 +47,7 @@ class TestIpify(unittest.TestCase):
     def test_getip_with_jsonp_format(self):
 
       configuration = openapiipify.Configuration(
-          host = "https://api.ipify.org"
+          host = "https://api64.ipify.org"
       )
 
       with openapiipify.ApiClient(configuration) as api_client:
@@ -67,7 +67,7 @@ class TestIpify(unittest.TestCase):
     def test_getip_with_jsonp_format_and_callback_function_name(self):
 
       configuration = openapiipify.Configuration(
-          host = "https://api.ipify.org"
+          host = "https://api64.ipify.org"
       )
 
       with openapiipify.ApiClient(configuration) as api_client:
