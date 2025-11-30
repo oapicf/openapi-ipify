@@ -22,7 +22,7 @@ paths:
         name: format
         required: false
         schema:
-          $ref: '#/components/schemas/getIp_format_parameter'
+          $ref: "#/components/schemas/getIp_format_parameter"
         style: form
       - description: JSONP callback function name
         explode: true

@@ -50,12 +50,27 @@ func NewDefaultAPIController(s DefaultAPIServicer, opts ...DefaultAPIOption) *De
 func (c *DefaultAPIController) Routes() Routes {
 	return Routes{
 		"GetIp": Route{
+			"GetIp",
 			strings.ToUpper("Get"),
 			"/",
 			c.GetIp,
 		},
 	}
 }
+
+// OrderedRoutes returns all the api routes in a deterministic order for the DefaultAPIController
+func (c *DefaultAPIController) OrderedRoutes() []Route {
+	return []Route{
+		Route{
+			"GetIp",
+			strings.ToUpper("Get"),
+			"/",
+			c.GetIp,
+		},
+	}
+}
+
+
 
 // GetIp - Get your public IP address
 func (c *DefaultAPIController) GetIp(w http.ResponseWriter, r *http.Request) {

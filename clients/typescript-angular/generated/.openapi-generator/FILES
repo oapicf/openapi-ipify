@@ -11,4 +11,5 @@ git_push.sh
 index.ts
 model/models.ts
 param.ts
+provide-api.ts
 variables.ts

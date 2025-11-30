@@ -36,7 +36,7 @@ impl std::str::FromStr for GetIpFormatParameter {
         match s {
             "json" => std::result::Result::Ok(GetIpFormatParameter::Json),
             "jsonp" => std::result::Result::Ok(GetIpFormatParameter::Jsonp),
-            _ => std::result::Result::Err(format!("Value not valid: {}", s)),
+            _ => std::result::Result::Err(format!("Value not valid: {s}")),
         }
     }
 }
@@ -52,8 +52,7 @@ impl std::convert::TryFrom<header::IntoHeaderValue<GetIpFormatParameter>> for hy
         match hyper::header::HeaderValue::from_str(&hdr_value) {
              std::result::Result::Ok(value) => std::result::Result::Ok(value),
              std::result::Result::Err(e) => std::result::Result::Err(
-                 format!("Invalid header value for GetIpFormatParameter - value: {} is invalid {}",
-                     hdr_value, e))
+                 format!("Invalid header value for GetIpFormatParameter - value: {hdr_value} is invalid {e}"))
         }
     }
 }
@@ -68,13 +67,11 @@ impl std::convert::TryFrom<hyper::header::HeaderValue> for header::IntoHeaderVal
                     match <GetIpFormatParameter as std::str::FromStr>::from_str(value) {
                         std::result::Result::Ok(value) => std::result::Result::Ok(header::IntoHeaderValue(value)),
                         std::result::Result::Err(err) => std::result::Result::Err(
-                            format!("Unable to convert header value '{}' into GetIpFormatParameter - {}",
-                                value, err))
+                            format!("Unable to convert header value '{value}' into GetIpFormatParameter - {err}"))
                     }
              },
              std::result::Result::Err(e) => std::result::Result::Err(
-                 format!("Unable to convert header: {:?} to string: {}",
-                     hdr_value, e))
+                 format!("Unable to convert header: {hdr_value:?} to string: {e}"))
         }
     }
 }
@@ -90,8 +87,7 @@ impl std::convert::TryFrom<header::IntoHeaderValue<Vec<GetIpFormatParameter>>> f
 
         match hyper::header::HeaderValue::from_str(&hdr_values.join(", ")) {
            std::result::Result::Ok(hdr_value) => std::result::Result::Ok(hdr_value),
-           std::result::Result::Err(e) => std::result::Result::Err(format!("Unable to convert {:?} into a header - {}",
-               hdr_values, e))
+           std::result::Result::Err(e) => std::result::Result::Err(format!("Unable to convert {hdr_values:?} into a header - {e}",))
         }
     }
 }
@@ -111,16 +107,14 @@ impl std::convert::TryFrom<hyper::header::HeaderValue> for header::IntoHeaderVal
                         match <GetIpFormatParameter as std::str::FromStr>::from_str(hdr_value) {
                             std::result::Result::Ok(value) => std::result::Result::Ok(value),
                             std::result::Result::Err(err) => std::result::Result::Err(
-                                format!("Unable to convert header value '{}' into GetIpFormatParameter - {}",
-                                    hdr_value, err))
+                                format!("Unable to convert header value '{hdr_value}' into GetIpFormatParameter - {err}"))
                         }
                     })
                 }).collect::<std::result::Result<std::vec::Vec<_>, String>>()?;
 
                 std::result::Result::Ok(header::IntoHeaderValue(hdr_values))
             },
-            std::result::Result::Err(e) => std::result::Result::Err(format!("Unable to parse header: {:?} as a string - {}",
-                hdr_values, e)),
+            std::result::Result::Err(e) => std::result::Result::Err(format!("Unable to parse header: {hdr_values:?} as a string - {e}")),
         }
     }
 }

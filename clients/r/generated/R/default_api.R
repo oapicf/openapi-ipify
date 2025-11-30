@@ -91,7 +91,13 @@ DefaultApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
+      if (!missing(`format`) && is.null(`format`)) {
+        stop("Invalid value for `format` when calling DefaultApi$GetIp, `format` is not nullable")
+      }
 
+      if (!missing(`callback`) && is.null(`callback`)) {
+        stop("Invalid value for `callback` when calling DefaultApi$GetIp, `callback` is not nullable")
+      }
 
       if (!is.null(`format`) && !(`format` %in% c("json", "jsonp"))) {
         stop("Invalid value for format when calling DefaultApi$GetIp. Must be [json, jsonp].")

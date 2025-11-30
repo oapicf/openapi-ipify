@@ -23,10 +23,10 @@ import javax.validation.Valid;
 @Path("")
 @RequestScoped
 
-@Api(description = "the default API")
+@Api
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2025-11-18T13:40:28.142793872Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2025-11-30T07:59:43.849444305Z[Etc/UTC]", comments = "Generator version: 7.17.0")
 
 public class DefaultApi  {
 

@@ -73,12 +73,8 @@ class DefaultController extends Controller
 
         $callback = $request->string('callback')->value();
 
-        try {
-            $apiResult = $this->api->getIp($format, $callback);
-        } catch (\Exception $exception) {
-            // This shouldn't happen
-            return response()->json(['error' => $exception->getMessage()], 500);
-        }
+
+        $apiResult = $this->api->getIp($format, $callback);
 
         if ($apiResult instanceof string) {
             return response()->json($this->serde->serialize($apiResult, format: 'array'), 200);

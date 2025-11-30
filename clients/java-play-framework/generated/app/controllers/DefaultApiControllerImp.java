@@ -10,7 +10,7 @@ import java.io.FileInputStream;
 import play.libs.Files.TemporaryFile;
 import javax.validation.constraints.*;
 import javax.validation.Valid;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2025-11-18T13:40:17.425997444Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2025-11-30T07:59:35.684915493Z[Etc/UTC]", comments = "Generator version: 7.17.0")
 public class DefaultApiControllerImp extends DefaultApiControllerImpInterface {
     @Override
     public String getIp(Http.Request request, String format, String paramCallback) throws Exception {

@@ -8,7 +8,7 @@
 type format = [
 | `Json [@printer fun fmt _ -> Format.pp_print_string fmt "json"] [@name "json"]
 | `Jsonp [@printer fun fmt _ -> Format.pp_print_string fmt "jsonp"] [@name "jsonp"]
-] [@@deriving yojson, show { with_path = false }];;
+] [@@deriving yojson, show { with_path = false }, eq];;
 
 let format_of_yojson json = format_of_yojson (`List [json])
 let format_to_yojson e =

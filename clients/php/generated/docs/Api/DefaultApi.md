@@ -1,5 +1,7 @@
 # OpenAPI\Client\DefaultApi
 
+
+
 All URIs are relative to https://api64.ipify.org, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

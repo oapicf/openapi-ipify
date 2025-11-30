@@ -13,8 +13,8 @@ To see how to make this your own, look here:
 [README](https://openapi-generator.tech)
 
 - API version: 5.3.1-pre.0
-- Build date: 2025-11-18T13:39:34.002510876Z[Etc/UTC]
-- Generator version: 7.12.0
+- Build date: 2025-11-30T07:59:10.423728411Z[Etc/UTC]
+- Generator version: 7.17.0
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
 
 ### Running the server

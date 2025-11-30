@@ -25,16 +25,16 @@ pub enum GetIpError {
 
 pub async fn get_ip(configuration: &configuration::Configuration, format: Option<&str>, callback: Option<&str>) -> Result<String, Error<GetIpError>> {
     // add a prefix to parameters to efficiently prevent name collisions
-    let p_format = format;
-    let p_callback = callback;
+    let p_query_format = format;
+    let p_query_callback = callback;
 
     let uri_str = format!("{}/", configuration.base_path);
     let mut req_builder = configuration.client.request(reqwest::Method::GET, &uri_str);
 
-    if let Some(ref param_value) = p_format {
+    if let Some(ref param_value) = p_query_format {
         req_builder = req_builder.query(&[("format", &param_value.to_string())]);
     }
-    if let Some(ref param_value) = p_callback {
+    if let Some(ref param_value) = p_query_callback {
         req_builder = req_builder.query(&[("callback", &param_value.to_string())]);
     }
     if let Some(ref user_agent) = configuration.user_agent {

@@ -30,6 +30,7 @@ message GetIpRequest {
 }
 
 message GetIpResponse {
-  string data = 1;
+    oneof response {
+        string string_200 = 1;
+    }
 }
-

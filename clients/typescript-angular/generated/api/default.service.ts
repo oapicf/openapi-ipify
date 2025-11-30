@@ -35,6 +35,7 @@ export class DefaultService extends BaseService {
 
     /**
      * Get your public IP address
+     * @endpoint get /
      * @param format Response format
      * @param callback JSONP callback function name
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -80,15 +81,16 @@ export class DefaultService extends BaseService {
         }
 
         let localVarPath = `/`;
-        return this.httpClient.request<string>('get', `${this.configuration.basePath}${localVarPath}`,
+        const { basePath, withCredentials } = this.configuration;
+        return this.httpClient.request<string>('get', `${basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
                 params: localVarQueryParameters,
                 responseType: <any>responseType_,
-                withCredentials: this.configuration.withCredentials,
+                ...(withCredentials ? { withCredentials } : {}),
                 headers: localVarHeaders,
                 observe: observe,
-                transferCache: localVarTransferCache,
+                ...(localVarTransferCache !== undefined ? { transferCache: localVarTransferCache } : {}),
                 reportProgress: reportProgress
             }
         );

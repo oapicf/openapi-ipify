@@ -39,11 +39,11 @@ template constructResult[T](response: Response): untyped =
 
 proc getIp*(httpClient: HttpClient, format: string, callback: string): (Option[string], Response) =
   ## Get your public IP address
-  let query_for_api_call = encodeQuery([
+  let url_encoded_query_params = encodeQuery([
     ("format", $format), # Response format
     ("callback", $callback), # JSONP callback function name
   ])
 
-  let response = httpClient.get(basepath & "/" & "?" & query_for_api_call)
+  let response = httpClient.get(basepath & "/" & "?" & url_encoded_query_params)
   constructResult[string](response)
 

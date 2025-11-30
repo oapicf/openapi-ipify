@@ -7,7 +7,7 @@ All URIs are relative to *https://api64.ipify.org*
 
 | Class | Method | HTTP request | Description |
 |------------ | ------------- | ------------- | -------------|
-| *DefaultApi* | [**getIp**](Apis/DefaultApi.md#getip) | **GET** / | Get your public IP address |
+| *DefaultApi* | [**getIp**](Apis/DefaultApi.md#getIp) | **GET** / | Get your public IP address |
 
 
 <a name="documentation-for-models"></a>

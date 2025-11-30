@@ -4,7 +4,7 @@ package api
 /**
   * Provides a default implementation for [[DefaultApi]].
   */
-@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2025-11-18T13:41:59.387910295Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = Array("org.openapitools.codegen.languages.ScalaPlayFrameworkServerCodegen"), date = "2025-11-30T08:00:51.945623269Z[Etc/UTC]", comments = "Generator version: 7.17.0")
 class DefaultApiImpl extends DefaultApi {
   /**
     * @inheritdoc

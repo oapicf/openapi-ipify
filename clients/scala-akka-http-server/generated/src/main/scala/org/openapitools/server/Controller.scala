@@ -6,11 +6,11 @@ import org.openapitools.server.api.DefaultApi
 
 import akka.http.scaladsl.server.Directives._
 import akka.actor.ActorSystem
-import akka.stream.ActorMaterializer
+import akka.stream.Materializer
 
-class Controller(default: DefaultApi)(implicit system: ActorSystem, materializer: ActorMaterializer) {
+class Controller(default: DefaultApi)(implicit system: ActorSystem, materializer: Materializer) {
 
     lazy val routes: Route = default.route 
 
-    Http().bindAndHandle(routes, "0.0.0.0", 9000)
+    Http().newServerAt("0.0.0.0", 9000).bind(routes)
 }

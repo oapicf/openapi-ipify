@@ -11,7 +11,7 @@ import java.util.List;
 import org.openapitools.model.*;
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaInflectorServerCodegen", date = "2025-11-18T13:40:07.676656074Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaInflectorServerCodegen", date = "2025-11-30T07:59:29.448254140Z[Etc/UTC]", comments = "Generator version: 7.17.0")
 public class DefaultController  {
   /**
    * Uncomment and implement as you see fit.  These operations will map

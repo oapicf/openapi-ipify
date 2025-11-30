@@ -85,7 +85,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIpCall(String format, String paramCallback, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIpCall(@javax.annotation.Nullable String format, @javax.annotation.Nullable String paramCallback, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -141,7 +141,7 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getIpValidateBeforeCall(String format, String paramCallback, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getIpValidateBeforeCall(@javax.annotation.Nullable String format, @javax.annotation.Nullable String paramCallback, final ApiCallback _callback) throws ApiException {
         return getIpCall(format, paramCallback, _callback);
 
     }
@@ -160,7 +160,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public String getIp(String format, String paramCallback) throws ApiException {
+    public String getIp(@javax.annotation.Nullable String format, @javax.annotation.Nullable String paramCallback) throws ApiException {
         ApiResponse<String> localVarResp = getIpWithHttpInfo(format, paramCallback);
         return localVarResp.getData();
     }
@@ -179,7 +179,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> getIpWithHttpInfo(String format, String paramCallback) throws ApiException {
+    public ApiResponse<String> getIpWithHttpInfo(@javax.annotation.Nullable String format, @javax.annotation.Nullable String paramCallback) throws ApiException {
         okhttp3.Call localVarCall = getIpValidateBeforeCall(format, paramCallback, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -200,7 +200,7 @@ public class DefaultApi {
         <tr><td> 200 </td><td> Your public IP address </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIpAsync(String format, String paramCallback, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call getIpAsync(@javax.annotation.Nullable String format, @javax.annotation.Nullable String paramCallback, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIpValidateBeforeCall(format, paramCallback, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

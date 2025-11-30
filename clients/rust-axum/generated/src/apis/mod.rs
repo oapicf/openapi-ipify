@@ -1,6 +1,8 @@
 pub mod default;
 
 
+
+
 // Error handler for unhandled errors.
 #[async_trait::async_trait]
 pub trait ErrorHandler<E: std::fmt::Debug + Send + Sync + 'static = ()> {
