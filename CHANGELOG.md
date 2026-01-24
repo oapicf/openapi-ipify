@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add application/javascript response content
 - Add examples to spec responses
+- Add Ruby tests
 
 ### Changed
 - Move server to api64.ipify.org
