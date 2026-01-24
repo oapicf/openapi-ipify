@@ -4,7 +4,7 @@
 ################################################################
 
 # The version of Swaggy C
-SWAGGY_C_VERSION = 5.0.1
+SWAGGY_C_VERSION = 5.1.0
 
 # The version of OpenAPI Generator (https://openapi-generator.tech/) used for generating the API clients
 OPENAPI_GENERATOR_VERSION = 7.18.0
@@ -188,7 +188,7 @@ build-javascript:
 build-python:
 	cd clients/python/generated/ && \
 	  python3 -m venv .venv && \
-	  $(call python_venv,pip install twine wheel pytest setuptools validators) && \
+	  $(call python_venv,pip install twine wheel pytest setuptools) && \
 	  $(call python_venv,pip install -r requirements.txt) && \
 	  $(call python_venv,python3 setup.py sdist bdist_wheel) && \
 	  $(call python_venv,python3 setup.py install --single-version-externally-managed --record record.txt)
@@ -221,6 +221,7 @@ test-javascript: build-javascript
 
 test-python: build-python
 	cd clients/python/generated/ && \
+	  $(call python_venv,pip install validators) && \
 	  $(call python_venv,twine check dist/*) && \
 	  $(call python_venv,pytest -v ../../../test/python/*.py --capture=no)
 
@@ -228,7 +229,7 @@ test-ruby: build-ruby
 	cd clients/ruby/generated/ && \
 	  rm -f *.gem && \
 	  bundle exec rspec --format documentation && \
-	  bundle exec rspec ../../../test/ruby/ --format documentation
+	  bundle exec rspec ../../../test/ruby/
 
 ################################################################
 # API clients package publishing targets for primary generators
