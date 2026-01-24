@@ -40,12 +40,16 @@ paths:
             text/plain:
               schema:
                 type: string
-            text/javascript:
+              example: "192.168.1.1"
+            application/json:
               schema:
-                type: string
+                type: object
+                properties:
+                  ip:
+                    type: string
+                example:
+                  ip: "192.168.1.1"
             application/javascript:
               schema:
                 type: string
-            application/json:
-              schema:
-                type: string
+              example: "callback({\"ip\":\"192.168.1.1\"})"

@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add application/javascript response content
+- Add examples to spec responses
 
 ### Changed
 - Move server to api64.ipify.org
 - Switch contact details to OpenAPI Clients Factory project
-- Upgrade Swaggy C to 5.0.0
+- Upgrade Swaggy C to 5.0.1
 - Upgrade OpenAPI Generator to 7.18.0
 - Upgrade OpenAPI specification to 3.1.0
 - Replace obsolete application/javascript with text/javascript
