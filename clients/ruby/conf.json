@@ -1,7 +1,7 @@
 {
   "gemName": "openapi_ipify",
   "moduleName": "OpenApiIpifyClient",
-  "gemVersion": "6.0.0",
+  "gemVersion": "6.0.1-pre.0",
   "gemAuthor": "OpenAPI Clients Factory",
   "gemAuthorEmail": "blah+oapicf@cliffano.com",
   "gemHomepage": "https://github.com/oapicf/openapi-ipify",

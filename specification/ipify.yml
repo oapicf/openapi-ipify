@@ -1,7 +1,7 @@
 ---
 openapi: 3.1.0
 info:
-  version: 6.0.0
+  version: 6.0.1-pre.0
   title: openapi-ipify
   description: OpenAPI client for ipify, a simple public IP address API
   license:
