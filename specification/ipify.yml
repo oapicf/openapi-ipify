@@ -1,6 +1,7 @@
+---
 openapi: 3.1.0
 info:
-  version: 5.3.1-pre.0
+  version: 6.0.0
   title: openapi-ipify
   description: OpenAPI client for ipify, a simple public IP address API
   license:
@@ -40,7 +41,7 @@ paths:
             text/plain:
               schema:
                 type: string
-              example: "192.168.1.1"
+              example: 192.168.1.1
             application/json:
               schema:
                 type: object
@@ -48,8 +49,8 @@ paths:
                   ip:
                     type: string
                 example:
-                  ip: "192.168.1.1"
+                  ip: 192.168.1.1
             application/javascript:
               schema:
                 type: string
-              example: "callback({\"ip\":\"192.168.1.1\"})"
+              example: callback({"ip":"192.168.1.1"})
