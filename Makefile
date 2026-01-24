@@ -229,7 +229,7 @@ test-ruby: build-ruby
 	cd clients/ruby/generated/ && \
 	  rm -f *.gem && \
 	  bundle exec rspec --format documentation && \
-	  bundle exec rspec ../../../test/ruby/
+	  bundle exec rspec ../../../test/ruby/ --format documentation
 
 ################################################################
 # API clients package publishing targets for primary generators
