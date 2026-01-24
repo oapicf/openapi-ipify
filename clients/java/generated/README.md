@@ -2,8 +2,8 @@
 
 openapi-ipify
 - API version: 5.3.1-pre.0
-  - Build date: 2025-11-30T07:59:25.563371129Z[Etc/UTC]
-  - Generator version: 7.17.0
+  - Build date: 2026-01-24T04:44:49.555899855Z[Etc/UTC]
+  - Generator version: 7.18.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [GetIp200Response](docs/GetIp200Response.md)
 
 
 <a id="documentation-for-authorization"></a>

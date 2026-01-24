@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.GetIp200Response;
 import org.openapitools.api.DefaultApiService;
 
 import javax.ws.rs.*;
@@ -26,7 +27,7 @@ import javax.validation.Valid;
 @Api
 
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2025-11-30T07:59:43.849444305Z[Etc/UTC]", comments = "Generator version: 7.17.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSCXFCDIServerCodegen", date = "2026-01-24T04:45:11.254980857Z[Etc/UTC]", comments = "Generator version: 7.18.0")
 
 public class DefaultApi  {
 
@@ -38,7 +39,7 @@ public class DefaultApi  {
     @GET
     
     
-    @Produces({ "text/plain", "text/javascript", "application/javascript", "application/json" })
+    @Produces({ "text/plain", "application/json", "application/javascript" })
     @ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

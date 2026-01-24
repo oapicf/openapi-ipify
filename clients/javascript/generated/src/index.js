@@ -13,6 +13,7 @@
 
 
 import ApiClient from './ApiClient';
+import GetIp200Response from './model/GetIp200Response';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -53,6 +54,12 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The GetIp200Response model constructor.
+     * @property {module:model/GetIp200Response}
+     */
+    GetIp200Response,
 
     /**
     * The DefaultApi service constructor.

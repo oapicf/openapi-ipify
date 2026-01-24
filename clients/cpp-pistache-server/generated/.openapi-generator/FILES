@@ -1,11 +1,14 @@
 .openapi-generator-ignore
 CMakeLists.txt
 README.md
+api/ApiBase.cpp
 api/ApiBase.h
 api/DefaultApi.cpp
 api/DefaultApi.h
 impl/DefaultApiImpl.cpp
 impl/DefaultApiImpl.h
 main-api-server.cpp
+model/GetIp_200_response.cpp
+model/GetIp_200_response.h
 model/Helpers.cpp
 model/Helpers.h

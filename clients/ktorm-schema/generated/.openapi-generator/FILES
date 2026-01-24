@@ -1,5 +1,7 @@
 .openapi-generator-ignore
 README.md
 build.gradle
+docs/GetIp200Response.md
 ktorm_schema.sql
 settings.gradle
+src/main/kotlin/org/openapitools/database/models/GetIp200Response.kt

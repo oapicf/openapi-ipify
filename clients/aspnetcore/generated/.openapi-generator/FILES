@@ -12,6 +12,7 @@ src/Org.OpenAPITools/Dockerfile
 src/Org.OpenAPITools/Filters/BasePathFilter.cs
 src/Org.OpenAPITools/Filters/GeneratePathParamsValidationFilter.cs
 src/Org.OpenAPITools/Formatters/InputFormatterStream.cs
+src/Org.OpenAPITools/Models/GetIp200Response.cs
 src/Org.OpenAPITools/OpenApi/TypeExtensions.cs
 src/Org.OpenAPITools/Org.OpenAPITools.csproj
 src/Org.OpenAPITools/Program.cs

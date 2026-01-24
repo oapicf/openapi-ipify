@@ -1,5 +1,6 @@
 package org.openapitools.server.api.verticle
 
+import org.openapitools.server.api.model.GetIp200Response
 import io.vertx.core.Vertx
 import io.vertx.core.json.JsonObject
 import io.vertx.core.json.JsonArray

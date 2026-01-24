@@ -13,6 +13,7 @@ export(ApiClient)
 export(ApiResponse)
 
 # Models
+export(GetIp200Response)
 
 # APIs
 export(DefaultApi)

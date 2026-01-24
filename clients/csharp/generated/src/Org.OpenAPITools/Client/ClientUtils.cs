@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Org.OpenAPITools.Model;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("Org.OpenAPITools.Test")]

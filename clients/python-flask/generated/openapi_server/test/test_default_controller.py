@@ -2,6 +2,7 @@ import unittest
 
 from flask import json
 
+from openapi_server.models.get_ip200_response import GetIp200Response  # noqa: E501
 from openapi_server.test import BaseTestCase
 
 

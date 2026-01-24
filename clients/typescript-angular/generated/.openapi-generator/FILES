@@ -9,7 +9,9 @@ configuration.ts
 encoder.ts
 git_push.sh
 index.ts
+model/getIp200Response.ts
 model/models.ts
 param.ts
 provide-api.ts
+query.params.ts
 variables.ts

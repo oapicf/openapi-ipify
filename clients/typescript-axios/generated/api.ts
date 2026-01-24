@@ -23,6 +23,9 @@ import type { RequestArgs } from './base';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, operationServerMap } from './base';
 
+export interface GetIp200Response {
+    'ip'?: string;
+}
 
 /**
  * DefaultApi - axios parameter creator
@@ -58,8 +61,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['callback'] = callback;
             }
 
+            localVarHeaderParameter['Accept'] = 'text/plain,application/json,application/javascript';
 
-    
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};

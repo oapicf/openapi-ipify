@@ -18,16 +18,14 @@ import tables
 import typetraits
 import uri
 
+import ../models/model_get_ip200response
 
 const basepath = "https://api64.ipify.org"
 
 template constructResult[T](response: Response): untyped =
   if response.code in {Http200, Http201, Http202, Http204, Http206}:
     try:
-      when name(stripGenericParams(T.typedesc).typedesc) == name(Table):
-        (some(json.to(parseJson(response.body), T.typedesc)), response)
-      else:
-        (some(marshal.to[T](response.body)), response)
+      (some(to(parseJson(response.body), T)), response)
     except JsonParsingError:
       # The server returned a malformed response though the response code is 2XX
       # TODO: need better error handling
@@ -39,10 +37,12 @@ template constructResult[T](response: Response): untyped =
 
 proc getIp*(httpClient: HttpClient, format: string, callback: string): (Option[string], Response) =
   ## Get your public IP address
-  let url_encoded_query_params = encodeQuery([
-    ("format", $format), # Response format
-    ("callback", $callback), # JSONP callback function name
-  ])
+  var query_params_list: seq[(string, string)] = @[]
+  if $format != "":
+    query_params_list.add(("format", $format))
+  if $callback != "":
+    query_params_list.add(("callback", $callback))
+  let url_encoded_query_params = encodeQuery(query_params_list)
 
   let response = httpClient.get(basepath & "/" & "?" & url_encoded_query_params)
   constructResult[string](response)

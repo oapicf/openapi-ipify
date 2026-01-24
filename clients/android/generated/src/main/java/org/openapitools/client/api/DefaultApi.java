@@ -16,12 +16,14 @@ import org.openapitools.client.ApiInvoker;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.Pair;
 
+import org.openapitools.client.model.*;
 
 import java.util.*;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.GetIp200Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;

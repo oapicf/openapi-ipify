@@ -1,4 +1,5 @@
 namespace OpenAPI
+open OpenAPI.Model.GetIp200Response
 open DefaultApiHandlerParams
 open DefaultApiServiceInterface
 open System.Collections.Generic

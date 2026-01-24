@@ -1,5 +1,6 @@
 package org.openapitools.api
 
+import org.openapitools.model.GetIp200Response
 import io.swagger.v3.oas.annotations.*
 import io.swagger.v3.oas.annotations.enums.*
 import io.swagger.v3.oas.annotations.media.*
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.context.request.NativeWebRequest
 import org.springframework.beans.factory.annotation.Autowired
+import org.openapitools.api.DefaultApiController.Companion.BASE_PATH
 
 import javax.validation.Valid
 import javax.validation.constraints.DecimalMax
@@ -29,7 +31,7 @@ import kotlin.collections.Map
 
 @RestController
 @Validated
-@RequestMapping("\${api.base-path:}")
+@RequestMapping("\${openapi.openapiIpify.base-path:\${api.base-path:$BASE_PATH}}")
 class DefaultApiController() {
 
     @Operation(
@@ -41,10 +43,19 @@ class DefaultApiController() {
     )
     @RequestMapping(
         method = [RequestMethod.GET],
-        value = ["/"],
-        produces = ["text/plain", "text/javascript", "application/javascript", "application/json"]
+        value = [PATH_GET_IP /* "/" */],
+        produces = ["text/plain", "application/json", "application/javascript"]
     )
-    fun getIp(@Parameter(description = "Response format", schema = Schema(allowableValues = ["json", "jsonp"])) @Valid @RequestParam(value = "format", required = false) format: kotlin.String?,@Parameter(description = "JSONP callback function name") @Valid @RequestParam(value = "callback", required = false) paramCallback: kotlin.String?): ResponseEntity<kotlin.String> {
+    fun getIp(
+        @Parameter(description = "Response format", schema = Schema(allowableValues = ["json", "jsonp"])) @Valid @RequestParam(value = "format", required = false) format: kotlin.String?,
+        @Parameter(description = "JSONP callback function name") @Valid @RequestParam(value = "callback", required = false) paramCallback: kotlin.String?
+    ): ResponseEntity<kotlin.String> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
+    }
+
+    companion object {
+        //for your own safety never directly reuse these path definitions in tests
+        const val BASE_PATH: String = ""
+        const val PATH_GET_IP: String = "/"
     }
 }

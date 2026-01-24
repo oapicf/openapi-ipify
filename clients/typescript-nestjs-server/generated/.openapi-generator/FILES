@@ -1,0 +1,13 @@
+.gitignore
+.openapi-generator-ignore
+README.md
+api-implementations.ts
+api.module.ts
+api/DefaultApi.ts
+api/index.ts
+controllers/DefaultApi.controller.ts
+controllers/index.ts
+index.ts
+models/get-ip-200-response.ts
+models/index.ts
+tsconfig.json

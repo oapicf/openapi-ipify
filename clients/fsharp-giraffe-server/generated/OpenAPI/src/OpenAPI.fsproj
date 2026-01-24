@@ -21,6 +21,7 @@
   <ItemGroup>
     <Content Include="openapi.yaml"/>
     <Compile Include="helpers/Helpers.fs" />
+    <Compile Include="model/GetIp200Response.fs" />
     <Compile Include="api/DefaultApiHandlerParams.fs" />
     <Compile Include="api/DefaultApiServiceInterface.fs" />
     <Compile Include="impl/DefaultApiService.fs" />

@@ -70,8 +70,8 @@ class DefaultApiSimulation extends Simulation {
         .feed(getIpQUERYFeeder)
         .exec(http("getIp")
         .httpRequest("GET","/")
-        .queryParam("callback","${callback}")
         .queryParam("format","${format}")
+        .queryParam("callback","${callback}")
 )
 
     // Run scngetIp with warm up and reach a constant rate for entire duration

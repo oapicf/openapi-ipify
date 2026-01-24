@@ -17,11 +17,12 @@ namespace openapitools {
 namespace server {
 namespace api {
 
-
+using namespace org::openapitools::server::model;
 
 DefaultApiImpl::DefaultApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr)
     : DefaultApi(rtr)
 {
+    
 }
 
 void DefaultApiImpl::get_ip(const std::optional<std::string> &format, const std::optional<std::string> &callback, Pistache::Http::ResponseWriter &response) {

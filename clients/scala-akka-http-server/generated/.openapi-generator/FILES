@@ -6,3 +6,4 @@ src/main/scala/org/openapitools/server/Controller.scala
 src/main/scala/org/openapitools/server/MultipartDirectives.scala
 src/main/scala/org/openapitools/server/StringDirectives.scala
 src/main/scala/org/openapitools/server/api/DefaultApi.scala
+src/main/scala/org/openapitools/server/model/GetIp200Response.scala

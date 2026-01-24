@@ -11,11 +11,13 @@
 
 import { Inject, Injectable, Optional }                      from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams,
-         HttpResponse, HttpEvent, HttpParameterCodec, HttpContext 
+         HttpResponse, HttpEvent, HttpContext 
         }       from '@angular/common/http';
-import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
+import { OpenApiHttpParams, QueryParamStyle } from '../query.params';
 
+// @ts-ignore
+import { GetIp200Response } from '../model/getIp200Response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
@@ -40,25 +42,39 @@ export class DefaultService extends BaseService {
      * @param callback JSONP callback function name
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
+     * @param options additional options
      */
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'text/javascript' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<string>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'text/javascript' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<string>>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'text/javascript' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<string>>;
-    public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'text/javascript' | 'application/javascript' | 'application/json', context?: HttpContext, transferCache?: boolean}): Observable<any> {
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'application/javascript', context?: HttpContext, transferCache?: boolean}): Observable<string>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'application/javascript', context?: HttpContext, transferCache?: boolean}): Observable<HttpResponse<string>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'application/javascript', context?: HttpContext, transferCache?: boolean}): Observable<HttpEvent<string>>;
+    public getIp(format?: 'json' | 'jsonp', callback?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'text/plain' | 'application/json' | 'application/javascript', context?: HttpContext, transferCache?: boolean}): Observable<any> {
 
-        let localVarQueryParameters = new HttpParams({encoder: this.encoder});
-        localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-          <any>format, 'format');
-        localVarQueryParameters = this.addToHttpParams(localVarQueryParameters,
-          <any>callback, 'callback');
+        let localVarQueryParameters = new OpenApiHttpParams(this.encoder);
+
+        localVarQueryParameters = this.addToHttpParams(
+            localVarQueryParameters,
+            'format',
+            <any>format,
+            QueryParamStyle.Form,
+            true,
+        );
+
+
+        localVarQueryParameters = this.addToHttpParams(
+            localVarQueryParameters,
+            'callback',
+            <any>callback,
+            QueryParamStyle.Form,
+            true,
+        );
+
 
         let localVarHeaders = this.defaultHeaders;
 
         const localVarHttpHeaderAcceptSelected: string | undefined = options?.httpHeaderAccept ?? this.configuration.selectHeaderAccept([
             'text/plain',
-            'text/javascript',
-            'application/javascript',
-            'application/json'
+            'application/json',
+            'application/javascript'
         ]);
         if (localVarHttpHeaderAcceptSelected !== undefined) {
             localVarHeaders = localVarHeaders.set('Accept', localVarHttpHeaderAcceptSelected);
@@ -85,7 +101,7 @@ export class DefaultService extends BaseService {
         return this.httpClient.request<string>('get', `${basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
-                params: localVarQueryParameters,
+                params: localVarQueryParameters.toHttpParams(),
                 responseType: <any>responseType_,
                 ...(withCredentials ? { withCredentials } : {}),
                 headers: localVarHeaders,

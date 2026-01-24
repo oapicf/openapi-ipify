@@ -1,0 +1,84 @@
+{
+	"info": {
+		"name": "openapi-ipify",
+		"description": {
+		    "content": "OpenAPI client for ipify, a simple public IP address API",
+		    "type": "text/markdown"
+		},
+		"version": "5.3.1-pre.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+	        {
+	            "name": "default",
+	            "item": [
+	                        {
+    "name": "/",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Get your public IP address",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "text/plain",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        ""
+    ],
+    "variable": [
+    ],
+    "query": [
+        {
+        "key": "format",
+        "value": "format_example",
+        "description": "Response format",
+        "disabled": true
+        },
+        {
+        "key": "callback",
+        "value": "callback_example",
+        "description": "JSONP callback function name",
+        "disabled": true
+        }
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        }
+    ],
+    
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api64.ipify.org",
+			"type": "string"
+        }
+	]
+}
+

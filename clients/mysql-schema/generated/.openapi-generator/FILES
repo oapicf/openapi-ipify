@@ -1,3 +1,4 @@
 .openapi-generator-ignore
+Model/GetIp200Response.sql
 README.md
 mysql_schema.sql

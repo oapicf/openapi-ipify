@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.github.oapicf.openapiipify.model.GetIp200Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -120,9 +121,8 @@ public class DefaultApi {
 
         final String[] localVarAccepts = {
             "text/plain",
-            "text/javascript",
-            "application/javascript",
-            "application/json"
+            "application/json",
+            "application/javascript"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {

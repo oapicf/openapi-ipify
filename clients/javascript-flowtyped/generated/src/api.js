@@ -69,6 +69,19 @@ export class RequiredError extends Error {
     }
 }
 
+/**
+ * 
+ * @export
+ */
+export type GetIp200Response = {
+    /**
+     * 
+     * @type {string}
+     * @memberof GetIp200Response
+     */
+    ip?: string;
+}
+
 
 
 /**

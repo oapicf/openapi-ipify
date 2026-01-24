@@ -20,6 +20,7 @@ import io.micronaut.security.rules.SecurityRule;
 import reactor.core.publisher.Mono;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.exceptions.HttpStatusException;
+import org.openapitools.model.GetIp200Response;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +37,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2025-11-30T07:59:31.819617691Z[Etc/UTC]", comments = "Generator version: 7.17.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2026-01-24T04:45:01.320713512Z[Etc/UTC]", comments = "Generator version: 7.18.0")
 @Controller
 @Tag(name = "Default", description = "The Default API")
 public class DefaultController {
@@ -53,9 +54,8 @@ public class DefaultController {
         responses = {
             @ApiResponse(responseCode = "200", description = "Your public IP address", content = {
                 @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)),
-                @Content(mediaType = "text/javascript", schema = @Schema(implementation = String.class)),
-                @Content(mediaType = "application/javascript", schema = @Schema(implementation = String.class)),
-                @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))
+                @Content(mediaType = "application/json", schema = @Schema(implementation = String.class)),
+                @Content(mediaType = "application/javascript", schema = @Schema(implementation = String.class))
             })
         },
         parameters = {
@@ -64,7 +64,7 @@ public class DefaultController {
         }
     )
     @Get(uri="/")
-    @Produces(value = {"text/plain", "text/javascript", "application/javascript", "application/json"})
+    @Produces(value = {"text/plain", "application/json", "application/javascript"})
     @Secured({SecurityRule.IS_ANONYMOUS})
     public Mono<String> getIp(
         @QueryValue(value="format") @Nullable String _format, 

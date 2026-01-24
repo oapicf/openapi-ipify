@@ -5,11 +5,14 @@ README.md
 bin/autodoc
 cpanfile
 docs/DefaultApi.md
+docs/GetIp200Response.md
 git_push.sh
 lib/WWW/OpenAPIClient/ApiClient.pm
 lib/WWW/OpenAPIClient/ApiFactory.pm
 lib/WWW/OpenAPIClient/Configuration.pm
 lib/WWW/OpenAPIClient/DefaultApi.pm
+lib/WWW/OpenAPIClient/Object/GetIp200Response.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
 t/DefaultApiTest.t
+t/GetIp200ResponseTest.t

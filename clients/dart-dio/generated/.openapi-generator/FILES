@@ -3,6 +3,7 @@
 README.md
 analysis_options.yaml
 doc/DefaultApi.md
+doc/GetIp200Response.md
 lib/openapi.dart
 lib/src/api.dart
 lib/src/api/default_api.dart
@@ -14,6 +15,8 @@ lib/src/auth/bearer_auth.dart
 lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/date.dart
+lib/src/model/get_ip200_response.dart
 lib/src/serializers.dart
 pubspec.yaml
 test/default_api_test.dart
+test/get_ip200_response_test.dart

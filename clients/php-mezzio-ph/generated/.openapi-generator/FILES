@@ -8,6 +8,7 @@ application/config/path_handler.yml
 application/container.php
 composer.json
 public/index.php
+src/App/DTO/GetIp200Response.php
 src/App/DTO/GetIpQueryData.php
 src/App/Factory.php
 src/App/Handler/DefaultApi.php

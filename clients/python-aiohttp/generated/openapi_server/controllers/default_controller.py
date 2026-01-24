@@ -1,6 +1,7 @@
 from typing import List, Dict
 from aiohttp import web
 
+from openapi_server.models.get_ip200_response import GetIp200Response
 from openapi_server import util
 
 

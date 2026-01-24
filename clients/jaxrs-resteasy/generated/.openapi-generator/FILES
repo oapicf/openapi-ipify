@@ -13,6 +13,7 @@ src/gen/java/org/openapitools/api/NotFoundException.java
 src/gen/java/org/openapitools/api/RFC3339DateFormat.java
 src/gen/java/org/openapitools/api/RestApplication.java
 src/gen/java/org/openapitools/api/StringUtil.java
+src/gen/java/org/openapitools/model/GetIp200Response.java
 src/main/java/org/openapitools/api/impl/DefaultApiServiceImpl.java
 src/main/webapp/WEB-INF/jboss-web.xml
 src/main/webapp/WEB-INF/web.xml

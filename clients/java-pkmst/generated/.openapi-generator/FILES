@@ -11,6 +11,7 @@ src/main/java/com/prokarma/pkmst/config/swagger/PkmstProperties.java
 src/main/java/com/prokarma/pkmst/controller/DefaultApi.java
 src/main/java/com/prokarma/pkmst/controller/DefaultApiController.java
 src/main/java/com/prokarma/pkmst/logging/HttpLoggingFilter.java
+src/main/java/com/prokarma/pkmst/model/GetIp200Response.java
 src/main/java/com/prokarma/pkmst/security/AuthorizationServerConfiguration.java
 src/main/java/com/prokarma/pkmst/security/OAuth2SecurityConfiguration.java
 src/main/java/com/prokarma/pkmst/security/ResourceServerConfiguration.java

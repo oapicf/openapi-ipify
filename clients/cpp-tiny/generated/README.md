@@ -36,4 +36,5 @@ All URIs are relative to https://api64.ipify.orghttps://api64.ipify.org
 ## What are the Model files for the data structures/objects?
 |Class | Description|
 |------------- | -------------|
+|*GetIp_200_response* | |
 

@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Microsoft.Extensions.DependencyInjection;
 using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Model;
 
 
 /* *********************************************************************************

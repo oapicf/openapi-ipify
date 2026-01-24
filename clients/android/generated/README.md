@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [GetIp200Response](docs/GetIp200Response.md)
 
 
 ## Documentation for Authorization

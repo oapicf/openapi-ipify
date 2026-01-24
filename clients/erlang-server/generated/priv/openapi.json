@@ -46,21 +46,18 @@
           "200" : {
             "content" : {
               "text/plain" : {
-                "schema" : {
-                  "type" : "string"
-                }
-              },
-              "text/javascript" : {
-                "schema" : {
-                  "type" : "string"
-                }
-              },
-              "application/javascript" : {
+                "example" : "192.168.1.1",
                 "schema" : {
                   "type" : "string"
                 }
               },
               "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/getIp_200_response"
+                }
+              },
+              "application/javascript" : {
+                "example" : "callback({\"ip\":\"192.168.1.1\"})",
                 "schema" : {
                   "type" : "string"
                 }
@@ -74,6 +71,17 @@
     }
   },
   "components" : {
-    "schemas" : { }
+    "schemas" : {
+      "getIp_200_response" : {
+        "example" : {
+          "ip" : "192.168.1.1"
+        },
+        "properties" : {
+          "ip" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
   }
 }

@@ -24,10 +24,11 @@
 #include <pistache/http.h>
 #include <pistache/router.h>
 #include <pistache/http_headers.h>
-#include <nlohmann/json.hpp>
+
 #include <optional>
 #include <utility>
 
+#include "GetIp_200_response.h"
 #include <string>
 
 namespace org::openapitools::server::api
@@ -83,7 +84,7 @@ private:
     /// </remarks>
     /// <param name="format">Response format (optional, default to &quot;&quot;)</param>
     /// <param name="callback">JSONP callback function name (optional, default to &quot;&quot;)</param>
-    virtual void get_ip(const std::optional<std::string> &format, const std::optional<std::string> &callback, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void get_ip( const std::optional<std::string> &format, const std::optional<std::string> &callback, Pistache::Http::ResponseWriter &response) = 0;
 
 };
 

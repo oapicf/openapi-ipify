@@ -48,6 +48,7 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
+    model/get_ip_200_response.c
     api/DefaultAPI.c
 
 )
@@ -60,6 +61,7 @@ set(HDRS
     external/cJSON.h
     model/object.h
     model/any_type.h
+    model/get_ip_200_response.h
     api/DefaultAPI.h
 
 )

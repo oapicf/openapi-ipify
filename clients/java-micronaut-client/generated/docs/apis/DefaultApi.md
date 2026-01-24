@@ -57,5 +57,5 @@ Get your public IP address
 
 ### HTTP request headers
  - **Content-Type**: Not defined
- - **Accept**: `text/plain`, `text/javascript`, `application/javascript`, `application/json`
+ - **Accept**: `text/plain`, `application/json`, `application/javascript`
 

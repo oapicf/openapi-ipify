@@ -14,6 +14,11 @@
 
 import { HttpMethods, QueryConfig, ResponseBody, ResponseText } from 'redux-query';
 import * as runtime from '../runtime';
+import {
+    GetIp200Response,
+    GetIp200ResponseFromJSON,
+    GetIp200ResponseToJSON,
+} from '../models';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;

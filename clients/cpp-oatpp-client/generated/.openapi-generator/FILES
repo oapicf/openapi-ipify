@@ -1,0 +1,6 @@
+.openapi-generator-ignore
+CMakeLists.txt
+README.md
+api/DefaultApi.hpp
+main-api-client.cpp
+model/GetIp_200_response.hpp

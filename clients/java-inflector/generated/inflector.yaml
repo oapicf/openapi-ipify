@@ -4,7 +4,8 @@ swaggerUrl: ./src/main/openapi/openapi.yaml
 modelMappings:
   # to enable explicit mappings, use this syntax:
   DefinitionFromSwaggerSpecification: fully.qualified.path.to.Model
-  
+  GetIp200Response : org.openapitools.model.GetIp200Response
+
 entityProcessors:
   - json
   - xml

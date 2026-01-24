@@ -20,6 +20,7 @@ import { IAPIConfiguration } from '../IAPIConfiguration';
 import { Headers } from '../Headers';
 import HttpResponse from '../HttpResponse';
 
+import { GetIp200Response } from '../model/getIp200Response';
 
 import { COLLECTION_FORMATS }  from '../variables';
 
@@ -53,7 +54,7 @@ export class DefaultService {
             queryParameters.push('callback='+encodeURIComponent(String(callback)));
         }
 
-        headers['Accept'] = 'text/plain, text/javascript, application/javascript, application/json';
+        headers['Accept'] = 'text/plain, application/json, application/javascript';
 
         const response: Observable<HttpResponse<string>> = this.httpClient.get(`${this.basePath}/?${queryParameters.join('&')}`, headers);
         if (observe === 'body') {

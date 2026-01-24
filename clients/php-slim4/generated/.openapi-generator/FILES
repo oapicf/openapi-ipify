@@ -12,6 +12,7 @@ lib/App/RegisterMiddlewares.php
 lib/App/RegisterRoutes.php
 lib/App/ResponseEmitter.php
 lib/BaseModel.php
+lib/Model/GetIp200Response.php
 logs/.htaccess
 phpcs.xml.dist
 phpunit.xml.dist
@@ -19,3 +20,4 @@ public/.htaccess
 public/index.php
 tests/Api/DefaultApiTest.php
 tests/BaseModelTest.php
+tests/Model/GetIp200ResponseTest.php

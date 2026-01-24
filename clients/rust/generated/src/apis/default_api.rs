@@ -32,7 +32,7 @@ pub async fn get_ip(configuration: &configuration::Configuration, format: Option
     let mut req_builder = configuration.client.request(reqwest::Method::GET, &uri_str);
 
     if let Some(ref param_value) = p_query_format {
-        req_builder = req_builder.query(&[("format", &param_value.to_string())]);
+        req_builder = req_builder.query(&[("format", &serde_json::to_string(param_value)?)]);
     }
     if let Some(ref param_value) = p_query_callback {
         req_builder = req_builder.query(&[("callback", &param_value.to_string())]);

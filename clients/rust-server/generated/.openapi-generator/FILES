@@ -5,6 +5,7 @@ Cargo.toml
 README.md
 api/openapi.yaml
 bin/cli.rs
+docs/GetIp200Response.md
 docs/GetIpFormatParameter.md
 docs/default_api.md
 examples/ca.pem

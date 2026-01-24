@@ -80,9 +80,8 @@ Get your public IP address
 ===== Content Type
 
 * text/plain
-* text/javascript
-* application/javascript
 * application/json
+* application/javascript
 
 ===== Responses
 
@@ -122,5 +121,27 @@ endif::internal-generation[]
 
 [#models]
 == Models
+
+
+[#GetIp200Response]
+=== _GetIp200Response_ 
+
+
+
+
+[.fields-GetIp200Response]
+[cols="2,1,1,2,4,1"]
+|===
+| Field Name| Required| Nullable | Type| Description | Format
+
+| ip
+| 
+| 
+|   String  
+| 
+|     
+
+|===
+
 
 

@@ -3,6 +3,7 @@ package org.openapitools.apis
 import java.io._
 import org.openapitools._
 import org.openapitools.models._
+import org.openapitools.models.GetIp200Response
 import io.finch.circe._
 import io.circe.generic.semiauto._
 import com.twitter.concurrent.AsyncStream

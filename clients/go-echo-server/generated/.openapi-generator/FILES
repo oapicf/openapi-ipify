@@ -7,3 +7,4 @@ handlers/api_default.go
 handlers/container.go
 main.go
 models/hello-world.go
+models/model_get_ip_200_response.go

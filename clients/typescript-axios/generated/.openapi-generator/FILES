@@ -6,5 +6,6 @@ base.ts
 common.ts
 configuration.ts
 docs/DefaultApi.md
+docs/GetIp200Response.md
 git_push.sh
 index.ts

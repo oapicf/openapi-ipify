@@ -15,6 +15,7 @@
 
 #include <QObject>
 
+#include "OAIGetIp_200_response.h"
 #include <QString>
 
 namespace OpenAPI {

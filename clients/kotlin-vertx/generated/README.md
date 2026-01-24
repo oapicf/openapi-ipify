@@ -32,6 +32,7 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [org.openapitools.server.api.model.GetIp200Response](docs/GetIp200Response.md)
 
 
 <a id="documentation-for-authorization"></a>

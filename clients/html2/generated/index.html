@@ -844,6 +844,16 @@ ul.nav-tabs {
   <script>
     // Script section to load models into a JS Var
     var defs = {}
+    defs["getIp_200_response"] = {
+  "properties" : {
+    "ip" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "ip" : "192.168.1.1"
+  }
+};
 
 
     var errs = {};
@@ -925,7 +935,7 @@ ul.nav-tabs {
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-Default-getIp-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X GET \
- -H "Accept: text/plain,text/javascript,application/javascript,application/json" \
+ -H "Accept: text/plain,application/json,application/javascript" \
  "https://api64.ipify.org/?format=format_example&callback=callback_example"
 </code></pre>
                           </div>
@@ -1246,22 +1256,19 @@ JSONP callback function name
     "text/plain" : {
       "schema" : {
         "type" : "string"
-      }
+      },
+      "example" : "192.168.1.1"
     },
-    "text/javascript" : {
+    "application/json" : {
       "schema" : {
-        "type" : "string"
+        "$ref" : "#/components/schemas/getIp_200_response"
       }
     },
     "application/javascript" : {
       "schema" : {
         "type" : "string"
-      }
-    },
-    "application/json" : {
-      "schema" : {
-        "type" : "string"
-      }
+      },
+      "example" : "callback({\"ip\":\"192.168.1.1\"})"
     }
   }
 };

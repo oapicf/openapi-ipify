@@ -10,3 +10,8 @@
  * Do not edit the class manually.
  */
 
+
+export interface GetIp200Response {
+  ip?: string;
+}
+

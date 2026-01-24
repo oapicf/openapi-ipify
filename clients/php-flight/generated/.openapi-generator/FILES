@@ -1,0 +1,10 @@
+.gitignore
+.openapi-generator-ignore
+Api/AbstractDefaultApi.php
+Model/GetIp200Response.php
+Model/GetIpFormatParameter.php
+README.md
+RegisterRoutes.php
+Test/RegisterRoutesTest.php
+composer.json
+phpunit.xml.dist

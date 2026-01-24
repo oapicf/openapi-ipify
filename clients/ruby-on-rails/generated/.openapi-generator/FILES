@@ -10,6 +10,7 @@ app/controllers/default_controller.rb
 app/jobs/application_job.rb
 app/mailers/application_mailer.rb
 app/models/application_record.rb
+app/models/get_ip_200_response.rb
 app/views/layouts/mailer.html.erb
 app/views/layouts/mailer.text.erb
 bin/bundle

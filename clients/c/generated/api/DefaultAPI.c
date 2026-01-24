@@ -109,9 +109,8 @@ DefaultAPI_getIp(apiClient_t *apiClient, openapi_ipify_getIp_format_e format, ch
         list_addElement(localVarQueryParameters,keyPairQuery_callback);
     }
     list_addElement(localVarHeaderType,"text/plain"); //produces
-    list_addElement(localVarHeaderType,"text/javascript"); //produces
-    list_addElement(localVarHeaderType,"application/javascript"); //produces
     list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"application/javascript"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,

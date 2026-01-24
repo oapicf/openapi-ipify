@@ -1,5 +1,6 @@
 package com.prokarma.pkmst.controller;
 
+import com.prokarma.pkmst.model.GetIp200Response;
 
 import io.swagger.annotations.*;
 
@@ -22,7 +23,7 @@ import java.io.IOException;
  * @author pkmst
  *
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2025-11-30T07:59:34.521820819Z[Etc/UTC]", comments = "Generator version: 7.17.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPKMSTServerCodegen", date = "2026-01-24T04:45:03.474667403Z[Etc/UTC]", comments = "Generator version: 7.18.0")
 @Controller
 public class DefaultApiController implements DefaultApi {
     private final ObjectMapper objectMapper;

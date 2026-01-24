@@ -7,6 +7,7 @@ docs/assets/js/bootstrap.js
 docs/assets/js/jquery-3.7.1.min.js
 docs/assets/js/main.js
 docs/index.html
+docs/models/GetIp200Response.html
 docs/operations/DefaultApi.html
 main.js
 package.json

@@ -289,9 +289,8 @@ class DefaultApi:
             _header_params['Accept'] = self.api_client.select_header_accept(
                 [
                     'text/plain', 
-                    'text/javascript', 
-                    'application/javascript', 
-                    'application/json'
+                    'application/json', 
+                    'application/javascript'
                 ]
             )
 

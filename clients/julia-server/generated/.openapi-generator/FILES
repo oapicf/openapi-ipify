@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+README.md
+docs/DefaultApi.md
+docs/GetIp200Response.md
+src/APIServer.jl
+src/apis/api_DefaultApi.jl
+src/modelincludes.jl
+src/models/model_GetIp200Response.jl

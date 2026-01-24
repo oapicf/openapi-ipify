@@ -13,6 +13,7 @@ All URIs are relative to *https://api64.ipify.org*
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [getIp_200_response](./Models/getIp_200_response.md)
 
 
 <a name="documentation-for-authorization"></a>

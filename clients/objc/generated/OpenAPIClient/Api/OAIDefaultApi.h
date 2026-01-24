@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "OAIGetIp200Response.h"
 #import "OAIApi.h"
 
 /**

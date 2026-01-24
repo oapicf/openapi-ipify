@@ -3,8 +3,10 @@
 README.md
 api_client.ecf
 docs/DEFAULT_API.md
+docs/GET_IP_200_RESPONSE.md
 src/api/default_api.e
 src/api_client.e
+src/domain/get_ip_200_response.e
 src/framework/api_client_request.e
 src/framework/api_client_response.e
 src/framework/api_error.e

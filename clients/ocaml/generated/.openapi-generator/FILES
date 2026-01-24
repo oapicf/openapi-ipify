@@ -6,6 +6,7 @@ dune-project
 openapi.opam
 src/apis/default_api.ml
 src/apis/default_api.mli
+src/models/get_ip_200_response.ml
 src/support/enums.ml
 src/support/jsonSupport.ml
 src/support/request.ml

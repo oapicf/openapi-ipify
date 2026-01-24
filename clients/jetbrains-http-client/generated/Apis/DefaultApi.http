@@ -1,0 +1,8 @@
+## DefaultApi
+
+### Get your public IP address
+## Get your public IP address
+GET https://api64.ipify.org/?format={{format}}&callback={{callback}}
+Accept: text/plain
+Accept: application/json
+Accept: application/javascript

@@ -22,6 +22,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Date;
+import org.openapitools.client.model.*;
 
 public class JsonUtil {
   public static GsonBuilder gsonBuilder;
@@ -56,11 +57,19 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
+    if ("GetIp200Response".equalsIgnoreCase(className)) {
+      return new TypeToken<List<GetIp200Response>>(){}.getType();
+    }
+    
     return new TypeToken<List<Object>>(){}.getType();
   }
 
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
+    
+    if ("GetIp200Response".equalsIgnoreCase(className)) {
+      return new TypeToken<GetIp200Response>(){}.getType();
+    }
     
     return new TypeToken<Object>(){}.getType();
   }

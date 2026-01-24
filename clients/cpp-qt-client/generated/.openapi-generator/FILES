@@ -5,6 +5,8 @@ client/Config.cmake.in
 client/OAIDefaultApi.cpp
 client/OAIDefaultApi.h
 client/OAIEnum.h
+client/OAIGetIp_200_response.cpp
+client/OAIGetIp_200_response.h
 client/OAIHelpers.cpp
 client/OAIHelpers.h
 client/OAIHttpFileElement.cpp

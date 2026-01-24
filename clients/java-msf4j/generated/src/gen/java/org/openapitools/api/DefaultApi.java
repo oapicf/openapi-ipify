@@ -7,6 +7,7 @@ import org.openapitools.api.factories.DefaultApiServiceFactory;
 import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
+import org.openapitools.model.GetIp200Response;
 
 import java.util.List;
 import org.openapitools.api.NotFoundException;
@@ -25,14 +26,14 @@ import javax.ws.rs.*;
 
 
 @io.swagger.annotations.Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2025-11-30T07:59:33.314317110Z[Etc/UTC]", comments = "Generator version: 7.17.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaMSF4JServerCodegen", date = "2026-01-24T04:45:02.473364790Z[Etc/UTC]", comments = "Generator version: 7.18.0")
 public class DefaultApi  {
    private final DefaultApiService delegate = DefaultApiServiceFactory.getDefaultApi();
 
     @GET
     
     
-    @Produces({ "text/plain", "text/javascript", "application/javascript", "application/json" })
+    @Produces({ "text/plain", "application/json", "application/javascript" })
     @io.swagger.annotations.ApiOperation(value = "Get your public IP address", notes = "", response = String.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

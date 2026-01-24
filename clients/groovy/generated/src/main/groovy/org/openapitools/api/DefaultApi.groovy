@@ -1,6 +1,7 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
+import org.openapitools.model.GetIp200Response
 
 class DefaultApi {
     String basePath = "https://api64.ipify.org"

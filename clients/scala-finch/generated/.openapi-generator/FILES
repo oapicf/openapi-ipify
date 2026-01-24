@@ -9,3 +9,4 @@ src/main/scala/Server.scala
 src/main/scala/endpoint.scala
 src/main/scala/errors.scala
 src/main/scala/org/openapitools/apis/DefaultApi.scala
+src/main/scala/org/openapitools/models/GetIp200Response.scala

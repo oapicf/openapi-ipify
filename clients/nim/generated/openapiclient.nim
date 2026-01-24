@@ -8,7 +8,9 @@
 #
 
 # Models
+import openapiclient/models/model_get_ip200response
 
+export model_get_ip200response
 
 # APIs
 import openapiclient/apis/api_default

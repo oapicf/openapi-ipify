@@ -1,4 +1,6 @@
+export * from '../models/GetIp200Response';
 
+import { GetIp200Response } from '../models/GetIp200Response';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -16,6 +18,7 @@ let enumsMap: Set<string> = new Set<string>([
 ]);
 
 let typeMap: {[index: string]: any} = {
+    "GetIp200Response": GetIp200Response,
 }
 
 type MimeTypeDescriptor = {

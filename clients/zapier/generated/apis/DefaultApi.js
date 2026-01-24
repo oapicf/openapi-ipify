@@ -1,4 +1,5 @@
 const samples = require('../samples/DefaultApi');
+const getIp_200_response = require('../models/getIp_200_response');
 const utils = require('../utils/utils');
 
 module.exports = {
@@ -36,7 +37,7 @@ module.exports = {
                     removeMissingValuesFrom: { params: true, body: true },
                     headers: {
                         'Content-Type': '',
-                        'Accept': 'text/plain, text/javascript, application/javascript, application/json',
+                        'Accept': 'text/plain, application/json, application/javascript',
                     },
                     params: {
                         'format': bundle.inputData?.['format'],

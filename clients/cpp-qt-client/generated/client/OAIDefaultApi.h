@@ -18,6 +18,7 @@
 #include "OAIServerConfiguration.h"
 #include "OAIOauth.h"
 
+#include "OAIGetIp_200_response.h"
 #include <QString>
 
 #include <QObject>

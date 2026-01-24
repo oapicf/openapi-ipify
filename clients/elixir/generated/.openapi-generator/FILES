@@ -7,6 +7,7 @@ config/runtime.exs
 lib/openapi_ipify/api/default.ex
 lib/openapi_ipify/connection.ex
 lib/openapi_ipify/deserializer.ex
+lib/openapi_ipify/model/get_ip_200_response.ex
 lib/openapi_ipify/request_builder.ex
 mix.exs
 test/test_helper.exs

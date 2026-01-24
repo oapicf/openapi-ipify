@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.GetIp200Response;
 
 import com.google.inject.Inject;
 import com.typesafe.config.Config;

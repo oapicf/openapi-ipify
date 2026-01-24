@@ -14,6 +14,7 @@
 package com.prokarma.pkmst.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.prokarma.pkmst.model.GetIp200Response;
 import org.junit.Test;
 import org.junit.Ignore;
 

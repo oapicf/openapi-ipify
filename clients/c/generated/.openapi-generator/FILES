@@ -6,6 +6,7 @@ README.md
 api/DefaultAPI.c
 api/DefaultAPI.h
 docs/DefaultAPI.md
+docs/get_ip_200_response.md
 external/cJSON.c
 external/cJSON.h
 external/cJSON.licence
@@ -15,6 +16,8 @@ include/keyValuePair.h
 include/list.h
 libcurl.licence
 model/any_type.h
+model/get_ip_200_response.c
+model/get_ip_200_response.h
 model/object.c
 model/object.h
 src/apiClient.c
@@ -22,3 +25,4 @@ src/apiKey.c
 src/binary.c
 src/list.c
 uncrustify-rules.cfg
+unit-test/test_get_ip_200_response.c

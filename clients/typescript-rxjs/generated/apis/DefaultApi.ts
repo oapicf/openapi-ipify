@@ -15,6 +15,9 @@ import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
+import type {
+    GetIp200Response,
+} from '../models';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;

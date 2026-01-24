@@ -20,6 +20,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Org.OpenAPITools.Api
@@ -167,7 +168,7 @@ namespace Org.OpenAPITools.Api
             bool suppressDefaultLog = false;
             AfterGetIp(ref suppressDefaultLog, apiResponseLocalVar, format, callback);
             if (!suppressDefaultLog)
-                Logger.LogInformation("{0,-9} | {1} | {3}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
+                Logger.LogInformation("{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
 
         /// <summary>
@@ -266,9 +267,8 @@ namespace Org.OpenAPITools.Api
 
                     string[] acceptLocalVars = new string[] {
                         "text/plain",
-                        "text/javascript",
-                        "application/javascript",
-                        "application/json"
+                        "application/json",
+                        "application/javascript"
                     };
 
                     string? acceptLocalVar = ClientUtils.SelectHeaderAccept(acceptLocalVars);

@@ -3,6 +3,7 @@ README.md
 pom.xml
 src/main/java/org/openapitools/handler/PathHandlerInterface.java
 src/main/java/org/openapitools/handler/PathHandlerProvider.java
+src/main/java/org/openapitools/model/GetIp200Response.java
 src/main/resources/META-INF/services/com.networknt.server.HandlerProvider
 src/main/resources/config/oauth/primary.crt
 src/main/resources/config/openapi.json

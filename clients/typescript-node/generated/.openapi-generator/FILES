@@ -4,4 +4,5 @@ api.ts
 api/apis.ts
 api/defaultApi.ts
 git_push.sh
+model/getIp200Response.ts
 model/models.ts

@@ -2,6 +2,7 @@
 .openapi-generator-ignore
 Api/DefaultApiInterface.php
 Http/Controllers/DefaultController.php
+Model/GetIp200Response.php
 Model/GetIpFormatParameter.php
 README.md
 composer.json

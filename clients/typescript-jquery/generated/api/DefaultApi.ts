@@ -75,9 +75,8 @@ export class DefaultApi {
         // to determine the Accept header
         let produces: string[] = [
             'text/plain', 
-            'text/javascript', 
-            'application/javascript', 
-            'application/json'
+            'application/json', 
+            'application/javascript'
         ];
 
 

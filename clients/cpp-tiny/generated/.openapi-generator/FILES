@@ -1,7 +1,10 @@
 .openapi-generator-ignore
 README.md
+lib/Models/GetIp200Response.cpp
+lib/Models/GetIp200Response.h
 lib/Models/Helpers.cpp
 lib/Models/Helpers.h
+lib/TestFiles/GetIp200ResponseTest.cpp
 lib/service/DefaultApi.cpp
 lib/service/DefaultApi.h
 lib/service/Response.h

@@ -3,4 +3,5 @@ README.md
 rebar.config
 src/openapi.app.src
 src/openapi_default_api.erl
+src/openapi_get_ip_200_response.erl
 src/openapi_utils.erl

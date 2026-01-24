@@ -26,11 +26,9 @@ class DefaultApi
      * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
      * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="text/plain")
      * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
-     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="text/javascript")
+     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="application/json")
      * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
      * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="application/javascript")
-     * TODO check if producer is valid, if it has correct priority and if it can be moved to class annotation
-     * @PHA\Producer(name=PHProducer\Transfer::class, mediaType="application/json")
      * @param ServerRequestInterface $request
      *
      * @throws PHException\HttpCode 501 if the method is not implemented

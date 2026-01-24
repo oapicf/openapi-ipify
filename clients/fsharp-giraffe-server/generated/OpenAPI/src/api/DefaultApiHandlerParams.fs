@@ -1,5 +1,6 @@
 namespace OpenAPI
 
+open OpenAPI.Model.GetIp200Response
 open System.Collections.Generic
 open System
 

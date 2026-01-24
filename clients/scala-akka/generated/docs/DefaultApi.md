@@ -19,6 +19,7 @@ Get your public IP address
 
 ```scala
 // Import classes:
+import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -81,7 +82,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, text/javascript, application/javascript, application/json
+- **Accept**: text/plain, application/json, application/javascript
 
 ### HTTP response details
 | Status code | Description | Response headers |

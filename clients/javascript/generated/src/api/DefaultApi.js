@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import GetIp200Response from '../model/GetIp200Response';
 
 /**
 * Default service.
@@ -66,7 +67,7 @@ export default class DefaultApi {
 
       let authNames = [];
       let contentTypes = [];
-      let accepts = ['text/plain', 'text/javascript', 'application/javascript', 'application/json'];
+      let accepts = ['text/plain', 'application/json', 'application/javascript'];
       let returnType = 'String';
       return this.apiClient.callApi(
         '/', 'GET',

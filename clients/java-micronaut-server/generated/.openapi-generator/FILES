@@ -6,6 +6,7 @@
 README.md
 build.gradle
 docs/controllers/DefaultController.md
+docs/models/GetIp200Response.md
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
@@ -17,6 +18,8 @@ pom.xml
 settings.gradle
 src/main/java/org/openapitools/Application.java
 src/main/java/org/openapitools/controller/DefaultController.java
+src/main/java/org/openapitools/model/GetIp200Response.java
 src/main/resources/application.yml
 src/main/resources/logback.xml
 src/test/java/org/openapitools/controller/DefaultControllerTest.java
+src/test/java/org/openapitools/model/GetIp200ResponseTest.java

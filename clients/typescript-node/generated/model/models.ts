@@ -1,5 +1,6 @@
 import localVarRequest from 'request';
 
+export * from './getIp200Response';
 
 import * as fs from 'fs';
 
@@ -14,6 +15,7 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { GetIp200Response } from './getIp200Response';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -31,6 +33,7 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
+    "GetIp200Response": GetIp200Response,
 }
 
 // Check if a string starts with another string without using es6 features

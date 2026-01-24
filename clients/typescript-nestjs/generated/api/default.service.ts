@@ -15,6 +15,7 @@ import { Injectable, Optional } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { Observable, from, of, switchMap } from 'rxjs';
+import { GetIp200Response } from '../model/getIp200Response';
 import { Configuration } from '../configuration';
 import { COLLECTION_FORMATS } from '../variables';
 
@@ -68,9 +69,8 @@ export class DefaultService {
         // to determine the Accept header
         let httpHeaderAccepts: string[] = [
             'text/plain',
-            'text/javascript',
-            'application/javascript',
-            'application/json'
+            'application/json',
+            'application/javascript'
         ];
         const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
         if (httpHeaderAcceptSelected != undefined) {

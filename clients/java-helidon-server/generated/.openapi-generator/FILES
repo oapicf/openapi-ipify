@@ -1,0 +1,16 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/org/openapitools/server/Main.java
+src/main/java/org/openapitools/server/RFC3339DateFormat.java
+src/main/java/org/openapitools/server/api/DefaultService.java
+src/main/java/org/openapitools/server/api/DefaultServiceImpl.java
+src/main/java/org/openapitools/server/api/JsonProvider.java
+src/main/java/org/openapitools/server/api/ValidatorUtils.java
+src/main/java/org/openapitools/server/model/GetIp200Response.java
+src/main/java/org/openapitools/server/package-info.java
+src/main/resources/META-INF/openapi.yml
+src/main/resources/application.yaml
+src/main/resources/logging.properties
+src/test/java/org/openapitools/server/MainTest.java
+src/test/java/org/openapitools/server/model/GetIp200ResponseTest.java

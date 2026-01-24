@@ -8,6 +8,7 @@ src/main/java/org/openapitools/api/DefaultApi.java
 src/main/java/org/openapitools/api/DefaultApiController.java
 src/main/java/org/openapitools/configuration/HomeController.java
 src/main/java/org/openapitools/configuration/SpringDocConfiguration.java
+src/main/java/org/openapitools/model/GetIp200Response.java
 src/main/resources/application.properties
 src/main/resources/openapi.yaml
 src/test/java/org/openapitools/OpenApiGeneratorApplicationTests.java

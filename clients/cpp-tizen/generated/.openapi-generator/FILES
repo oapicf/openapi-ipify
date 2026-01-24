@@ -6,6 +6,8 @@ src/DefaultManager.cpp
 src/DefaultManager.h
 src/Error.cpp
 src/Error.h
+src/GetIp200Response.cpp
+src/GetIp200Response.h
 src/Helpers.cpp
 src/Helpers.h
 src/NetClient.cpp

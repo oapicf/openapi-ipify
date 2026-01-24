@@ -86,9 +86,8 @@ valid_content_headers(Req, State) ->
 content_types_provided(Req, #state{operation_id = 'getIp'} = State) ->
     {[
       {<<"text/plain">>, handle_type_provided},
-      {<<"text/javascript">>, handle_type_provided},
-      {<<"application/javascript">>, handle_type_provided},
-      {<<"application/json">>, handle_type_provided}
+      {<<"application/json">>, handle_type_provided},
+      {<<"application/javascript">>, handle_type_provided}
      ], Req, State};
 content_types_provided(Req, State) ->
     {[], Req, State}.

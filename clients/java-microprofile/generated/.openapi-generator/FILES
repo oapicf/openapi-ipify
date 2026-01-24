@@ -1,0 +1,11 @@
+.openapi-generator-ignore
+README.md
+docs/DefaultApi.md
+docs/GetIp200Response.md
+pom.xml
+src/main/java/org/openapitools/server/api/ApiException.java
+src/main/java/org/openapitools/server/api/ApiExceptionMapper.java
+src/main/java/org/openapitools/server/api/DefaultApi.java
+src/main/java/org/openapitools/server/model/GetIp200Response.java
+src/test/java/org/openapitools/server/api/DefaultApiTest.java
+src/test/java/org/openapitools/server/model/GetIp200ResponseTest.java

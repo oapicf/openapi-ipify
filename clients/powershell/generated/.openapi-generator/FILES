@@ -3,8 +3,10 @@ Build.ps1
 README.md
 appveyor.yml
 docs/DefaultApi.md
+docs/GetIp200Response.md
 src/PSOpenAPITools/Api/DefaultApi.ps1
 src/PSOpenAPITools/Client/Configuration.ps1
+src/PSOpenAPITools/Model/GetIp200Response.ps1
 src/PSOpenAPITools/PSOpenAPITools.psm1
 src/PSOpenAPITools/Private/ApiClient.ps1
 src/PSOpenAPITools/Private/Get-CommonParameters.ps1
@@ -13,3 +15,4 @@ src/PSOpenAPITools/Private/Out-DebugParameter.ps1
 src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
 tests/Api/DefaultApi.Tests.ps1
+tests/Model/GetIp200Response.Tests.ps1

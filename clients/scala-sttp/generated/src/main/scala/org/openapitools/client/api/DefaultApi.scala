@@ -11,6 +11,7 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.GetIp200Response
 import org.openapitools.client.core.JsonSupport._
 import sttp.client3._
 import sttp.model.Method

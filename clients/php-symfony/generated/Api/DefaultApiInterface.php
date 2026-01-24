@@ -30,6 +30,7 @@
 namespace OpenAPI\Server\Api;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use OpenAPI\Server\Model\GetIp200Response;
 
 /**
  * DefaultApiInterface Interface Doc Comment

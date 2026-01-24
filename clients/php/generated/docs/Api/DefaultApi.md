@@ -59,7 +59,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `text/plain`, `text/javascript`, `application/javascript`, `application/json`
+- **Accept**: `text/plain`, `application/json`, `application/javascript`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

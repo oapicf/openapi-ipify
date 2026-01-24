@@ -9,6 +9,10 @@ force-app/main/default/classes/OASDefaultApi.cls
 force-app/main/default/classes/OASDefaultApi.cls-meta.xml
 force-app/main/default/classes/OASDefaultApiTest.cls
 force-app/main/default/classes/OASDefaultApiTest.cls-meta.xml
+force-app/main/default/classes/OASGetIp200Response.cls
+force-app/main/default/classes/OASGetIp200Response.cls-meta.xml
+force-app/main/default/classes/OASGetIp200ResponseTest.cls
+force-app/main/default/classes/OASGetIp200ResponseTest.cls-meta.xml
 force-app/main/default/classes/OASResponseMock.cls
 force-app/main/default/classes/OASResponseMock.cls-meta.xml
 force-app/main/default/classes/OASTest.cls

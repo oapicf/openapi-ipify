@@ -2,6 +2,10 @@
 
 title openapi-ipify Schemas Diagram
 
+entity GetIp200Response {
+    ip: String
+}
+
 
 
 @enduml

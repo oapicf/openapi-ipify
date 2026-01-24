@@ -4,5 +4,6 @@ api/api.ts
 configuration.ts
 git_push.sh
 index.ts
+model/GetIp200Response.ts
 model/models.ts
 variables.ts

@@ -5,9 +5,12 @@ README.md
 git_push.sh
 shard.yml
 spec/api/default_api_spec.cr
+spec/models/get_ip200_response_spec.cr
 spec/spec_helper.cr
 src/openapi_client.cr
 src/openapi_client/api/default_api.cr
 src/openapi_client/api_client.cr
 src/openapi_client/api_error.cr
 src/openapi_client/configuration.cr
+src/openapi_client/models/get_ip200_response.cr
+src/openapi_client/recursive_hash.cr

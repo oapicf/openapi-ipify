@@ -3,10 +3,12 @@ OpenAPI.Build.cs
 Private/OpenAPIBaseModel.cpp
 Private/OpenAPIDefaultApi.cpp
 Private/OpenAPIDefaultApiOperations.cpp
+Private/OpenAPIGetIp200Response.cpp
 Private/OpenAPIHelpers.cpp
 Private/OpenAPIModule.cpp
 Private/OpenAPIModule.h
 Public/OpenAPIBaseModel.h
 Public/OpenAPIDefaultApi.h
 Public/OpenAPIDefaultApiOperations.h
+Public/OpenAPIGetIp200Response.h
 Public/OpenAPIHelpers.h

@@ -14,6 +14,13 @@
 
 
 import * as runtime from '../runtime';
+import type {
+  GetIp200Response,
+} from '../models/index';
+import {
+    GetIp200ResponseFromJSON,
+    GetIp200ResponseToJSON,
+} from '../models/index';
 
 export interface GetIpRequest {
     format?: GetIpFormatEnum;

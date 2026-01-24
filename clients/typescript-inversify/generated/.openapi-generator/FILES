@@ -6,4 +6,5 @@ HttpResponse.ts
 IAPIConfiguration.ts
 IHttpClient.ts
 api/default.service.ts
+model/getIp200Response.ts
 variables.ts

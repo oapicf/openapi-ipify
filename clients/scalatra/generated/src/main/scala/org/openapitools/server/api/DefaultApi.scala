@@ -12,6 +12,7 @@
 
 package org.openapitools.server.api
 
+import org.openapitools.server.model.GetIp200Response
 
 import java.io.File
 

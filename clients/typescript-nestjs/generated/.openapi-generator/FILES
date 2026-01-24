@@ -7,5 +7,6 @@ api/default.service.ts
 configuration.ts
 git_push.sh
 index.ts
+model/getIp200Response.ts
 model/models.ts
 variables.ts

@@ -1,5 +1,6 @@
 package org.openapitools.vertxweb.server.api;
 
+import org.openapitools.vertxweb.server.model.GetIp200Response;
 
 import org.openapitools.vertxweb.server.ApiResponse;
 

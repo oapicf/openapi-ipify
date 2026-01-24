@@ -4,4 +4,5 @@ pom.xml
 src/gen/java/org/openapitools/api/DefaultApi.java
 src/gen/java/org/openapitools/api/RestApplication.java
 src/gen/java/org/openapitools/api/RestResourceRoot.java
+src/gen/java/org/openapitools/model/GetIp200Response.java
 src/main/openapi/openapi.yaml

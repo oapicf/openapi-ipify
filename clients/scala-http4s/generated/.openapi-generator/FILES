@@ -1,0 +1,11 @@
+.openapi-generator-ignore
+build.sbt
+project/build.properties
+src/main/scala/org/openapitools/client/apis/BaseClient.scala
+src/main/scala/org/openapitools/client/apis/DefaultApi.scala
+src/main/scala/org/openapitools/client/apis/JsonSupports.scala
+src/main/scala/org/openapitools/client/models/GetIp200Response.scala
+src/main/scala/org/openapitools/client/models/GetIpFormatParameter.scala
+src/main/scala/org/openapitools/client/models/_Authorization.scala
+src/main/scala/org/openapitools/client/models/_FailedRequest.scala
+src/main/scala/org/openapitools/client/models/package.scala

@@ -113,6 +113,14 @@ arbitraryReducedMaybeValue n = do
 
 -- * Models
 
+instance Arbitrary GetIp200Response where
+  arbitrary = sized genGetIp200Response
+
+genGetIp200Response :: Int -> Gen GetIp200Response
+genGetIp200Response n =
+  GetIp200Response
+    <$> arbitraryReducedMaybe n -- getIp200ResponseIp :: Maybe Text
+  
 
 
 

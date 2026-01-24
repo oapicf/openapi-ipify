@@ -24,6 +24,7 @@ app/openapi_server/models/__init__.py
 app/openapi_server/models/__init__.py
 app/openapi_server/models/base_model.py
 app/openapi_server/models/base_model.py
+app/openapi_server/models/get_ip200_response.py
 app/openapi_server/swagger/swagger.yaml
 app/openapi_server/swagger/swagger.yaml
 app/openapi_server/test/__init__.py
@@ -41,6 +42,10 @@ app/test-requirements.txt
 app/test-requirements.txt
 app/tox.ini
 app/tox.ini
+model-definitions/types/ddui-views/openapi_server.resourceTypes.GetIp200Response/create.json
+model-definitions/types/ddui-views/openapi_server.resourceTypes.GetIp200Response/high.json
+model-definitions/types/ddui-views/openapi_server.resourceTypes.GetIp200Response/low.json
+model-definitions/types/tosca/openapi_server/GetIp200Response_ResourceType.tosca
 requirements.txt
 requirements.txt
 solution/fig.yml

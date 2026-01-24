@@ -1,5 +1,6 @@
 package org.openapitools.controller;
 
+import org.openapitools.model.GetIp200Response;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;
@@ -78,10 +79,9 @@ public class DefaultControllerTest {
         // given
         String uri = UriTemplate.of("/").expand(new HashMap<>());
         MutableHttpRequest<?> request = HttpRequest.GET(uri)
-            .accept("[Ljava.lang.String;@35e478f")
-            .accept("[Ljava.lang.String;@35e478f")
-            .accept("[Ljava.lang.String;@35e478f")
-            .accept("[Ljava.lang.String;@35e478f");
+            .accept("[Ljava.lang.String;@6f012914")
+            .accept("[Ljava.lang.String;@6f012914")
+            .accept("[Ljava.lang.String;@6f012914");
         request.getParameters()
             .add("format", "example") // The query parameter format should be 
             .add("callback", "example"); // The query parameter format should be 

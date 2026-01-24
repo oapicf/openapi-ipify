@@ -4,4 +4,5 @@ README.md
 composer.json
 src/App/ApiClient.php
 src/App/ApiClientFactory.php
+src/App/DTO/GetIp200Response.php
 src/App/DTO/GetIpParameterData.php

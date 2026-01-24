@@ -2,6 +2,7 @@ QT += network
 
 HEADERS += \
 # Models
+    $${PWD}/OAIGetIp_200_response.h \
 # APIs
     $${PWD}/OAIDefaultApi.h \
 # Others
@@ -16,6 +17,7 @@ HEADERS += \
 
 SOURCES += \
 # Models
+    $${PWD}/OAIGetIp_200_response.cpp \
 # APIs
     $${PWD}/OAIDefaultApi.cpp \
 # Others

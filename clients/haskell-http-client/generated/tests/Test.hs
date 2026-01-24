@@ -20,4 +20,5 @@ main =
   hspec $ modifyMaxSize (const 10) $ do
     describe "JSON instances" $ do
       pure ()
+      propMimeEq MimeJSON (Proxy :: Proxy GetIp200Response)
       

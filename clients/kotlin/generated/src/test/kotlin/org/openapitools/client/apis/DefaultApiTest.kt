@@ -19,6 +19,7 @@ import io.kotlintest.shouldBe
 import io.kotlintest.specs.ShouldSpec
 
 import org.openapitools.client.apis.DefaultApi
+import org.openapitools.client.models.GetIp200Response
 
 class DefaultApiTest : ShouldSpec() {
     init {

@@ -1,5 +1,6 @@
 package controllers;
 
+import apimodels.GetIp200Response;
 
 import com.typesafe.config.Config;
 import play.mvc.Controller;
@@ -23,7 +24,7 @@ import com.typesafe.config.Config;
 
 import openapitools.OpenAPIUtils.ApiAction;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2025-11-30T07:59:35.684915493Z[Etc/UTC]", comments = "Generator version: 7.17.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaPlayFrameworkCodegen", date = "2026-01-24T04:45:04.646072934Z[Etc/UTC]", comments = "Generator version: 7.18.0")
 public class DefaultApiController extends Controller {
     private final DefaultApiControllerImpInterface imp;
     private final ObjectMapper mapper;

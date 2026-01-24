@@ -14,6 +14,7 @@
 package com.github.oapicf.openapiipify.api;
 
 import com.github.oapicf.openapiipify.ApiException;
+import com.github.oapicf.openapiipify.model.GetIp200Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

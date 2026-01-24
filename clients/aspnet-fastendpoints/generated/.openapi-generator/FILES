@@ -1,0 +1,12 @@
+.gitignore
+.openapi-generator-ignore
+Org.OpenAPITools.sln
+README.md
+src/Org.OpenAPITools/Features/DefaultApiEndpoint.cs
+src/Org.OpenAPITools/Features/DefaultApiRequest.cs
+src/Org.OpenAPITools/Models/GetIp200Response.cs
+src/Org.OpenAPITools/Org.OpenAPITools.csproj
+src/Org.OpenAPITools/Program.cs
+src/Org.OpenAPITools/Properties/launchSettings.json
+src/Org.OpenAPITools/appsettings.Development.json
+src/Org.OpenAPITools/appsettings.json

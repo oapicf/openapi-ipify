@@ -7,6 +7,7 @@ open FSharp.Control.Tasks.V2.ContextInsensitive
 open DefaultApiHandlerParams
 open DefaultApiServiceInterface
 open DefaultApiServiceImplementation
+open OpenAPI.Model.GetIp200Response
 
 module DefaultApiHandler =
 

@@ -15,6 +15,7 @@ src/openapi_server/impl/__init__.py
 src/openapi_server/main.py
 src/openapi_server/models/__init__.py
 src/openapi_server/models/extra_models.py
+src/openapi_server/models/get_ip200_response.py
 src/openapi_server/security_api.py
 tests/conftest.py
 tests/test_default_api.py

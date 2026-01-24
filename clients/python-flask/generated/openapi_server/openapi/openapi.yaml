@@ -39,19 +39,25 @@ paths:
         "200":
           content:
             text/plain:
-              schema:
-                type: string
-            text/javascript:
-              schema:
-                type: string
-            application/javascript:
+              example: 192.168.1.1
               schema:
                 type: string
             application/json:
+              schema:
+                $ref: "#/components/schemas/getIp_200_response"
+            application/javascript:
+              example: "callback({\"ip\":\"192.168.1.1\"})"
               schema:
                 type: string
           description: Your public IP address
       summary: Get your public IP address
       x-openapi-router-controller: openapi_server.controllers.default_controller
 components:
-  schemas: {}
+  schemas:
+    getIp_200_response:
+      example:
+        ip: 192.168.1.1
+      properties:
+        ip:
+          type: string
+      title: getIp_200_response

@@ -6,4 +6,6 @@ README.md
 api/DefaultApi.cpp
 api/DefaultApi.h
 git_push.sh
+model/GetIp_200_response.cpp
+model/GetIp_200_response.h
 model/helpers.h

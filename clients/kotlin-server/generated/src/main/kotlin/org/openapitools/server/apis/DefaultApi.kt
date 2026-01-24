@@ -25,6 +25,7 @@ import io.ktor.server.resources.head
 import io.ktor.server.resources.patch
 import io.ktor.server.routing.*
 import org.openapitools.server.infrastructure.ApiPrincipal
+import org.openapitools.server.models.GetIp200Response
 
 fun Route.DefaultApi() {
     val empty = mutableMapOf<String, Any?>()

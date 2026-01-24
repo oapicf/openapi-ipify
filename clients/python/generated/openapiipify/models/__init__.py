@@ -14,4 +14,5 @@
 """  # noqa: E501
 
 # import models into model package
+from openapiipify.models.get_ip200_response import GetIp200Response
 

@@ -1,0 +1,35 @@
+"$schema"   = "http://cyaninc.com/json-schemas/tosca-lite-v1/definition-module#"
+title       = "openapi_server GetIp200Response"
+package     = openapi_server
+version     = "1.0"
+description = "Defines a GetIp200Response"
+authors     = ["F. Bar (foo@bar.baz)"]
+
+imports {
+  Root = tosca.resourceTypes.Root
+}
+resourceTypes {
+
+  GetIp200Response {
+    title = GetIp200Response
+    description = GetIp200Response
+    derivedFrom = Root
+    properties {
+        ip {
+          type =  string
+          description = ""
+          optional = false
+        }
+    }
+  }
+}
+
+serviceTemplates {
+
+  GetIp200Response {
+    title = GetIp200Response
+    description = GetIp200Response
+    implements = openapi_server.resourceTypes.GetIp200Response
+
+  }
+}

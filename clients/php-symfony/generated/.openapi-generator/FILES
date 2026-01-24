@@ -9,6 +9,7 @@ Controller/Controller.php
 Controller/DefaultController.php
 DependencyInjection/Compiler/OpenAPIServerApiPass.php
 DependencyInjection/OpenAPIServerExtension.php
+Model/GetIp200Response.php
 OpenAPIServerBundle.php
 README.md
 Resources/config/routing.yaml
@@ -23,9 +24,11 @@ Service/ValidatorInterface.php
 Tests/Api/DefaultApiInterfaceTest.php
 Tests/AppKernel.php
 Tests/Controller/ControllerTest.php
+Tests/Model/GetIp200ResponseTest.php
 Tests/test_config.yaml
 autoload.php
 composer.json
 docs/Api/DefaultApiInterface.md
+docs/Model/GetIp200Response.md
 git_push.sh
 phpunit.xml.dist

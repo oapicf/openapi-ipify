@@ -1,5 +1,6 @@
 package org.openapitools.api;
 
+import org.openapitools.model.GetIp200Response;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -34,7 +35,7 @@ public interface DefaultApi  {
      */
     @GET
     
-    @Produces({ "text/plain", "text/javascript", "application/javascript", "application/json" })
+    @Produces({ "text/plain", "application/json", "application/javascript" })
     @ApiOperation(value = "Get your public IP address", tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Your public IP address", response = String.class) })

@@ -15,6 +15,7 @@
 #include "OpenAPIBaseModel.h"
 #include "OpenAPIDefaultApi.h"
 
+#include "OpenAPIGetIp200Response.h"
 
 namespace OpenAPI
 {

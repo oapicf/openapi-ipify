@@ -3,6 +3,7 @@
             [clojure.spec.alpha :as s]
             [spec-tools.core :as st]
             [orchestra.core :refer [defn-spec]]
+            [openapi-ipify.specs.get-ip-200-response :refer :all]
             )
   (:import (java.io File)))
 
@@ -17,7 +18,7 @@
               :query-params  {"format" format "callback" callback }
               :form-params   {}
               :content-types []
-              :accepts       ["text/plain" "text/javascript" "application/javascript" "application/json"]
+              :accepts       ["text/plain" "application/json" "application/javascript"]
               :auth-names    []})))
 
 (defn-spec get-ip string?

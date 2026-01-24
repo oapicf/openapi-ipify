@@ -1,3 +1,4 @@
 .openapi-generator-ignore
 Apis/DefaultApi.md
+Models/getIp_200_response.md
 README.md

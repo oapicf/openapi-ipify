@@ -3,6 +3,7 @@ README.md
 inflector.yaml
 pom.xml
 src/gen/java/org/openapitools/controllers/StringUtil.java
+src/gen/java/org/openapitools/model/GetIp200Response.java
 src/main/java/org/openapitools/controllers/DefaultController.java
 src/main/openapi/openapi.yaml
 src/main/webapp/WEB-INF/web.xml

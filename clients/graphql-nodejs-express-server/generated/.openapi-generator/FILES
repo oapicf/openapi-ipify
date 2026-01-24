@@ -1,9 +1,11 @@
 .openapi-generator-ignore
+docs/GetIp200Response.md
 docs/default_api.md
 openapi3graphql-server/.gitignore
 openapi3graphql-server/README.md
 openapi3graphql-server/api/default_api.graphql
 openapi3graphql-server/api/default_api_resolver.js
+openapi3graphql-server/model/get_ip_200_response.graphql
 openapi3graphql-server/package.json
 openapi3graphql-server/schema.graphql
 openapi3graphql-server/server.js

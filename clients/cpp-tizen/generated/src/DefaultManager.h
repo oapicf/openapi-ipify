@@ -5,6 +5,7 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
+#include "GetIp_200_response.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints

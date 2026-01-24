@@ -22,7 +22,7 @@ h3. getIp
     || Protocol | {noformat:nopanel=true}https{noformat} |
     || Path | {noformat:nopanel=true}/{noformat} |
     || Base Path | {noformat:nopanel=true}https://api64.ipify.org{noformat} |
-    || Produces | {noformat:nopanel=true}text/plain text/javascript application/javascript application/json {noformat} |
+    || Produces | {noformat:nopanel=true}text/plain application/json application/javascript {noformat} |
 ----
 h4. Parameters
 
@@ -44,22 +44,19 @@ h4. Responses
     "text/plain" : {
       "schema" : {
         "type" : "string"
-      }
+      },
+      "example" : "192.168.1.1"
     },
-    "text/javascript" : {
+    "application/json" : {
       "schema" : {
-        "type" : "string"
+        "$ref" : "#/components/schemas/getIp_200_response"
       }
     },
     "application/javascript" : {
       "schema" : {
         "type" : "string"
-      }
-    },
-    "application/json" : {
-      "schema" : {
-        "type" : "string"
-      }
+      },
+      "example" : "callback({\"ip\":\"192.168.1.1\"})"
     }
   }
 }{code} |
@@ -71,3 +68,12 @@ h4. Responses
 {anchor:models}
 h2. Models
 
+        {anchor:GetIp200ResponseModelAnchor}
+        h3. GetIp200Response
+
+        
+
+        
+        ||Field Name||Required||Type||Description||Enum||Example||
+         |ip |(x) |{noformat:nopanel=true}String{noformat} |  |  | null
+         

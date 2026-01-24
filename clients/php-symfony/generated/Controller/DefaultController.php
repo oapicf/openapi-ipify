@@ -36,6 +36,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Validator\Constraints as Assert;
 use OpenAPI\Server\Api\DefaultApiInterface;
+use OpenAPI\Server\Model\GetIp200Response;
 
 /**
  * DefaultController Class Doc Comment
@@ -59,7 +60,7 @@ class DefaultController extends Controller
     public function getIpAction(Request $request)
     {
         // Figure out what data format to return to the client
-        $produces = ['text/plain', 'text/javascript', 'application/javascript', 'application/json'];
+        $produces = ['text/plain', 'application/json', 'application/javascript'];
         // Figure out what the client accepts
         $clientAccepts = $request->headers->has('Accept')?$request->headers->get('Accept'):'*/*';
         $responseFormat = $this->getOutputFormat($clientAccepts, $produces);

@@ -17,6 +17,7 @@ import io.micronaut.core.annotation.*;
 import io.micronaut.http.client.annotation.Client;
 import io.micronaut.core.convert.format.Format;
 import reactor.core.publisher.Mono;
+import org.openapitools.model.GetIp200Response;
 import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,7 +26,7 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2025-11-30T07:59:30.631770331Z[Etc/UTC]", comments = "Generator version: 7.17.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2026-01-24T04:45:00.138069703Z[Etc/UTC]", comments = "Generator version: 7.18.0")
 @Client("${openapi-micronaut-client-base-path}")
 public interface DefaultApi {
     /**
@@ -36,7 +37,7 @@ public interface DefaultApi {
      * @return String
      */
     @Get(uri="/")
-    @Consumes({"text/plain", "text/javascript", "application/javascript", "application/json"})
+    @Consumes({"text/plain", "application/json", "application/javascript"})
     Mono<String> getIp(
         @QueryValue(value="format") @Nullable String _format, 
         @QueryValue(value="callback") @Nullable String paramCallback

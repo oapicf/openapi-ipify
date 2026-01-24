@@ -1,4 +1,6 @@
 
+#include "GetIp_200_responseTest.cpp"
+
 
 
 void setUp(){}
@@ -7,7 +9,15 @@ void tearDown(){}
 
 void runTests(){
     
+    
+    RUN_TEST(test_GetIp_200_response_ip_is_assigned_from_json);
+    
+    
 
+    
+    
+    RUN_TEST(test_GetIp_200_response_ip_is_converted_to_json);
+    
     
 
 

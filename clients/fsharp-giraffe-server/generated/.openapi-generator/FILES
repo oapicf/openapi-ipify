@@ -16,3 +16,4 @@ OpenAPI/src/auth/AuthSchemes.fs
 OpenAPI/src/helpers/Helpers.fs
 OpenAPI/src/impl/CustomHandlers.fs
 OpenAPI/src/impl/DefaultApiService.fs
+OpenAPI/src/model/GetIp200Response.fs

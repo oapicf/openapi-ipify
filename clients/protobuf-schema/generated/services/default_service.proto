@@ -15,6 +15,7 @@ syntax = "proto3";
 package openapitools.services.defaultservice;
 
 import "google/protobuf/empty.proto";
+import public "models/get_ip200_response.proto";
 
 service DefaultService {
   rpc GetIp (GetIpRequest) returns (GetIpResponse);

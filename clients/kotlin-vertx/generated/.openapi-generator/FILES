@@ -1,6 +1,7 @@
 .openapi-generator-ignore
 README.md
 pom.xml
+src/main/kotlin/org/openapitools/server/api/model/GetIp200Response.kt
 src/main/kotlin/org/openapitools/server/api/verticle/DefaultApi.kt
 src/main/kotlin/org/openapitools/server/api/verticle/DefaultApiVerticle.kt
 src/main/kotlin/org/openapitools/server/api/verticle/DefaultApiVertxProxyHandler.kt

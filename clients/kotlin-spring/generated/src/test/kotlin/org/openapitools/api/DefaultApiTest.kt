@@ -1,5 +1,6 @@
 package org.openapitools.api
 
+import org.openapitools.model.GetIp200Response
 import org.junit.jupiter.api.Test
 import org.springframework.http.ResponseEntity
 
@@ -17,6 +18,7 @@ class DefaultApiTest {
     fun getIpTest() {
         val format: kotlin.String? = TODO()
         val paramCallback: kotlin.String? = TODO()
+        
         val response: ResponseEntity<kotlin.String> = api.getIp(format, paramCallback)
 
         // TODO: test validations

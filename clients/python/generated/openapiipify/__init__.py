@@ -29,7 +29,7 @@ __all__ = [
     "ApiKeyError",
     "ApiAttributeError",
     "ApiException",
-    
+    "GetIp200Response",
 ]
 
 # import apis into sdk package
@@ -47,4 +47,5 @@ from openapiipify.exceptions import ApiAttributeError as ApiAttributeError
 from openapiipify.exceptions import ApiException as ApiException
 
 # import models into sdk package
+from openapiipify.models.get_ip200_response import GetIp200Response as GetIp200Response
 

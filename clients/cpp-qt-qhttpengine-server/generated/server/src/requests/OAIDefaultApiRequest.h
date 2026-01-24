@@ -20,6 +20,7 @@
 #include <QSharedPointer>
 
 #include <qhttpengine/socket.h>
+#include "OAIGetIp_200_response.h"
 #include <QString>
 #include "OAIDefaultApiHandler.h"
 

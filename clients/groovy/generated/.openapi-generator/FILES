@@ -3,3 +3,4 @@ README.md
 build.gradle
 src/main/groovy/org/openapitools/api/ApiUtils.groovy
 src/main/groovy/org/openapitools/api/DefaultApi.groovy
+src/main/groovy/org/openapitools/model/GetIp200Response.groovy

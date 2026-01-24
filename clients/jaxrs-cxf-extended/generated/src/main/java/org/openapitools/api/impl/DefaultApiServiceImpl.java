@@ -1,6 +1,7 @@
 package org.openapitools.api.impl;
 
 import org.openapitools.api.*;
+import org.openapitools.model.GetIp200Response;
 
 import java.io.InputStream;
 import java.io.OutputStream;

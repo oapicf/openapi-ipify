@@ -1,6 +1,7 @@
 .openapi-generator-ignore
 README.md
 rebar.config
+src/model/openapi_get_ip_200_response.erl
 src/openapi.app.src
 src/openapi.hrl
 src/openapi_api.erl

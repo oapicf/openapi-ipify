@@ -4,6 +4,7 @@ app/api/ApiDocController.scala
 app/api/DefaultApi.scala
 app/api/DefaultApiController.scala
 app/api/DefaultApiImpl.scala
+app/model/GetIp200Response.scala
 app/org/openapitools/ErrorHandler.scala
 app/org/openapitools/Module.scala
 app/org/openapitools/OpenApiExceptions.scala

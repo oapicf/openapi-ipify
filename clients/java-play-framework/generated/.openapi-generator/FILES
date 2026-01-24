@@ -2,6 +2,7 @@
 LICENSE
 README
 app/Module.java
+app/apimodels/GetIp200Response.java
 app/controllers/ApiDocController.java
 app/controllers/DefaultApiController.java
 app/controllers/DefaultApiControllerImp.java
