@@ -4,7 +4,7 @@
 ################################################################
 
 # The version of Swaggy C
-SWAGGY_C_VERSION = 5.0.0
+SWAGGY_C_VERSION = 5.0.1
 
 # The version of OpenAPI Generator (https://openapi-generator.tech/) used for generating the API clients
 OPENAPI_GENERATOR_VERSION = 7.18.0
@@ -198,7 +198,8 @@ build-ruby:
 	cd clients/ruby/generated/ && \
 	  rm -f *.gem && \
 	  gem install bundler && \
-	  bundle install --binstubs && \
+	  bundle install && \
+	  bundle binstubs --all && \
 	  gem build *.gemspec && \
 	  gem install ./*.gem
 
