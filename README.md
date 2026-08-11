@@ -1,17 +1,19 @@
+<!-- BEGIN:AVATAR -->
 <img align="right" src="https://raw.github.com/oapicf/openapi-ipify/main/avatar.jpg" alt="Avatar"/>
+<!-- END:AVATAR -->
 
+<!-- BEGIN:BADGES -->
 [![Build Status](https://github.com/oapicf/openapi-ipify/actions/workflows/ci-workflow.yaml/badge.svg)](https://github.com/oapicf/openapi-ipify/actions/workflows/ci-workflow.yaml)
 <br/>
+<!-- END:BADGES -->
 
-OpenAPI ipify
--------------
+# OpenAPI ipify
 
 OpenAPI ipify is an OpenAPI v3 specification and a set of generated API clients for [ipify](https://www.ipify.org/)
 
 The API clients are generated using [OpenAPI Generator](https://openapi-generator.tech/).
 
-Published packages
-------------------
+## Published packages
 
 | Language | Package | Status | Documentation |
 |----------|---------|--------|---------------|
@@ -19,8 +21,7 @@ Published packages
 | Python | [openapiipify]((https://pypi.python.org/pypi/openapiipify)) | [![Published Version](https://img.shields.io/pypi/v/openapiipify.svg)](https://pypi.python.org/pypi/openapiipify) | [README](https://github.com/oapicf/openapi-ipify/blob/main/clients/python/generated/README.md) |
 | Ruby | [openapi_ipify]((https://rubygems.org/gems/openapi_ipify)) | [![Published Version](https://img.shields.io/gem/v/openapi_ipify.svg)](https://rubygems.org/gems/openapi_ipify) | [README](https://github.com/oapicf/openapi-ipify/blob/main/clients/ruby/generated/README.md) |
 
-Version matrix
---------------
+## Version matrix
 
 | OpenAPI Ipify Version | OpenAPI Version | OpenAPI Generator Version |
 |-----------------------|-----------------|---------------------------|
@@ -35,8 +36,7 @@ Version matrix
 | 3.0.0 | 3.0.0 | 6.0.0 |
 | 2.0.0 | 3.0.0 | 5.4.0 |
 
-Installation
-------------
+## Installation
 
 You can either use the generated clients from `clients/<lang>/generated/` directory.
 
@@ -44,17 +44,24 @@ Or you can use the published packages like below:
 
 Install JavaScript client:
 
-    npm install openapi-ipify
+```shell
+npm install openapi-ipify
+```
 
 Install Python client:
 
-    pip install openapiipify
+```shell
+pip install openapiipify
+```
 
 Install Ruby client:
 
-    gem install openapi_ipify
+```shell
+gem install openapi_ipify
+```
 
-Colophon
---------
+## Colophon
 
+<!-- BEGIN:BUILD_REPORTS -->
 * [API Documentation](https://oapicf.github.io/openapi-ipify/api/latest/)
+<!-- END:BUILD_REPORTS -->
