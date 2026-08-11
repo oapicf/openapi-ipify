@@ -13,3 +13,15 @@ base_dir:
   local: /Users/cliffano/dev/workspace-oapicf/openapi-ipify
   custom: >-
     /home/runner/work/generator-openapi-generator/generator-openapi-generator/stage/openapi-ipify/
+generator:
+  component: oag-file-spec
+  inputs:
+    project_id: openapi-ipify
+    project_name: OpenAPI ipify
+    project_desc: An OpenAPI v3 specification and a set of generated API clients for ipify
+    author_name: OpenAPI Clients Factory
+    author_email: blah+oapicf@cliffano.com
+    author_url: https://github.com/oapicf
+    github_id: oapicf
+    github_repo: openapi-ipify
+    github_token_prefix: OAPICF
