@@ -1,7 +1,7 @@
 {
   "resources": [
     {
-      "path": "specification/ipify.yml",
+      "path": "specification/openapi-ipify.yml",
       "type": "yaml",
       "params": {
         "property": "info.version"
