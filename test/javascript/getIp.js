@@ -1,9 +1,17 @@
 const assert = require('assert');
+const https = require('https');
 const validator = require('validator');
 const Ipify = require('openapi_ipify');
 const api = new Ipify.DefaultApi();
 
+// Disable keep-alive so each request opens a fresh connection instead of
+// reusing a pooled one, which avoids ECONNRESET when the remote server
+// closes a pooled connection out from under a reused socket.
+api.apiClient.requestAgent = new https.Agent({ keepAlive: false });
+
 describe('ipify', function() {
+  this.retries(2);
+
   describe('without format', function() {
     it('should return IP address in plain text', function(done) {
       var callback = function(error, data, response) {
