@@ -24,6 +24,7 @@ The API clients are generated using [OpenAPI Generator](https://openapi-generato
 
 | OpenAPI Ipify Version | OpenAPI Version | OpenAPI Generator Version |
 |-----------------------|-----------------|---------------------------|
+| 6.1.0 | 3.1.0 | 7.24.0 |
 | 6.0.0 | 3.1.0 | 7.18.0 |
 | 5.3.0 | 3.0.0 | 7.6.0 |
 | 5.2.0 | 3.0.0 | 7.4.0 |
