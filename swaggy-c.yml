@@ -1,6 +1,6 @@
 ---
 spec_uri: specification/openapi-ipify.yml
-version: 6.1.0
+version: 6.1.1-pre.0
 contact:
   name: OpenAPI Clients Factory
   url: https://github.com/oapicf/openapi-ipify
