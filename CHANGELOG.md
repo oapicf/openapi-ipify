@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add examples
+- Add new generators: cpp-boost-beast-client, cpp-httplib-server, ruby-nextgen, rust-salvo, terraform-provider
 
 ### Changed
 - Upgrade Swaggy C to 6.2.2
