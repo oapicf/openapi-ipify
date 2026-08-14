@@ -5,7 +5,7 @@
 OpenAPI client for ipify, a simple public IP address API
 
 * API basepath : [https://api64.ipify.org](https://api64.ipify.org)
-* Version : 5.3.1-pre.0
+* Version : 6.0.1-pre.0
 
 ## Documentation for API Endpoints
 

@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 README.md
 models/get_ip200_response.proto
 services/default_service.proto

@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 Api/DefaultApiInterface.php
 Http/Controllers/DefaultController.php
 Model/GetIp200Response.php

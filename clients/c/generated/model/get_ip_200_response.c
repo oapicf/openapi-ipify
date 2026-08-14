@@ -12,18 +12,21 @@ static get_ip_200_response_t *get_ip_200_response_create_internal(
     if (!get_ip_200_response_local_var) {
         return NULL;
     }
-    get_ip_200_response_local_var->ip = ip;
-
+    memset(get_ip_200_response_local_var, 0, sizeof(get_ip_200_response_t));
     get_ip_200_response_local_var->_library_owned = 1;
+    get_ip_200_response_local_var->ip = ip;
     return get_ip_200_response_local_var;
 }
 
 __attribute__((deprecated)) get_ip_200_response_t *get_ip_200_response_create(
     char *ip
     ) {
-    return get_ip_200_response_create_internal (
+    get_ip_200_response_t *result = get_ip_200_response_create_internal (
         ip
         );
+    if (!result) {
+    }
+    return result;
 }
 
 void get_ip_200_response_free(get_ip_200_response_t *get_ip_200_response) {
@@ -64,6 +67,8 @@ get_ip_200_response_t *get_ip_200_response_parseFromJSON(cJSON *get_ip_200_respo
 
     get_ip_200_response_t *get_ip_200_response_local_var = NULL;
 
+    char *ip_local_str = NULL;
+
     // get_ip_200_response->ip
     cJSON *ip = cJSON_GetObjectItemCaseSensitive(get_ip_200_responseJSON, "ip");
     if (cJSON_IsNull(ip)) {
@@ -77,12 +82,22 @@ get_ip_200_response_t *get_ip_200_response_parseFromJSON(cJSON *get_ip_200_respo
     }
 
 
+    if (ip && !cJSON_IsNull(ip)) ip_local_str = strdup(ip->valuestring);
+
     get_ip_200_response_local_var = get_ip_200_response_create_internal (
-        ip && !cJSON_IsNull(ip) ? strdup(ip->valuestring) : NULL
+        ip_local_str
         );
+
+    if (!get_ip_200_response_local_var) {
+        goto end;
+    }
 
     return get_ip_200_response_local_var;
 end:
+    if (ip_local_str) {
+        free(ip_local_str);
+        ip_local_str = NULL;
+    }
     return NULL;
 
 }

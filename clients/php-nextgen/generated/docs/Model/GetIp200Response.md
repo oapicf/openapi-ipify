@@ -1,4 +1,4 @@
-# # GetIp200Response
+# GetIp200Response
 
 ## Properties
 

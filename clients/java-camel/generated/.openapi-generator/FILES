@@ -1,4 +1,10 @@
-.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/org/openapitools/OpenApiGeneratorApplication.java
+src/main/java/org/openapitools/RFC3339DateFormat.java
 src/main/java/org/openapitools/RestConfiguration.java
 src/main/java/org/openapitools/api/DefaultApi.java
+src/main/java/org/openapitools/api/DefaultApiRoutesImpl.java
 src/main/java/org/openapitools/model/GetIp200Response.java
+src/main/resources/application.properties
+src/test/java/org/openapitools/api/DefaultApiTest.java

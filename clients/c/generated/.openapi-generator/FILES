@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 CMakeLists.txt
 Config.cmake.in
 Packing.cmake
@@ -25,4 +24,3 @@ src/apiKey.c
 src/binary.c
 src/list.c
 uncrustify-rules.cfg
-unit-test/test_get_ip_200_response.c

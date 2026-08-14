@@ -15,7 +15,7 @@ use serde::{Serialize, Deserialize};
 type ServiceError = Box<dyn Error + Send + Sync + 'static>;
 
 pub const BASE_PATH: &str = "";
-pub const API_VERSION: &str = "5.3.1-pre.0";
+pub const API_VERSION: &str = "6.0.1-pre.0";
 
 mod auth;
 pub use auth::{AuthenticationApi, Claims};
@@ -25,7 +25,7 @@ pub use auth::{AuthenticationApi, Claims};
 pub enum GetIpResponse {
     /// Your public IP address
     YourPublicIPAddress
-    (String)
+    (swagger::OneOf3::<String, models::GetIp200Response, String>)
 }
 
 /// API

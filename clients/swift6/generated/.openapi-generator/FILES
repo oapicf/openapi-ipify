@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .swiftformat
 Cartfile
 OpenAPIClient.podspec
@@ -14,6 +13,7 @@ Sources/OpenAPIClient/Infrastructure/JSONDataEncoding.swift
 Sources/OpenAPIClient/Infrastructure/JSONEncodingHelper.swift
 Sources/OpenAPIClient/Infrastructure/JSONValue.swift
 Sources/OpenAPIClient/Infrastructure/Models.swift
+Sources/OpenAPIClient/Infrastructure/OpenAPIMutex.swift
 Sources/OpenAPIClient/Infrastructure/OpenISO8601DateFormatter.swift
 Sources/OpenAPIClient/Infrastructure/SynchronizedDictionary.swift
 Sources/OpenAPIClient/Infrastructure/URLSessionImplementations.swift

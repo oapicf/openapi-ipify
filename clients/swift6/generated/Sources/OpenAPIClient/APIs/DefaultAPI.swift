@@ -25,7 +25,6 @@ open class DefaultAPI {
      - parameter apiConfiguration: The configuration for the http request.
      - returns: String
      */
-    @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
     open class func getIp(format: Format_getIp? = nil, callback: String? = nil, apiConfiguration: OpenAPIClientAPIConfiguration = OpenAPIClientAPIConfiguration.shared) async throws(ErrorResponse) -> String {
         return try await getIpWithRequestBuilder(format: format, callback: callback, apiConfiguration: apiConfiguration).execute().body
     }

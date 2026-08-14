@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 api/DefaultApi.cpp
 api/DefaultApi.h

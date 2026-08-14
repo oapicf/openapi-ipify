@@ -5,7 +5,7 @@
  *
  * OpenAPI client for ipify, a simple public IP address API
  *
- * API version: 5.3.1-pre.0
+ * API version: 6.0.1-pre.0
  * Contact: blah+oapicf@cliffano.com
  */
 
@@ -19,7 +19,8 @@ type GetIp200Response struct {
 	Ip string `json:"ip,omitempty"`
 }
 
-// AssertGetIp200ResponseRequired checks if the required fields are not zero-ed
+// AssertGetIp200ResponseRequired checks complex required fields (models, arrays, maps) and embedded parents.
+// Primitive required fields are validated for JSON request bodies in UnmarshalJSON so zero values remain valid.
 func AssertGetIp200ResponseRequired(obj GetIp200Response) error {
 	return nil
 }

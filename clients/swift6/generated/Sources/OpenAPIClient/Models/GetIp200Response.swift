@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GetIp200Response: Sendable, Codable, ParameterConvertible, Hashable {
+public struct GetIp200Response: Sendable, Codable, Hashable {
 
     public var ip: String?
 

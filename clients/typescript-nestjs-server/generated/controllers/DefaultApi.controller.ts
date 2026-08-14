@@ -1,14 +1,14 @@
-import { Body, Controller, Get, Param, Query, Req } from '@nestjs/common';
+import { Body, Controller, DefaultValuePipe, Get, Param, ParseIntPipe, ParseFloatPipe, Query, Req } from '@nestjs/common';
 import { Observable } from 'rxjs';
+import { Cookies, Headers } from '../decorators';
 import { DefaultApi } from '../api';
-import { &#39;json&#39; | &#39;jsonp&#39;,  } from '../models';
 
 @Controller()
 export class DefaultApiController {
   constructor(private readonly defaultApi: DefaultApi) {}
 
   @Get('/')
-  getIp(@Query('format') format: 'json' | 'jsonp', @Query('callback') callback: string, @Req() request: Request): string | Promise<string> | Observable<string> {
+  getIp(@Query('format') format: 'json' | 'jsonp' | undefined, @Query('callback') callback: string | undefined, @Req() request: Request): string | Promise<string> | Observable<string> {
     return this.defaultApi.getIp(format, callback, request);
   }
 

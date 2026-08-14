@@ -1,6 +1,5 @@
 .github/workflows/maven.yml
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -37,5 +36,3 @@ src/main/java/com/github/oapicf/openapiipify/auth/HttpBasicAuth.java
 src/main/java/com/github/oapicf/openapiipify/auth/HttpBearerAuth.java
 src/main/java/com/github/oapicf/openapiipify/model/AbstractOpenApiSchema.java
 src/main/java/com/github/oapicf/openapiipify/model/GetIp200Response.java
-src/test/java/com/github/oapicf/openapiipify/api/DefaultApiTest.java
-src/test/java/com/github/oapicf/openapiipify/model/GetIp200ResponseTest.java

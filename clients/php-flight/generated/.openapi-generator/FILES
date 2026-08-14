@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 Api/AbstractDefaultApi.php
 Model/GetIp200Response.php
 Model/GetIpFormatParameter.php
