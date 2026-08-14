@@ -22,7 +22,7 @@ import jakarta.annotation.Generated;
  */
 
 @JsonTypeName("getIp_200_response")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-08-14T06:53:23.619771512Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-08-14T10:55:46.568044026Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class GetIp200Response {
 
   @JsonInclude(JsonInclude.Include.NON_NULL)

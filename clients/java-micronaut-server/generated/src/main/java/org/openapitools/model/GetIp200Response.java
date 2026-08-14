@@ -30,7 +30,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
   GetIp200Response.JSON_PROPERTY_IP
 })
 @JsonTypeName("getIp_200_response")
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2026-08-14T06:51:09.124406805Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautServerCodegen", date="2026-08-14T10:53:24.131978044Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 @Introspected
 public class GetIp200Response {
     public static final String JSON_PROPERTY_IP = "ip";

@@ -29,7 +29,7 @@ import javax.annotation.Generated;
   GetIp200Response.JSON_PROPERTY_IP
 })
 @JsonTypeName("getIp_200_response")
-@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2026-08-14T06:51:07.546039630Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@Generated(value="org.openapitools.codegen.languages.JavaMicronautClientCodegen", date="2026-08-14T10:53:22.445885477Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 @Introspected
 public class GetIp200Response {
     public static final String JSON_PROPERTY_IP = "ip";

@@ -29,7 +29,7 @@ import javax.validation.Valid;
 @JsonPropertyOrder({
   GetIp200Response.JSON_PROPERTY_IP
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2026-08-14T06:51:24.883247493Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJerseyServerCodegen", date = "2026-08-14T10:53:40.727590195Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class GetIp200Response   {
   public static final String JSON_PROPERTY_IP = "ip";
   @JsonProperty(JSON_PROPERTY_IP)
