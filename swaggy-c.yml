@@ -1,5 +1,5 @@
 ---
-spec_uri: specification/ipify.yml
+spec_uri: specification/openapi-ipify.yml
 version: 6.0.1-pre.0
 contact:
   name: OpenAPI Clients Factory
