@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix Ruby and JavaScript publishing via Swaggy C 6.3.0
+
 ## 6.1.0 - 2026-08-14
 ### Added
 - Add examples
