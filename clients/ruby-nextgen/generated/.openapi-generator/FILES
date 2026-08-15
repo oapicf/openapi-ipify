@@ -1,6 +1,5 @@
 .github/workflows/ci.yml
 .gitignore
-.openapi-generator-ignore
 .rspec
 .rubocop.yml
 Gemfile
@@ -22,6 +21,4 @@ lib/openapi_client/serializable.rb
 lib/openapi_client/validations.rb
 lib/openapi_client/version.rb
 openapi_client.gemspec
-spec/api/root_spec.rb
-spec/models/get_ip200_response_spec.rb
 spec/spec_helper.rb

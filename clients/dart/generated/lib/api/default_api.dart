@@ -27,7 +27,7 @@ class DefaultApi {
   ///
   /// * [String] callback:
   ///   JSONP callback function name
-  Future<Response> getIpWithHttpInfo({ String? format, String? callback, }) async {
+  Future<Response> getIpWithHttpInfo({ String? format, String? callback, Future<void>? abortTrigger, }) async {
     // ignore: prefer_const_declarations
     final path = r'/';
 
@@ -56,6 +56,7 @@ class DefaultApi {
       headerParams,
       formParams,
       contentTypes.isEmpty ? null : contentTypes.first,
+      abortTrigger: abortTrigger,
     );
   }
 
@@ -68,8 +69,8 @@ class DefaultApi {
   ///
   /// * [String] callback:
   ///   JSONP callback function name
-  Future<String?> getIp({ String? format, String? callback, }) async {
-    final response = await getIpWithHttpInfo( format: format, callback: callback, );
+  Future<String?> getIp({ String? format, String? callback, Future<void>? abortTrigger, }) async {
+    final response = await getIpWithHttpInfo(format: format, callback: callback, abortTrigger: abortTrigger,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

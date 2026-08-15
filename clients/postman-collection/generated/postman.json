@@ -5,7 +5,7 @@
 		    "content": "OpenAPI client for ipify, a simple public IP address API",
 		    "type": "text/markdown"
 		},
-		"version": "6.0.1-pre.0",
+		"version": "6.1.1-pre.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

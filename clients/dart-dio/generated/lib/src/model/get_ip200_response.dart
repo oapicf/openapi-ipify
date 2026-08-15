@@ -73,8 +73,9 @@ class _$GetIp200ResponseSerializer implements PrimitiveSerializer<GetIp200Respon
         case r'ip':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.ip = valueDes;
           break;
         default:

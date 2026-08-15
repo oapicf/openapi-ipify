@@ -15,7 +15,7 @@ builder.Services
             s.Description = """
 OpenAPI client for ipify, a simple public IP address API
 """;
-            s.Version = "6.0.1-pre.0";
+            s.Version = "6.1.1-pre.0";
         };
         o.AutoTagPathSegmentIndex = 0;
     })

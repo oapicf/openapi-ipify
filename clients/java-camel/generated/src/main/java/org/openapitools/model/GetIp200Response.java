@@ -21,7 +21,7 @@ import jakarta.annotation.Generated;
  */
 
 @JsonTypeName("getIp_200_response")
-@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2026-08-14T10:53:34.174319764Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@Generated(value = "org.openapitools.codegen.languages.JavaCamelServerCodegen", date = "2026-08-15T01:57:34.647224669Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class GetIp200Response {
 
   private String ip;

@@ -21,7 +21,7 @@ type ClientContext = swagger::make_context_ty!(
 #[derive(Parser, Debug)]
 #[clap(
     name = "openapi-ipify",
-    version = "6.0.1-pre.0",
+    version = "6.1.1-pre.0",
     about = "CLI access to openapi-ipify"
 )]
 struct Cli {

@@ -51,7 +51,7 @@ public:
 
 	/*! \brief Set 
 	 */
-	void setIp(std::string  ip);
+	void setIp(std::string ip);
 
 
     private:

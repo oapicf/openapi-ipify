@@ -64,7 +64,7 @@ GetIp_200_response::getIp()
 }
 
 void
-GetIp_200_response::setIp(std::string  ip)
+GetIp_200_response::setIp(std::string ip)
 {
 	this->ip = ip;
 }
