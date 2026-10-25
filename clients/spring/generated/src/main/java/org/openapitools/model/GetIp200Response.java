@@ -2,7 +2,6 @@ package org.openapitools.model;
 
 import java.net.URI;
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -22,10 +21,9 @@ import jakarta.annotation.Generated;
  */
 
 @JsonTypeName("getIp_200_response")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-08-15T01:59:48.977526828Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-25T05:55:44.410611947Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class GetIp200Response {
 
-  @JsonInclude(JsonInclude.Include.NON_NULL)
   private @Nullable String ip;
 
   public GetIp200Response ip(@Nullable String ip) {

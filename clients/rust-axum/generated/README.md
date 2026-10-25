@@ -11,9 +11,9 @@ server, you can easily generate a server stub.
 
 To see how to make this your own, look here: [README](https://openapi-generator.tech)
 
-- API version: 6.1.1-pre.0
-- Build date: 2026-08-15T01:59:17.188186408Z[Etc/UTC]
-- Generator version: 7.24.0
+- API version: 6.1.2-pre.0
+- Build date: 2026-10-25T05:55:10.855362299Z[Etc/UTC]
+- Generator version: 7.26.0
 
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
 

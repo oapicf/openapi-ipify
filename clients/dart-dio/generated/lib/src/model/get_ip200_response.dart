@@ -107,3 +107,4 @@ class _$GetIp200ResponseSerializer implements PrimitiveSerializer<GetIp200Respon
   }
 }
 
+

@@ -1,9 +1,9 @@
 # openapiipify
 
 openapi-ipify
-- API version: 6.1.1-pre.0
-  - Build date: 2026-08-15T01:57:11.544008126Z[Etc/UTC]
-  - Generator version: 7.24.0
+- API version: 6.1.2-pre.0
+  - Build date: 2026-10-25T05:52:50.394098438Z[Etc/UTC]
+  - Generator version: 7.26.0
 
 OpenAPI client for ipify, a simple public IP address API
 
@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.github.oapicf</groupId>
   <artifactId>openapiipify</artifactId>
-  <version>6.1.1-pre.0</version>
+  <version>6.1.2-pre.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -58,7 +58,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.github.oapicf:openapiipify:6.1.1-pre.0"
+     implementation "com.github.oapicf:openapiipify:6.1.2-pre.0"
   }
 ```
 
@@ -72,7 +72,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapiipify-6.1.1-pre.0.jar`
+* `target/openapiipify-6.1.2-pre.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

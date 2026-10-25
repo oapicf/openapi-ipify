@@ -15,7 +15,7 @@ class BaseDefaultApi:
         BaseDefaultApi.subclasses = BaseDefaultApi.subclasses + (cls,)
     async def get_ip(
         self,
-        format: Annotated[Optional[StrictStr], Field(description="Response format")],
-        param_callback: Annotated[Optional[StrictStr], Field(description="JSONP callback function name")],
+        format: Annotated[Optional[str], Field(description="Response format")],
+        param_callback: Annotated[Optional[str], Field(description="JSONP callback function name")],
     ) -> str:
         ...

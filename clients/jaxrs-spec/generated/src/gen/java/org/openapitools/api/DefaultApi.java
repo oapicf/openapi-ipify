@@ -18,7 +18,7 @@ import javax.validation.Valid;
 */
 @Path("")
 @Api(description = "the default API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2026-08-15T01:57:47.975725373Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaJAXRSSpecServerCodegen", date = "2026-10-25T05:53:31.831204077Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class DefaultApi {
 
     @GET
@@ -27,7 +27,9 @@ public class DefaultApi {
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Your public IP address", response = String.class)
     })
-    public Response getIp(@QueryParam("format")  @ApiParam("Response format")  String format,@QueryParam("callback")  @ApiParam("JSONP callback function name")  String paramCallback) {
+    public Response getIp(@QueryParam("format")  @ApiParam("Response format")  String format
+,@QueryParam("callback")  @ApiParam("JSONP callback function name")  String paramCallback
+) {
         return Response.ok().entity("magic!").build();
     }
 }

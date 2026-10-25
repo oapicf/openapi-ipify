@@ -22,11 +22,9 @@ from fastapi import (  # noqa: F401
     status,
 )
 
-from openapi_server.models.extra_models import TokenModel  # noqa: F401
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-
 
 router = APIRouter()
 
@@ -45,8 +43,8 @@ for _, name, _ in pkgutil.iter_modules(ns_pkg.__path__, ns_pkg.__name__ + "."):
     response_model_by_alias=True,
 )
 async def get_ip(
-    format: Annotated[Optional[StrictStr], Field(description="Response format")] = Query(None, description="Response format", alias="format"),
-    param_callback: Annotated[Optional[StrictStr], Field(description="JSONP callback function name")] = Query(None, description="JSONP callback function name", alias="callback"),
+    format: Annotated[Optional[str], Field(description="Response format")] = Query(None, description="Response format", alias="format"),
+    param_callback: Annotated[Optional[str], Field(description="JSONP callback function name")] = Query(None, description="JSONP callback function name", alias="callback"),
 ) -> str:
     if not BaseDefaultApi.subclasses:
         raise HTTPException(status_code=500, detail="Not implemented")

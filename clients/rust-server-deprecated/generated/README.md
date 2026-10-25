@@ -13,9 +13,9 @@ To see how to make this your own, look here:
 
 [README]((https://openapi-generator.tech))
 
-- API version: 6.1.1-pre.0
-- Build date: 2026-08-15T01:59:24.301870787Z[Etc/UTC]
-- Generator version: 7.24.0
+- API version: 6.1.2-pre.0
+- Build date: 2026-10-25T05:55:18.403132634Z[Etc/UTC]
+- Generator version: 7.26.0
 
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)
 
@@ -128,13 +128,13 @@ HTTPS support is included by default. To disable it (for example, to reduce depe
 
 ```toml
 [dependencies]
-openapi_client = { version = "6.1.1-pre.0", default-features = false, features = ["client", "server"] }
+openapi_client = { version = "6.1.2-pre.0", default-features = false, features = ["client", "server"] }
 ```
 
 **For server with callbacks that need HTTPS:**
 ```toml
 [dependencies]
-openapi_client = { version = "6.1.1-pre.0", features = ["server", "client-tls"] }
+openapi_client = { version = "6.1.2-pre.0", features = ["server", "client-tls"] }
 ```
 
 The TLS backend is automatically selected based on your target platform:

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 # **getIp**
 ```swift
-    open class func getIp(format: Format_getIp? = nil, callback: String? = nil, completion: @escaping (_ data: String?, _ error: Error?) -> Void)
+    open class func getIp(format: Format_getIp? = nil, callback: String? = nil, apiConfiguration: OpenAPIClientAPIConfiguration = OpenAPIClientAPIConfiguration.shared) async throws(ErrorResponse) -> String
 ```
 
 Get your public IP address
@@ -23,15 +23,11 @@ let format = "format_example" // String | Response format (optional)
 let callback = "callback_example" // String | JSONP callback function name (optional)
 
 // Get your public IP address
-DefaultAPI.getIp(format: format, callback: callback) { (response, error) in
-    guard error == nil else {
-        print(error)
-        return
-    }
-
-    if (response) {
-        dump(response)
-    }
+do {
+    let response = try await DefaultAPI.getIp(format: format, callback: callback)
+    dump(response)
+} catch {
+    print(error)
 }
 ```
 

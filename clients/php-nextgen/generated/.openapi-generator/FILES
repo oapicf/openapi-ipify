@@ -13,6 +13,7 @@ src/ApiException.php
 src/Configuration.php
 src/FormDataProcessor.php
 src/HeaderSelector.php
+src/Model/AnyOfInterface.php
 src/Model/GetIp200Response.php
 src/Model/ModelInterface.php
 src/Model/OneOfInterface.php

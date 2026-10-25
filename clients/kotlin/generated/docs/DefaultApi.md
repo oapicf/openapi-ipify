@@ -35,9 +35,9 @@ try {
 ```
 
 ### Parameters
-| **format** | **kotlin.String**| Response format | [optional] [enum: json, jsonp] |
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **format** | **kotlin.String**| Response format | [optional] [enum: json, jsonp] |
 | **paramCallback** | **kotlin.String**| JSONP callback function name | [optional] |
 
 ### Return type

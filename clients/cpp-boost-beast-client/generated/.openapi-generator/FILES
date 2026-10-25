@@ -8,3 +8,14 @@ api/HttpClientImpl.h
 model/AnyType.h
 model/GetIp_200_response.cpp
 model/GetIp_200_response.h
+model/NullableField.h
+model/Oas31DeepEqual.h
+model/Oas31ExactJson.h
+model/Oas31ExactNumber.cpp
+model/Oas31ExactNumber.h
+model/Oas31SchemaIr.h
+model/Oas31SchemaRegistry.h
+model/Oas31Validator.h
+model/ValidationTypes.h
+model/schema_ir.generated.cpp
+test/MultipartWireTest.cpp

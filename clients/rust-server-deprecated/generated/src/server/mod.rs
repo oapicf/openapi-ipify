@@ -265,6 +265,7 @@ where
                             Ok(param_format) => Some(param_format),
                             Err(e) => return Ok(Response::builder()
                                 .status(StatusCode::BAD_REQUEST)
+                                .header(CONTENT_TYPE, mime::TEXT_PLAIN.as_ref())
                                 .body(body_from_string(format!("Couldn't parse query parameter format - doesn't match schema: {e}")))
                                 .expect("Unable to create Bad Request response for invalid query parameter format")),
                         }
@@ -282,6 +283,7 @@ where
                             Ok(param_callback) => Some(param_callback),
                             Err(e) => return Ok(Response::builder()
                                 .status(StatusCode::BAD_REQUEST)
+                                .header(CONTENT_TYPE, mime::TEXT_PLAIN.as_ref())
                                 .body(body_from_string(format!("Couldn't parse query parameter callback - doesn't match schema: {e}")))
                                 .expect("Unable to create Bad Request response for invalid query parameter callback")),
                         }
@@ -318,6 +320,10 @@ where
                                                 // Application code returned an error. This should not happen, as the implementation should
                                                 // return a valid response.
                                                 *response.status_mut() = StatusCode::INTERNAL_SERVER_ERROR;
+                                                response.headers_mut().insert(
+                                                    CONTENT_TYPE,
+                                                    HeaderValue::from_static("text/plain"),
+                                                );
                                                 *response.body_mut() = body_from_str("An internal error occurred");
                                             },
                                         }

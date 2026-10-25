@@ -4,8 +4,8 @@
 
 openapi-ipify
 
-- API version: 6.1.1-pre.0
-- Generator version: 7.24.0
+- API version: 6.1.2-pre.0
+- Generator version: 7.26.0
 
 OpenAPI client for ipify, a simple public IP address API
 
