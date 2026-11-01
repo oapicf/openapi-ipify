@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    openapi_ipify (6.1.2.pre.pre.0)
+    openapi_ipify (6.2.2.pre.pre.0)
       typhoeus (~> 1.0, >= 1.0.1)
 
 GEM
@@ -120,7 +120,7 @@ CHECKSUMS
   jaro_winkler (1.5.6) sha256=007db7805527ada1cc12f2547676181d63b0a504ec4dd7a9a2eb2424521ccd81
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
-  openapi_ipify (6.1.2.pre.pre.0)
+  openapi_ipify (6.2.2.pre.pre.0)
   parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
   parser (3.3.13.0) sha256=e02f9b63c2fe05b0c68f692ba4df89b3cb113b663964f75d988fbebfd6c3deca
   pry (0.16.1) sha256=d92d82c86e7f2dc34beec6d2892d5cf5ea517eea22eed3ceabb38ee62a98accc

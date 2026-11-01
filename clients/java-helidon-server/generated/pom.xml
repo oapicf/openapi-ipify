@@ -11,7 +11,7 @@
     </parent>
     <groupId>org.openapitools</groupId>
     <artifactId>openapi-java-server</artifactId>
-    <version>6.1.2-pre.0</version>
+    <version>6.2.2-pre.0</version>
     <name>openapi-java-server</name>
     <description>OpenAPI client for ipify, a simple public IP address API</description>
 

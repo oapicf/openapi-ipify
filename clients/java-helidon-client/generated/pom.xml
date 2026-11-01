@@ -11,7 +11,7 @@
     </parent>
     <artifactId>openapi-java-client</artifactId>
     <name>openapi-java-client</name>
-    <version>6.1.2-pre.0</version>
+    <version>6.2.2-pre.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <packaging>jar</packaging>

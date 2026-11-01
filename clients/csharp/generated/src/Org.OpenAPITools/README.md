@@ -11,7 +11,7 @@ outputDir: out
 
 # https://openapi-generator.tech/docs/generators/csharp
 additionalProperties:
-  packageGuid: '{9DD48CE1-401B-4C36-A56D-2E7DAA4DE811}'
+  packageGuid: '{B135B7A2-BF64-4143-96DE-0754ACAED282}'
 
 # https://openapi-generator.tech/docs/integrations/#github-integration
 # gitHost:
@@ -100,7 +100,7 @@ namespace YourProject
 
 ## Api Information
 - appName: openapi-ipify
-- appVersion: 6.1.2-pre.0
+- appVersion: 6.2.2-pre.0
 - appDescription: OpenAPI client for ipify, a simple public IP address API
 
 ## Build
