@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix missing OIDC-required args for publish workflows
+
 ## 6.2.0 - 2026-11-01
 ### Added
 - Add upgrade dependencies workflow

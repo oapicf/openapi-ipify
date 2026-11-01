@@ -28,3 +28,4 @@ jobs:
             make clean deps init-spec generate-primary build-ruby test-ruby &&
             make publish-ruby
           env_file: /tmp/.env
+          extra_args: '--env GEM_HOST_API_KEY'
