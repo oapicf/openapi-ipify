@@ -21,7 +21,7 @@ import jakarta.annotation.Generated;
  */
 
 @JsonTypeName("getIp_200_response")
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-10-25T05:55:44.410611947Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-11-01T05:56:01.250833428Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class GetIp200Response {
 
   private @Nullable String ip;

@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 Apis/DefaultApi.http
 Apis/http-client.template.env.json
 README.md

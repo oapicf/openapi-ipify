@@ -19,6 +19,7 @@ class DefaultApiTest {
         val format: kotlin.String? = TODO()
         val paramCallback: kotlin.String? = TODO()
         
+        
         val response: ResponseEntity<kotlin.String> = api.getIp(format, paramCallback)
 
         // TODO: test validations

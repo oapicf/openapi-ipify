@@ -1,3 +1,6 @@
+.openapi-generator-ignore
+OpenAPI.Tests/DefaultApiTests.fs
+OpenAPI.Tests/DefaultApiTestsHelper.fs
 OpenAPI.Tests/OpenAPITests.fsproj
 OpenAPI.Tests/TestHelper.fs
 OpenAPI/.gitignore

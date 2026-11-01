@@ -2,7 +2,7 @@
 
 openapi-ipify
 - API version: 6.1.2-pre.0
-  - Build date: 2026-10-25T05:52:50.394098438Z[Etc/UTC]
+  - Build date: 2026-11-01T05:54:03.388601596Z[Etc/UTC]
   - Generator version: 7.26.0
 
 OpenAPI client for ipify, a simple public IP address API

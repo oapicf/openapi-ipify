@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 README.md
 apis/DefaultApi.gd
 apis/DefaultApi.md

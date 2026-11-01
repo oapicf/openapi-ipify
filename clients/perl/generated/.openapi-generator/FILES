@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 .travis.yml
 README.md
 bin/autodoc
@@ -13,3 +14,5 @@ lib/WWW/OpenAPIClient/DefaultApi.pm
 lib/WWW/OpenAPIClient/Object/GetIp200Response.pm
 lib/WWW/OpenAPIClient/Role.pm
 lib/WWW/OpenAPIClient/Role/AutoDoc.pm
+t/DefaultApiTest.t
+t/GetIp200ResponseTest.t

@@ -6,7 +6,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: 6.1.2-pre.0
 - Package version: 6.1.2-pre.0
-- Build date: 2026-10-25T05:52:43.077219864Z[Etc/UTC]
+- Build date: 2026-11-01T05:53:58.459265140Z[Etc/UTC]
 - Generator version: 7.26.0
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://github.com/oapicf/openapi-ipify](https://github.com/oapicf/openapi-ipify)

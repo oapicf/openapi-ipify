@@ -1,5 +1,6 @@
 .gitattributes
 .gitignore
+.openapi-generator-ignore
 README.md
 apis/DefaultApi.ts
 apis/baseapi.ts
